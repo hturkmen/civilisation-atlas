@@ -1,0 +1,1029 @@
+{
+  "schema_version": "1.0",
+  "repo_target": "hturkmen/civilisation-atlas",
+  "status_note": "Repository provided by owner: public hturkmen/civilisation-atlas. GitHub issue synchronization is tracked separately. Estimates exclude scaled historical digitisation, licensing waits and independent expert review.",
+  "projects": [
+    {
+      "id": "P01",
+      "name": "Proje temeli ve geliştirme ortamı",
+      "gate": "A",
+      "goal": "Tek repo, tekrar üretilebilir geliştirme ve secretsız kalite kontrolü."
+    },
+    {
+      "id": "P02",
+      "name": "Kaynak ve tarihsel veri üretimi",
+      "gate": "A",
+      "goal": "Kullanım hakkı ve dayanağı incelenebilir küçük koleksiyon; ölçülmüş içerik üretim akışı."
+    },
+    {
+      "id": "P03",
+      "name": "Zaman, coğrafi model ve API",
+      "gate": "B",
+      "goal": "Aynı yayın ve tarih üzerinde tutarlı veri erişimi."
+    },
+    {
+      "id": "P04",
+      "name": "Harita ve zaman deneyimi",
+      "gate": "B",
+      "goal": "Telefon ve masaüstünde tarih → seçim → kaynak akışı."
+    },
+    {
+      "id": "P05",
+      "name": "Hesaplar ve kullanıcı güvenliği",
+      "gate": "C",
+      "goal": "Gerçek oturum, minimum profil, favori sahipliği ve yetkili admin."
+    },
+    {
+      "id": "P06",
+      "name": "Dönemin bilinen dünyası",
+      "gate": "C",
+      "goal": "Bakış açısı ve eser tarihi ayrılmış, kaynaklı ikinci görünüm."
+    },
+    {
+      "id": "P07",
+      "name": "Admin, inceleme ve yayın",
+      "gate": "C",
+      "goal": "İçerik taslağından doğrulanmış ve geri alınabilir yayına kadar akış."
+    },
+    {
+      "id": "P08",
+      "name": "Beta doğrulama ve mobil hazırlık",
+      "gate": "D",
+      "goal": "Ölçülmüş, incelenmiş beta; sonraki uygulama için uyumluluk denemesi."
+    }
+  ],
+  "items": [
+    {
+      "id": "P01-001",
+      "project_id": "P01",
+      "title": "hturkmen reposunu oluştur ve başlangıç paketini aktar",
+      "status": "todo",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 1,
+        "max": 2
+      },
+      "depends_on": [],
+      "deliverable": "GitHub repo ve başlangıç commit'i",
+      "acceptance_criteria": [
+        "Hesap hturkmen; mevcut public görünürlük kullanıcıya bildirilmiş; mevcut başka dosyalar ezilmez.",
+        "Paket ve görev tanımları remote commit üzerinden açılır."
+      ],
+      "verification": "Remote ağaç ve commit kimliğini doğrula; mevcut dosya çakışmasında dur."
+    },
+    {
+      "id": "P01-002",
+      "project_id": "P01",
+      "title": "Next.js ve TypeScript uygulama temelini kur",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 6
+      },
+      "depends_on": [
+        "P01-001"
+      ],
+      "deliverable": "apps/web ve doğrulanmış lockfile",
+      "acceptance_criteria": [
+        "Uygulama yerelde ve standart Node build ortamında açılır.",
+        "Domain ve API katmanları route dosyalarından ayrıdır."
+      ],
+      "verification": "Temiz checkout üzerinden kurulum ve production build."
+    },
+    {
+      "id": "P01-003",
+      "project_id": "P01",
+      "title": "Dev/staging ortamlarını ve secret sınırını kur",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P01-002"
+      ],
+      "deliverable": "Ortam değişkeni şeması ve staging bağlantısı",
+      "acceptance_criteria": [
+        "Staging production DB erişimi taşımaz.",
+        "Client bundle içinde gizli anahtar yoktur."
+      ],
+      "verification": "Bundle taraması ve yanlış ortamla başlatma negatif senaryosu."
+    },
+    {
+      "id": "P01-004",
+      "project_id": "P01",
+      "title": "CI kalite kapıları ve bağımlılık kontrolünü kur",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P01-002"
+      ],
+      "deliverable": "CI yapılandırması",
+      "acceptance_criteria": [
+        "Tip/derleme/domain/contract kontrolleri PR üzerinde çalışır.",
+        "Untrusted PR production secret alamaz; izinler sınırlıdır."
+      ],
+      "verification": "Hatalı sözleşme ve başarısız testin CI'ı durdurduğunu doğrula."
+    },
+    {
+      "id": "P01-005",
+      "project_id": "P01",
+      "title": "Sağlayıcı, bütçe ve sürüm kararlarını kaydet",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 2,
+        "max": 4
+      },
+      "depends_on": [
+        "P02-001"
+      ],
+      "deliverable": "Karar kayıtları ve güncel maliyet hesabı",
+      "acceptance_criteria": [
+        "Hosting/DB/auth bölgesi, paket fiyatı ve limitleri resmi kaynaklarla kaydedilir.",
+        "Ücretli kaynak açılmadan somut maliyet ve geri dönüş planı kullanıcıya sunulur."
+      ],
+      "verification": "Uydurma fiyat/sürüm bulunmadığını ve ortak servis sayısının gereksiz artmadığını incele."
+    },
+    {
+      "id": "P02-001",
+      "project_id": "P02",
+      "title": "Kaynak ve nesne bazlı lisans kayıtlarını hazırla",
+      "status": "todo",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [],
+      "deliverable": "data kaynak şeması",
+      "acceptance_criteria": [
+        "Kaynak, veri sürümü ve lisans istisnası birbirinden ayrılır.",
+        "Hak durumu bilinmeyen veri yayınlanamaz."
+      ],
+      "verification": "CC0 kaynak içindeki farklı lisanslı nesne örneğini değerlendir."
+    },
+    {
+      "id": "P02-002",
+      "project_id": "P02",
+      "title": "Üç dönem/bölgeden kanıt ve geometri denemesi yap",
+      "status": "todo",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 8,
+        "max": 16
+      },
+      "depends_on": [
+        "P02-001"
+      ],
+      "deliverable": "Kaynak denemesi raporu",
+      "acceptance_criteria": [
+        "Her örnekte kaynak locator, zaman belirsizliği ve geometri dayanağı bulunur.",
+        "Bir varlık/geometri için harcanan süre ve başarısızlık nedeni ölçülür."
+      ],
+      "verification": "Tarihsel inceleyen örnekleri değerlendirir; uygun değilse veri stratejisi düzeltilir."
+    },
+    {
+      "id": "P02-003",
+      "project_id": "P02",
+      "title": "İdempotent içe aktarma ve karantina akışını uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 6,
+        "max": 10
+      },
+      "depends_on": [
+        "P02-002",
+        "P03-002"
+      ],
+      "deliverable": "apps/worker import adaptörü",
+      "acceptance_criteria": [
+        "Checksum+adapter sürümü tekrarında duplicate oluşmaz.",
+        "Format, byte, vertex ve dış ağ sınırları uygulanır."
+      ],
+      "verification": "Aynı dosyayı iki kez; bozuk/çok büyük dosyayı bir kez çalıştır."
+    },
+    {
+      "id": "P02-004",
+      "project_id": "P02",
+      "title": "İddia, geometri ve kaynak eşleştirme kurallarını uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 7
+      },
+      "depends_on": [
+        "P02-001",
+        "P03-002"
+      ],
+      "deliverable": "Evidence doğrulayıcı",
+      "acceptance_criteria": [
+        "Kaynak linki iddia/geometri/perspektif revizyonuna bağlıdır.",
+        "Çelişen kaynak ve editör çıkarımı destekleyici kaynaklardan ayrılır."
+      ],
+      "verification": "Genel kaynakçası olup iddia dayanağı eksik taslağın yayınını engelle."
+    },
+    {
+      "id": "P02-005",
+      "project_id": "P02",
+      "title": "Bölge × dönem × katman kapsama kaydını oluştur",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P02-002",
+        "P03-002"
+      ],
+      "deliverable": "Coverage matrisi",
+      "acceptance_criteria": [
+        "Henüz taranmamış alan ile incelenip kaynak bulunamayan alan ayrıdır.",
+        "Kapsama yokluğu uygarlık/insan yokluğu şeklinde sunulmaz."
+      ],
+      "verification": "Bir dolu, bir boş ve bir araştırılmamış hücreyi API/UI üzerinden kontrol et."
+    },
+    {
+      "id": "P02-006",
+      "project_id": "P02",
+      "title": "Başlangıç koleksiyonunu seç ve içerik eforunu ölç",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 6
+      },
+      "depends_on": [
+        "P02-002"
+      ],
+      "deliverable": "Kaynaklı koleksiyon listesi ve iş tahmini",
+      "acceptance_criteria": [
+        "20–30 varlık ve iki perspektif hedefi kanıt durumuyla yeniden boyutlanır.",
+        "Gerçek sayısallaştırma ve bağımsız tarihsel inceleme eforu ayrı hesaplanır."
+      ],
+      "verification": "Sayılara ulaşmak için veri uydurulmadığını incele; bu görev koleksiyonun tamamını üretmiş sayılmaz."
+    },
+    {
+      "id": "P03-001",
+      "project_id": "P03",
+      "title": "MÖ/MS tarih çekirdeğini ve sınır davranışını uygula",
+      "status": "partial",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [],
+      "deliverable": "packages/domain zaman modeli",
+      "acceptance_criteria": [
+        "MÖ 1 → MS 1 geçişi kullanıcı 0 yılı olmadan çalışır.",
+        "Exact/possible/certain interval ve ürün sınırı ayrıdır."
+      ],
+      "verification": "BCE/CE dönüşümleri, boş certain aralığı ve exclusive bitiş vakaları; temel kısmı bu pakette uygulanmıştır."
+    },
+    {
+      "id": "P03-002",
+      "project_id": "P03",
+      "title": "Postgres/PostGIS şemasını ve revizyon ilişkilerini kur",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 7,
+        "max": 11
+      },
+      "depends_on": [
+        "P01-003",
+        "P03-001"
+      ],
+      "deliverable": "database migrations",
+      "acceptance_criteria": [
+        "İddia/geometri/kaynak revizyonları referans bütünlüğü taşır.",
+        "Zaman sıralaması, immutable yayın ve FK kısıtları DB'de korunur."
+      ],
+      "verification": "Staging migration, referans ihlali ve yayınlanmış revizyon değiştirme negatif testi."
+    },
+    {
+      "id": "P03-003",
+      "project_id": "P03",
+      "title": "Geometri doğrulama ve LOD üretimini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 9
+      },
+      "depends_on": [
+        "P03-002"
+      ],
+      "deliverable": "Geometri QA ve türetim işi",
+      "acceptance_criteria": [
+        "EPSG:4326, MultiPolygon/delik/antimeridyen desteklenir.",
+        "Onarım özgün geometriyi silmez; label point alanla uyumludur."
+      ],
+      "verification": "Dateline, delik, ada ve geçersiz halka fixture'ları; ST_IsValid tek başına tarihsel kanıt sayılmaz."
+    },
+    {
+      "id": "P03-004",
+      "project_id": "P03",
+      "title": "Tarih/bbox/zoom filtreli public harita API'sini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 6,
+        "max": 10
+      },
+      "depends_on": [
+        "P03-003",
+        "P02-004"
+      ],
+      "deliverable": "features ve coverage endpointleri",
+      "acceptance_criteria": [
+        "Yanıt aynı release_id'ye bağlı; yalnız yayınlanmış kayıtlar gelir.",
+        "Payload/feature limitinde sessiz eksiltme yapılmaz."
+      ],
+      "verification": "Cross-date, dateline bbox, büyük sorgu ve draft ID erişim testleri."
+    },
+    {
+      "id": "P03-005",
+      "project_id": "P03",
+      "title": "Arama, dönem adı, detay ve kaynak API'lerini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P03-002",
+        "P02-004"
+      ],
+      "deliverable": "search/entity/source endpointleri",
+      "acceptance_criteria": [
+        "Alias araması bulunur; o yıla ait ad/iddia gösterilir.",
+        "Detay, haritanın sabitlenmiş yayın revizyonunu kullanır."
+      ],
+      "verification": "Ad değişimi, başka dönem hükümdarı ve çelişen kaynak vakaları."
+    },
+    {
+      "id": "P03-006",
+      "project_id": "P03",
+      "title": "OpenAPI'yi implementasyonla eşleştir ve istemci tiplerini üret",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P03-004",
+        "P03-005"
+      ],
+      "deliverable": "Doğrulanmış OpenAPI ve client types",
+      "acceptance_criteria": [
+        "Request/response/authorization koşulları gerçek servisle tutarlı.",
+        "İstemcinin bilinmeyen enum veya geri çekilmiş yayını ele alma davranışı vardır."
+      ],
+      "verification": "Spec validator ve contract test; bu paketteki taslak implementasyon olarak sayılmaz."
+    },
+    {
+      "id": "P04-001",
+      "project_id": "P04",
+      "title": "MapLibre harita kabuğu ve dönem katmanlarını oluştur",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P01-002",
+        "P03-004"
+      ],
+      "deliverable": "Explorer working surface",
+      "acceptance_criteria": [
+        "Açılış doğrudan haritaya gelir; modern siyasi etiketler tarih katmanına sızmaz.",
+        "Katmanlar ve renkler kararlı feature kimliğine bağlıdır."
+      ],
+      "verification": "İki tarih ve üç zoom seviyesinde etiket/katman incelemesi."
+    },
+    {
+      "id": "P04-002",
+      "project_id": "P04",
+      "title": "Yıl girişi, zoom'lu timeline ve istek iptalini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 6,
+        "max": 10
+      },
+      "depends_on": [
+        "P04-001",
+        "P03-001"
+      ],
+      "deliverable": "Timeline ve görünüm state",
+      "acceptance_criteria": [
+        "MÖ/MS ile kesin yıl seçilebilir; önceki/sonraki belgelenmiş değişim bulunur.",
+        "Geç dönen yanıt yeni tarih state'ini değiştiremez."
+      ],
+      "verification": "Yavaş ağda hızlı tarih değişimi; MÖ 1/MS 1 ve uç tarih vakaları."
+    },
+    {
+      "id": "P04-003",
+      "project_id": "P04",
+      "title": "Örtüşen bölge seçimi ve tarihe bağlı detay paneli",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P04-001",
+        "P03-005"
+      ],
+      "deliverable": "Entity selection/panel",
+      "acceptance_criteria": [
+        "Örtüşen kayıtların aday listesi vardır.",
+        "Seçili varlığın başka tarihte kaydı yoksa açıklanır; ölüm/çöküş uydurulmaz."
+      ],
+      "verification": "İç içe poligon, kayıtsız tarih ve küçük ada seçim senaryoları."
+    },
+    {
+      "id": "P04-004",
+      "project_id": "P04",
+      "title": "Kaynak, belirsizlik ve kapsama deneyimini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P04-003",
+        "P02-005"
+      ],
+      "deliverable": "Evidence/coverage UI",
+      "acceptance_criteria": [
+        "Kullanıcı iddiadan kaynak locator'ına ulaşabilir.",
+        "Yaklaşık/tartışmalı veri renk dışında da anlaşılır."
+      ],
+      "verification": "Kaynak bulma görevi ve yalnız renksiz görünüm incelemesi."
+    },
+    {
+      "id": "P04-005",
+      "project_id": "P04",
+      "title": "Mobil alt panel, klavye ve WebGL fallback geliştir",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P04-002",
+        "P04-003"
+      ],
+      "deliverable": "Responsive/a11y explorer",
+      "acceptance_criteria": [
+        "360 px ve %200 metinde temel akış erişilebilir.",
+        "Haritasız sonuç listesi ve klavye odağı doğru çalışır."
+      ],
+      "verification": "Gerçek telefon + klavye + WebGL kapalı test; hover zorunluluğu olmamalı."
+    },
+    {
+      "id": "P04-006",
+      "project_id": "P04",
+      "title": "Harita performansını ölç ve tile kararını ver",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 7
+      },
+      "depends_on": [
+        "P04-005",
+        "P03-003"
+      ],
+      "deliverable": "Performans raporu ve servisleme kararı",
+      "acceptance_criteria": [
+        "Tanımlı cihaz/ağda cold/warm ölçümleri kaydedilir.",
+        "Gerekirse vektör tile işi ayrı scope edilir; erken zorunlu kılınmaz."
+      ],
+      "verification": "Büyük geometri ve 10 ardışık tarih geçişinde bellek/yanıt boyutu incelemesi."
+    },
+    {
+      "id": "P05-001",
+      "project_id": "P05",
+      "title": "Gerçek üyelik, oturum ve e-posta doğrulamayı bağla",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P01-003"
+      ],
+      "deliverable": "Kimlik entegrasyonu",
+      "acceptance_criteria": [
+        "Kayıt/giriş/çıkış/kurtarma sağlayıcının desteklenen akışıyla çalışır.",
+        "Süresi dolmuş veya iptal edilmiş oturum kabul edilmez."
+      ],
+      "verification": "Yanlış audience/issuer, süre dolumu ve logout sonrası istek."
+    },
+    {
+      "id": "P05-002",
+      "project_id": "P05",
+      "title": "Rol, MFA, CSRF ve DB sahiplik politikalarını uygula",
+      "status": "todo",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 6,
+        "max": 10
+      },
+      "depends_on": [
+        "P05-001",
+        "P03-002"
+      ],
+      "deliverable": "Yetki/oturum koruması",
+      "acceptance_criteria": [
+        "Admin/editor/reviewer MFA zorunlu; izinler server'da doğrulanır.",
+        "Başka kullanıcı verisine ve yetkisiz role geçiş reddedilir."
+      ],
+      "verification": "İki kullanıcı IDOR, sahte role, CSRF ve revoke sonrası erişim testleri."
+    },
+    {
+      "id": "P05-003",
+      "project_id": "P05",
+      "title": "Özel favoriler ve paylaşılan görünüm URL'leri",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P05-002",
+        "P04-002"
+      ],
+      "deliverable": "Bookmark ve URL state",
+      "acceptance_criteria": [
+        "Favori sahibi oturumdan alınır; URL'de session/private içerik yoktur.",
+        "Eski release bağlantısı sessizce yeni tarihe dönüştürülmez."
+      ],
+      "verification": "Başkasının bookmark'ını okuma/silme ve withdrawn release açma."
+    },
+    {
+      "id": "P05-004",
+      "project_id": "P05",
+      "title": "Admin kullanıcı listesi ve kontrollü rol değişimi",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 6
+      },
+      "depends_on": [
+        "P05-002"
+      ],
+      "deliverable": "Admin users",
+      "acceptance_criteria": [
+        "Kayıt tarihi, durum ve gereken minimum kullanıcı alanı gösterilir.",
+        "Son admin kaldırılmaz; rol değişimi audit'e yazılır."
+      ],
+      "verification": "Yetkisiz listeleme, eski oturum ve kendi son adminini kaldırma senaryosu."
+    },
+    {
+      "id": "P05-005",
+      "project_id": "P05",
+      "title": "Hesap silme ve kişisel veri yaşam döngüsünü uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 6
+      },
+      "depends_on": [
+        "P05-003"
+      ],
+      "deliverable": "Silme işi ve kullanıcı açıklaması",
+      "acceptance_criteria": [
+        "Kimlik sağlayıcısı ve app kayıtları koordineli silinir/ayrıştırılır.",
+        "Başarısız kısmi silme yeniden denenebilir."
+      ],
+      "verification": "İşin yarıda kesilip devam etmesi ve kalan private kayıtların kontrolü."
+    },
+    {
+      "id": "P06-001",
+      "project_id": "P06",
+      "title": "Bakış açısı, tasavvur ve eser/kopya tarih modelini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 6
+      },
+      "depends_on": [
+        "P03-002",
+        "P02-001"
+      ],
+      "deliverable": "Perspective modeli ve API",
+      "acceptance_criteria": [
+        "Observer, knowledge date ve artifact date ayrıdır.",
+        "Orijinal/kopya/yeniden kurma açık tiplerdir."
+      ],
+      "verification": "Farklı yüzyıldan kopya ve belirsiz gözlemci örneği."
+    },
+    {
+      "id": "P06-002",
+      "project_id": "P06",
+      "title": "Hakları incelenmiş iki perspektif eseri seç",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 8
+      },
+      "depends_on": [
+        "P06-001",
+        "P02-002"
+      ],
+      "deliverable": "İki eser kayıt dosyası",
+      "acceptance_criteria": [
+        "İki eser için hak/atıf ve tarih dayanağı doğrulanır.",
+        "Kaynak erişilemiyorsa kullanım onaylı sayılmaz."
+      ],
+      "verification": "Eser kayıtlarını tarihsel inceleyen ve hak kontrolüyle değerlendir."
+    },
+    {
+      "id": "P06-003",
+      "project_id": "P06",
+      "title": "Arşiv haritası görsel inceleyicisini uygula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P06-001",
+        "P05-002"
+      ],
+      "deliverable": "Perspective viewer",
+      "acceptance_criteria": [
+        "Zoom/pan, açıklama ve atıf mobilde çalışır.",
+        "Şematik eser gerçek koordinatlara zorlanmaz."
+      ],
+      "verification": "Büyük çözünürlüklü görsel ve klavye alternatifleri."
+    },
+    {
+      "id": "P06-004",
+      "project_id": "P06",
+      "title": "Opsiyonel georeference ve açıklamalı overlay desteği",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 8
+      },
+      "depends_on": [
+        "P06-003",
+        "P03-003"
+      ],
+      "deliverable": "Overlay adaptörü",
+      "acceptance_criteria": [
+        "Yöntem ve hata notu olmadan overlay yayınlanmaz.",
+        "Kanıtsız bilinen-dünya maskesi üretilmez."
+      ],
+      "verification": "Bir koordinatlandırılabilir örnek ve uygun olmayan eserin reddi."
+    },
+    {
+      "id": "P06-005",
+      "project_id": "P06",
+      "title": "İki mod arasında tarih uyumlu geçişi tamamla",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P06-003",
+        "P04-002"
+      ],
+      "deliverable": "Mode switch/perspective picker",
+      "acceptance_criteria": [
+        "Seçili yıla uygun bakış açıları ve açıklamalı boş durum var.",
+        "En yakın örneğe geçerken yeni tarih açıkça gösterilir."
+      ],
+      "verification": "MÖ 4000 boş görünüm ve farklı tarihli eser seçimi."
+    },
+    {
+      "id": "P07-001",
+      "project_id": "P07",
+      "title": "Kaynak, varlık, iddia ve geometri taslak ekranları",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 7,
+        "max": 11
+      },
+      "depends_on": [
+        "P05-002",
+        "P02-004"
+      ],
+      "deliverable": "Admin content forms",
+      "acceptance_criteria": [
+        "Şema doğrulama ve optimistic concurrency uygulanır.",
+        "Kaynak/locator eksikleri form ve server seviyesinde görünür."
+      ],
+      "verification": "Eşzamanlı düzenleme, XSS metni ve eksik kaynak kaydı."
+    },
+    {
+      "id": "P07-002",
+      "project_id": "P07",
+      "title": "İnceleme kuyruğu, red gerekçesi ve revizyon farkı",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P07-001"
+      ],
+      "deliverable": "Review workflow",
+      "acceptance_criteria": [
+        "Onay belirli revizyon/hash'a bağlıdır; sonra değişince düşer.",
+        "Kendi düzenlemesini bağımsız inceleme diye işaretleme engellenir."
+      ],
+      "verification": "Onaydan sonra kaynak/geometri değişimi ve stale review denemesi."
+    },
+    {
+      "id": "P07-003",
+      "project_id": "P07",
+      "title": "Import işi, karantina ve hata raporu ekranı",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 6
+      },
+      "depends_on": [
+        "P07-001",
+        "P02-003"
+      ],
+      "deliverable": "Admin imports",
+      "acceptance_criteria": [
+        "Başarılı/kalan/hatalı satırlar ve retry durumu anlaşılır.",
+        "Serbest URL SSRF yolu ve keyfi dosya yürütme bulunmaz."
+      ],
+      "verification": "Bozuk dosya, tekrar import ve kısmi hata akışı."
+    },
+    {
+      "id": "P07-004",
+      "project_id": "P07",
+      "title": "Immutable yayın derlemesi ve manifest üretimi",
+      "status": "todo",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 7,
+        "max": 12
+      },
+      "depends_on": [
+        "P07-002",
+        "P07-003",
+        "P06-001"
+      ],
+      "deliverable": "Release builder",
+      "acceptance_criteria": [
+        "Tüm içerik tam revision kimliği ve checksum ile sabitlenir.",
+        "Kaynak izni/inceleme eksik veya private alan içeren export reddedilir."
+      ],
+      "verification": "Build sırasında kaynak geri çekme, eksik asset ve arıza enjeksiyonu."
+    },
+    {
+      "id": "P07-005",
+      "project_id": "P07",
+      "title": "Atomik aktivasyon, geri alma ve geri çekme",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P07-004"
+      ],
+      "deliverable": "Release lifecycle",
+      "acceptance_criteria": [
+        "Aktivasyon If-Match/CAS ile; eski sağlam yayın korunur.",
+        "Geri çekme eski URL/CDN erişimini de sınırlar ve nedeni gösterir."
+      ],
+      "verification": "İki paralel aktivasyon, failed build ve withdrawn object erişimi."
+    },
+    {
+      "id": "P07-006",
+      "project_id": "P07",
+      "title": "Admin yetkileri ve yayın sızıntısı güvenlik testleri",
+      "status": "todo",
+      "priority": "P0",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P07-005",
+        "P05-004"
+      ],
+      "deliverable": "Negatif yetki suite",
+      "acceptance_criteria": [
+        "Her admin endpoint için rol/MFA negatif senaryosu var.",
+        "Public API/dosya URL'leri taslak/private kayda erişemez."
+      ],
+      "verification": "Gerçek DB politikalarıyla entegrasyon; yalnız mock ile tamamlanmış sayılmaz."
+    },
+    {
+      "id": "P08-001",
+      "project_id": "P08",
+      "title": "Gerçek koleksiyon için editoryal beta kabulü",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P02-006",
+        "P07-004",
+        "P06-002"
+      ],
+      "deliverable": "Yayın kabul raporu",
+      "acceptance_criteria": [
+        "Hedef koleksiyonun gerçek üretim/inceleme işleri bitmiş olmalı.",
+        "Geometri ve önemli iddialarda kaynak/inceleme/izin kapsamı %100."
+      ],
+      "verification": "Tarihsel inceleyenle kayıt bazında kabul; uzman çalışma ve sayısallaştırma saatleri bu tahmine dahil değil."
+    },
+    {
+      "id": "P08-002",
+      "project_id": "P08",
+      "title": "Kritik E2E ve cihaz performans kapılarını çalıştır",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 5,
+        "max": 8
+      },
+      "depends_on": [
+        "P04-006",
+        "P05-005",
+        "P06-005",
+        "P07-006"
+      ],
+      "deliverable": "Uçtan uca sonuç raporu",
+      "acceptance_criteria": [
+        "Tarih→seçim→kaynak, üyelik/favori ve admin→yayın akışı geçer.",
+        "Yavaş ağ, WebGL fallback ve hata durumları kapsanır."
+      ],
+      "verification": "Aynı sabit release ile gerçek staging uçtan uca test."
+    },
+    {
+      "id": "P08-003",
+      "project_id": "P08",
+      "title": "Beş kullanıcıyla kullanım denemesi ve düzeltmeler",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 8
+      },
+      "depends_on": [
+        "P08-002"
+      ],
+      "deliverable": "Kullanılabilirlik bulguları",
+      "acceptance_criteria": [
+        "En az 4/5 kişi ana görevi 30 saniyede tamamlar hedefi ölçülür.",
+        "Kritik yanlış tarih/belirsizlik yorumlamaları düzeltilir."
+      ],
+      "verification": "Görev süreleri ve gözlemler kaydedilir; henüz test yapılmış gibi raporlanmaz."
+    },
+    {
+      "id": "P08-004",
+      "project_id": "P08",
+      "title": "Restore, alarm ve maliyet kontrollerini doğrula",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 4,
+        "max": 7
+      },
+      "depends_on": [
+        "P07-005",
+        "P01-005"
+      ],
+      "deliverable": "Runbook ve restore raporu",
+      "acceptance_criteria": [
+        "DB+asset birlikte geri yükleme denenir.",
+        "Maliyet ve hata eşikleri alıcı/kanalla yapılandırılır."
+      ],
+      "verification": "Staging restore ve kasıtlı başarısız import alarmı."
+    },
+    {
+      "id": "P08-005",
+      "project_id": "P08",
+      "title": "Kapalı betayı yayınla ve kapsamı belgeleyerek izle",
+      "status": "todo",
+      "priority": "P1",
+      "phase": "web-beta",
+      "estimate_hours": {
+        "min": 3,
+        "max": 5
+      },
+      "depends_on": [
+        "P08-001",
+        "P08-003",
+        "P08-004"
+      ],
+      "deliverable": "Beta sürümü ve veri kapsamı",
+      "acceptance_criteria": [
+        "Bilinen kritik güvenlik açığı yok; kaynak/izin ve geri alma koşulları sağlanır.",
+        "Beta içerik kapsamı ve data_as_of kullanıcıya gösterilir."
+      ],
+      "verification": "Yayınlanan build/release kimliği ve canlı temel akış doğrulaması."
+    },
+    {
+      "id": "P08-006",
+      "project_id": "P08",
+      "title": "Mobil harita ve kimlik uyumluluk denemesi",
+      "status": "todo",
+      "priority": "P2",
+      "phase": "mobile-follow-up",
+      "estimate_hours": {
+        "min": 8,
+        "max": 16
+      },
+      "depends_on": [
+        "P08-005"
+      ],
+      "deliverable": "Mobil teknik karar ve örnek istemci",
+      "acceptance_criteria": [
+        "Aynı API/hesapla native harita ve code+PKCE akışı denenir.",
+        "Offline haklar ve boyut değerlendirilir; tam uygulama tamamlandı sayılmaz."
+      ],
+      "verification": "En az bir Android ve bir iOS hedefinde teknik uyumluluk; mobil fazda yapılır."
+    }
+  ]
+}

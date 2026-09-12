@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+dist/
+coverage/
+__pycache__/
+*.pyc
+data/raw/
+data/derived/
+*.pmtiles
+*.mbtiles
+*.gpkg
+.github-sync-state.json
+.DS_Store

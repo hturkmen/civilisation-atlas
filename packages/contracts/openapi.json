@@ -1,0 +1,3314 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Civilisation Atlas API",
+    "version": "0.1.0-design",
+    "description": "Design contract, not a deployed service. Historical year API uses positive display year + BCE/CE; internal temporal extents use astronomical integers. Privacy, draft lifecycle and database policies are implementation gates."
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/api/v1/meta": {
+      "get": {
+        "operationId": "getMeta",
+        "summary": "Read date bounds and active release",
+        "description": "",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Meta"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/features": {
+      "get": {
+        "operationId": "getFeatures",
+        "summary": "Read bounded historical map features",
+        "description": "Only published revisions. No silent truncation. Reject/refine if response exceeds configured byte or feature budget. All responses bound to requested release.",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Display year, positive. Validate against /meta, never use negative BCE input."
+          },
+          {
+            "in": "query",
+            "name": "era",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BCE",
+                "CE"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "bbox",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "west,south,east,north in EPSG:4326; west>east means crossing antimeridian. Validate numeric range."
+          },
+          {
+            "in": "query",
+            "name": "zoom",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 18
+            }
+          },
+          {
+            "in": "query",
+            "name": "layers",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "control",
+                  "claim",
+                  "culture",
+                  "settlement"
+                ]
+              },
+              "minItems": 1
+            },
+            "style": "form",
+            "explode": false
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tr",
+                "en"
+              ],
+              "default": "tr"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureCollection"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/entities/{entityId}": {
+      "get": {
+        "operationId": "getEntity",
+        "summary": "Read date-specific entity details",
+        "description": "",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "entityId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Display year, positive. Validate against /meta, never use negative BCE input."
+          },
+          {
+            "in": "query",
+            "name": "era",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BCE",
+                "CE"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tr",
+                "en"
+              ],
+              "default": "tr"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityDetail"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/sources/{sourceId}": {
+      "get": {
+        "operationId": "getSource",
+        "summary": "Read public bibliographic source",
+        "description": "",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "sourceId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Source"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/search": {
+      "get": {
+        "operationId": "searchEntities",
+        "summary": "Search names and aliases",
+        "description": "year and era must be provided together or both omitted. Returns alias/time context.",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 120
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "era",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BCE",
+                "CE"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tr",
+                "en"
+              ],
+              "default": "tr"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "releaseId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "entityId": {
+                            "type": "string",
+                            "format": "uuid"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "extent": {
+                            "$ref": "#/components/schemas/TemporalExtent"
+                          }
+                        },
+                        "required": [
+                          "entityId",
+                          "label",
+                          "extent"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "maxItems": 50
+                    }
+                  },
+                  "required": [
+                    "releaseId",
+                    "results"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/coverage": {
+      "get": {
+        "operationId": "getCoverage",
+        "summary": "Read coverage, not historical absence",
+        "description": "",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Display year, positive. Validate against /meta, never use negative BCE input."
+          },
+          {
+            "in": "query",
+            "name": "era",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BCE",
+                "CE"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "regionId",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "releaseId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "cells": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/CoverageCell"
+                      }
+                    }
+                  },
+                  "required": [
+                    "releaseId",
+                    "cells"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/perspectives": {
+      "get": {
+        "operationId": "listPerspectives",
+        "summary": "List sourced viewpoints for a date",
+        "description": "",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Display year, positive. Validate against /meta, never use negative BCE input."
+          },
+          {
+            "in": "query",
+            "name": "era",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BCE",
+                "CE"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tr",
+                "en"
+              ],
+              "default": "tr"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "releaseId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Perspective"
+                      }
+                    },
+                    "coverageNote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "releaseId",
+                    "items",
+                    "coverageNote"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{releaseId}/perspectives/{perspectiveId}": {
+      "get": {
+        "operationId": "getPerspective",
+        "summary": "Read artifact and viewpoint provenance",
+        "description": "",
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "perspectiveId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Perspective"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "ETag matched; no response body"
+          }
+        }
+      }
+    },
+    "/api/v1/me": {
+      "get": {
+        "operationId": "getMe",
+        "summary": "Read own profile",
+        "description": "",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "eraseMe",
+        "summary": "Request coordinated account erasure",
+        "description": "Requires recent reauthentication. Provider and app erasure are coordinated and retryable.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reason": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/bookmarks": {
+      "get": {
+        "operationId": "listBookmarks",
+        "summary": "List own bookmarks",
+        "description": "",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Bookmark"
+                      },
+                      "maxItems": 100
+                    },
+                    "nextCursor": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createBookmark",
+        "summary": "Save own view state",
+        "description": "",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookmarkInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bookmark"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/bookmarks/{bookmarkId}": {
+      "delete": {
+        "operationId": "deleteBookmark",
+        "summary": "Delete own bookmark",
+        "description": "Ownership from verified session. Repeated deletion is idempotent; no cross-owner existence disclosure.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "bookmarkId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success; no response body"
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/corrections": {
+      "post": {
+        "operationId": "submitCorrection",
+        "summary": "Submit moderated correction",
+        "description": "Not automatically published. Rate and size limited. Source URL is stored, not blindly fetched.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CorrectionInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reportId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "state": {
+                      "type": "string",
+                      "const": "pending_review"
+                    }
+                  },
+                  "required": [
+                    "reportId",
+                    "state"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users": {
+      "get": {
+        "operationId": "listAdminUsers",
+        "summary": "List minimum user management fields",
+        "description": "Admin role only. Does not return private bookmarks. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/User"
+                      },
+                      "maxItems": 100
+                    },
+                    "nextCursor": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users/{subject}/role": {
+      "patch": {
+        "operationId": "changeRole",
+        "summary": "Grant or revoke an application role",
+        "description": "Admin only, recent reauthentication. Cannot remove the last active admin. Role not read from profile metadata. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "member",
+                      "editor",
+                      "reviewer",
+                      "admin"
+                    ]
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "grant",
+                      "revoke"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 1000
+                  }
+                },
+                "required": [
+                  "role",
+                  "action",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users/{subject}/status": {
+      "patch": {
+        "operationId": "changeUserStatus",
+        "summary": "Suspend or restore account access",
+        "description": "Admin only; immediate permission revocation and audit. Last active admin safety applies. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "active",
+                      "suspended"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 1000
+                  }
+                },
+                "required": [
+                  "status",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/drafts": {
+      "post": {
+        "operationId": "createDraft",
+        "summary": "Create a typed editorial revision",
+        "description": "Editor capability required. UUIDs are client-generated; uniqueness, reference permissions and full type-specific schemas checked. This draft v0.1 contract will be refined before implementation. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient. Editing creates a successor revision via parentRevisionId and If-Match; published revisions are never mutated.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DraftInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DraftResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "If-Match",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Required with parentRevisionId; previous draft content hash. Stale hash returns 412."
+          }
+        ]
+      },
+      "get": {
+        "operationId": "listDrafts",
+        "summary": "List typed editorial drafts",
+        "description": "Editorial role and verified MFA. Scope records to permitted capabilities. Private,no-store.",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "kind",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "entity",
+                "assertion",
+                "geometry",
+                "source",
+                "perspective"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "draft",
+                "in_review",
+                "approved",
+                "rejected"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DraftResult"
+                      },
+                      "maxItems": 100
+                    },
+                    "nextCursor": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/drafts/{draftId}/reviews": {
+      "post": {
+        "operationId": "reviewDraft",
+        "summary": "Review an exact revision/hash",
+        "description": "Reviewer capability; author cannot claim independent review. Changing content invalidates approval. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "draftId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DraftResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/imports": {
+      "post": {
+        "operationId": "createImport",
+        "summary": "Start allowlisted source import",
+        "description": "Editor capability; registered source adapter only, no arbitrary fetch URL. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ImportInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/releases": {
+      "post": {
+        "operationId": "buildRelease",
+        "summary": "Build an immutable release candidate",
+        "description": "Admin capability; validates review/rights/geometry and strips private fields. Does not activate. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 200
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReleaseInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "listReleases",
+        "summary": "List permitted release candidates and history",
+        "description": "Admin capability and verified MFA; private,no-store.",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "format": "uuid"
+                          },
+                          "state": {
+                            "type": "string",
+                            "enum": [
+                              "building",
+                              "validated",
+                              "active",
+                              "withdrawn"
+                            ]
+                          },
+                          "dataAsOf": {
+                            "type": "string",
+                            "format": "date"
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "state",
+                          "dataAsOf",
+                          "createdAt"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "maxItems": 100
+                    },
+                    "nextCursor": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/jobs/{jobId}": {
+      "get": {
+        "operationId": "getJob",
+        "summary": "Read permitted job status",
+        "description": "Role scoped to job type and visibility; sanitized failure summary. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "jobId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/releases/{releaseId}/activate": {
+      "post": {
+        "operationId": "activateRelease",
+        "summary": "Atomically activate a validated release",
+        "description": "Admin, reauthentication, CAS, rights recheck. Previous complete release preserved on failure. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "header",
+            "name": "If-Match",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Expected active_release version; mismatch returns 412."
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reason": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 2000
+                  }
+                },
+                "required": [
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "activeReleaseId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "version": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "activeReleaseId",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/releases/{releaseId}/withdraw": {
+      "post": {
+        "operationId": "withdrawRelease",
+        "summary": "Withdraw release and revoke serving",
+        "description": "Admin. If currently active, replacementReleaseId is required and must refer to a validated allowed release. Restrict old API/asset routes and invalidate caches. Previously downloaded public content cannot be recalled. Requires server-side role enforcement and verified MFA. See security matrix; authentication alone is insufficient.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "releaseId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "header",
+            "name": "If-Match",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Expected active_release version; mismatch returns 412."
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reason": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 2000
+                  },
+                  "replacementReleaseId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/drafts/{draftId}": {
+      "get": {
+        "operationId": "getDraft",
+        "summary": "Read an exact editorial draft",
+        "description": "Editorial role and verified MFA. Scope records to permitted capabilities. Private,no-store.",
+        "security": [
+          {
+            "sessionCookie": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "draftId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DraftDetail"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/drafts/{draftId}/submit": {
+      "post": {
+        "operationId": "submitDraft",
+        "summary": "Submit an exact draft for review",
+        "description": "Author/editor capability and MFA; revision/hash must match. Source rights and required evidence validated before queueing.",
+        "security": [
+          {
+            "sessionCookie": [],
+            "csrfHeader": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "draftId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "revisionId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "contentHash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "revisionId",
+                  "contentHash"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DraftResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Problem; 400,401,403,404,409,410,412,422,429,500 as applicable. 429 includes Retry-After.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Problem": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "uri-reference"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "code": {
+            "type": "string"
+          },
+          "requestId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "DisplayYear": {
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "era": {
+            "type": "string",
+            "enum": [
+              "BCE",
+              "CE"
+            ]
+          }
+        },
+        "required": [
+          "year",
+          "era"
+        ],
+        "additionalProperties": false
+      },
+      "TemporalExtent": {
+        "type": "object",
+        "properties": {
+          "startEarliest": {
+            "type": "integer"
+          },
+          "startLatest": {
+            "type": "integer"
+          },
+          "endEarliestExclusive": {
+            "type": "integer"
+          },
+          "endLatestExclusive": {
+            "type": "integer"
+          },
+          "originalExpression": {
+            "type": "string"
+          },
+          "calendarSystem": {
+            "type": "string"
+          },
+          "precision": {
+            "type": "string",
+            "enum": [
+              "year",
+              "month",
+              "day",
+              "century",
+              "approximate"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "startEarliest",
+          "startLatest",
+          "endEarliestExclusive",
+          "endLatestExclusive",
+          "originalExpression",
+          "precision"
+        ],
+        "additionalProperties": false
+      },
+      "Geometry": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "Point"
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "required": [
+              "type",
+              "coordinates"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "MultiPolygon"
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "minItems": 4
+                  },
+                  "minItems": 1
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "type",
+              "coordinates"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "Source": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "accessedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "licenseName": {
+            "type": "string"
+          },
+          "licenseVersion": {
+            "type": "string"
+          },
+          "licenseUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "attribution": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "revisionId",
+          "title",
+          "accessedAt",
+          "licenseName",
+          "attribution"
+        ],
+        "additionalProperties": false
+      },
+      "Evidence": {
+        "type": "object",
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "sourceRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "contradicts",
+              "context"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sourceId",
+          "sourceRevisionId",
+          "locator",
+          "relation"
+        ],
+        "additionalProperties": false
+      },
+      "Name": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "locale": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "contemporary",
+              "local",
+              "alternative",
+              "later_label"
+            ]
+          },
+          "extent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "text",
+          "locale",
+          "kind",
+          "extent",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "Assertion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "predicate": {
+            "type": "string"
+          },
+          "value": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": "number"
+                  },
+                  "max": {
+                    "type": "number"
+                  },
+                  "unit": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "min",
+                  "max",
+                  "unit"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "locale": {
+            "type": "string"
+          },
+          "extent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "editorialClass": {
+            "type": "string",
+            "enum": [
+              "documented",
+              "scholarly_reconstruction",
+              "approximate",
+              "disputed"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "revisionId",
+          "predicate",
+          "value",
+          "locale",
+          "extent",
+          "editorialClass",
+          "rationale",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "EntityDetail": {
+        "type": "object",
+        "properties": {
+          "releaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "entityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "polity",
+              "civilisation",
+              "culture",
+              "settlement",
+              "region"
+            ]
+          },
+          "requestedDate": {
+            "$ref": "#/components/schemas/DisplayYear"
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Name"
+            }
+          },
+          "assertions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Assertion"
+            }
+          },
+          "coverageNote": {
+            "type": "string"
+          },
+          "temporalState": {
+            "type": "string",
+            "enum": [
+              "certain",
+              "possible",
+              "no_published_record"
+            ]
+          }
+        },
+        "required": [
+          "releaseId",
+          "entityId",
+          "revisionId",
+          "kind",
+          "requestedDate",
+          "names",
+          "assertions",
+          "coverageNote",
+          "temporalState"
+        ],
+        "additionalProperties": false
+      },
+      "Feature": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Feature"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "properties": {
+            "type": "object",
+            "properties": {
+              "releaseId": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "entityId": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "entityRevisionId": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "geometryRevisionId": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "label": {
+                "type": "string"
+              },
+              "layer": {
+                "type": "string",
+                "enum": [
+                  "control",
+                  "claim",
+                  "culture",
+                  "settlement"
+                ]
+              },
+              "extent": {
+                "$ref": "#/components/schemas/TemporalExtent"
+              },
+              "temporalState": {
+                "type": "string",
+                "enum": [
+                  "certain",
+                  "possible"
+                ]
+              },
+              "editorialClass": {
+                "type": "string",
+                "enum": [
+                  "documented",
+                  "scholarly_reconstruction",
+                  "approximate",
+                  "disputed"
+                ]
+              },
+              "interpretationId": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Evidence"
+                },
+                "minItems": 1
+              },
+              "qualityNote": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "releaseId",
+              "entityId",
+              "entityRevisionId",
+              "geometryRevisionId",
+              "label",
+              "layer",
+              "extent",
+              "temporalState",
+              "editorialClass",
+              "evidence",
+              "qualityNote"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "type",
+          "id",
+          "geometry",
+          "properties"
+        ],
+        "additionalProperties": false
+      },
+      "FeatureCollection": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "FeatureCollection"
+          },
+          "releaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "requestedDate": {
+            "$ref": "#/components/schemas/DisplayYear"
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Feature"
+            },
+            "maxItems": 2000
+          },
+          "dataAsOf": {
+            "type": "string",
+            "format": "date"
+          },
+          "coverageNote": {
+            "type": "string"
+          },
+          "truncated": {
+            "type": "boolean",
+            "const": false
+          }
+        },
+        "required": [
+          "type",
+          "releaseId",
+          "requestedDate",
+          "features",
+          "dataAsOf",
+          "coverageNote",
+          "truncated"
+        ],
+        "additionalProperties": false
+      },
+      "CoverageCell": {
+        "type": "object",
+        "properties": {
+          "regionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "extent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "layer": {
+            "type": "string",
+            "enum": [
+              "control",
+              "claim",
+              "culture",
+              "settlement",
+              "perspective"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "unresearched",
+              "under_review",
+              "limited",
+              "reviewed_no_usable_evidence"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "regionId",
+          "extent",
+          "layer",
+          "status",
+          "note"
+        ],
+        "additionalProperties": false
+      },
+      "Perspective": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "releaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "observerLabel": {
+            "type": "string"
+          },
+          "observerEntityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "knowledgeExtent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "artifactExtent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "artifactKind": {
+            "type": "string",
+            "enum": [
+              "original",
+              "later_copy",
+              "modern_reconstruction"
+            ]
+          },
+          "renderMode": {
+            "type": "string",
+            "enum": [
+              "image_viewer",
+              "georeferenced_overlay"
+            ]
+          },
+          "assetUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "georeferenceNote": {
+            "type": "string"
+          },
+          "interpretationNote": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "revisionId",
+          "releaseId",
+          "observerLabel",
+          "knowledgeExtent",
+          "artifactExtent",
+          "artifactKind",
+          "renderMode",
+          "assetUrl",
+          "interpretationNote",
+          "attribution",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "ViewState": {
+        "type": "object",
+        "properties": {
+          "releaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "$ref": "#/components/schemas/DisplayYear"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "historical_world",
+              "known_world"
+            ]
+          },
+          "perspectiveId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "entityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "longitude": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          },
+          "latitude": {
+            "type": "number",
+            "minimum": -85.051129,
+            "maximum": 85.051129
+          },
+          "zoom": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 18
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "tr",
+              "en"
+            ]
+          }
+        },
+        "required": [
+          "releaseId",
+          "date",
+          "mode",
+          "longitude",
+          "latitude",
+          "zoom",
+          "locale"
+        ],
+        "additionalProperties": false
+      },
+      "BookmarkInput": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "view": {
+            "$ref": "#/components/schemas/ViewState"
+          }
+        },
+        "required": [
+          "title",
+          "view"
+        ],
+        "additionalProperties": false
+      },
+      "Bookmark": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "view": {
+            "$ref": "#/components/schemas/ViewState"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "view",
+          "createdAt"
+        ],
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "tr",
+              "en"
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "suspended",
+              "erasure_pending"
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "member",
+                "editor",
+                "reviewer",
+                "admin"
+              ]
+            }
+          }
+        },
+        "required": [
+          "subject",
+          "displayName",
+          "locale",
+          "createdAt",
+          "status",
+          "roles"
+        ],
+        "additionalProperties": false
+      },
+      "CorrectionInput": {
+        "type": "object",
+        "properties": {
+          "targetRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 4000
+          },
+          "sourceUrl": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "targetRevisionId",
+          "body"
+        ],
+        "additionalProperties": false
+      },
+      "Job": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "running",
+              "succeeded",
+              "failed"
+            ]
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "state",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "minDate": {
+            "$ref": "#/components/schemas/DisplayYear"
+          },
+          "maxDate": {
+            "$ref": "#/components/schemas/DisplayYear"
+          },
+          "activeReleaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dataAsOf": {
+            "type": "string",
+            "format": "date"
+          },
+          "releaseSchemaVersion": {
+            "type": "string"
+          },
+          "features": {
+            "type": "object",
+            "properties": {
+              "knownWorld": {
+                "type": "boolean"
+              },
+              "bookmarks": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "knownWorld",
+              "bookmarks"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "minDate",
+          "maxDate",
+          "activeReleaseId",
+          "dataAsOf",
+          "releaseSchemaVersion",
+          "features"
+        ],
+        "additionalProperties": false
+      },
+      "ReleaseInput": {
+        "type": "object",
+        "properties": {
+          "entityRevisionIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "geometryRevisionIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "sourceRevisionIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "perspectiveRevisionIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "dataAsOf": {
+            "type": "string",
+            "format": "date"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "entityRevisionIds",
+          "geometryRevisionIds",
+          "sourceRevisionIds",
+          "perspectiveRevisionIds",
+          "dataAsOf",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "ReviewInput": {
+        "type": "object",
+        "properties": {
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "contentHash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "accept",
+              "reject"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 4000
+          }
+        },
+        "required": [
+          "revisionId",
+          "contentHash",
+          "decision",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "ImportInput": {
+        "type": "object",
+        "properties": {
+          "sourceRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "registeredAdapter": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]{1,80}$"
+          },
+          "assetId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "sourceRevisionId",
+          "registeredAdapter",
+          "assetId"
+        ],
+        "additionalProperties": false
+      },
+      "GeometryDraft": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "geometry"
+          },
+          "entityRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "layer": {
+            "type": "string",
+            "enum": [
+              "control",
+              "claim",
+              "culture",
+              "settlement"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "extent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "minItems": 1
+          },
+          "qualityNote": {
+            "type": "string"
+          },
+          "parentRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "kind",
+          "entityRevisionId",
+          "layer",
+          "geometry",
+          "extent",
+          "evidence",
+          "qualityNote"
+        ],
+        "additionalProperties": false
+      },
+      "EntityDraft": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "entity"
+          },
+          "entityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "entityKind": {
+            "type": "string",
+            "enum": [
+              "polity",
+              "civilisation",
+              "culture",
+              "settlement",
+              "region"
+            ]
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Name"
+            },
+            "minItems": 1
+          },
+          "parentRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "kind",
+          "entityId",
+          "entityKind",
+          "names"
+        ],
+        "additionalProperties": false
+      },
+      "AssertionDraft": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "assertion"
+          },
+          "entityRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "assertion": {
+            "$ref": "#/components/schemas/Assertion"
+          },
+          "parentRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "kind",
+          "entityRevisionId",
+          "assertion"
+        ],
+        "additionalProperties": false
+      },
+      "SourceDraft": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "source"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          },
+          "rightsStatus": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "approved",
+              "rejected"
+            ]
+          },
+          "rightsNote": {
+            "type": "string"
+          },
+          "parentRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "kind",
+          "source",
+          "rightsStatus",
+          "rightsNote"
+        ],
+        "additionalProperties": false
+      },
+      "PerspectiveDraft": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "perspective"
+          },
+          "perspective": {
+            "$ref": "#/components/schemas/Perspective"
+          },
+          "rightsStatus": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "approved",
+              "rejected"
+            ]
+          },
+          "parentRevisionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "kind",
+          "perspective",
+          "rightsStatus"
+        ],
+        "additionalProperties": false
+      },
+      "DraftInput": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/GeometryDraft"
+          },
+          {
+            "$ref": "#/components/schemas/EntityDraft"
+          },
+          {
+            "$ref": "#/components/schemas/AssertionDraft"
+          },
+          {
+            "$ref": "#/components/schemas/SourceDraft"
+          },
+          {
+            "$ref": "#/components/schemas/PerspectiveDraft"
+          }
+        ]
+      },
+      "DraftResult": {
+        "type": "object",
+        "properties": {
+          "draftId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "contentHash": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "in_review",
+              "approved",
+              "rejected"
+            ]
+          }
+        },
+        "required": [
+          "draftId",
+          "revisionId",
+          "contentHash",
+          "state"
+        ],
+        "additionalProperties": false
+      },
+      "DraftDetail": {
+        "type": "object",
+        "properties": {
+          "draftId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "contentHash": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "in_review",
+              "approved",
+              "rejected"
+            ]
+          },
+          "payload": {
+            "$ref": "#/components/schemas/DraftInput"
+          }
+        },
+        "required": [
+          "draftId",
+          "revisionId",
+          "contentHash",
+          "state",
+          "payload"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "sessionCookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "atlas_session",
+        "description": "Design name; server-validated provider-backed session, Secure/HttpOnly."
+      },
+      "csrfHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-CSRF-Token"
+      },
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Provider-backed native/API session; signature/issuer/audience/expiry and role enforced."
+      }
+    }
+  }
+}

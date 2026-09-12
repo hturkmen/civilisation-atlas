@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-09-12",
+  "status": "candidate_registry_only_no_data_imported",
+  "sources": [
+    {
+      "id": "ohm",
+      "name": "OpenHistoricalMap",
+      "url": "https://www.openhistoricalmap.org/copyright",
+      "use": "Historical feature candidate",
+      "licence_observed": "CC0 except feature-level exceptions, including CC BY and CC BY-SA",
+      "record_review_required": true
+    },
+    {
+      "id": "pleiades",
+      "name": "Pleiades",
+      "url": "https://pleiades.stoa.org/",
+      "use": "Ancient place IDs, names and locations",
+      "licence_observed": "CC BY homepage; exact export licence version must be checked",
+      "record_review_required": true
+    },
+    {
+      "id": "seshat",
+      "name": "Seshat",
+      "url": "https://seshat-db.com/terms/current/",
+      "use": "Public polity/attribute evidence",
+      "licence_observed": "CC BY-SA 4.0 Public Data; account/terms for downloads; no Private Data republication",
+      "record_review_required": true
+    },
+    {
+      "id": "natural-earth",
+      "name": "Natural Earth",
+      "url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "use": "Geographic reference, not historical political boundaries",
+      "licence_observed": "Public domain",
+      "record_review_required": true
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "use": "Structured IDs and reference discovery",
+      "licence_observed": "CC0 structured main/property/lexeme data; other content differs",
+      "record_review_required": true
+    }
+  ]
+}

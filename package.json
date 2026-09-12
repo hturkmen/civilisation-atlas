@@ -1,0 +1,10 @@
+{
+  "name": "civilisation-atlas-planning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Planning package and chronology foundation; not a running atlas application.",
+  "scripts": {
+    "test": "node --test packages/domain/test/*.test.mjs"
+  }
+}
