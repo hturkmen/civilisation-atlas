@@ -4,7 +4,7 @@
 
 Repo: https://github.com/hturkmen/civilisation-atlas · Ana dal: main · Görünürlük: public.
 
-Repo sahibi tarafından oluşturulup paylaşıldı. Yeni repo açma adımı artık gerekli değil. Plan, başlangıç kodu ve görev kayıtları bu repoda tutulur.
+Repo sahibi tarafından oluşturulup paylaşıldı. Yeni repo açma adımı artık gerekli değil. Plan, başlangıç kodu ve 45 görev kaydı bu repoda tutulur. [Görev dizini](../backlog/github-issues.md), dosya ve issue eşleştirmesini içerir.
 
 ## Kendi bilgisayarında devam et
 

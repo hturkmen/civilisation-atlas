@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "repo_target": "hturkmen/civilisation-atlas",
-  "status_note": "Repository provided by owner: public hturkmen/civilisation-atlas. GitHub issue synchronization is tracked separately. Estimates exclude scaled historical digitisation, licensing waits and independent expert review.",
+  "status_note": "Initial GitHub import complete: 45 tasks, 44 open and 1 closed. Live task status is maintained in GitHub Issues. Estimates exclude historical digitisation, licensing waits and independent expert review.",
   "projects": [
     {
       "id": "P01",
@@ -57,7 +57,7 @@
       "id": "P01-001",
       "project_id": "P01",
       "title": "hturkmen reposunu oluştur ve başlangıç paketini aktar",
-      "status": "todo",
+      "status": "done",
       "priority": "P0",
       "phase": "web-beta",
       "estimate_hours": {
@@ -70,7 +70,11 @@
         "Hesap hturkmen; mevcut public görünürlük kullanıcıya bildirilmiş; mevcut başka dosyalar ezilmez.",
         "Paket ve görev tanımları remote commit üzerinden açılır."
       ],
-      "verification": "Remote ağaç ve commit kimliğini doğrula; mevcut dosya çakışmasında dur."
+      "verification": "Remote ağaç ve commit kimliğini doğrula; mevcut dosya çakışmasında dur.",
+      "github": {
+        "number": 1,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/1"
+      }
     },
     {
       "id": "P01-002",
@@ -91,7 +95,11 @@
         "Uygulama yerelde ve standart Node build ortamında açılır.",
         "Domain ve API katmanları route dosyalarından ayrıdır."
       ],
-      "verification": "Temiz checkout üzerinden kurulum ve production build."
+      "verification": "Temiz checkout üzerinden kurulum ve production build.",
+      "github": {
+        "number": 2,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/2"
+      }
     },
     {
       "id": "P01-003",
@@ -112,7 +120,11 @@
         "Staging production DB erişimi taşımaz.",
         "Client bundle içinde gizli anahtar yoktur."
       ],
-      "verification": "Bundle taraması ve yanlış ortamla başlatma negatif senaryosu."
+      "verification": "Bundle taraması ve yanlış ortamla başlatma negatif senaryosu.",
+      "github": {
+        "number": 3,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/3"
+      }
     },
     {
       "id": "P01-004",
@@ -133,7 +145,11 @@
         "Tip/derleme/domain/contract kontrolleri PR üzerinde çalışır.",
         "Untrusted PR production secret alamaz; izinler sınırlıdır."
       ],
-      "verification": "Hatalı sözleşme ve başarısız testin CI'ı durdurduğunu doğrula."
+      "verification": "Hatalı sözleşme ve başarısız testin CI'ı durdurduğunu doğrula.",
+      "github": {
+        "number": 4,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/4"
+      }
     },
     {
       "id": "P01-005",
@@ -154,7 +170,11 @@
         "Hosting/DB/auth bölgesi, paket fiyatı ve limitleri resmi kaynaklarla kaydedilir.",
         "Ücretli kaynak açılmadan somut maliyet ve geri dönüş planı kullanıcıya sunulur."
       ],
-      "verification": "Uydurma fiyat/sürüm bulunmadığını ve ortak servis sayısının gereksiz artmadığını incele."
+      "verification": "Uydurma fiyat/sürüm bulunmadığını ve ortak servis sayısının gereksiz artmadığını incele.",
+      "github": {
+        "number": 5,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/5"
+      }
     },
     {
       "id": "P02-001",
@@ -173,7 +193,11 @@
         "Kaynak, veri sürümü ve lisans istisnası birbirinden ayrılır.",
         "Hak durumu bilinmeyen veri yayınlanamaz."
       ],
-      "verification": "CC0 kaynak içindeki farklı lisanslı nesne örneğini değerlendir."
+      "verification": "CC0 kaynak içindeki farklı lisanslı nesne örneğini değerlendir.",
+      "github": {
+        "number": 6,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/6"
+      }
     },
     {
       "id": "P02-002",
@@ -194,7 +218,11 @@
         "Her örnekte kaynak locator, zaman belirsizliği ve geometri dayanağı bulunur.",
         "Bir varlık/geometri için harcanan süre ve başarısızlık nedeni ölçülür."
       ],
-      "verification": "Tarihsel inceleyen örnekleri değerlendirir; uygun değilse veri stratejisi düzeltilir."
+      "verification": "Tarihsel inceleyen örnekleri değerlendirir; uygun değilse veri stratejisi düzeltilir.",
+      "github": {
+        "number": 7,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/7"
+      }
     },
     {
       "id": "P02-003",
@@ -216,7 +244,11 @@
         "Checksum+adapter sürümü tekrarında duplicate oluşmaz.",
         "Format, byte, vertex ve dış ağ sınırları uygulanır."
       ],
-      "verification": "Aynı dosyayı iki kez; bozuk/çok büyük dosyayı bir kez çalıştır."
+      "verification": "Aynı dosyayı iki kez; bozuk/çok büyük dosyayı bir kez çalıştır.",
+      "github": {
+        "number": 8,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/8"
+      }
     },
     {
       "id": "P02-004",
@@ -238,7 +270,11 @@
         "Kaynak linki iddia/geometri/perspektif revizyonuna bağlıdır.",
         "Çelişen kaynak ve editör çıkarımı destekleyici kaynaklardan ayrılır."
       ],
-      "verification": "Genel kaynakçası olup iddia dayanağı eksik taslağın yayınını engelle."
+      "verification": "Genel kaynakçası olup iddia dayanağı eksik taslağın yayınını engelle.",
+      "github": {
+        "number": 9,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/9"
+      }
     },
     {
       "id": "P02-005",
@@ -260,7 +296,11 @@
         "Henüz taranmamış alan ile incelenip kaynak bulunamayan alan ayrıdır.",
         "Kapsama yokluğu uygarlık/insan yokluğu şeklinde sunulmaz."
       ],
-      "verification": "Bir dolu, bir boş ve bir araştırılmamış hücreyi API/UI üzerinden kontrol et."
+      "verification": "Bir dolu, bir boş ve bir araştırılmamış hücreyi API/UI üzerinden kontrol et.",
+      "github": {
+        "number": 10,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/10"
+      }
     },
     {
       "id": "P02-006",
@@ -281,7 +321,11 @@
         "20–30 varlık ve iki perspektif hedefi kanıt durumuyla yeniden boyutlanır.",
         "Gerçek sayısallaştırma ve bağımsız tarihsel inceleme eforu ayrı hesaplanır."
       ],
-      "verification": "Sayılara ulaşmak için veri uydurulmadığını incele; bu görev koleksiyonun tamamını üretmiş sayılmaz."
+      "verification": "Sayılara ulaşmak için veri uydurulmadığını incele; bu görev koleksiyonun tamamını üretmiş sayılmaz.",
+      "github": {
+        "number": 11,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/11"
+      }
     },
     {
       "id": "P03-001",
@@ -300,7 +344,11 @@
         "MÖ 1 → MS 1 geçişi kullanıcı 0 yılı olmadan çalışır.",
         "Exact/possible/certain interval ve ürün sınırı ayrıdır."
       ],
-      "verification": "BCE/CE dönüşümleri, boş certain aralığı ve exclusive bitiş vakaları; temel kısmı bu pakette uygulanmıştır."
+      "verification": "BCE/CE dönüşümleri, boş certain aralığı ve exclusive bitiş vakaları; temel kısmı bu pakette uygulanmıştır.",
+      "github": {
+        "number": 12,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/12"
+      }
     },
     {
       "id": "P03-002",
@@ -322,7 +370,11 @@
         "İddia/geometri/kaynak revizyonları referans bütünlüğü taşır.",
         "Zaman sıralaması, immutable yayın ve FK kısıtları DB'de korunur."
       ],
-      "verification": "Staging migration, referans ihlali ve yayınlanmış revizyon değiştirme negatif testi."
+      "verification": "Staging migration, referans ihlali ve yayınlanmış revizyon değiştirme negatif testi.",
+      "github": {
+        "number": 13,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/13"
+      }
     },
     {
       "id": "P03-003",
@@ -343,7 +395,11 @@
         "EPSG:4326, MultiPolygon/delik/antimeridyen desteklenir.",
         "Onarım özgün geometriyi silmez; label point alanla uyumludur."
       ],
-      "verification": "Dateline, delik, ada ve geçersiz halka fixture'ları; ST_IsValid tek başına tarihsel kanıt sayılmaz."
+      "verification": "Dateline, delik, ada ve geçersiz halka fixture'ları; ST_IsValid tek başına tarihsel kanıt sayılmaz.",
+      "github": {
+        "number": 14,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/14"
+      }
     },
     {
       "id": "P03-004",
@@ -365,7 +421,11 @@
         "Yanıt aynı release_id'ye bağlı; yalnız yayınlanmış kayıtlar gelir.",
         "Payload/feature limitinde sessiz eksiltme yapılmaz."
       ],
-      "verification": "Cross-date, dateline bbox, büyük sorgu ve draft ID erişim testleri."
+      "verification": "Cross-date, dateline bbox, büyük sorgu ve draft ID erişim testleri.",
+      "github": {
+        "number": 15,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/15"
+      }
     },
     {
       "id": "P03-005",
@@ -387,7 +447,11 @@
         "Alias araması bulunur; o yıla ait ad/iddia gösterilir.",
         "Detay, haritanın sabitlenmiş yayın revizyonunu kullanır."
       ],
-      "verification": "Ad değişimi, başka dönem hükümdarı ve çelişen kaynak vakaları."
+      "verification": "Ad değişimi, başka dönem hükümdarı ve çelişen kaynak vakaları.",
+      "github": {
+        "number": 16,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/16"
+      }
     },
     {
       "id": "P03-006",
@@ -409,7 +473,11 @@
         "Request/response/authorization koşulları gerçek servisle tutarlı.",
         "İstemcinin bilinmeyen enum veya geri çekilmiş yayını ele alma davranışı vardır."
       ],
-      "verification": "Spec validator ve contract test; bu paketteki taslak implementasyon olarak sayılmaz."
+      "verification": "Spec validator ve contract test; bu paketteki taslak implementasyon olarak sayılmaz.",
+      "github": {
+        "number": 17,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/17"
+      }
     },
     {
       "id": "P04-001",
@@ -431,7 +499,11 @@
         "Açılış doğrudan haritaya gelir; modern siyasi etiketler tarih katmanına sızmaz.",
         "Katmanlar ve renkler kararlı feature kimliğine bağlıdır."
       ],
-      "verification": "İki tarih ve üç zoom seviyesinde etiket/katman incelemesi."
+      "verification": "İki tarih ve üç zoom seviyesinde etiket/katman incelemesi.",
+      "github": {
+        "number": 18,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/18"
+      }
     },
     {
       "id": "P04-002",
@@ -453,7 +525,11 @@
         "MÖ/MS ile kesin yıl seçilebilir; önceki/sonraki belgelenmiş değişim bulunur.",
         "Geç dönen yanıt yeni tarih state'ini değiştiremez."
       ],
-      "verification": "Yavaş ağda hızlı tarih değişimi; MÖ 1/MS 1 ve uç tarih vakaları."
+      "verification": "Yavaş ağda hızlı tarih değişimi; MÖ 1/MS 1 ve uç tarih vakaları.",
+      "github": {
+        "number": 19,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/19"
+      }
     },
     {
       "id": "P04-003",
@@ -475,7 +551,11 @@
         "Örtüşen kayıtların aday listesi vardır.",
         "Seçili varlığın başka tarihte kaydı yoksa açıklanır; ölüm/çöküş uydurulmaz."
       ],
-      "verification": "İç içe poligon, kayıtsız tarih ve küçük ada seçim senaryoları."
+      "verification": "İç içe poligon, kayıtsız tarih ve küçük ada seçim senaryoları.",
+      "github": {
+        "number": 20,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/20"
+      }
     },
     {
       "id": "P04-004",
@@ -497,7 +577,11 @@
         "Kullanıcı iddiadan kaynak locator'ına ulaşabilir.",
         "Yaklaşık/tartışmalı veri renk dışında da anlaşılır."
       ],
-      "verification": "Kaynak bulma görevi ve yalnız renksiz görünüm incelemesi."
+      "verification": "Kaynak bulma görevi ve yalnız renksiz görünüm incelemesi.",
+      "github": {
+        "number": 21,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/21"
+      }
     },
     {
       "id": "P04-005",
@@ -519,7 +603,11 @@
         "360 px ve %200 metinde temel akış erişilebilir.",
         "Haritasız sonuç listesi ve klavye odağı doğru çalışır."
       ],
-      "verification": "Gerçek telefon + klavye + WebGL kapalı test; hover zorunluluğu olmamalı."
+      "verification": "Gerçek telefon + klavye + WebGL kapalı test; hover zorunluluğu olmamalı.",
+      "github": {
+        "number": 22,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/22"
+      }
     },
     {
       "id": "P04-006",
@@ -541,7 +629,11 @@
         "Tanımlı cihaz/ağda cold/warm ölçümleri kaydedilir.",
         "Gerekirse vektör tile işi ayrı scope edilir; erken zorunlu kılınmaz."
       ],
-      "verification": "Büyük geometri ve 10 ardışık tarih geçişinde bellek/yanıt boyutu incelemesi."
+      "verification": "Büyük geometri ve 10 ardışık tarih geçişinde bellek/yanıt boyutu incelemesi.",
+      "github": {
+        "number": 23,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/23"
+      }
     },
     {
       "id": "P05-001",
@@ -562,7 +654,11 @@
         "Kayıt/giriş/çıkış/kurtarma sağlayıcının desteklenen akışıyla çalışır.",
         "Süresi dolmuş veya iptal edilmiş oturum kabul edilmez."
       ],
-      "verification": "Yanlış audience/issuer, süre dolumu ve logout sonrası istek."
+      "verification": "Yanlış audience/issuer, süre dolumu ve logout sonrası istek.",
+      "github": {
+        "number": 24,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/24"
+      }
     },
     {
       "id": "P05-002",
@@ -584,7 +680,11 @@
         "Admin/editor/reviewer MFA zorunlu; izinler server'da doğrulanır.",
         "Başka kullanıcı verisine ve yetkisiz role geçiş reddedilir."
       ],
-      "verification": "İki kullanıcı IDOR, sahte role, CSRF ve revoke sonrası erişim testleri."
+      "verification": "İki kullanıcı IDOR, sahte role, CSRF ve revoke sonrası erişim testleri.",
+      "github": {
+        "number": 25,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/25"
+      }
     },
     {
       "id": "P05-003",
@@ -606,7 +706,11 @@
         "Favori sahibi oturumdan alınır; URL'de session/private içerik yoktur.",
         "Eski release bağlantısı sessizce yeni tarihe dönüştürülmez."
       ],
-      "verification": "Başkasının bookmark'ını okuma/silme ve withdrawn release açma."
+      "verification": "Başkasının bookmark'ını okuma/silme ve withdrawn release açma.",
+      "github": {
+        "number": 26,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/26"
+      }
     },
     {
       "id": "P05-004",
@@ -627,7 +731,11 @@
         "Kayıt tarihi, durum ve gereken minimum kullanıcı alanı gösterilir.",
         "Son admin kaldırılmaz; rol değişimi audit'e yazılır."
       ],
-      "verification": "Yetkisiz listeleme, eski oturum ve kendi son adminini kaldırma senaryosu."
+      "verification": "Yetkisiz listeleme, eski oturum ve kendi son adminini kaldırma senaryosu.",
+      "github": {
+        "number": 27,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/27"
+      }
     },
     {
       "id": "P05-005",
@@ -648,7 +756,11 @@
         "Kimlik sağlayıcısı ve app kayıtları koordineli silinir/ayrıştırılır.",
         "Başarısız kısmi silme yeniden denenebilir."
       ],
-      "verification": "İşin yarıda kesilip devam etmesi ve kalan private kayıtların kontrolü."
+      "verification": "İşin yarıda kesilip devam etmesi ve kalan private kayıtların kontrolü.",
+      "github": {
+        "number": 28,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/28"
+      }
     },
     {
       "id": "P06-001",
@@ -670,7 +782,11 @@
         "Observer, knowledge date ve artifact date ayrıdır.",
         "Orijinal/kopya/yeniden kurma açık tiplerdir."
       ],
-      "verification": "Farklı yüzyıldan kopya ve belirsiz gözlemci örneği."
+      "verification": "Farklı yüzyıldan kopya ve belirsiz gözlemci örneği.",
+      "github": {
+        "number": 29,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/29"
+      }
     },
     {
       "id": "P06-002",
@@ -692,7 +808,11 @@
         "İki eser için hak/atıf ve tarih dayanağı doğrulanır.",
         "Kaynak erişilemiyorsa kullanım onaylı sayılmaz."
       ],
-      "verification": "Eser kayıtlarını tarihsel inceleyen ve hak kontrolüyle değerlendir."
+      "verification": "Eser kayıtlarını tarihsel inceleyen ve hak kontrolüyle değerlendir.",
+      "github": {
+        "number": 30,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/30"
+      }
     },
     {
       "id": "P06-003",
@@ -714,7 +834,11 @@
         "Zoom/pan, açıklama ve atıf mobilde çalışır.",
         "Şematik eser gerçek koordinatlara zorlanmaz."
       ],
-      "verification": "Büyük çözünürlüklü görsel ve klavye alternatifleri."
+      "verification": "Büyük çözünürlüklü görsel ve klavye alternatifleri.",
+      "github": {
+        "number": 31,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/31"
+      }
     },
     {
       "id": "P06-004",
@@ -736,7 +860,11 @@
         "Yöntem ve hata notu olmadan overlay yayınlanmaz.",
         "Kanıtsız bilinen-dünya maskesi üretilmez."
       ],
-      "verification": "Bir koordinatlandırılabilir örnek ve uygun olmayan eserin reddi."
+      "verification": "Bir koordinatlandırılabilir örnek ve uygun olmayan eserin reddi.",
+      "github": {
+        "number": 32,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/32"
+      }
     },
     {
       "id": "P06-005",
@@ -758,7 +886,11 @@
         "Seçili yıla uygun bakış açıları ve açıklamalı boş durum var.",
         "En yakın örneğe geçerken yeni tarih açıkça gösterilir."
       ],
-      "verification": "MÖ 4000 boş görünüm ve farklı tarihli eser seçimi."
+      "verification": "MÖ 4000 boş görünüm ve farklı tarihli eser seçimi.",
+      "github": {
+        "number": 33,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/33"
+      }
     },
     {
       "id": "P07-001",
@@ -780,7 +912,11 @@
         "Şema doğrulama ve optimistic concurrency uygulanır.",
         "Kaynak/locator eksikleri form ve server seviyesinde görünür."
       ],
-      "verification": "Eşzamanlı düzenleme, XSS metni ve eksik kaynak kaydı."
+      "verification": "Eşzamanlı düzenleme, XSS metni ve eksik kaynak kaydı.",
+      "github": {
+        "number": 34,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/34"
+      }
     },
     {
       "id": "P07-002",
@@ -801,7 +937,11 @@
         "Onay belirli revizyon/hash'a bağlıdır; sonra değişince düşer.",
         "Kendi düzenlemesini bağımsız inceleme diye işaretleme engellenir."
       ],
-      "verification": "Onaydan sonra kaynak/geometri değişimi ve stale review denemesi."
+      "verification": "Onaydan sonra kaynak/geometri değişimi ve stale review denemesi.",
+      "github": {
+        "number": 35,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/35"
+      }
     },
     {
       "id": "P07-003",
@@ -823,7 +963,11 @@
         "Başarılı/kalan/hatalı satırlar ve retry durumu anlaşılır.",
         "Serbest URL SSRF yolu ve keyfi dosya yürütme bulunmaz."
       ],
-      "verification": "Bozuk dosya, tekrar import ve kısmi hata akışı."
+      "verification": "Bozuk dosya, tekrar import ve kısmi hata akışı.",
+      "github": {
+        "number": 36,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/36"
+      }
     },
     {
       "id": "P07-004",
@@ -846,7 +990,11 @@
         "Tüm içerik tam revision kimliği ve checksum ile sabitlenir.",
         "Kaynak izni/inceleme eksik veya private alan içeren export reddedilir."
       ],
-      "verification": "Build sırasında kaynak geri çekme, eksik asset ve arıza enjeksiyonu."
+      "verification": "Build sırasında kaynak geri çekme, eksik asset ve arıza enjeksiyonu.",
+      "github": {
+        "number": 37,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/37"
+      }
     },
     {
       "id": "P07-005",
@@ -867,7 +1015,11 @@
         "Aktivasyon If-Match/CAS ile; eski sağlam yayın korunur.",
         "Geri çekme eski URL/CDN erişimini de sınırlar ve nedeni gösterir."
       ],
-      "verification": "İki paralel aktivasyon, failed build ve withdrawn object erişimi."
+      "verification": "İki paralel aktivasyon, failed build ve withdrawn object erişimi.",
+      "github": {
+        "number": 38,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/38"
+      }
     },
     {
       "id": "P07-006",
@@ -889,7 +1041,11 @@
         "Her admin endpoint için rol/MFA negatif senaryosu var.",
         "Public API/dosya URL'leri taslak/private kayda erişemez."
       ],
-      "verification": "Gerçek DB politikalarıyla entegrasyon; yalnız mock ile tamamlanmış sayılmaz."
+      "verification": "Gerçek DB politikalarıyla entegrasyon; yalnız mock ile tamamlanmış sayılmaz.",
+      "github": {
+        "number": 39,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/39"
+      }
     },
     {
       "id": "P08-001",
@@ -912,7 +1068,11 @@
         "Hedef koleksiyonun gerçek üretim/inceleme işleri bitmiş olmalı.",
         "Geometri ve önemli iddialarda kaynak/inceleme/izin kapsamı %100."
       ],
-      "verification": "Tarihsel inceleyenle kayıt bazında kabul; uzman çalışma ve sayısallaştırma saatleri bu tahmine dahil değil."
+      "verification": "Tarihsel inceleyenle kayıt bazında kabul; uzman çalışma ve sayısallaştırma saatleri bu tahmine dahil değil.",
+      "github": {
+        "number": 40,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/40"
+      }
     },
     {
       "id": "P08-002",
@@ -936,7 +1096,11 @@
         "Tarih→seçim→kaynak, üyelik/favori ve admin→yayın akışı geçer.",
         "Yavaş ağ, WebGL fallback ve hata durumları kapsanır."
       ],
-      "verification": "Aynı sabit release ile gerçek staging uçtan uca test."
+      "verification": "Aynı sabit release ile gerçek staging uçtan uca test.",
+      "github": {
+        "number": 41,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/41"
+      }
     },
     {
       "id": "P08-003",
@@ -957,7 +1121,11 @@
         "En az 4/5 kişi ana görevi 30 saniyede tamamlar hedefi ölçülür.",
         "Kritik yanlış tarih/belirsizlik yorumlamaları düzeltilir."
       ],
-      "verification": "Görev süreleri ve gözlemler kaydedilir; henüz test yapılmış gibi raporlanmaz."
+      "verification": "Görev süreleri ve gözlemler kaydedilir; henüz test yapılmış gibi raporlanmaz.",
+      "github": {
+        "number": 42,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/42"
+      }
     },
     {
       "id": "P08-004",
@@ -979,7 +1147,11 @@
         "DB+asset birlikte geri yükleme denenir.",
         "Maliyet ve hata eşikleri alıcı/kanalla yapılandırılır."
       ],
-      "verification": "Staging restore ve kasıtlı başarısız import alarmı."
+      "verification": "Staging restore ve kasıtlı başarısız import alarmı.",
+      "github": {
+        "number": 43,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/43"
+      }
     },
     {
       "id": "P08-005",
@@ -1002,7 +1174,11 @@
         "Bilinen kritik güvenlik açığı yok; kaynak/izin ve geri alma koşulları sağlanır.",
         "Beta içerik kapsamı ve data_as_of kullanıcıya gösterilir."
       ],
-      "verification": "Yayınlanan build/release kimliği ve canlı temel akış doğrulaması."
+      "verification": "Yayınlanan build/release kimliği ve canlı temel akış doğrulaması.",
+      "github": {
+        "number": 44,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/44"
+      }
     },
     {
       "id": "P08-006",
@@ -1023,7 +1199,11 @@
         "Aynı API/hesapla native harita ve code+PKCE akışı denenir.",
         "Offline haklar ve boyut değerlendirilir; tam uygulama tamamlandı sayılmaz."
       ],
-      "verification": "En az bir Android ve bir iOS hedefinde teknik uyumluluk; mobil fazda yapılır."
+      "verification": "En az bir Android ve bir iOS hedefinde teknik uyumluluk; mobil fazda yapılır.",
+      "github": {
+        "number": 45,
+        "url": "https://github.com/hturkmen/civilisation-atlas/issues/45"
+      }
     }
   ]
 }

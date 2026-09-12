@@ -6,6 +6,8 @@
 |---|---|---|
 | GitHub hesap kimliği | Doğrulandı | Bağlı kullanıcı hturkmen |
 | Uzak repo erişimi | Doğrulandı | Kullanıcı tarafından oluşturulan public repo; main dalı ve yazma erişimi mevcut |
+| Başlangıç dosyalarının aktarımı | Geçti | İlk içerik commit'indeki 32 dosyanın GitHub blob hash değerleri yerel içerikle birebir eşleşti |
+| GitHub görev kayıtları | Geçti | 45 tekil görev kimliği; 44 açık, 1 tamamlanmış kapalı kayıt |
 | Tarih çekirdeği | 7/7 test geçti | MÖ/MS, exclusive bitiş, belirsizlik ve hatalı girdi |
 | Tarih round-trip | Geçti | MÖ 4000–MS 2026 arası 6.026 yıl |
 | Backlog | Geçti | 8 alt proje, 45 tekil görev; eksik bağımlılık/döngü yok |
@@ -25,6 +27,8 @@ Kontrol sırasında /meta uç noktasını /me ile yanlış eşleştiren doğrula
 - Üretim güvenlik testleri, CDN geri çekme, restore veya yük testi.
 - GitHub Projects panosu ve üretim CI kurulumu.
 
-Dosya ve issue aktarımı ayrıca repo üzerinden doğrulanır.
+İlk içerik commit'i: [b3a73dc](https://github.com/hturkmen/civilisation-atlas/commit/b3a73dcdbf61e836f55b65897023bf037ce03944). Görev kayıtları repository issues API üzerinden yeniden okunarak doğrulandı.
+
+Sonradan eklenen [görev dizini](../backlog/github-issues.md) ve JSON eşleştirmesi ilk aktarımın durumunu belgeler.
 
 Bu sınırlar nedeniyle “site hazır”, “güvenlik tamam”, “veriler doğru” sonucu çıkarılamaz. Dosyalar geliştirmeyi başlatmak için hazırlanmış tasarım ve başlangıç paketidir.

@@ -36,6 +36,6 @@ Haftada 10 saat ayırılırsa yalnız bu efor yaklaşık 19–32 hafta; 20 saat 
 
 ## İş yönetimi
 
-Makine tarafından okunabilir kayıt: [issues.json](../backlog/issues.json). Önerilen pano sütunları: Backlog, Ready, In progress, Review, Blocked, Done. GitHub issue kayıtları repo üzerinden takip edilir; Projects panosu ve milestone yapılandırması henüz yapılmadı. Alt proje dosyaları doğrudan issue gövdesine çevrilebilir; aktarım yardımcısı marker ile duplicate oluşturmayı önler.
+Makine tarafından okunabilir kayıt: [issues.json](../backlog/issues.json). Önerilen pano sütunları: Backlog, Ready, In progress, Review, Blocked, Done. 45 GitHub issue kaydı [görev dizini](../backlog/github-issues.md) üzerinden takip edilir; Projects panosu ve milestone yapılandırması henüz yapılmadı. Alt proje dosyaları doğrudan issue gövdesine çevrilebilir; aktarım yardımcısı marker ile duplicate oluşturmayı önler.
 
-P03-001 temel tarih matematiği uygulanmış olduğu için partial işaretlidir; uygulamaya entegrasyon ve import tarih yorumlarının tamamı henüz bitmedi. Diğer görevler todo durumundadır.
+P03-001 temel tarih matematiği uygulanmış olduğu için partial işaretlidir; uygulamaya entegrasyon ve import tarih yorumlarının tamamı henüz bitmedi. P01-001 repo aktarımı tamamlandığı için done; diğer görevler todo durumundadır.

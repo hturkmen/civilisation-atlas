@@ -44,7 +44,7 @@ Bu komutlar plan bütünlüğünü ve tarih çekirdeğini doğrular. Uygulama g�
 
 Repo: [hturkmen/civilisation-atlas](https://github.com/hturkmen/civilisation-atlas) · Ana dal: main · Görünürlük: public.
 
-Repo sahibi tarafından oluşturuldu ve paylaşımı doğrulandı. Plan ve başlangıç dosyaları bu repoda tutulur. Geliştirme işleri [Issues](https://github.com/hturkmen/civilisation-atlas/issues) bölümünden takip edilir; görev kimlikleri ve ayrıntıları [backlog/issues.json](backlog/issues.json) dosyasındadır. GitHub Projects panosu henüz kurulmadı.
+Repo sahibi tarafından oluşturuldu ve paylaşımı doğrulandı. Plan ve başlangıç dosyaları bu repoda tutulur. Geliştirme işleri [Issues](https://github.com/hturkmen/civilisation-atlas/issues) bölümünden takip edilir; 45 görevin bağlantıları [görev dizininde](backlog/github-issues.md), kimlikleri ve ayrıntıları [backlog/issues.json](backlog/issues.json) dosyasındadır. İlk aktarımda 44 açık görev ve 1 tamamlanmış kurulum görevi bulunur. GitHub Projects panosu henüz kurulmadı.
 
 [Aktarım rehberi](docs/github-setup.md), yerel geliştirme ve eksik görevleri güvenle eşitleme adımlarını içerir.
 

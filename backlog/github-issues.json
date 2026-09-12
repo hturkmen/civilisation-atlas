@@ -1,0 +1,277 @@
+{
+  "repository": "hturkmen/civilisation-atlas",
+  "snapshot_date": "2026-09-12",
+  "note": "Initial import snapshot; GitHub Issues is the source of live task status.",
+  "issues": [
+    {
+      "number": 1,
+      "state": "closed",
+      "task_id": "P01-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/1"
+    },
+    {
+      "number": 2,
+      "state": "open",
+      "task_id": "P01-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/2"
+    },
+    {
+      "number": 3,
+      "state": "open",
+      "task_id": "P01-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/3"
+    },
+    {
+      "number": 4,
+      "state": "open",
+      "task_id": "P01-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/4"
+    },
+    {
+      "number": 5,
+      "state": "open",
+      "task_id": "P01-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/5"
+    },
+    {
+      "number": 6,
+      "state": "open",
+      "task_id": "P02-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/6"
+    },
+    {
+      "number": 7,
+      "state": "open",
+      "task_id": "P02-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/7"
+    },
+    {
+      "number": 8,
+      "state": "open",
+      "task_id": "P02-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/8"
+    },
+    {
+      "number": 9,
+      "state": "open",
+      "task_id": "P02-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/9"
+    },
+    {
+      "number": 10,
+      "state": "open",
+      "task_id": "P02-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/10"
+    },
+    {
+      "number": 11,
+      "state": "open",
+      "task_id": "P02-006",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/11"
+    },
+    {
+      "number": 12,
+      "state": "open",
+      "task_id": "P03-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/12"
+    },
+    {
+      "number": 13,
+      "state": "open",
+      "task_id": "P03-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/13"
+    },
+    {
+      "number": 14,
+      "state": "open",
+      "task_id": "P03-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/14"
+    },
+    {
+      "number": 15,
+      "state": "open",
+      "task_id": "P03-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/15"
+    },
+    {
+      "number": 16,
+      "state": "open",
+      "task_id": "P03-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/16"
+    },
+    {
+      "number": 17,
+      "state": "open",
+      "task_id": "P03-006",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/17"
+    },
+    {
+      "number": 18,
+      "state": "open",
+      "task_id": "P04-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/18"
+    },
+    {
+      "number": 19,
+      "state": "open",
+      "task_id": "P04-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/19"
+    },
+    {
+      "number": 20,
+      "state": "open",
+      "task_id": "P04-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/20"
+    },
+    {
+      "number": 21,
+      "state": "open",
+      "task_id": "P04-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/21"
+    },
+    {
+      "number": 22,
+      "state": "open",
+      "task_id": "P04-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/22"
+    },
+    {
+      "number": 23,
+      "state": "open",
+      "task_id": "P04-006",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/23"
+    },
+    {
+      "number": 24,
+      "state": "open",
+      "task_id": "P05-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/24"
+    },
+    {
+      "number": 25,
+      "state": "open",
+      "task_id": "P05-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/25"
+    },
+    {
+      "number": 26,
+      "state": "open",
+      "task_id": "P05-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/26"
+    },
+    {
+      "number": 27,
+      "state": "open",
+      "task_id": "P05-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/27"
+    },
+    {
+      "number": 28,
+      "state": "open",
+      "task_id": "P05-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/28"
+    },
+    {
+      "number": 29,
+      "state": "open",
+      "task_id": "P06-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/29"
+    },
+    {
+      "number": 30,
+      "state": "open",
+      "task_id": "P06-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/30"
+    },
+    {
+      "number": 31,
+      "state": "open",
+      "task_id": "P06-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/31"
+    },
+    {
+      "number": 32,
+      "state": "open",
+      "task_id": "P06-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/32"
+    },
+    {
+      "number": 33,
+      "state": "open",
+      "task_id": "P06-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/33"
+    },
+    {
+      "number": 34,
+      "state": "open",
+      "task_id": "P07-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/34"
+    },
+    {
+      "number": 35,
+      "state": "open",
+      "task_id": "P07-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/35"
+    },
+    {
+      "number": 36,
+      "state": "open",
+      "task_id": "P07-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/36"
+    },
+    {
+      "number": 37,
+      "state": "open",
+      "task_id": "P07-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/37"
+    },
+    {
+      "number": 38,
+      "state": "open",
+      "task_id": "P07-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/38"
+    },
+    {
+      "number": 39,
+      "state": "open",
+      "task_id": "P07-006",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/39"
+    },
+    {
+      "number": 40,
+      "state": "open",
+      "task_id": "P08-001",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/40"
+    },
+    {
+      "number": 41,
+      "state": "open",
+      "task_id": "P08-002",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/41"
+    },
+    {
+      "number": 42,
+      "state": "open",
+      "task_id": "P08-003",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/42"
+    },
+    {
+      "number": 43,
+      "state": "open",
+      "task_id": "P08-004",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/43"
+    },
+    {
+      "number": 44,
+      "state": "open",
+      "task_id": "P08-005",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/44"
+    },
+    {
+      "number": 45,
+      "state": "open",
+      "task_id": "P08-006",
+      "url": "https://github.com/hturkmen/civilisation-atlas/issues/45"
+    }
+  ]
+}
