@@ -20,3 +20,11 @@ Kullanıcının istediği sıklık üç saatti. Sonraki servis okumasında dört
 6. Anlamlı değişiklikleri doğrula, GitHub ve mevcut demoyu güncelle, çalışma sonunda neyin bittiğini/ne kaldığını kaydet. Başarısız yayını veya eksik işlevi tamamlandı diye yazma.
 
 Üç yerleşim, tek tarihî harita ve 12 alan kaydı, bütün medeniyet tarihinin tamamlanması değildir. Görev kapanışı, onaylı kapsamın kabul ölçütleri karşılanınca yapılır.
+
+## Son doğrulanmış yayın — 13 Eylül 2026
+
+Kaynaklı alan sürümü GitHub’a aktarıldı: `adba71198fcd79d576af2107d38027a51deddbd1`. Mevcut özel demo sürüm 3, 19:26 UTC’de başarılı yayımlandı: https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site. Demo kaynak commit’i: `a8677916fc6c1b98126b92b0fef03560acf55d7b`. Yayın durumu Sites hizmetinden `succeeded` olarak doğrulandı; canlı adrese ek tarayıcı testi uygulanmadı.
+
+Altı siyasi yapıdan seçilmiş 12 kaynak kaydı; tarihe göre alanlar, kaynak detayları, paylaşılan seçim ve mobil etiket düzeni tamamlandı. 19 alan/veri testi, statik demodaki 13 tarayıcı senaryosu ve ana Node girişindeki üç hedefli senaryo doğrulandı. Tek ilk açılış zaman aşımının yeniden kontrolü ve kapsam sınırları docs/13-sourced-boundaries.md içinde. Her iki üretim derlemesi başarılı.
+
+Sonraki dilim: komşu kaynak dönemlerini ve diğer bölgeleri genişlet; koleksiyondaki boş yıllar arasında gezinmeyi iyileştir. Bütün dünya kapsamı, tarihçi incelemesi, kullanıcı/admin ve mobil uygulama tamamlanmış sayılmaz. Otomasyon üç saatlik aralıkla etkin; 14 Eylül 00:13 Türkiye başlangıcı son servis okumasıyla doğrulandı.
