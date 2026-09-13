@@ -41,17 +41,68 @@ test('BCE to CE has no display year zero and invalid years cannot alter state', 
   await expect(page).toHaveURL(/year=1&era=CE/);
 });
 
-test('known world is a separate truthful empty state; sources dialog supports Escape', async ({page}) => {
+test('known world preserves the selected year and sources dialog supports Escape', async ({page}) => {
   await page.goto('/');
   await page.getByRole('button', {name: 'Bilinen dünya', exact: true}).click();
-  await expect(page.getByText('Henüz harita yok', {exact: true})).toBeVisible();
+  await expect(page.getByText('için arşivde henüz harita yok.', {exact: false})).toBeVisible();
   await expect(page.getByTestId('atlas-map')).toHaveCount(0);
-  await expect(page.getByRole('slider')).toBeDisabled();
+  await expect(page.getByTestId('historical-viewer')).toHaveCount(0);
+  await expect(page.getByRole('textbox', {name: 'Yıl', exact: true})).toHaveValue('2500');
+  await expect(page.getByRole('slider')).toBeEnabled();
   await page.getByRole('button', {name: 'Kaynaklar', exact: true}).click();
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.getByRole('dialog')).not.toBeVisible();
   await expect(page.getByRole('button', {name: 'Kaynaklar', exact: true})).toBeFocused();
+});
+
+test('archive opens at its own date, zooms, shares its state and never fills adjacent years', async ({page}) => {
+  const external: string[] = [];
+  const errors: string[] = [];
+  page.on('request', request => {if (/^https?:/.test(request.url()) && !request.url().startsWith('http://127.0.0.1:3100')) external.push(request.url());});
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/');
+  await page.getByRole('navigation', {name: 'Koleksiyonda keşfedilecek tarihler'}).getByRole('button', {name: /MS 1507/}).click();
+  await expect(page.locator('.archive-sheet')).toHaveAttribute('data-ready', 'true');
+  await expect(page).toHaveURL(/year=1507&era=CE&mode=known/);
+  await page.getByRole('button', {name: 'Tarihî haritayı yakınlaştır', exact: true}).click();
+  await expect(page.getByLabel('Harita büyütme oranı')).toHaveText('150%');
+  await page.getByRole('button', {name: 'Haritanın tamamını göster'}).click();
+  await expect(page.getByLabel('Harita büyütme oranı')).toHaveText('100%');
+  await page.reload();
+  await expect(page.locator('.archive-sheet')).toHaveAttribute('data-ready', 'true');
+  await page.getByRole('textbox', {name: 'Yıl', exact: true}).fill('1506');
+  await page.getByRole('button', {name: 'Yıla git'}).click();
+  await expect(page.getByTestId('historical-viewer')).toHaveCount(0);
+  await expect(page.getByText('için arşivde henüz harita yok.', {exact: false})).toBeVisible();
+  expect(external).toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test('collection stops and contemporary places keep year and mode consistent', async ({page}) => {
+  await page.goto('/?year=2500&era=BCE&place=caral-supe');
+  await page.locator('.contemporaries').getByRole('button', {name: /Mohenjo-daro/}).click();
+  await expect(page.getByRole('heading', {name: 'Mohenjo-daro', exact: true})).toBeVisible();
+  await expect(page).toHaveURL(/year=2500&era=BCE&mode=history&place=mohenjo-daro/);
+  await page.getByRole('button', {name: 'Sonraki koleksiyon durağı'}).click();
+  await expect(page.locator('.place-list')).toContainText('Büyük Zimbabve');
+  await page.getByRole('button', {name: 'Sonraki koleksiyon durağı'}).click();
+  await expect(page.getByTestId('historical-viewer')).toBeVisible();
+  await page.getByRole('button', {name: 'Önceki koleksiyon durağı'}).click();
+  await expect(page.getByTestId('atlas-map')).toBeVisible();
+  await expect(page.locator('.place-list')).toContainText('Büyük Zimbabve');
+});
+
+test('mobile archive controls and dates stay usable without page overflow', async ({page}) => {
+  await page.setViewportSize({width: 390, height: 844});
+  await page.goto('/?year=1507&era=CE&mode=known');
+  await expect(page.locator('.archive-sheet')).toHaveAttribute('data-ready', 'true');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.getByRole('button', {name: 'Tarihî haritayı yakınlaştır', exact: true}).click();
+  await expect(page.getByLabel('Harita büyütme oranı')).toHaveText('150%');
+  await page.getByRole('textbox', {name: 'Yıl', exact: true}).scrollIntoViewIfNeeded();
+  await expect(page.getByRole('textbox', {name: 'Yıl', exact: true})).toBeVisible();
+  await page.getByRole('button', {name: 'Bilinen dünya', exact: true}).scrollIntoViewIfNeeded();
 });
 
 test('mobile keeps timeline and place selection accessible without horizontal overflow', async ({page}) => {

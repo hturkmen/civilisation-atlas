@@ -1,5 +1,7 @@
 # Doğrulama sonucu
 
+13 Eylül görsel sürümü: üretim derlemesi/TypeScript, 14 alan/veri testi ve 9 Chromium akışı geçti. Yeni arşiv görseli önbelleksiz indirilerek hash kontrolünden geçirildi. Masaüstü ve mobil düzen görsel olarak incelendi. Ayrıntılar: [görsel geliştirme kaydı](11-visual-priorities.md). Aşağıdaki bölüm ilk sürümün tarihsel doğrulama kaydıdır.
+
 12 Eylül 2026'da yapılan kontroller. İlk plan aktarımı ile çalışan web diliminin doğrulamaları ayrı kaydedilmiştir.
 
 ## Çalışan web dilimi

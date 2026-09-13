@@ -1,5 +1,7 @@
 # İlk canlı demo — 13 Eylül 2026
 
+Bu belge ilk demo kaydıdır. Güncel sürüme ilk arşiv haritası ve yeni zaman durakları eklendi; [görsel geliştirme kaydına](11-visual-priorities.md) bakınız.
+
 [Demoyu aç](https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site)
 
 Demo proje sahibine özel olarak yayımlandı. Bağlantının çalışması, görüntüleyenin yetkili hesabıyla giriş yapmasını gerektirebilir. Bu, atlasın kendi kullanıcı/üyelik altyapısı değildir.

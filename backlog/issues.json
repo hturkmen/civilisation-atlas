@@ -511,7 +511,7 @@
       "id": "P04-002",
       "project_id": "P04",
       "title": "Yıl girişi, zoom'lu timeline ve istek iptalini uygula",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -531,7 +531,8 @@
       "github": {
         "number": 19,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/19"
-      }
+      },
+      "implementation_note": "Kesin yıl, koleksiyon durakları ve önceki/sonraki durak uygulandı. Yakınlaştırılabilir zaman ekseni ve uzak API istek iptali henüz yok."
     },
     {
       "id": "P04-003",
@@ -563,7 +564,7 @@
       "id": "P04-004",
       "project_id": "P04",
       "title": "Kaynak, belirsizlik ve kapsama deneyimini uygula",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -583,7 +584,8 @@
       "github": {
         "number": 21,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/21"
-      }
+      },
+      "implementation_note": "Yerleşim kaynakları, arşiv hak bilgisi, tarih ayrımı ve açıklamalı boş durum hazır. Alan/sınır belirsizliği gerçek geometri koleksiyonuyla tamamlanacak."
     },
     {
       "id": "P04-005",
@@ -768,7 +770,7 @@
       "id": "P06-001",
       "project_id": "P06",
       "title": "Bakış açısı, tasavvur ve eser/kopya tarih modelini uygula",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -788,13 +790,14 @@
       "github": {
         "number": 29,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/29"
-      }
+      },
+      "implementation_note": "İlk arşiv için yayım yılı, bilgi/kopya açıklaması, bakış açısı ve kaynak modeli eklendi. Çoklu perspektif ve DB modeli henüz yok."
     },
     {
       "id": "P06-002",
       "project_id": "P06",
       "title": "Hakları incelenmiş iki perspektif eseri seç",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -814,13 +817,14 @@
       "github": {
         "number": 30,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/30"
-      }
+      },
+      "implementation_note": "İlk kamu malı eser seçildi: Waldseemüller 1507. İkinci perspektif eseri ve bağımsız editoryal inceleme bekliyor."
     },
     {
       "id": "P06-003",
       "project_id": "P06",
       "title": "Arşiv haritası görsel inceleyicisini uygula",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -840,7 +844,8 @@
       "github": {
         "number": 31,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/31"
-      }
+      },
+      "implementation_note": "Gerçek tarama üzerinde zoom/pan, kaynaklar, tam ekran desteği ve mobil düzen hazır. Üretim rol/DB bağımlılıkları ve gerçek cihaz kontrolleri bekliyor."
     },
     {
       "id": "P06-004",
@@ -872,7 +877,7 @@
       "id": "P06-005",
       "project_id": "P06",
       "title": "İki mod arasında tarih uyumlu geçişi tamamla",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -892,7 +897,8 @@
       "github": {
         "number": 33,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/33"
-      }
+      },
+      "implementation_note": "Mod değişiminde yıl korunur; arşive geçişte yeni tarih açıkça seçilir. İlk eser için URL ve komşu yıl testleri geçti. Çoklu eser seçimi henüz yok."
     },
     {
       "id": "P07-001",

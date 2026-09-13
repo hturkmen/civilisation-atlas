@@ -19,6 +19,8 @@ const paths = {
   pause: <><path d="M8 5v14M16 5v14"/></>,
   external: <><path d="M14 3h7v7m0-7L10 14M10 4H4v16h16v-6"/></>,
   check: <path d="m5 12 4 4L19 6"/>,
+  expand: <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/>,
+  fit: <><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M1 9V3h6m10 0h6v6M1 15v6h6m10 0h6v-6"/></>,
 };
 
 export function Icon({name, size = 20, style}: {name: keyof typeof paths; size?: number; style?: CSSProperties}) {

@@ -18,3 +18,4 @@ data/derived/
 playwright-report/
 test-results/
 apps/web/public/vendor/
+apps/web/public/maps/

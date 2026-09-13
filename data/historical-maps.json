@@ -1,0 +1,27 @@
+[
+  {
+    "id": "waldseemuller-1507",
+    "title": "Waldseemüller’in dünya haritası",
+    "creator": "Martin Waldseemüller",
+    "publicationYear": 1507,
+    "representation": "facsimile",
+    "knowledgeDate": "Tek bir bilgi tarihi yok; başlık, Batlamyus geleneği ile Vespucci ve diğer gezginlerin aktardığı bilgileri bir araya getirir.",
+    "copyDate": "1507 basımı; 12 ayrı yaprağın birleştirilmiş dijital görüntüsü.",
+    "perspective": "Waldseemüller’in coğrafi tasavvuru. Dönemdeki bütün toplumların dünya bilgisini temsil etmez.",
+    "summary": "Bu 1507 dünya haritası, “America” adını içeren ilk harita olarak tanınır. On iki yaprakta bir araya gelen çizim, coğrafyanın o dönemde nasıl düşünüldüğünü incelemek için bir arşiv belgesidir.",
+    "holdingInstitution": "Library of Congress · Geography and Map Division",
+    "sourceUrl": "https://www.loc.gov/item/2003626426/",
+    "sourceLocator": "Katalog 2003626426; G3200 1507 .W3. Başlık, yayım tarihi ve on iki yapraktan oluşan dijital bileşim kaydı.",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Waldseemuller_map,_complete_100%25.jpg",
+    "license": "Public domain · kamu malı",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "accessedOn": "2026-09-13",
+    "image": {
+      "src": "/maps/waldseemuller-1507.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Waldseemuller_map%2C_complete_100%25.jpg/3840px-Waldseemuller_map%2C_complete_100%25.jpg",
+      "sha256": "f4219df3a2b9b1f58eae676ac28ae2731253c6ed4b97c8a31c62e7e657ca6842",
+      "width": 3840,
+      "height": 2133
+    }
+  }
+]

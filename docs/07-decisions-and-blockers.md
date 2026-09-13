@@ -17,7 +17,7 @@
 - Modüler monolit, Next.js/TypeScript, MapLibre, PostgreSQL/PostGIS.
 - Auth/veri servisleri için Supabase ilk aday; hosting ve bölge satın alma öncesi seçilir.
 - İlk ürün ücretsiz keşif akışı; ödeme/abonelik henüz kapsamda değil.
-- İlk planlama paketi tamamlandı. Sonraki “Devam et” yönlendirmesiyle yerelde çalışan ilk web dilimi geliştirildi; canlı dağıtım henüz yapılmadı.
+- İlk planlama paketi ve özel canlı demo hazır. Görsel öncelikle geliştirme sürüyor; güncel kapsam docs/11-visual-priorities.md, otomatik devam engeli docs/12-continuation.md içinde kayıtlı.
 
 Bu öneriler kullanıcı onayı verilmiş seçimler gibi işaretlenmez. Geri döndürülebilir planlama tercihleridir.
 
