@@ -2,7 +2,7 @@
 
 MÖ 4000'den günümüze tarih seçerek dünya medeniyetlerini harita üzerinde keşfetme projesi.
 
-**Durum: yerelde çalışan ilk web dilimi.** Tarih seçimi, MapLibre haritası, üç kaynaklı yerleşim, arama ve bilgi paneli uygulanmıştır. Tam tarihsel sınır koleksiyonu, kullanıcı girişi, admin, veritabanı/API ve canlı dağıtım henüz yoktur.
+**Durum: ilk etkileşimli demo yayında.** [Demoyu aç](https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site) — erişim proje sahibine özeldir. Tarih seçimi, MapLibre haritası, üç kaynaklı yerleşim, arama ve bilgi paneli uygulanmıştır. Tam tarihsel sınır koleksiyonu, kullanıcı girişi, admin ve veritabanı/API henüz yoktur. [Demo kapsamı ve doğrulama](docs/10-live-demo.md).
 
 Kapsam sahibi: hturkmen. Hazırlanma tarihi: 12 Eylül 2026. Proje adı teknik çalışma adıdır; marka/domain uygunluğu araştırılmadı.
 
