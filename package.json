@@ -1,10 +1,18 @@
 {
-  "name": "civilisation-atlas-planning",
+  "name": "civilisation-atlas",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Planning package and chronology foundation; not a running atlas application.",
+  "description": "A source-grounded historical atlas, web first.",
+  "workspaces": ["apps/web", "packages/domain"],
+  "engines": {"node": ">=22.0.0"},
   "scripts": {
-    "test": "node --test packages/domain/test/*.test.mjs"
+    "dev": "npm run dev --workspace @atlas/web",
+    "build": "npm run build --workspace @atlas/web",
+    "start": "npm run start --workspace @atlas/web",
+    "typecheck": "npm run typecheck --workspace @atlas/web",
+    "test": "node --test packages/domain/test/*.test.mjs",
+    "test:e2e": "npm run test:e2e --workspace @atlas/web",
+    "check:plan": "python3 scripts/validate_plan.py"
   }
 }

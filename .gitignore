@@ -14,3 +14,7 @@ data/derived/
 *.gpkg
 .github-sync-state.json
 .DS_Store
+*.tsbuildinfo
+playwright-report/
+test-results/
+apps/web/public/vendor/

@@ -80,7 +80,7 @@
       "id": "P01-002",
       "project_id": "P01",
       "title": "Next.js ve TypeScript uygulama temelini kur",
-      "status": "todo",
+      "status": "done",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -99,7 +99,8 @@
       "github": {
         "number": 2,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/2"
-      }
+      },
+      "verification_result": "2026-09-12: temiz kaynak kopyasında npm ci ve production build geçti; domain ve preview repository route dosyalarından ayrı."
     },
     {
       "id": "P01-003",
@@ -483,7 +484,7 @@
       "id": "P04-001",
       "project_id": "P04",
       "title": "MapLibre harita kabuğu ve dönem katmanlarını oluştur",
-      "status": "todo",
+      "status": "in_progress",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -503,7 +504,8 @@
       "github": {
         "number": 18,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/18"
-      }
+      },
+      "implementation_note": "Üç yerleşimlik static preview haritası hazır; tarihsel sınır/release API entegrasyonu ve tam kabul kapısı bekliyor."
     },
     {
       "id": "P04-002",

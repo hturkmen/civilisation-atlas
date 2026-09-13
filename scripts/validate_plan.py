@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 import re
+import os
 
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
@@ -88,21 +89,30 @@ for path, operations in spec['paths'].items():
         if not operation.get('responses'):
             errors.append('Missing responses: ' + oid)
 
-for file in ROOT.rglob('*.md'):
-    if '.git' in file.parts:
-        continue
+SKIP_DIRS = {'.git', 'node_modules', '.next', 'dist', 'coverage', '__pycache__',
+             'playwright-report', 'test-results'}
+
+
+def project_files(suffix):
+    for directory, dirs, files in os.walk(ROOT):
+        dirs[:] = [name for name in dirs if name not in SKIP_DIRS]
+        for name in files:
+            if name.endswith(suffix):
+                yield Path(directory) / name
+
+
+for file in project_files('.md'):
     for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)', file.read_text()):
         if target.startswith(('http:', 'https:', 'mailto:', '#', 'sandbox:')):
             continue
         local = target.split('#', 1)[0]
         if local and not (file.parent / local).exists():
             errors.append('Broken local link in ' + str(file.relative_to(ROOT)) + ': ' + target)
-for file in ROOT.rglob('*.json'):
-    if '.git' not in file.parts:
-        try:
-            json.loads(file.read_text())
-        except ValueError:
-            errors.append('Invalid JSON: ' + str(file.relative_to(ROOT)))
+for file in project_files('.json'):
+    try:
+        json.loads(file.read_text())
+    except ValueError:
+        errors.append('Invalid JSON: ' + str(file.relative_to(ROOT)))
 
 if errors:
     for error in errors:

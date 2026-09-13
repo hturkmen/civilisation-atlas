@@ -1,0 +1,10 @@
+{
+  "name": "@atlas/domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./chronology": {"types": "./src/chronology.d.mts", "default": "./src/chronology.mjs"},
+    "./catalog": {"types": "./src/catalog.d.mts", "default": "./src/catalog.mjs"}
+  }
+}

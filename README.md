@@ -2,7 +2,7 @@
 
 MÖ 4000'den günümüze tarih seçerek dünya medeniyetlerini harita üzerinde keşfetme projesi.
 
-**Durum: planlama ve başlangıç paketi. Çalışan web sitesi, giriş sistemi veya canlı veri servisi henüz uygulanmadı.**
+**Durum: yerelde çalışan ilk web dilimi.** Tarih seçimi, MapLibre haritası, üç kaynaklı yerleşim, arama ve bilgi paneli uygulanmıştır. Tam tarihsel sınır koleksiyonu, kullanıcı girişi, admin, veritabanı/API ve canlı dağıtım henüz yoktur.
 
 Kapsam sahibi: hturkmen. Hazırlanma tarihi: 12 Eylül 2026. Proje adı teknik çalışma adıdır; marka/domain uygunluğu araştırılmadı.
 
@@ -28,23 +28,32 @@ Kapsam sahibi: hturkmen. Hazırlanma tarihi: 12 Eylül 2026. Proje adı teknik �
 | [Alt projeler ve görevler](docs/06-delivery-plan.md) | Sıralama, efor, bağımlılık ve kabul kriterleri |
 | [Açık kararlar](docs/07-decisions-and-blockers.md) | Kesinleşen, önerilen ve bekleyen konular |
 | [Doğrulama sonucu](docs/08-validation.md) | Gerçekte yapılan ve henüz yapılamayan kontroller |
+| [İlk çalışan web dilimi](docs/09-first-web-slice.md) | Uygulanan özellikler, sınırlar ve sıradaki işler |
 
 Teknik dizinler: apps/web, apps/worker, packages/domain, packages/contracts, database, data, backlog, scripts.
 
-## Yerelde doğrulama
+## Çalıştırma
 
-Node.js ve Python 3 kurulu bir ortamda:
+Node.js 22+ ve npm ile repo kökünde:
 
-    node --test packages/domain/test/*.test.mjs
-    python3 scripts/validate_plan.py
+    npm ci
+    npm run dev
 
-Bu komutlar plan bütünlüğünü ve tarih çekirdeğini doğrular. Uygulama güvenlik testlerinin veya veritabanı entegrasyon testlerinin yerine geçmez.
+[Yerel uygulama](http://localhost:3000) doğrudan haritaya açılır. API anahtarı gerekmez; coğrafi referans ve başlangıç koleksiyonu repodadır.
+
+    npm test
+    npm run typecheck
+    npm run build
+    npm start
+    npm run check:plan
+
+Son komut için Python 3 gerekir. Tarayıcı testleri ve üretim çalıştırma ayrıntıları [web README](apps/web/README.md) dosyasındadır.
 
 ## GitHub
 
 Repo: [hturkmen/civilisation-atlas](https://github.com/hturkmen/civilisation-atlas) · Ana dal: main · Görünürlük: public.
 
-Repo sahibi tarafından oluşturuldu ve paylaşımı doğrulandı. Plan ve başlangıç dosyaları bu repoda tutulur. Geliştirme işleri [Issues](https://github.com/hturkmen/civilisation-atlas/issues) bölümünden takip edilir; 45 görevin bağlantıları [görev dizininde](backlog/github-issues.md), kimlikleri ve ayrıntıları [backlog/issues.json](backlog/issues.json) dosyasındadır. İlk aktarımda 44 açık görev ve 1 tamamlanmış kurulum görevi bulunur. GitHub Projects panosu henüz kurulmadı.
+Repo sahibi tarafından oluşturuldu ve paylaşımı doğrulandı. Plan ve uygulama dosyaları bu repoda tutulur. Geliştirme işleri [Issues](https://github.com/hturkmen/civilisation-atlas/issues) bölümünden takip edilir; 45 görevin bağlantıları [görev dizininde](backlog/github-issues.md), kimlikleri ve ayrıntıları [backlog/issues.json](backlog/issues.json) dosyasındadır. GitHub Projects panosu henüz kurulmadı.
 
 [Aktarım rehberi](docs/github-setup.md), yerel geliştirme ve eksik görevleri güvenle eşitleme adımlarını içerir.
 
@@ -52,4 +61,4 @@ Repo sahibi tarafından oluşturuldu ve paylaşımı doğrulandı. Plan ve başl
 
 Bu pakete açık kaynak lisansı eklenmedi. Repo public görünürlüktedir; kodun yeniden kullanım lisansı ayrıca belirlenecek. Üçüncü taraf verilerin kendi lisansları korunur. Veriye açık lisans uygulanması, uygulama kodunu otomatik olarak aynı lisansla yayınlama kararı anlamına gelmez; birleşik veri ürününün yükümlülükleri ayrıca değerlendirilir.
 
-Pakette gerçek tarihsel sınır poligonları, telifli harita taramaları, kullanıcı bilgileri veya erişim anahtarları yoktur.
+Başlangıç koleksiyonundaki UNESCO açıklama uyarlamaları CC BY-SA 3.0 IGO koşullarıyla sunulur. [Veri kaynakları ve dönüşümler](data/README.md) dosyasında kapsam ve atıflar kayıtlıdır. Natural Earth coğrafi referansı public domain'dir. Pakette tarihsel sınır poligonları, harita taramaları, kullanıcı bilgileri veya erişim anahtarları yoktur.

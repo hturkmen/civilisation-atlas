@@ -1,7 +1,7 @@
 {
   "repository": "hturkmen/civilisation-atlas",
   "snapshot_date": "2026-09-12",
-  "note": "Initial import snapshot; GitHub Issues is the source of live task status.",
+  "note": "Snapshot after first web slice; GitHub Issues is the source of live task status.",
   "issues": [
     {
       "number": 1,
@@ -11,7 +11,7 @@
     },
     {
       "number": 2,
-      "state": "open",
+      "state": "closed",
       "task_id": "P01-002",
       "url": "https://github.com/hturkmen/civilisation-atlas/issues/2"
     },

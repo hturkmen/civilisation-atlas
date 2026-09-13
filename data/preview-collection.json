@@ -1,0 +1,114 @@
+{
+  "sources": [
+    {
+      "id": "unesco-138",
+      "title": "Archaeological Ruins at Moenjodaro",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/138/",
+      "accessedOn": "2026-09-12",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Açıklamadan Türkçe kısaltma ve uyarlama: Civilisation Atlas. Fotoğraflar kullanılmadı. UNESCO onayı ima edilmez."
+    },
+    {
+      "id": "unesco-1269",
+      "title": "Sacred City of Caral-Supe",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/1269/",
+      "accessedOn": "2026-09-12",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Açıklamadan Türkçe kısaltma ve uyarlama: Civilisation Atlas. Fotoğraflar kullanılmadı. UNESCO onayı ima edilmez."
+    },
+    {
+      "id": "unesco-364",
+      "title": "Great Zimbabwe National Monument",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/364/",
+      "accessedOn": "2026-09-12",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Açıklamadan Türkçe kısaltma ve uyarlama: Civilisation Atlas. Fotoğraflar kullanılmadı. UNESCO onayı ima edilmez."
+    }
+  ],
+  "places": [
+    {
+      "id": "mohenjo-daro",
+      "name": "Mohenjo-daro",
+      "aliases": ["Moenjodaro", "Mohenjo Daro", "İndus"],
+      "culture": "İndus uygarlığı",
+      "region": "İndus Vadisi · Güney Asya",
+      "kind": "settlement",
+      "coordinates": [68.13888889, 27.32916667],
+      "coordinateNote": "UNESCO miras alanının referans noktası; kentin veya uygarlığın sınırını göstermez. N27 19 45, E68 8 20 değerleri ondalığa çevrildi.",
+      "summary": "İndus Vadisi'ndeki Mohenjo-daro, düzenli sokakları ve planlı yerleşimiyle erken kent yaşamına ışık tutar. UNESCO, kentin kalıntılarını MÖ üçüncü binyılla ilişkilendirir.",
+      "significance": "Kent planı, kamusal yapılar ve su yönetimi, ortak bir yaşamı düzenlemenin erken örneklerini sunar.",
+      "editorialStatus": "Kaynak bağlantıları kontrol edildi; bağımsız tarihçi incelemesi bekliyor.",
+      "period": {
+        "start": -2999,
+        "endExclusive": -1999,
+        "label": "MÖ 3. binyıl",
+        "kind": "source-focus",
+        "note": "Kaynağın girişindeki binyıl ifadesinin gezinme aralığıdır. Kesin kuruluş/yıkılış tarihi veya her yıl için ayrı kanıt değildir."
+      },
+      "suggestedYear": -2499,
+      "evidence": {
+        "summary": {"sourceId": "unesco-138", "locator": "Description; Outstanding Universal Value / Brief synthesis"},
+        "period": {"sourceId": "unesco-138", "locator": "Description: kentin MÖ 3. binyıla tarihlenmesi"},
+        "coordinates": {"sourceId": "unesco-138", "locator": "Dossier 138: N27 19 45 E68 8 20"}
+      }
+    },
+    {
+      "id": "caral-supe",
+      "name": "Caral-Supe",
+      "aliases": ["Caral", "Karal", "And"],
+      "culture": "Caral-Supe",
+      "region": "Supe Vadisi · Güney Amerika",
+      "kind": "settlement",
+      "coordinates": [-77.52138889, -10.89166667],
+      "coordinateNote": "UNESCO miras alanının referans noktası; yerleşimin siyasi sınırını göstermez. S10 53 30, W77 31 17 değerleri ondalığa çevrildi.",
+      "summary": "Supe Vadisi'ndeki Caral, anıtsal platformları ve çökertilmiş dairesel avlularıyla erken And yerleşimlerinin bir örneğidir. Mimari düzeni, törensel yaşamın önemini gösterir.",
+      "significance": "Kentteki büyük ölçekli yapılar ve planlama, Amerika kıtasındaki erken toplumsal örgütlenmeyi anlamaya yardımcı olur.",
+      "editorialStatus": "Kaynak bağlantıları kontrol edildi; bağımsız tarihçi incelemesi bekliyor.",
+      "period": {
+        "start": -2999,
+        "endExclusive": -1798,
+        "label": "Yaklaşık MÖ 3000–1800",
+        "kind": "source-focus",
+        "note": "UNESCO'nun radyokarbon analizleriyle ilişkilendirdiği gelişim dönemidir. Sınır yılları yaklaşık kabul edilir; sonraki kullanımlar bu koleksiyonda modellenmez."
+      },
+      "suggestedYear": -2499,
+      "evidence": {
+        "summary": {"sourceId": "unesco-1269", "locator": "Description; Outstanding Universal Value / Brief Synthesis"},
+        "period": {"sourceId": "unesco-1269", "locator": "Integrity and Authenticity: radyokarbon analizi ve MÖ 3000–1800"},
+        "coordinates": {"sourceId": "unesco-1269", "locator": "Dossier 1269: S10 53 30 W77 31 17"}
+      }
+    },
+    {
+      "id": "great-zimbabwe",
+      "name": "Büyük Zimbabve",
+      "aliases": ["Great Zimbabwe", "Zimbabve", "Shona"],
+      "culture": "Şona kültürü",
+      "region": "Afrika’nın güneyi",
+      "kind": "settlement",
+      "coordinates": [30.93326889, -20.27117],
+      "coordinateNote": "UNESCO miras alanının referans noktası; tarihsel devlet sınırı değildir. S20 16 16.212, E30 55 59.768 değerleri ondalığa çevrildi.",
+      "summary": "Büyük Zimbabve'nin taş yapıları, Şona toplumunun kent yaşamına tanıklık eder. Yerleşim, bölgesel ve uzak mesafeli ticaretle bağlantılı önemli bir merkezdi.",
+      "significance": "Taş mimarisi ve arkeolojik buluntular, yerel ustalığı ve farklı bölgelerle kurulan ticaret ilişkilerini görünür kılar.",
+      "editorialStatus": "Kaynak bağlantıları kontrol edildi; bağımsız tarihçi incelemesi bekliyor.",
+      "period": {
+        "start": 1100,
+        "endExclusive": 1451,
+        "label": "Yaklaşık MS 1100–1450",
+        "kind": "source-focus",
+        "note": "UNESCO'nun yapılaşma için verdiği dönemdir. Yerleşimin bütün kullanım tarihini veya Şona kültürünün varlık süresini tanımlamaz."
+      },
+      "suggestedYear": 1300,
+      "evidence": {
+        "summary": {"sourceId": "unesco-364", "locator": "Description; Brief synthesis: taş mimarisi ve ticaret buluntuları"},
+        "period": {"sourceId": "unesco-364", "locator": "Brief synthesis: 1100–1450 AD yapılaşma dönemi"},
+        "coordinates": {"sourceId": "unesco-364", "locator": "Dossier 364: S20 16 16.212 E30 55 59.768"}
+      }
+    }
+  ]
+}
