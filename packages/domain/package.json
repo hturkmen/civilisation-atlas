@@ -6,6 +6,7 @@
   "exports": {
     "./chronology": {"types": "./src/chronology.d.mts", "default": "./src/chronology.mjs"},
     "./catalog": {"types": "./src/catalog.d.mts", "default": "./src/catalog.mjs"},
-    "./archive": {"types": "./src/archive.d.mts", "default": "./src/archive.mjs"}
+    "./archive": {"types": "./src/archive.d.mts", "default": "./src/archive.mjs"},
+    "./boundaries": {"types": "./src/boundaries.d.mts", "default": "./src/boundaries.mjs"}
   }
 }

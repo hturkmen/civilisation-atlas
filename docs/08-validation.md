@@ -54,3 +54,10 @@ Kontrol sırasında /meta uç noktasını /me ile yanlış eşleştiren doğrula
 Sonradan eklenen [görev dizini](../backlog/github-issues.md) ve JSON eşleştirmesi ilk aktarımın durumunu belgeler.
 
 Bu sınırlar nedeniyle “üretim sitesi hazır”, “güvenlik tamam” veya “bütün tarihsel veriler doğrulandı” sonucu çıkarılamaz. İlk çalışan dilim ve kapsam dışı kalanlar [uygulama durumunda](09-first-web-slice.md) açıklanır.
+
+
+## 13 Eylül — kaynaklı alan katmanı
+
+19 alan/veri testi ve statik demoda 13 Chromium senaryosu geçti. Veri kaynağı, sabit sürüm, BCE/CE dönüşümü, geometri doğrulaması, paylaşım ve mobil akış ayrıntıları docs/13-sourced-boundaries.md içinde. Bu sayı tarihsel yorumun bağımsız tarihçi onayı anlamına gelmez.
+
+Son mobil etiket düzeltmesi: görünür etiketler çakışmıyor. Ana Node girişinde üç hedefli Chromium senaryosu ve her iki üretim derlemesi geçti. İlk statik açılıştaki tek zaman aşımı, kontrol tek başına tekrar çalıştırılarak çözüldü; ayrıntı ve kapsam sınırı docs/13-sourced-boundaries.md içinde.

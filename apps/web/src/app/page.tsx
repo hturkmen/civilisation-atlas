@@ -1,5 +1,6 @@
 import {parseView} from '@atlas/domain/catalog';
 import {catalog} from '@/lib/catalog';
+import {boundaryCollection} from '@/lib/boundaries';
 import {Explorer} from '@/components/explorer';
 
 export const dynamic = 'force-dynamic';
@@ -14,5 +15,5 @@ export default async function Page({searchParams}: {
   }
   // Current civil year only. Ancient years always use @atlas/domain/chronology.
   const maxYear = new Date().getUTCFullYear();
-  return <Explorer catalog={catalog} maxYear={maxYear} initialView={parseView(params, maxYear, catalog.places)} />;
+  return <Explorer catalog={catalog} maxYear={maxYear} initialView={parseView(params, maxYear, catalog.places, boundaryCollection.records)} />;
 }

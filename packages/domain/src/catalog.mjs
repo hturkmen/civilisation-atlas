@@ -2,7 +2,7 @@ import {containsYear, toAstronomicalYear, toDisplayYear} from './chronology.mjs'
 
 export const MIN_YEAR = -3999;
 export const DEFAULT_YEAR = -2499;
-export const RELEASE_ID = 'preview-2026-09-13.2';
+export const RELEASE_ID = 'preview-2026-09-13.3';
 
 /** The window means source coverage, never the complete lifetime of a polity. */
 export function visiblePlaces(places, year, query = '') {
@@ -15,7 +15,7 @@ export function normalize(value) {
   return value.toLocaleLowerCase('tr').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i');
 }
 
-export function parseView(params, maxYear, places) {
+export function parseView(params, maxYear, places, boundaryRecords = []) {
   const raw = params.get('year');
   const era = params.get('era');
   let year = DEFAULT_YEAR;
@@ -24,16 +24,18 @@ export function parseView(params, maxYear, places) {
     if (candidate >= MIN_YEAR && candidate <= maxYear) year = candidate;
   }
   const mode = params.get('mode') === 'known' ? 'known' : 'history';
-  const selectedId = mode === 'history'
+  const selectedPolityId = mode === 'history' ? boundaryRecords.find(record => record.polityId === params.get('polity') && containsYear(record.period, year))?.polityId : undefined;
+  const selectedId = mode === 'history' && !selectedPolityId
     ? visiblePlaces(places, year).find(p => p.id === params.get('place'))?.id ?? null
     : null;
-  return {year, mode, selectedId};
+  return {year, mode, selectedId, ...(selectedPolityId ? {selectedPolityId} : {})};
 }
 
 export function viewQuery(view) {
   const display = toDisplayYear(view.year);
   const params = new URLSearchParams({year: String(display.year), era: display.era, mode: view.mode});
-  if (view.mode === 'history' && view.selectedId) params.set('place', view.selectedId);
+  if (view.mode === 'history' && view.selectedPolityId) params.set('polity', view.selectedPolityId);
+  else if (view.mode === 'history' && view.selectedId) params.set('place', view.selectedId);
   return '?' + params.toString();
 }
 

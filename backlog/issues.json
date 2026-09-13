@@ -181,7 +181,7 @@
       "id": "P02-001",
       "project_id": "P02",
       "title": "Kaynak ve nesne bazlı lisans kayıtlarını hazırla",
-      "status": "todo",
+      "status": "partial",
       "priority": "P0",
       "phase": "web-beta",
       "estimate_hours": {
@@ -198,13 +198,14 @@
       "github": {
         "number": 6,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/6"
-      }
+      },
+      "implementation_note": "Cliopatria sabit sürümü, CC BY 4.0 lisansı ve nesne/kayıt kökeni eklendi. Kapsamlı editoryal/lisans kayıt sistemi bekliyor."
     },
     {
       "id": "P02-002",
       "project_id": "P02",
       "title": "Üç dönem/bölgeden kanıt ve geometri denemesi yap",
-      "status": "todo",
+      "status": "partial",
       "priority": "P0",
       "phase": "web-beta",
       "estimate_hours": {
@@ -223,13 +224,14 @@
       "github": {
         "number": 7,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/7"
-      }
+      },
+      "implementation_note": "Altı siyasi yapıdan 12 geometri kaydıyla farklı bölge/dönem denemesi yapıldı; kaynak ve türetilmiş geometri doğrulandı. Bağımsız tarihçi incelemesi ve kapsam genişlemesi bekliyor."
     },
     {
       "id": "P02-003",
       "project_id": "P02",
       "title": "İdempotent içe aktarma ve karantina akışını uygula",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -249,13 +251,14 @@
       "github": {
         "number": 8,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/8"
-      }
+      },
+      "implementation_note": "Sabit hashli kaynak ZIP'ten tekrar üretilebilir alt küme aktarımı ve derleme doğrulaması eklendi; veritabanı idempotency, karantina ve editoryal kuyruk bekliyor."
     },
     {
       "id": "P02-004",
       "project_id": "P02",
       "title": "İddia, geometri ve kaynak eşleştirme kurallarını uygula",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -275,7 +278,8 @@
       "github": {
         "number": 9,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/9"
-      }
+      },
+      "implementation_note": "Her alan geometrisi kaynak satırı, sürümü ve tarih aralığına bağlı. Tam iddia modeli, veri tabanı kısıtları ve editoryal iş akışı bekliyor."
     },
     {
       "id": "P02-005",
@@ -484,7 +488,7 @@
       "id": "P04-001",
       "project_id": "P04",
       "title": "MapLibre harita kabuğu ve dönem katmanlarını oluştur",
-      "status": "in_progress",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -505,7 +509,7 @@
         "number": 18,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/18"
       },
-      "implementation_note": "Üç yerleşimlik static preview haritası hazır; tarihsel sınır/release API entegrasyonu ve tam kabul kapısı bekliyor."
+      "implementation_note": "Yerel GeoJSON ile dönem filtresi, renkli alanlar, adlar ve seçili alan vurgusu eklendi. Büyük koleksiyon/tiles ve kapsam genişlemesi bekliyor."
     },
     {
       "id": "P04-002",
@@ -538,7 +542,7 @@
       "id": "P04-003",
       "project_id": "P04",
       "title": "Örtüşen bölge seçimi ve tarihe bağlı detay paneli",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -558,7 +562,8 @@
       "github": {
         "number": 20,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/20"
-      }
+      },
+      "implementation_note": "Kaynağa bağlı alan detayı, paylaşım URL'si ve kaynak dönemleri arasında geçiş eklendi. Çoklu tıklama seçici mevcut; gerçek örtüşen örnekler ve kapsamlı erişilebilirlik doğrulaması bekliyor."
     },
     {
       "id": "P04-004",
@@ -585,7 +590,7 @@
         "number": 21,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/21"
       },
-      "implementation_note": "Yerleşim kaynakları, arşiv hak bilgisi, tarih ayrımı ve açıklamalı boş durum hazır. Alan/sınır belirsizliği gerçek geometri koleksiyonuyla tamamlanacak."
+      "implementation_note": "Alanlarda kaynak, lisans, uyarlama ve tarihsel belirsizlik; kayıt boşluklarında eski seçimi temizleme eklendi. Dünya çapında kapsam katmanı bekliyor."
     },
     {
       "id": "P04-005",

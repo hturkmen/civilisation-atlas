@@ -1,14 +1,16 @@
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
-import {MIN_YEAR, type Place} from '@atlas/domain/catalog';
+import {MIN_YEAR, visiblePlaces, type Place} from '@atlas/domain/catalog';
+import {visibleBoundaries, type BoundaryCollection} from '@atlas/domain/boundaries';
 import type {ArchiveMap} from '@atlas/domain/archive';
 import {formatYear, toAstronomicalYear, toDisplayYear, type Era} from '@atlas/domain/chronology';
 import {Icon} from './icon';
 
-export function Timeline({year, maxYear, places, onChange, mode, maps, onOpenArchive, onJumpToCollection, disabled = false}: {
+export function Timeline({year, maxYear, places, onChange, mode, maps, boundaries, onOpenArchive, onJumpToCollection, disabled = false}: {
   year: number; maxYear: number; places: Place[]; onChange: (year: number) => void; disabled?: boolean;
   mode: 'history' | 'known'; maps: ArchiveMap[]; onOpenArchive: (year: number) => void; onJumpToCollection: (year: number) => void;
+  boundaries: BoundaryCollection;
 }) {
   const display = toDisplayYear(year);
   const [input, setInput] = useState(String(display.year));
@@ -42,8 +44,8 @@ export function Timeline({year, maxYear, places, onChange, mode, maps, onOpenArc
   const pct = (value: number) => ((value - MIN_YEAR) / (maxYear - MIN_YEAR)) * 100;
   const ticks = [MIN_YEAR, -2999, -1999, -999, 1, 1000, maxYear];
   const stops = [
-    ...Array.from(new Set(places.map(place => place.suggestedYear))).map(value => ({year: value, mode: 'history' as const,
-      label: places.filter(place => place.suggestedYear === value).length + ' yerleşim'})),
+    ...Array.from(new Set([...places.map(place => place.suggestedYear), ...boundaries.records.map(record => record.sampleYear)])).map(value => ({year: value, mode: 'history' as const,
+      label: [visibleBoundaries(boundaries, value).length ? visibleBoundaries(boundaries, value).length + ' alan' : '', visiblePlaces(places, value).length ? visiblePlaces(places, value).length + ' yerleşim' : ''].filter(Boolean).join(' · ')})),
     ...maps.map(map => ({year: map.publicationYear, mode: 'known' as const, label: 'Arşiv haritası'})),
   ].sort((a, b) => a.year - b.year);
   const previous = stops.filter(stop => stop.year < year).at(-1);
@@ -80,12 +82,12 @@ export function Timeline({year, maxYear, places, onChange, mode, maps, onOpenArc
         }}><Icon name={playing ? 'pause' : 'play'} size={15}/>{playing ? 'Duraklat' : 'Oynat'}<small>100 yıl/sn</small></button>}
       </div>
       <div className="slider-wrap">
-        <div className="coverage-track" aria-hidden="true">{mode === 'history' ? places.map(place => <span key={place.id} style={{left: pct(place.period.start) + '%', width: (pct(place.period.endExclusive - 1) - pct(place.period.start)) + '%'}}/>) : maps.map(map => <span className="archive-year-mark" key={map.id} style={{left: pct(map.publicationYear) + '%'}}/>)}</div>
+        <div className="coverage-track" aria-hidden="true">{mode === 'history' ? <>{places.map(place => <span key={place.id} style={{left: pct(place.period.start) + '%', width: (pct(place.period.endExclusive) - pct(place.period.start)) + '%'}}/>)}{boundaries.records.map(record => <span className="boundary-coverage" key={record.id} style={{left: pct(record.period.start) + '%', width: (pct(record.period.endExclusive) - pct(record.period.start)) + '%'}}/>)}</> : maps.map(map => <span className="archive-year-mark" key={map.id} style={{left: pct(map.publicationYear) + '%'}}/>)}</div>
         <input className="year-slider" type="range" min={MIN_YEAR} max={maxYear} step={1} value={year} disabled={disabled} aria-label="Zaman çizelgesi" aria-valuetext={formatYear(year)}
           onChange={e => {setPlaying(false); onChange(Number(e.target.value));}}/>
       </div>
       <div className="time-ticks">{ticks.map((tick, i) => <button key={tick} className={i === 0 ? 'first' : i === ticks.length - 1 ? 'last' : ''} style={{left: pct(tick) + '%'}} disabled={disabled} onClick={() => {setPlaying(false); onChange(tick);}}>{tick === maxYear ? 'Günümüz' : formatYear(tick)}</button>)}</div>
-      <div className="track-caption"><span className={'coverage-key' + (mode === 'known' ? ' archive-key' : '')}/>{mode === 'known' ? 'Altın işaretler arşiv eserlerinin yayım yıllarıdır.' : 'Yeşil aralıklar yerleşim koleksiyonunun dönem kapsamıdır.'}</div>
+      <div className="track-caption"><span className={'coverage-key' + (mode === 'known' ? ' archive-key' : '')}/>{mode === 'known' ? 'Altın işaretler arşiv eserlerinin yayım yıllarıdır.' : 'Yeşil: yerleşimler · Altın: alan kayıtları · Boşluklar tamamlanmayı bekliyor.'}</div>
       <nav ref={stopsNav} className="collection-stops" aria-label="Koleksiyonda keşfedilecek tarihler">{stops.map(stop => <button key={stop.mode + stop.year} className={stop.mode === 'known' ? 'archive-stop' : ''} aria-current={year === stop.year && mode === stop.mode ? 'step' : undefined} onClick={() => go(stop)} disabled={disabled}>
         <Icon name={stop.mode === 'known' ? 'map' : 'pin'} size={15}/><strong>{formatYear(stop.year)}</strong><span>{stop.label}</span>
       </button>)}</nav>

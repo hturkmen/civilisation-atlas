@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "node ../../scripts/prepare-maplibre.mjs && node ../../scripts/prepare-archive-assets.mjs",
+    "predev": "node ../../scripts/prepare-maplibre.mjs && node ../../scripts/prepare-archive-assets.mjs && node ../../scripts/validate-boundaries.mjs",
     "dev": "next dev",
-    "prebuild": "node ../../scripts/prepare-maplibre.mjs && node ../../scripts/prepare-archive-assets.mjs",
+    "prebuild": "node ../../scripts/prepare-maplibre.mjs && node ../../scripts/prepare-archive-assets.mjs && node ../../scripts/validate-boundaries.mjs",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",

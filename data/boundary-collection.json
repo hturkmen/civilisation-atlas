@@ -1,0 +1,362 @@
+{
+  "source": {
+    "id": "cliopatria-0-2-0",
+    "title": "Cliopatria",
+    "publisher": "Seshat Global History Databank · Bennett ve diğerleri",
+    "version": "v0.2.0",
+    "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+    "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258",
+    "paperUrl": "https://doi.org/10.1038/s41597-025-04516-9",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "licenseRecordUrl": "https://github.com/Seshat-Global-History-Databank/cliopatria/blob/ad28a691b7c07c1fca89d0e0636d324667d2a258/LICENSE.md",
+    "archiveUrl": "https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/ad28a691b7c07c1fca89d0e0636d324667d2a258/cliopatria.geojson.zip",
+    "archiveSha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+    "archiveMember": "cliopatria_polities_only.geojson",
+    "accessedOn": "2026-09-13",
+    "adaptation": "Seçim, Türkçe adlar ve görünüm için geometri sadeleştirmesi: Civilisation Atlas. Kaynak koordinatları 0,025 derece toleransla, her geometrinin topolojisi korunarak sadeleştirildi; 6 ondalığa yuvarlandı ve yeniden doğrulandı. Bu tolerans tarihsel doğruluk ölçüsü değildir.",
+    "uncertainty": "Sınırlar, Cliopatria'nın tarihsel alan yorumudur. Kesinlik ve ayrıntı döneme göre değişir. Kaydın tarih aralığı her yıl için ayrı gözlem veya devletin kuruluş ve bitiş tarihi değildir."
+  },
+  "geometryPath": "/data/polity-boundaries.geojson",
+  "geometrySha256": "f27559e187fdb2f08996848588dbfdafd6e2f291d845f63e991e70d79cb1e859",
+  "polities": [
+    {
+      "id": "sumer",
+      "name": "Sümer şehir devletleri",
+      "sourceName": "Sumerian City-States",
+      "color": "#987445"
+    },
+    {
+      "id": "old-kingdom-egypt",
+      "name": "Eski Krallık Mısırı",
+      "sourceName": "Old Kingdom of Egypt",
+      "color": "#b28e40"
+    },
+    {
+      "id": "achaemenid",
+      "name": "Ahameniş İmparatorluğu",
+      "sourceName": "Achaemenid Empire",
+      "color": "#716594"
+    },
+    {
+      "id": "roman-empire",
+      "name": "Roma İmparatorluğu",
+      "sourceName": "Roman Empire",
+      "color": "#a65a48"
+    },
+    {
+      "id": "han-dynasty",
+      "name": "Han Hanedanı",
+      "sourceName": "Han Dynasty",
+      "color": "#53816e"
+    },
+    {
+      "id": "ottoman-empire",
+      "name": "Osmanlı İmparatorluğu",
+      "sourceName": "Ottoman Empire",
+      "color": "#568487"
+    }
+  ],
+  "records": [
+    {
+      "id": "cliopatria-3",
+      "polityId": "sumer",
+      "sourceIndex": 3,
+      "sourceFromYear": -3000,
+      "sourceToYear": -2701,
+      "period": {
+        "start": -2999,
+        "endExclusive": -2699
+      },
+      "sampleYear": -2999,
+      "sourceAreaKm2": 45289.54883803891,
+      "wikidata": "Q2345840",
+      "seshatId": "",
+      "labelPoint": [
+        45.944354,
+        31.818201
+      ],
+      "bbox": [
+        44.163559,
+        30.307894,
+        47.29847,
+        33.457355
+      ]
+    },
+    {
+      "id": "cliopatria-10",
+      "polityId": "sumer",
+      "sourceIndex": 10,
+      "sourceFromYear": -2500,
+      "sourceToYear": -2301,
+      "period": {
+        "start": -2499,
+        "endExclusive": -2299
+      },
+      "sampleYear": -2499,
+      "sourceAreaKm2": 106576.07060876074,
+      "wikidata": "Q2345840",
+      "seshatId": "",
+      "labelPoint": [
+        45.551437,
+        32.718052
+      ],
+      "bbox": [
+        40.518059,
+        30.307894,
+        48.947632,
+        34.807949
+      ]
+    },
+    {
+      "id": "cliopatria-9",
+      "polityId": "old-kingdom-egypt",
+      "sourceIndex": 9,
+      "sourceFromYear": -2500,
+      "sourceToYear": -2301,
+      "period": {
+        "start": -2499,
+        "endExclusive": -2299
+      },
+      "sampleYear": -2499,
+      "sourceAreaKm2": 93286.0629244843,
+      "wikidata": "Q177819",
+      "seshatId": "eg_old_k_1",
+      "labelPoint": [
+        30.802034,
+        27.72504
+      ],
+      "bbox": [
+        29.49716,
+        23.995802,
+        33.13233,
+        31.601399
+      ]
+    },
+    {
+      "id": "cliopatria-299",
+      "polityId": "achaemenid",
+      "sourceIndex": 299,
+      "sourceFromYear": -500,
+      "sourceToYear": -481,
+      "period": {
+        "start": -499,
+        "endExclusive": -479
+      },
+      "sampleYear": -499,
+      "sourceAreaKm2": 5552559.804357906,
+      "wikidata": "Q389688",
+      "seshatId": "ir_achaemenid_emp",
+      "labelPoint": [
+        56.744262,
+        33.553802
+      ],
+      "bbox": [
+        18.734566,
+        23.364861,
+        72.905052,
+        43.667835
+      ]
+    },
+    {
+      "id": "cliopatria-1231",
+      "polityId": "han-dynasty",
+      "sourceIndex": 1231,
+      "sourceFromYear": 117,
+      "sourceToYear": 153,
+      "period": {
+        "start": 117,
+        "endExclusive": 154
+      },
+      "sampleYear": 117,
+      "sourceAreaKm2": 3819789.380468832,
+      "wikidata": "Q1068371",
+      "seshatId": "cn_eastern_han_dyn",
+      "labelPoint": [
+        111.475703,
+        29.600888
+      ],
+      "bbox": [
+        81.694733,
+        16.936163,
+        127.022903,
+        42.171238
+      ]
+    },
+    {
+      "id": "cliopatria-1235",
+      "polityId": "roman-empire",
+      "sourceIndex": 1235,
+      "sourceFromYear": 117,
+      "sourceToYear": 126,
+      "period": {
+        "start": 117,
+        "endExclusive": 127
+      },
+      "sampleYear": 117,
+      "sourceAreaKm2": 5263199.312993251,
+      "wikidata": "Q12544",
+      "seshatId": "it_roman_principate",
+      "labelPoint": [
+        36.229605,
+        37.738492
+      ],
+      "bbox": [
+        -9.571975,
+        23.364861,
+        49.042679,
+        55.361809
+      ]
+    },
+    {
+      "id": "cliopatria-1296",
+      "polityId": "han-dynasty",
+      "sourceIndex": 1296,
+      "sourceFromYear": 197,
+      "sourceToYear": 206,
+      "period": {
+        "start": 197,
+        "endExclusive": 207
+      },
+      "sampleYear": 200,
+      "sourceAreaKm2": 3478878.320305283,
+      "wikidata": "Q1068371",
+      "seshatId": "cn_eastern_han_dyn",
+      "labelPoint": [
+        111.47023,
+        29.600888
+      ],
+      "bbox": [
+        93.090485,
+        16.936163,
+        127.022903,
+        42.171238
+      ]
+    },
+    {
+      "id": "cliopatria-1300",
+      "polityId": "roman-empire",
+      "sourceIndex": 1300,
+      "sourceFromYear": 197,
+      "sourceToYear": 206,
+      "period": {
+        "start": 197,
+        "endExclusive": 207
+      },
+      "sampleYear": 200,
+      "sourceAreaKm2": 4640800.476061555,
+      "wikidata": "Q12544",
+      "seshatId": "it_roman_principate",
+      "labelPoint": [
+        32.792759,
+        37.738492
+      ],
+      "bbox": [
+        -9.571975,
+        23.364861,
+        45.014137,
+        55.361809
+      ]
+    },
+    {
+      "id": "cliopatria-7269",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7269,
+      "sourceFromYear": 1453,
+      "sourceToYear": 1458,
+      "period": {
+        "start": 1453,
+        "endExclusive": 1459
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 568540.1275546798,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        21.787024,
+        40.841166
+      ],
+      "bbox": [
+        19.248652,
+        36.223988,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-8504",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8504,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1601,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1602
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 4255285.287459455,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-10555",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 10555,
+      "sourceFromYear": 1800,
+      "sourceToYear": 1802,
+      "period": {
+        "start": 1800,
+        "endExclusive": 1803
+      },
+      "sampleYear": 1800,
+      "sourceAreaKm2": 2659990.673451406,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        44.017191,
+        33.457358
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        46.742905
+      ]
+    },
+    {
+      "id": "cliopatria-12307",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 12307,
+      "sourceFromYear": 1913,
+      "sourceToYear": 1914,
+      "period": {
+        "start": 1913,
+        "endExclusive": 1915
+      },
+      "sampleYear": 1914,
+      "sourceAreaKm2": 1929926.090148223,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_4",
+      "labelPoint": [
+        37.186999,
+        27.447353
+      ],
+      "bbox": [
+        26.071569,
+        12.693166,
+        48.600475,
+        42.106277
+      ]
+    }
+  ]
+}

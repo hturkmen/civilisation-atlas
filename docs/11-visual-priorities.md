@@ -2,6 +2,8 @@
 
 Kullanıcının yönlendirmesi: kalan işleri listele; kullanıcıya görünür etkiye göre geliştirmeye devam et. Sıra görsel etkiye göredir; veri doğruluğu ve güvenlik bağımlılıkları atlanmaz.
 
+Son güncelleme: [İlk kaynaklı tarihsel alan katmanı](13-sourced-boundaries.md) eklendi; altı siyasi yapı ve 12 seçilmiş kayıt. Aşağıdaki ilk arşiv adımının doğrulama kaydı korunur.
+
 ## Bu adımda uygulananlar
 
 - İlk gerçek arşiv haritası: Waldseemüller, 1507. Yakınlaştırma, kaydırma, kaynağa erişim ve destekleyen tarayıcılarda tam ekran inceleme.
@@ -14,7 +16,7 @@ Kullanıcının yönlendirmesi: kalan işleri listele; kullanıcıya görünür 
 
 | Öncelik | Kullanıcının göreceği sonuç | Kalan iş / kabul koşulu |
 |---|---|---|
-| 1 | Tarihe göre değişen ülke/medeniyet alanları | Lisansı doğrulanmış ilk sınır koleksiyonu; tarih, kaynak, çözünürlük ve belirsizlik kaydı; geçerli geometri; hiçbir modern sınırı antik sınır diye kullanmama. |
+| 1 | Tarihe göre değişen ülke/medeniyet alanları | İlk alt küme uygulandı. Komşu dönemler ve diğer bölgeler, kayıt düzeyinde kaynak/lisans/belirsizlik incelemesiyle genişletilmeli; bağımsız tarihçi incelemesi bekliyor. |
 | 2 | Daha dolu bir dünya ve karşılaştırılabilir dönemler | Üç yerleşimin ötesinde kaynaklı bölge/dönem kapsamı; medeniyet, ülke, şehir ayrımı; dönem adları; iddia düzeyinde kaynak; bağımsız editoryal inceleme. |
 | 3 | Daha güçlü keşif ve detay ekranı | Lisanslı yerleşim görselleri; önemli olaylar; yakınlaştırılabilir zaman ekseni; anlamlı filtreler; örtüşen alan seçimi. Şimdiki duraklar tarihî olay veya devlet değişimi değildir. |
 | 4 | Farklı toplumların dünya tasavvurları | İkinci kaynaklı perspektif eseri; eser seçici; tasavvur/kopya tarih aralıklarının yapılandırılması. Georeference ancak kontrol noktası, yöntem ve hata payı ile. |
