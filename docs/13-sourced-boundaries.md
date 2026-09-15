@@ -48,6 +48,25 @@ Derleme, önceden üretilmiş 166.424 baytlık yerel GeoJSON ile metadata eşle�
 
 Etiket noktaları geometri içinden hesaplanır; başkent veya yerleşim konumu anlamına gelmez. Küçük ekranda metin çakışmalarını azaltmak için etiketler yer değiştirebilir; kesik bağlantı çizgisi etiketin asıl konumunu gösterir. Coğrafi doğruluk alan geometrisine aittir.
 
+## Üretilmiş dosyaların bayt kararlılığı
+
+`data/boundary-collection.json` içindeki `geometrySha256`, üretilmiş GeoJSON'un **ham baytlarının** sha256'sıdır; `scripts/validate-boundaries.mjs` ve `packages/domain/test/boundaries.test.mjs` çalışma kopyasını yeniden hash'ler. Bu yüzden dosyanın baytları her platformda aynı kalmalıdır.
+
+`.gitattributes` içinde `apps/web/public/data/*.geojson -text` kuralı bulunur. Kural olmadan, `core.autocrlf=true` ayarlı bir Windows checkout'unda dosyanın tek sondaki LF'i CRLF olarak yazılır; dosya bir bayt büyür ve içeriği bozulmamış olsa bile checksum tutmaz. 15 Eylül incelemesinde gözlenen fark tam olarak budur: 317.270 yerine 317.271 bayt, tek bir CR. CR çıkarıldığında dosya commit'lenmiş baytlarla birebir aynıdır.
+
+Böyle bir uyuşmazlıkta beklenen checksum, üretilmiş GeoJSON veya metadata elle değiştirilmez; test de gevşetilmez. Hash hesaplanmadan önce sessiz normalizasyon eklenmez, çünkü bu gerçek bozulmaları da gizler.
+
+`scripts/import-boundaries.py` çıktılarını açıkça `encoding='utf-8', newline='\n'` ile yazar. Aksi hâlde Windows'ta platform varsayılanı devreye girer ve betik, az önce kaydettiği hash ile uyuşmayan bir dosya üretir.
+
+**Kuralı almış fakat çalışma kopyası zaten CRLF olan checkout için:** `.gitattributes` geldikten sonra dosya kendiliğinden düzelmez ve `git status` temiz görünür (stat önbelleği). Tek dosya için:
+
+    rm apps/web/public/data/polity-boundaries.geojson
+    git checkout -- apps/web/public/data/polity-boundaries.geojson
+
+`git add --renormalize` bu dosyada **kullanılmaz**: `-text` altında CRLF baytlarını index'e yazar ve sabitlenmiş yapıtı bozar (denendi: 317.271 baytlık blob).
+
+Doğrulama: `core.autocrlf=true` ile yapılan checkout benzetiminde kural öncesi 1 test başarısız, kural sonrası 6/6 geçti; aynı koşumda `README.md` hâlâ CRLF kalır, yani kural yalnız hash'lenen yapıta uygulanır ve depo yeniden normalize edilmez. Bu benzetim Linux üzerinde yapıldı; gerçek Windows makinesinde ayrıca çalıştırılmadı.
+
 ## Doğrulama ve kalanlar
 
 19 alan/veri testi ve statik demo üzerinde 13 Chromium senaryosu geçti. Yeni kontroller; BCE dahil uç dönüşümü, bağımsız kayıt dönemleri, paylaşım bağlantısı, kapsam dışı seçimin temizlenmesi, yerel veri yükleme, mobil detay ve mod geçişini kapsıyor. Kaynak geometrileri ve sadeleştirilmiş çıktı geçerli. Gerçek iPhone/Android, Safari/Firefox, bütün yıllar ve bütün dünya doğrulanmış değildir.

@@ -1,0 +1,18 @@
+# Byte-exact generated artifacts.
+#
+# data/boundary-collection.json records `geometrySha256`, the sha256 of the raw
+# bytes of the generated GeoJSON. scripts/validate-boundaries.mjs and
+# packages/domain/test/boundaries.test.mjs re-hash the working-tree file and
+# compare. Git must therefore never rewrite these files' line endings on
+# checkout: with core.autocrlf=true on Windows the single trailing LF is
+# checked out as CRLF, which changes the file by one byte and breaks the
+# comparison even though the content is intact.
+#
+# `-text` disables all end-of-line conversion, so the working-tree bytes stay
+# identical to the committed blob on every platform. The committed blobs are
+# already LF, so this adds no renormalisation and no content change.
+#
+# A checksum mismatch here means the artifact or its pin really changed.
+# Regenerate with scripts/import-boundaries.py; never edit the expected
+# checksum, the generated GeoJSON or the metadata by hand to make a test pass.
+apps/web/public/data/*.geojson -text

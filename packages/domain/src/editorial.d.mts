@@ -22,6 +22,10 @@ export interface EditorialSource {
   language: string;
   locatorUrl: string;
   doiOrIsbn?: string;
+  /** Stable revision/version identifier of this exact source state (e.g. a pinned commit). */
+  revision?: string;
+  /** Required instead of `revision` when the source has no stable revision identifier. */
+  revisionNote?: string;
   publishedOn?: string;
   publishedOnNote?: string;
   accessedOn: string;
@@ -39,6 +43,8 @@ export interface EditorialSource {
 
 export interface EditorialEvidence {
   sourceId: string;
+  /** Pins this evidence to one revision of the source; must equal the source's current `revision`. */
+  sourceRevision?: string;
   locator?: string | null;
   locatorMissingReason?: string;
   relation: EvidenceRelation;
@@ -68,6 +74,9 @@ export interface EditorialCandidate {
 
 export interface PublishabilityResult {publishable: boolean; reasons: string[]}
 
+/** Existing entity ids per kind, used to check that a candidate targets something real. */
+export type EntityRegistry = Partial<Record<EntityRefKind, string[]>>;
+
 export const RIGHTS_STATUSES: RightsStatus[];
 export const EDITORIAL_CLASSES: EditorialClass[];
 export const EVIDENCE_RELATIONS: EvidenceRelation[];
@@ -78,6 +87,6 @@ export const ENTITY_REF_KINDS: EntityRefKind[];
 
 export function validateEditorialSources<T extends EditorialSource[]>(sources: T): T;
 export function validateEditorialEvidence<T extends EditorialEvidence>(evidence: T, sources: EditorialSource[]): T;
-export function validateEditorialCandidates<T extends EditorialCandidate[]>(candidates: T, sources: EditorialSource[]): T;
+export function validateEditorialCandidates<T extends EditorialCandidate[]>(candidates: T, sources: EditorialSource[], entityRegistry?: EntityRegistry): T;
 export function contentHash(candidate: EditorialCandidate): string;
 export function evaluatePublishability(candidate: EditorialCandidate, sources: EditorialSource[]): PublishabilityResult;
