@@ -45,7 +45,7 @@ Kontrol sırasında /meta uç noktasını /me ile yanlış eşleştiren doğrula
 - Tam OpenAPI standardı doğrulayıcısı ve gerçek servis contract testleri.
 - Fiziksel telefon/Safari/Firefox matrisi, kullanıcı deneyimi görüşmeleri ve performans/yük ölçümü.
 - PostgreSQL/PostGIS migration, RLS ve canlı auth/MFA entegrasyonu.
-- Gerçek tarihsel veri import'u, eser lisans onayı ve tarihsel uzman incelemesi.
+- Daha geniş tarihsel veri kapsamı, ikinci arşiv eserinin kaynak/lisans değerlendirmesi ve bağımsız tarihsel uzman incelemesi. İlk kaynaklı geometri import'u tamamlandı; aşağıdaki sürüm kayıtlarına bakın.
 - Üretim güvenlik testleri, CDN geri çekme, restore veya yük testi.
 - GitHub Projects panosu ve üretim CI kurulumu.
 
@@ -61,3 +61,8 @@ Bu sınırlar nedeniyle “üretim sitesi hazır”, “güvenlik tamam” veya 
 19 alan/veri testi ve statik demoda 13 Chromium senaryosu geçti. Veri kaynağı, sabit sürüm, BCE/CE dönüşümü, geometri doğrulaması, paylaşım ve mobil akış ayrıntıları docs/13-sourced-boundaries.md içinde. Bu sayı tarihsel yorumun bağımsız tarihçi onayı anlamına gelmez.
 
 Son mobil etiket düzeltmesi: görünür etiketler çakışmıyor. Ana Node girişinde üç hedefli Chromium senaryosu ve her iki üretim derlemesi geçti. İlk statik açılıştaki tek zaman aşımı, kontrol tek başına tekrar çalıştırılarak çözüldü; ayrıntı ve kapsam sınırı docs/13-sourced-boundaries.md içinde.
+
+
+## 15 Eylül — koleksiyon ve yıl keşfi
+
+17 siyasi yapı / 35 kaynak kaydı için 23 alan/veri testi, iki üretim derlemesi ve dört hedefli Node tarayıcı senaryosu geçti. Statik demoda 17 senaryo doğrulandı: 16 toplu koşumda, soğuk ilk harita açılışındaki işlevsel bekleme toleransı 5 saniyeden 15 saniyeye çıkarılan bir senaryo ise hedefli tekrar koşumda geçti. Bu tolerans üretim performansı ölçümü değildir. Masaüstü 1440×1000 ve mobil 360×800 ekranları incelendi. Kaynak kapsamı, geometri sınırları, ayrıntılı sonuçlar ve sonraki iş [koleksiyon kaydında](14-collection-discovery.md); gerçek yayın sonucu [devam kaydında](12-continuation.md).

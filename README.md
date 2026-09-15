@@ -4,7 +4,7 @@ MÖ 4000'den günümüze tarih seçerek dünya medeniyetlerini harita üzerinde 
 
 **Durum: ilk etkileşimli demo yayında.** [Demoyu aç](https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site) — erişim proje sahibine özeldir. Tarih seçimi, MapLibre haritası, üç kaynaklı yerleşim, arama ve bilgi paneli uygulanmıştır. Tam tarihsel sınır koleksiyonu, kullanıcı girişi, admin ve veritabanı/API henüz yoktur. [Demo kapsamı ve doğrulama](docs/10-live-demo.md).
 
-**Kaynaklı alan katmanı:** Sümer, Eski Krallık Mısırı, Ahameniş, Roma, Han ve Osmanlı için seçilmiş 12 alan kaydı eklendi. [Kaynak, kapsam ve doğrulama](docs/13-sourced-boundaries.md).
+**Kaynaklı alan katmanı:** 17 siyasi yapı ve 35 seçilmiş kayıt; MS 1500'de beş siyasi yapı, boş yıllardan en yakın kaynaklı yıla geçiş ve duraklara göre oynatma. [Güncel kapsam ve doğrulama](docs/14-collection-discovery.md).
 
 **13 Eylül görsel geliştirmesi:** 1507 Waldseemüller haritası, arşiv inceleyicisi, koleksiyon durakları ve aynı dönemdeki yerleşimler arasında geçiş eklendi. [Görsel öncelikler ve kalanlar](docs/11-visual-priorities.md) · [Devam ve otomasyon durumu](docs/12-continuation.md).
 
@@ -65,4 +65,4 @@ Repo sahibi tarafından oluşturuldu ve paylaşımı doğrulandı. Plan ve uygul
 
 Bu pakete açık kaynak lisansı eklenmedi. Repo public görünürlüktedir; kodun yeniden kullanım lisansı ayrıca belirlenecek. Üçüncü taraf verilerin kendi lisansları korunur. Veriye açık lisans uygulanması, uygulama kodunu otomatik olarak aynı lisansla yayınlama kararı anlamına gelmez; birleşik veri ürününün yükümlülükleri ayrıca değerlendirilir.
 
-Başlangıç koleksiyonundaki UNESCO açıklama uyarlamaları CC BY-SA 3.0 IGO koşullarıyla sunulur. [Veri kaynakları ve dönüşümler](data/README.md) dosyasında kapsam ve atıflar kayıtlıdır. Natural Earth coğrafi referansı public domain'dir. Pakette tarihsel sınır poligonları, harita taramaları, kullanıcı bilgileri veya erişim anahtarları yoktur.
+Başlangıç koleksiyonundaki UNESCO açıklama uyarlamaları CC BY-SA 3.0 IGO koşullarıyla sunulur. [Veri kaynakları ve dönüşümler](data/README.md) dosyasında kapsam ve atıflar kayıtlıdır. Natural Earth coğrafi referansı public domain'dir. Cliopatria alanları CC BY 4.0 atıflarıyla sunulur; 1507 arşiv görseli doğrulanmış kaynaktan hazırlanır. Kullanıcı bilgileri veya erişim anahtarları depoya eklenmez.

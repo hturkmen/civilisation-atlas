@@ -15,16 +15,29 @@ Kullanıcının istediği sıklık üç saatti. Sonraki servis okumasında dört
 1. README, docs/11-visual-priorities.md, backlog/issues.json ve güncel GitHub görevlerini oku. Tamamlanan işleri tekrar yapma; açık kabul ölçütlerini kontrol et.
 2. Demo kaynak deposu mevcut Sites projesine bağlıdır: `appgprj_6aa638d93f3c819188b55444e79f992a`. Yeni Site oluşturma; mevcut özel erişimi koru. Ana uygulama: https://github.com/hturkmen/civilisation-atlas.
 3. GitHub ana uygulaması Node sunucu girişini, demo ise statik giriş uyarlamasını kullanır. Ortak bileşen/veri değişikliklerini ikisine aktar; birinin giriş/hosting ayarını diğerine yanlışlıkla kopyalama. Büyük arşiv görselleri doğrulanan indirme betiğiyle hazırlanır.
-4. İlk tarihsel alan katmanı uygulandı: Cliopatria'dan altı siyasi yapıya ait seçilmiş 12 kayıt. Önce docs/13-sourced-boundaries.md ve sabit kaynak kayıtlarını oku. Sonraki somut iş, komşu dönemleri/diğer bölgeleri kaynak incelemesiyle genişletmek ve veri boşluklarını daha kolay keşfedilir kılmak. Kayıt dönemi ile devletin yaşam süresini karıştırma. Kaynak yeterli değilse uydurma; ikinci arşiv perspektifi ve lisanslı görseller gibi bağımsız işleri ilerlet.
+4. Kaynaklı koleksiyon 17 siyasi yapı / 35 kayda genişletildi. Önce docs/14-collection-discovery.md, docs/13-sourced-boundaries.md ve sabit kaynak kayıtlarını oku. Sonraki somut iş, genel aramada siyasi yapıların diğer kaynaklı dönemlerini bulup o yıla geçişi sağlamak ve seçili alan detayına kaynaklı kısa anlatılar eklemek. Kayıt dönemi ile devletin yaşam süresini karıştırma. Kaynak yeterli değilse uydurma; ikinci arşiv perspektifi ve lisanslı görseller gibi bağımsız işleri ilerlet.
 5. Gerçek üyelik/admin öncesinde sağlayıcı, veri bölgesi ve bütçe gibi henüz kararlaştırılmamış taahhütleri somut seçeneklerle kullanıcıya getir. Sunucu yetkilendirmesini UI görünürlüğüyle ikame etme.
 6. Anlamlı değişiklikleri doğrula, GitHub ve mevcut demoyu güncelle, çalışma sonunda neyin bittiğini/ne kaldığını kaydet. Başarısız yayını veya eksik işlevi tamamlandı diye yazma.
 
-Üç yerleşim, tek tarihî harita ve 12 alan kaydı, bütün medeniyet tarihinin tamamlanması değildir. Görev kapanışı, onaylı kapsamın kabul ölçütleri karşılanınca yapılır.
+Üç yerleşim, tek tarihî harita ve 35 alan kaydı, bütün medeniyet tarihinin tamamlanması değildir. Görev kapanışı, onaylı kapsamın kabul ölçütleri karşılanınca yapılır.
 
-## Son doğrulanmış yayın — 13 Eylül 2026
+## Önceki doğrulanmış yayın — 13 Eylül 2026
 
 Kaynaklı alan sürümü GitHub’a aktarıldı: `adba71198fcd79d576af2107d38027a51deddbd1`. Mevcut özel demo sürüm 3, 19:26 UTC’de başarılı yayımlandı: https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site. Demo kaynak commit’i: `a8677916fc6c1b98126b92b0fef03560acf55d7b`. Yayın durumu Sites hizmetinden `succeeded` olarak doğrulandı; canlı adrese ek tarayıcı testi uygulanmadı.
 
 Altı siyasi yapıdan seçilmiş 12 kaynak kaydı; tarihe göre alanlar, kaynak detayları, paylaşılan seçim ve mobil etiket düzeni tamamlandı. 19 alan/veri testi, statik demodaki 13 tarayıcı senaryosu ve ana Node girişindeki üç hedefli senaryo doğrulandı. Tek ilk açılış zaman aşımının yeniden kontrolü ve kapsam sınırları docs/13-sourced-boundaries.md içinde. Her iki üretim derlemesi başarılı.
 
 Sonraki dilim: komşu kaynak dönemlerini ve diğer bölgeleri genişlet; koleksiyondaki boş yıllar arasında gezinmeyi iyileştir. Bütün dünya kapsamı, tarihçi incelemesi, kullanıcı/admin ve mobil uygulama tamamlanmış sayılmaz. Otomasyon üç saatlik aralıkla etkin; 14 Eylül 00:13 Türkiye başlangıcı son servis okumasıyla doğrulandı.
+
+
+## 15 Eylül 2026 — tamamlanan geliştirme ve yayın hazırlığı
+
+Koleksiyon 17 siyasi yapı / 35 seçilmiş kaynak kaydına genişletildi; MS 1500'de beş alan seçilebilir. Sabit Cliopatria arşivinin özeti yeniden doğrulandı; 35 kaynak ve sadeleştirilmiş geometri geçerli. Kaynak aralıkları korunur, eksik dönemler uydurulmaz. Modern coğrafyadaki alanlar ile arşiv eseri perspektifi ayrı kalır.
+
+Boş yılda en yakın önceki/sonraki gerçek kaynaklı yıl önerisi, üç saniyelik koleksiyon oynatması ve veriden hesaplanan durak sayıları tamamlandı. İçe aktarma planıyla üretilmiş dosyaların uyuşması derleme öncesinde denetlenir. Ayrıntılar docs/14-collection-discovery.md içinde.
+
+23 alan/veri testi, iki üretim derlemesi ve dört yeni Node tarayıcı senaryosu geçti. Statik demoda 17 senaryo doğrulandı: 16 toplu koşumda, ilk haritanın soğuk açılışındaki zaman aşımı için yalnız işlevsel bekleme toleransı artırılan bir kontrol hedefli tekrarda geçti. Tek temiz toplu koşum veya üretim performansı iddia edilmez. Masaüstü ve 360 px mobil ekranlar incelendi. Fiziksel cihaz, diğer tarayıcılar ve bağımsız tarihçi incelemesi bekliyor.
+
+Bu kayıt hazırlanırken yeni kaynak aktarımı/yayın henüz tamamlanmadı; son doğrulanmış yayın üstteki sürüm 3'tür. Sonraki adım mevcut özel Site'ın kaynağını kaydedip yayımlamak, hizmetin gerçek sonucunu bu kayda eklemektir. Ana Node girişi ile demo statik girişi korunur; erişim kitlesi değiştirilmez.
+
+Sonraki somut geliştirme: dönemler arası siyasi yapı araması ve kaynaklı kısa anlatılar. İkinci arşiv perspektifi, daha yoğun kaynak kapsamı, güvenli sunucu üyelik/admin ve mobil uygulama henüz tamamlanmadı. Sağlayıcı / veri bölgesi / ücret kararları kullanıcıya somut seçeneklerle sunulmadan bağlayıcı kurulum yapılmaz.

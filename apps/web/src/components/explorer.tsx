@@ -6,11 +6,13 @@ import {formatYear} from '@atlas/domain/chronology';
 import {archiveMapsAtYear} from '@atlas/domain/archive';
 import {archiveMaps} from '@/lib/archive';
 import {visibleBoundaries} from '@atlas/domain/boundaries';
+import {nearbyCoveredYears} from '@atlas/domain/collection';
 import {boundaryCollection} from '@/lib/boundaries';
 import {BoundarySource, PolityDetail} from './polity-detail';
 import {AtlasMap} from './atlas-map';
 import {ArchivePanel, ArchivePreview, ArchiveSource, HistoricalMap} from './historical-map';
 import {Timeline} from './timeline';
+import {CoverageGuide} from './coverage-guide';
 import {Icon} from './icon';
 
 export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; initialView: View; maxYear: number}) {
@@ -26,6 +28,7 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
   const boundaryResults = visibleBoundaries(boundaryCollection, view.year, query);
   const selectedBoundary = boundaries.find(item => item.polity.id === view.selectedPolityId);
   const archiveMap = archiveMapsAtYear(archiveMaps, view.year)[0];
+  const nearby = nearbyCoveredYears(catalog.places, boundaryCollection, view.year);
 
   useEffect(() => {window.history.replaceState(null, '', viewQuery(view));}, [view]);
   useEffect(() => {
@@ -66,7 +69,7 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
       document.getElementById('map-stage')?.scrollIntoView({block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
     }
   }
-  function jumpToCollection(year: number) {setQuery(''); setView({year, mode: 'history', selectedId: null});}
+  const jumpToCollection = useCallback((year: number) => {setQuery(''); setView({year, mode: 'history', selectedId: null});}, []);
   async function share() {
     try {
       await navigator.clipboard.writeText(window.location.origin + '/' + viewQuery(view));
@@ -119,8 +122,8 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
           {boundaryResults.length > 0 && <ul className="polity-list" aria-label="Bu tarihteki siyasi yapılar">{boundaryResults.map(({polity, record}) => <li key={record.id}><button style={{'--polity-color': polity.color} as React.CSSProperties} onClick={() => selectPolity(polity.id)}><i className="polity-swatch"/><span><strong>{polity.name}</strong><small>Yaklaşık alan · {formatYear(record.period.start)} – {formatYear(record.period.endExclusive - 1)}</small></span><Icon name="arrow" size={17}/></button></li>)}</ul>}
           {results.length > 0 && <ul className="place-list">{results.map((place, index) => <li key={place.id}><button onClick={() => selectPlace(place.id)}><span className="place-number">0{index + 1}</span><span><strong>{place.name}</strong><small>{place.culture}</small></span><Icon name="arrow" size={18}/></button></li>)}</ul>}
           {!results.length && !boundaryResults.length && <div className="empty-state"><Icon name="search"/><h3>{query ? 'Bu tarihte eşleşme yok' : 'Bu yıl için kayıt eklenmedi'}</h3><p>{query ? 'Aramayı temizle veya aşağıdan başka bir döneme geç.' : 'Bu, o dönemde toplum olmadığı anlamına gelmez. Koleksiyon seçilmiş kaynak dönemleriyle sınırlı.'}</p>{query && <button className="text-button" onClick={() => setQuery('')}>Aramayı temizle</button>}</div>}
-          <div className="collection-note"><Icon name="info" size={17}/><p>6 siyasi yapıdan seçilmiş 12 alan kaydı ve 3 yerleşim. Renkli alanlar yaklaşık rekonstrüksiyonlardır. Boş alanlar, orada toplum olmadığı anlamına gelmez.</p></div>
-          <button className="boundary-teaser" onClick={() => jumpToCollection(117)}><span><small>YENİ · KAYNAKLI ALANLAR</small><strong>Roma’dan Han’a</strong><span>MS 117’de iki dünyayı keşfet</span></span><Icon name="arrow" size={19}/></button>
+          <div className="collection-note"><Icon name="info" size={17}/><p>{boundaryCollection.polities.length} siyasi yapıdan seçilmiş {boundaryCollection.records.length} alan kaydı ve {catalog.places.length} yerleşim. Renkli alanlar yaklaşık rekonstrüksiyonlardır. Boş alanlar, orada toplum olmadığı anlamına gelmez.</p></div>
+          <button className="boundary-teaser" onClick={() => jumpToCollection(1500)}><span><small>GENİŞLEYEN KOLEKSİYON</small><strong>1500’de dünyaya bak</strong><span>Mali, Ming, Aztek, İnka ve Osmanlı</span></span><Icon name="arrow" size={19}/></button>
           <section className="journeys"><p className="eyebrow">BAŞKA BİR ZAMANA GİT</p>{catalog.places.map(place => <button key={place.id} onClick={() => jump(place)}><span><strong>{place.name}</strong><small>{formatYear(place.suggestedYear)}</small></span><Icon name="arrow" size={17}/></button>)}</section>
           <button className="archive-teaser" onClick={() => openArchive(archiveMaps[0].publicationYear)}><span className="archive-teaser-icon"><Icon name="map" size={27}/></span><span><small>YENİ · TARİHÎ HARİTA</small><strong>1507’de dünyaya bak</strong><span>Waldseemüller arşivini aç</span></span><Icon name="arrow" size={17}/></button>
         </>}
@@ -132,6 +135,7 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
           <AtlasMap places={visible} selectedId={view.selectedId} onSelect={selectPlace} boundaries={boundaries} selectedPolityId={view.selectedPolityId} onSelectPolity={selectPolity}/>
           <div className="map-heading"><span className="eyebrow">TARİHSEL DÜNYA</span><div>{formatYear(view.year)}</div><p role="status">{visible.length || boundaries.length ? boundaries.length + ' alan · ' + visible.length + ' yerleşim' : 'Bu yıl için kayıt eklenmedi'}</p>{boundaries.length > 0 && <span className="map-source-note">Cliopatria · seçilmiş kaynak dönemleri</span>}</div>
           <div className="north-mark" aria-hidden="true">N<span>↑</span></div>
+          {!visible.length && !boundaries.length && <CoverageGuide {...nearby} onJump={jumpToCollection}/>}
           <div className="map-legend"><span className="legend-area"/>Yaklaşık alan<span className="legend-divider"/><span className="legend-dot"/>Yerleşim<span className="legend-divider"/>Modern kıyı çizgisi</div>
         </> : archiveMap ? <HistoricalMap key={archiveMap.id} map={archiveMap}/> : <ArchivePreview map={archiveMaps[0]} year={view.year} onOpen={openArchive}/>}
       </section>

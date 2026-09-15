@@ -18,7 +18,7 @@
     "uncertainty": "Sınırlar, Cliopatria'nın tarihsel alan yorumudur. Kesinlik ve ayrıntı döneme göre değişir. Kaydın tarih aralığı her yıl için ayrı gözlem veya devletin kuruluş ve bitiş tarihi değildir."
   },
   "geometryPath": "/data/polity-boundaries.geojson",
-  "geometrySha256": "f27559e187fdb2f08996848588dbfdafd6e2f291d845f63e991e70d79cb1e859",
+  "geometrySha256": "fd5a005bde27cff18e7a1a497dcccecc420eedab5c850b6f675fcb5e90a7bb8d",
   "polities": [
     {
       "id": "sumer",
@@ -55,6 +55,72 @@
       "name": "Osmanlı İmparatorluğu",
       "sourceName": "Ottoman Empire",
       "color": "#568487"
+    },
+    {
+      "id": "maurya-empire",
+      "name": "Maurya İmparatorluğu",
+      "sourceName": "Maurya Empire",
+      "color": "#97833e"
+    },
+    {
+      "id": "gupta-empire",
+      "name": "Gupta İmparatorluğu",
+      "sourceName": "Gupta Empire",
+      "color": "#9f7550"
+    },
+    {
+      "id": "abbasid-caliphate",
+      "name": "Abbâsî Halifeliği",
+      "sourceName": "Abbasid Caliphate",
+      "color": "#627b55"
+    },
+    {
+      "id": "byzantine-empire",
+      "name": "Bizans İmparatorluğu",
+      "sourceName": "Byzantine Empire",
+      "color": "#8b6390"
+    },
+    {
+      "id": "mongol-empire",
+      "name": "Moğol İmparatorluğu",
+      "sourceName": "Mongol Empire",
+      "color": "#998248"
+    },
+    {
+      "id": "mali-empire",
+      "name": "Mali İmparatorluğu",
+      "sourceName": "Mali Empire",
+      "color": "#ad7951"
+    },
+    {
+      "id": "ming-dynasty",
+      "name": "Ming Hanedanı",
+      "sourceName": "Ming Dynasty",
+      "color": "#687eaa"
+    },
+    {
+      "id": "aztec-triple-alliance",
+      "name": "Aztek Üçlü İttifakı",
+      "sourceName": "Aztec Triple Alliance",
+      "color": "#ad6355"
+    },
+    {
+      "id": "inca-empire",
+      "name": "İnka İmparatorluğu",
+      "sourceName": "Inca Empire",
+      "color": "#7a8d59"
+    },
+    {
+      "id": "khmer-empire",
+      "name": "Kmer İmparatorluğu",
+      "sourceName": "Khmer Empire",
+      "color": "#a47896"
+    },
+    {
+      "id": "ghana-empire",
+      "name": "Gana İmparatorluğu",
+      "sourceName": "Ghana Empire",
+      "color": "#9b824f"
     }
   ],
   "records": [
@@ -159,6 +225,56 @@
       ]
     },
     {
+      "id": "cliopatria-634",
+      "polityId": "maurya-empire",
+      "sourceIndex": 634,
+      "sourceFromYear": -256,
+      "sourceToYear": -248,
+      "period": {
+        "start": -255,
+        "endExclusive": -246
+      },
+      "sampleYear": -249,
+      "sourceAreaKm2": 3946255.6172140413,
+      "wikidata": "Q62943",
+      "seshatId": "in_mauryan_emp",
+      "labelPoint": [
+        79.864127,
+        23.975601
+      ],
+      "bbox": [
+        62.563419,
+        10.571678,
+        92.777443,
+        37.512772
+      ]
+    },
+    {
+      "id": "cliopatria-698",
+      "polityId": "maurya-empire",
+      "sourceIndex": 698,
+      "sourceFromYear": -225,
+      "sourceToYear": -189,
+      "period": {
+        "start": -224,
+        "endExclusive": -187
+      },
+      "sampleYear": -199,
+      "sourceAreaKm2": 1140195.3791244929,
+      "wikidata": "Q62943",
+      "seshatId": "in_mauryan_emp",
+      "labelPoint": [
+        83.753232,
+        25.389997
+      ],
+      "bbox": [
+        77.077774,
+        19.250515,
+        89.960632,
+        31.143381
+      ]
+    },
+    {
       "id": "cliopatria-1231",
       "polityId": "han-dynasty",
       "sourceIndex": 1231,
@@ -259,6 +375,356 @@
       ]
     },
     {
+      "id": "cliopatria-1541",
+      "polityId": "gupta-empire",
+      "sourceIndex": 1541,
+      "sourceFromYear": 387,
+      "sourceToYear": 409,
+      "period": {
+        "start": 387,
+        "endExclusive": 410
+      },
+      "sampleYear": 400,
+      "sourceAreaKm2": 1990102.6163530822,
+      "wikidata": "Q11774",
+      "seshatId": "in_gupta_emp",
+      "labelPoint": [
+        86.717442,
+        23.589869
+      ],
+      "bbox": [
+        66.931259,
+        12.436016,
+        92.759018,
+        34.872288
+      ]
+    },
+    {
+      "id": "cliopatria-1899",
+      "polityId": "gupta-empire",
+      "sourceIndex": 1899,
+      "sourceFromYear": 490,
+      "sourceToYear": 533,
+      "period": {
+        "start": 490,
+        "endExclusive": 534
+      },
+      "sampleYear": 500,
+      "sourceAreaKm2": 1009448.6321514719,
+      "wikidata": "Q11774",
+      "seshatId": "in_gupta_emp",
+      "labelPoint": [
+        82.360596,
+        25.036392
+      ],
+      "bbox": [
+        74.605827,
+        18.543354,
+        90.34272,
+        31.786066
+      ]
+    },
+    {
+      "id": "cliopatria-2984",
+      "polityId": "ghana-empire",
+      "sourceIndex": 2984,
+      "sourceFromYear": 793,
+      "sourceToYear": 1084,
+      "period": {
+        "start": 793,
+        "endExclusive": 1085
+      },
+      "sampleYear": 1000,
+      "sourceAreaKm2": 204203.0156819039,
+      "wikidata": "Q206789",
+      "seshatId": "mr_wagadu_2",
+      "labelPoint": [
+        -6.191031,
+        15.618258
+      ],
+      "bbox": [
+        -8.578994,
+        13.336042,
+        -3.802668,
+        17.643328
+      ]
+    },
+    {
+      "id": "cliopatria-3007",
+      "polityId": "abbasid-caliphate",
+      "sourceIndex": 3007,
+      "sourceFromYear": 800,
+      "sourceToYear": 813,
+      "period": {
+        "start": 800,
+        "endExclusive": 814
+      },
+      "sampleYear": 800,
+      "sourceAreaKm2": 7890833.120814973,
+      "wikidata": "Q12536",
+      "seshatId": "iq_abbasid_cal_1",
+      "labelPoint": [
+        60.488139,
+        28.186676
+      ],
+      "bbox": [
+        18.714529,
+        12.628879,
+        73.800003,
+        43.667835
+      ]
+    },
+    {
+      "id": "cliopatria-3298",
+      "polityId": "khmer-empire",
+      "sourceIndex": 3298,
+      "sourceFromYear": 875,
+      "sourceToYear": 1027,
+      "period": {
+        "start": 875,
+        "endExclusive": 1028
+      },
+      "sampleYear": 1000,
+      "sourceAreaKm2": 397553.16538030736,
+      "wikidata": "Q201705",
+      "seshatId": "kh_angkor_1",
+      "labelPoint": [
+        104.751071,
+        12.500303
+      ],
+      "bbox": [
+        101.48114,
+        8.514477,
+        107.692688,
+        16.67901
+      ]
+    },
+    {
+      "id": "cliopatria-3577",
+      "polityId": "abbasid-caliphate",
+      "sourceIndex": 3577,
+      "sourceFromYear": 900,
+      "sourceToYear": 910,
+      "period": {
+        "start": 900,
+        "endExclusive": 911
+      },
+      "sampleYear": 900,
+      "sourceAreaKm2": 2448744.8236137866,
+      "wikidata": "Q12536",
+      "seshatId": "iq_abbasid_cal_1",
+      "labelPoint": [
+        49.544362,
+        30.564971
+      ],
+      "bbox": [
+        34.659443,
+        17.514753,
+        63.494045,
+        43.667835
+      ]
+    },
+    {
+      "id": "cliopatria-4098",
+      "polityId": "byzantine-empire",
+      "sourceIndex": 4098,
+      "sourceFromYear": 1000,
+      "sourceToYear": 1002,
+      "period": {
+        "start": 1000,
+        "endExclusive": 1003
+      },
+      "sampleYear": 1000,
+      "sourceAreaKm2": 864449.1406375997,
+      "wikidata": "Q112039853",
+      "seshatId": "tr_byzantine_emp_2",
+      "labelPoint": [
+        34.505417,
+        38.835735
+      ],
+      "bbox": [
+        15.312662,
+        34.550625,
+        43.578472,
+        45.038776
+      ]
+    },
+    {
+      "id": "cliopatria-5114",
+      "polityId": "khmer-empire",
+      "sourceIndex": 5114,
+      "sourceFromYear": 1188,
+      "sourceToYear": 1205,
+      "period": {
+        "start": 1188,
+        "endExclusive": 1206
+      },
+      "sampleYear": 1200,
+      "sourceAreaKm2": 830253.2420718322,
+      "wikidata": "Q201705",
+      "seshatId": "kh_angkor_2",
+      "labelPoint": [
+        102.961799,
+        14.814659
+      ],
+      "bbox": [
+        97.798264,
+        8.514477,
+        107.692688,
+        21.243395
+      ]
+    },
+    {
+      "id": "cliopatria-5181",
+      "polityId": "byzantine-empire",
+      "sourceIndex": 5181,
+      "sourceFromYear": 1192,
+      "sourceToYear": 1201,
+      "period": {
+        "start": 1192,
+        "endExclusive": 1202
+      },
+      "sampleYear": 1200,
+      "sourceAreaKm2": 431886.60292471905,
+      "wikidata": "Q112039853",
+      "seshatId": "tr_byzantine_emp_3",
+      "labelPoint": [
+        28.115156,
+        39.611267
+      ],
+      "bbox": [
+        19.248652,
+        35.000969,
+        41.795097,
+        45.038776
+      ]
+    },
+    {
+      "id": "cliopatria-5645",
+      "polityId": "mali-empire",
+      "sourceIndex": 5645,
+      "sourceFromYear": 1241,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1241,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1325,
+      "sourceAreaKm2": 973312.3247861502,
+      "wikidata": "Q184536",
+      "seshatId": "ml_mali_emp",
+      "labelPoint": [
+        -10.478017,
+        13.753912
+      ],
+      "bbox": [
+        -17.454187,
+        9.47879,
+        1.719503,
+        18.029055
+      ]
+    },
+    {
+      "id": "cliopatria-5694",
+      "polityId": "mongol-empire",
+      "sourceIndex": 5694,
+      "sourceFromYear": 1250,
+      "sourceToYear": 1259,
+      "period": {
+        "start": 1250,
+        "endExclusive": 1260
+      },
+      "sampleYear": 1250,
+      "sourceAreaKm2": 23974696.105834592,
+      "wikidata": "Q12557",
+      "seshatId": "mn_mongol_emp",
+      "labelPoint": [
+        91.747938,
+        43.179277
+      ],
+      "bbox": [
+        21.385677,
+        24.072035,
+        141.556625,
+        62.259857
+      ]
+    },
+    {
+      "id": "cliopatria-6639",
+      "polityId": "khmer-empire",
+      "sourceIndex": 6639,
+      "sourceFromYear": 1375,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1375,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 240474.29224646668,
+      "wikidata": "Q201705",
+      "seshatId": "",
+      "labelPoint": [
+        104.942854,
+        11.535991
+      ],
+      "bbox": [
+        102.392136,
+        8.514477,
+        107.666916,
+        14.557508
+      ]
+    },
+    {
+      "id": "cliopatria-7215",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 7215,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1467,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1468
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 4960435.683110944,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.291775,
+        33.36092
+      ],
+      "bbox": [
+        90.650169,
+        18.221918,
+        129.887589,
+        46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-7247",
+      "polityId": "inca-empire",
+      "sourceIndex": 7247,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 155367.62605453003,
+      "wikidata": "Q28573",
+      "seshatId": "pe_inca_emp",
+      "labelPoint": [
+        -73.349328,
+        -13.889749
+      ],
+      "bbox": [
+        -75.683601,
+        -16.236256,
+        -69.479774,
+        -11.478965
+      ]
+    },
+    {
       "id": "cliopatria-7269",
       "polityId": "ottoman-empire",
       "sourceIndex": 7269,
@@ -284,6 +750,156 @@
       ]
     },
     {
+      "id": "cliopatria-7301",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7301,
+      "sourceFromYear": 1453,
+      "sourceToYear": 1458,
+      "period": {
+        "start": 1453,
+        "endExclusive": 1459
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 69428.43992644464,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.779994,
+        19.411231
+      ],
+      "bbox": [
+        -100.218781,
+        18.157629,
+        -94.931114,
+        20.729105
+      ]
+    },
+    {
+      "id": "cliopatria-7416",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 7416,
+      "sourceFromYear": 1468,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1468,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1500,
+      "sourceAreaKm2": 4335857.522521183,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.291775,
+        33.36092
+      ],
+      "bbox": [
+        97.589081,
+        18.221918,
+        129.887589,
+        46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-7453",
+      "polityId": "mali-empire",
+      "sourceIndex": 7453,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1500,
+      "sourceAreaKm2": 346027.17241252476,
+      "wikidata": "Q184536",
+      "seshatId": "",
+      "labelPoint": [
+        -11.116328,
+        11.760997
+      ],
+      "bbox": [
+        -16.830828,
+        9.543078,
+        -6.471725,
+        13.914631
+      ]
+    },
+    {
+      "id": "cliopatria-7629",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7629,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1500,
+      "sourceAreaKm2": 930754.8602209121,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.0904,
+        41.359815
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.14975,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7642",
+      "polityId": "inca-empire",
+      "sourceIndex": 7642,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1500,
+      "sourceAreaKm2": 2095031.9905848631,
+      "wikidata": "Q28573",
+      "seshatId": "pe_inca_emp",
+      "labelPoint": [
+        -67.100414,
+        -17.393439
+      ],
+      "bbox": [
+        -81.474663,
+        -35.651798,
+        -62.527802,
+        0.992826
+      ]
+    },
+    {
+      "id": "cliopatria-7677",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7677,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1500,
+      "sourceAreaKm2": 177090.92574555875,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.146102,
+        19.057654
+      ],
+      "bbox": [
+        -101.716743,
+        14.750372,
+        -92.101685,
+        21.371967
+      ]
+    },
+    {
       "id": "cliopatria-8504",
       "polityId": "ottoman-empire",
       "sourceIndex": 8504,
@@ -306,6 +922,31 @@
         10.057378,
         51.74725,
         47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8532",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8532,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1618,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1619
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 3846244.1557575124,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.400885,
+        31.432586
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        124.725349,
+        42.886398
       ]
     },
     {

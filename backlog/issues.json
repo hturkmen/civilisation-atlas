@@ -311,7 +311,7 @@
       "id": "P02-006",
       "project_id": "P02",
       "title": "Başlangıç koleksiyonunu seç ve içerik eforunu ölç",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -330,7 +330,8 @@
       "github": {
         "number": 11,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/11"
-      }
+      },
+      "implementation_note": "17 siyasi yapı, 35 kaynaklı alan kaydı ve üç yerleşim; yeni bölgeler ve kaynak dönemleri docs/14-collection-discovery.md içinde. İkinci perspektif ve bağımsız inceleme/efor ölçümü bekliyor."
     },
     {
       "id": "P03-001",
@@ -536,7 +537,7 @@
         "number": 19,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/19"
       },
-      "implementation_note": "Kesin yıl, koleksiyon durakları ve önceki/sonraki durak uygulandı. Yakınlaştırılabilir zaman ekseni ve uzak API istek iptali henüz yok."
+      "implementation_note": "Kesin yıl girişi, koleksiyon durakları ve kaynaklı yıllara atlayan oynatma uygulandı. Boş yıl önerileri gerçek kaynak aralığı uçlarından hesaplanır. Zoomlu timeline ve API istek iptali kabul kapsamı bekliyor."
     },
     {
       "id": "P04-003",
@@ -590,7 +591,7 @@
         "number": 21,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/21"
       },
-      "implementation_note": "Alanlarda kaynak, lisans, uyarlama ve tarihsel belirsizlik; kayıt boşluklarında eski seçimi temizleme eklendi. Dünya çapında kapsam katmanı bekliyor."
+      "implementation_note": "Kaynak ve belirsizlik gösterimine en yakın kaynaklı yıl geçişleri eklendi. 17 siyasi yapı / 35 kayıt sayıları veriden hesaplanıyor. Tam bölge/dönem kapsama matrisi ve bağımsız inceleme bekliyor."
     },
     {
       "id": "P04-005",

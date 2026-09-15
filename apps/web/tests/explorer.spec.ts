@@ -6,7 +6,8 @@ test('map loads locally and selecting a place exposes evidence', async ({page}) 
   page.on('request', request => {if (/^https?:/.test(request.url()) && !request.url().startsWith('http://127.0.0.1:3100')) external.push(request.url());});
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page.getByTestId('atlas-map')).toHaveAttribute('data-ready', 'true');
+  // Cold software-GPU initialisation is not a production performance benchmark.
+  await expect(page.getByTestId('atlas-map')).toHaveAttribute('data-ready', 'true', {timeout: 15000});
   await page.getByRole('button', {name: 'Mohenjo-daro yerleşimini seç'}).click();
   await expect(page.getByRole('heading', {name: 'Mohenjo-daro', exact: true})).toBeVisible();
   await expect(page.getByRole('link', {name: 'Archaeological Ruins at Moenjodaro'})).toHaveAttribute('href', 'https://whc.unesco.org/en/list/138/');
@@ -196,4 +197,62 @@ test('mobile polity selection, period switching and sources remain usable', asyn
   await page.getByRole('button', {name: 'Bilinen dünya', exact: true}).click();
   await expect(page.getByTestId('atlas-map')).toHaveCount(0);
   await expect(page).not.toHaveURL(/polity=/);
+});
+
+test('expanded 1500 snapshot exposes five sourced areas and Turkish search', async ({page}) => {
+  await page.goto('/?year=1500&era=CE');
+  await expect(page.locator('.polity-list li')).toHaveCount(5);
+  await expect(page.getByTestId('atlas-map')).toHaveAttribute('data-ready', 'true');
+  await page.getByRole('textbox', {name: 'Medeniyet veya yerleşim ara'}).fill('İNKA');
+  await expect(page.locator('.polity-list li')).toHaveCount(1);
+  await page.locator('.polity-list').getByRole('button', {name: /İnka İmparatorluğu/}).click();
+  await expect(page.getByRole('heading', {name: 'İnka İmparatorluğu', exact: true})).toBeVisible();
+  await expect(page.locator('.boundary-period')).toContainText('MS 1497 — MS 1533');
+  await expect(page.getByRole('link', {name: 'CC BY 4.0 · uyarlanmış veri'})).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('heading', {name: 'İnka İmparatorluğu', exact: true})).toBeVisible();
+});
+
+test('empty year offers the actual nearest source edge without retaining a stale polity', async ({page}) => {
+  await page.goto('/?year=207&era=CE&polity=roman-empire');
+  const nearby = page.getByRole('navigation', {name: 'En yakın kaynaklı yıllar'});
+  await expect(nearby.getByRole('button', {name: 'Önceki kaynaklı yıl: MS 206'})).toBeVisible();
+  await expect(nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 387'})).toBeVisible();
+  await expect(page).not.toHaveURL(/polity=/);
+  await nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 387'}).click();
+  await expect(page.getByRole('textbox', {name: 'Yıl', exact: true})).toHaveValue('387');
+  await expect(page.locator('.polity-list')).toContainText('Gupta İmparatorluğu');
+  await expect(nearby).toHaveCount(0);
+});
+
+test('collection playback visits a short source period and stops on pause or a manual year', async ({page}) => {
+  await page.goto('/?year=500&era=CE');
+  await expect(page.getByTestId('atlas-map')).toHaveAttribute('data-ready', 'true');
+  await page.clock.install();
+  await page.getByRole('button', {name: 'Zamanı oynat', exact: true}).click();
+  await page.clock.fastForward(3100);
+  await expect(page.getByRole('textbox', {name: 'Yıl', exact: true})).toHaveValue('800');
+  await expect(page.locator('.polity-list')).toContainText('Abbâsî Halifeliği');
+  await page.getByRole('button', {name: 'Zamanı durdur', exact: true}).click();
+  await page.clock.fastForward(9000);
+  await expect(page.getByRole('textbox', {name: 'Yıl', exact: true})).toHaveValue('800');
+  await page.getByRole('button', {name: 'Zamanı oynat', exact: true}).click();
+  await page.getByRole('textbox', {name: 'Yıl', exact: true}).fill('1500');
+  await page.getByRole('button', {name: 'Yıla git'}).click();
+  await page.clock.fastForward(9000);
+  await expect(page.getByRole('textbox', {name: 'Yıl', exact: true})).toHaveValue('1500');
+  await expect(page.getByRole('button', {name: 'Zamanı oynat', exact: true})).toHaveAttribute('aria-pressed', 'false');
+});
+
+test('360px empty-year shortcuts remain in view and open a sourced period', async ({page}) => {
+  await page.setViewportSize({width: 360, height: 800});
+  await page.goto('/?year=1700&era=CE');
+  const nearby = page.getByRole('navigation', {name: 'En yakın kaynaklı yıllar'});
+  await expect(nearby).toBeInViewport();
+  await expect(nearby.getByRole('button', {name: 'Önceki kaynaklı yıl: MS 1618'})).toBeInViewport();
+  await expect(nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 1800'})).toBeInViewport();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 1800'}).click();
+  await page.locator('.polity-list').getByRole('button', {name: /Osmanlı İmparatorluğu/}).click();
+  await expect(page.getByRole('heading', {name: 'Osmanlı İmparatorluğu', exact: true})).toBeInViewport();
 });

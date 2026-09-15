@@ -2,7 +2,7 @@
 
 Kullanıcının yönlendirmesi: kalan işleri listele; kullanıcıya görünür etkiye göre geliştirmeye devam et. Sıra görsel etkiye göredir; veri doğruluğu ve güvenlik bağımlılıkları atlanmaz.
 
-Son güncelleme: [İlk kaynaklı tarihsel alan katmanı](13-sourced-boundaries.md) eklendi; altı siyasi yapı ve 12 seçilmiş kayıt. Aşağıdaki ilk arşiv adımının doğrulama kaydı korunur.
+Son güncelleme: [Genişleyen koleksiyon ve keşif](14-collection-discovery.md); 17 siyasi yapı, 35 seçilmiş kayıt, en yakın kaynaklı yıl ve koleksiyon oynatma. Aşağıdaki ilk arşiv adımının doğrulama kaydı korunur.
 
 ## Bu adımda uygulananlar
 

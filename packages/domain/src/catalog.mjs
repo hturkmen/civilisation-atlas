@@ -2,7 +2,7 @@ import {containsYear, toAstronomicalYear, toDisplayYear} from './chronology.mjs'
 
 export const MIN_YEAR = -3999;
 export const DEFAULT_YEAR = -2499;
-export const RELEASE_ID = 'preview-2026-09-13.3';
+export const RELEASE_ID = 'preview-2026-09-13.4';
 
 /** The window means source coverage, never the complete lifetime of a polity. */
 export function visiblePlaces(places, year, query = '') {

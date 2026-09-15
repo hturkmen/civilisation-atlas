@@ -24,6 +24,17 @@
     {"id": "achaemenid", "name": "Ahameniş İmparatorluğu", "sourceName": "Achaemenid Empire", "color": "#716594", "years": [-500]},
     {"id": "roman-empire", "name": "Roma İmparatorluğu", "sourceName": "Roman Empire", "color": "#a65a48", "years": [117, 200]},
     {"id": "han-dynasty", "name": "Han Hanedanı", "sourceName": "Han Dynasty", "color": "#53816e", "years": [117, 200]},
-    {"id": "ottoman-empire", "name": "Osmanlı İmparatorluğu", "sourceName": "Ottoman Empire", "color": "#568487", "years": [1453, 1600, 1800, 1914]}
+    {"id": "ottoman-empire", "name": "Osmanlı İmparatorluğu", "sourceName": "Ottoman Empire", "color": "#568487", "years": [1453, 1500, 1600, 1800, 1914]},
+    {"id": "maurya-empire", "name": "Maurya İmparatorluğu", "sourceName": "Maurya Empire", "color": "#97833e", "years": [-250, -200]},
+    {"id": "gupta-empire", "name": "Gupta İmparatorluğu", "sourceName": "Gupta Empire", "color": "#9f7550", "years": [400, 500]},
+    {"id": "abbasid-caliphate", "name": "Abbâsî Halifeliği", "sourceName": "Abbasid Caliphate", "color": "#627b55", "years": [800, 900]},
+    {"id": "byzantine-empire", "name": "Bizans İmparatorluğu", "sourceName": "Byzantine Empire", "color": "#8b6390", "years": [1000, 1200]},
+    {"id": "mongol-empire", "name": "Moğol İmparatorluğu", "sourceName": "Mongol Empire", "color": "#998248", "years": [1250]},
+    {"id": "mali-empire", "name": "Mali İmparatorluğu", "sourceName": "Mali Empire", "color": "#ad7951", "years": [1325, 1500]},
+    {"id": "ming-dynasty", "name": "Ming Hanedanı", "sourceName": "Ming Dynasty", "color": "#687eaa", "years": [1453, 1500, 1600]},
+    {"id": "aztec-triple-alliance", "name": "Aztek Üçlü İttifakı", "sourceName": "Aztec Triple Alliance", "color": "#ad6355", "years": [1453, 1500]},
+    {"id": "inca-empire", "name": "İnka İmparatorluğu", "sourceName": "Inca Empire", "color": "#7a8d59", "years": [1453, 1500]},
+    {"id": "khmer-empire", "name": "Kmer İmparatorluğu", "sourceName": "Khmer Empire", "color": "#a47896", "years": [1000, 1200, 1453]},
+    {"id": "ghana-empire", "name": "Gana İmparatorluğu", "sourceName": "Ghana Empire", "color": "#9b824f", "years": [1000]}
   ]
 }

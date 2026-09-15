@@ -11,8 +11,8 @@ const ids = year => visibleBoundaries(collection, year).map(item => item.polity.
 
 test('boundary export is pinned to evidence and the exact geometry artifact', () => {
   validateBoundaryCollection(collection);
-  assert.equal(collection.polities.length, 6);
-  assert.equal(collection.records.length, 12);
+  assert.equal(collection.polities.length, 17);
+  assert.equal(collection.records.length, 35);
   assert.equal(createHash('sha256').update(rawGeometry).digest('hex'), collection.geometrySha256);
   validateBoundaryGeometry(JSON.parse(rawGeometry), collection);
 });
@@ -30,10 +30,17 @@ test('CE boundaries retain independent source coverage and never interpolate gap
   assert.deepEqual(ids(117), ['han-dynasty', 'roman-empire']);
   assert.deepEqual(ids(126), ['han-dynasty', 'roman-empire']);
   assert.deepEqual(ids(127), ['han-dynasty']);
-  assert.deepEqual(ids(1601), ['ottoman-empire']);
-  assert.deepEqual(ids(1602), []);
+  assert.deepEqual(ids(1601), ['ming-dynasty', 'ottoman-empire']);
+  assert.deepEqual(ids(1602), ['ming-dynasty']);
   assert.deepEqual(ids(1914), ['ottoman-empire']);
   assert.deepEqual(ids(1915), []);
+});
+
+test('expanded world snapshot links five selected political areas to independent records', () => {
+  assert.deepEqual(ids(1500), ['aztec-triple-alliance', 'inca-empire', 'mali-empire', 'ming-dynasty', 'ottoman-empire']);
+  assert.deepEqual(ids(1000), ['byzantine-empire', 'ghana-empire', 'khmer-empire']);
+  assert.deepEqual(ids(-249), ['maurya-empire']);
+  assert.equal(visibleBoundaries(collection, 1500, 'İNKA')[0].polity.id, 'inca-empire');
 });
 
 test('shared polity links are validated against year and mode, with no ambiguous selection', () => {
