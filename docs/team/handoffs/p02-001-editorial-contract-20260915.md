@@ -5,7 +5,7 @@
 - Durum: `ready_for_review`
 - Güncelleme zamanı: 2026-09-15 12:40 (+03:00, Europe/Istanbul; UTC+3)
 - Başlangıç `origin/main` tam SHA: `80fe225d0e0732dc3b1e51865fcb21d0c57fed4e`
-- Dal / PR URL: `agent/kiro/p02-001-editorial-contract-20260915` — PR #açılıyor, aşağıdaki "GitHub ve yayın" bölümünde güncellenir
+- Dal / PR URL: [PR #47](https://github.com/hturkmen/civilisation-atlas/pull/47)
 - Son push edilen uygulama commit'i: `abde1dca8dad4af07447e5a06a2ee02e4d42876d` (bu devir kaydı bir önceki commit'te push edildi; bu dosyanın kendi SHA'sı bu satırda değildir)
 - Son doğrulanan commit: `abde1dca8dad4af07447e5a06a2ee02e4d42876d`
 - İnceleme kapsamı / kalan fark: yalnızca aşağıda listelenen yeni/değişen dosyalar
@@ -61,6 +61,6 @@ Beş kaynağın ikisi (UNESCO 138, UNESCO 364) canlı sayfadan gerçek metinle d
 ## GitHub ve yayın
 
 - Push doğrulaması / uzak SHA: `origin/agent/kiro/p02-001-editorial-contract-20260915` → `abde1dca8dad4af07447e5a06a2ee02e4d42876d` (push çıktısıyla doğrulandı)
-- PR inceleme ve birleştirme durumu: PR açıldı, incelemede
+- PR inceleme ve birleştirme durumu: [PR #47](https://github.com/hturkmen/civilisation-atlas/pull/47) açıldı, incelemede
 - Demo: `not_needed` — bu görev dosya alanı (`packages/contracts/editorial/`, `data/editorial/`, domain modülü, script, test) mevcut web arayüzünü veya yayınlanan demo davranışını değiştirmiyor.
 - Yayımlandıysa hizmetten doğrulanan sürüm / dağıtım / zaman / URL: uygulanmaz (demo değişmedi)
