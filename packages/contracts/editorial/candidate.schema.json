@@ -1,0 +1,61 @@
+{
+  "title": "EditorialCandidate",
+  "description": "P02-001/P02-002 Gate A candidate: one claim about one entity, with evidence and review state. Structural validity is not publication approval; see evaluatePublishability in packages/domain/src/editorial.mjs. The 'extent' property has the shape documented in temporal-extent.schema.json in this same directory (mirrors packages/domain/src/chronology.mjs).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "entityRef", "claimPredicate", "claimStatement", "status", "reviewStatus", "editor", "minutesSpent"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "entityRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": {"enum": ["settlement", "boundary_record", "perspective"]},
+        "id": {"type": "string", "minLength": 1, "description": "Identifier of the existing entity/record this candidate is about, e.g. a preview-collection.json place id or a boundary-collection.json record id. This module does not itself dereference that id."}
+      }
+    },
+    "claimPredicate": {"type": "string", "minLength": 1, "description": "What kind of statement this is, e.g. 'temporal_focus', 'coordinate_basis', 'alternative_interpretation'."},
+    "claimStatement": {"type": "string", "minLength": 1},
+    "status": {"enum": ["draft", "blocked", "ready_for_review"]},
+    "blockedReason": {"type": "string", "minLength": 1, "description": "Required when status is 'blocked', forbidden otherwise. Documents a researched candidate that could not be completed, e.g. a source with no verifiable provenance."},
+    "extent": {"type": "object", "description": "See temporal-extent.schema.json in this directory."},
+    "originalExpression": {"type": "string", "minLength": 1},
+    "editorialClass": {"enum": ["documented", "scholarly_reconstruction", "approximate", "disputed", "unknown"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sourceId", "relation", "sourceStatement", "editorialInference"],
+        "properties": {
+          "sourceId": {"type": "string", "minLength": 1, "description": "Must match the id of an entry in the accompanying sources file."},
+          "locator": {"type": ["string", "null"], "minLength": 1, "description": "Exact page/figure/map/feature locator. Use null with locatorMissingReason when none exists."},
+          "locatorMissingReason": {"type": "string", "minLength": 1},
+          "relation": {"enum": ["supports", "contradicts", "context"]},
+          "sourceStatement": {"type": "string", "minLength": 1, "description": "What the source actually says, kept separate from the editor's conclusion."},
+          "editorialInference": {"type": "string", "minLength": 1, "description": "What the editor concluded from the source statement."},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "reviewStatus": {"enum": ["unreviewed", "in_review", "independently_reviewed", "rejected"]},
+    "reviewer": {"type": "string", "minLength": 1, "description": "Required only when reviewStatus is 'independently_reviewed'."},
+    "reviewedContentHash": {"type": "string", "pattern": "^[a-f0-9]{64}$", "description": "sha256 of the candidate content (excluding review fields) at the time of review, per contentHash() in editorial.mjs. Used to detect edits made after a review was recorded."},
+    "editor": {"type": "string", "minLength": 1},
+    "minutesSpent": {"type": "number", "minimum": 0}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "blocked"}}, "required": ["status"]},
+      "then": {"required": ["blockedReason"], "not": {"anyOf": [{"required": ["extent"]}]}},
+      "else": {"not": {"required": ["blockedReason"]}, "required": ["extent", "originalExpression", "editorialClass", "rationale", "evidence"]}
+    },
+    {
+      "if": {"properties": {"reviewStatus": {"const": "independently_reviewed"}}, "required": ["reviewStatus"]},
+      "then": {"required": ["reviewer", "reviewedContentHash"]},
+      "else": {"not": {"anyOf": [{"required": ["reviewer"]}, {"required": ["reviewedContentHash"]}]}}
+    }
+  ]
+}

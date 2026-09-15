@@ -1,0 +1,146 @@
+[
+  {
+    "id": "gate-a-mohenjo-daro-3rd-millennium",
+    "entityRef": {"kind": "settlement", "id": "mohenjo-daro"},
+    "claimPredicate": "temporal_focus_basis",
+    "claimStatement": "Mohenjo-daro'nun UNESCO kaydındaki yerleşim dönemi, kentin MÖ 3. binyılın başına tarihlendiğini belirtir; bu, İndus uygarlığına verilen daha geniş MÖ 2500–1500 aralığından ayrıdır ve kente aktarılmaz.",
+    "status": "ready_for_review",
+    "extent": {
+      "startEarliest": -2999,
+      "startLatest": -2999,
+      "endEarliestExclusive": -1999,
+      "endLatestExclusive": -1999,
+      "calendarSystem": "proleptic Gregorian, astronomical year numbering",
+      "precision": "century",
+      "rationale": "Kaynak yalnız 'MÖ 3. binyılın başı' der; ek sayısal belirsizlik uydurulmadı. Certain ve possible aralığı bu yüzden aynı: kaynağın verdiği tek yorum penceresi budur, daha dar bir 'kesin' alt küme kaynakta yok."
+    },
+    "originalExpression": "dating back to the beginning of the 3rd millennium BC",
+    "editorialClass": "scholarly_reconstruction",
+    "rationale": "UNESCO Brief synthesis metni arkeolojik/radyokarbon temelli tarihleme sonucudur, birincil yazılı belge değildir; bu yüzden 'documented' değil 'scholarly_reconstruction' seçildi. Kentin bütün yaşam süresi veya İndus uygarlığının MÖ 2500–1500 aralığı bu iddiaya dahil edilmedi.",
+    "evidence": [
+      {
+        "sourceId": "ed-unesco-138",
+        "locator": "Brief synthesis, ilk paragraf",
+        "relation": "supports",
+        "sourceStatement": "\"The Archaeological Ruins at Moenjodaro are the best preserved urban settlement in South Asia dating back to the beginning of the 3rd millennium BC\" ve ayrı olarak \"the Indus civilization, which flourished between 2,500-1,500 BC\".",
+        "editorialInference": "Yerleşimin kendisi için kullanılabilecek tek tarih ifadesi 'MÖ 3. binyılın başı'dır; 2500–1500 BC ifadesi uygarlığa aittir ve kente genişletilmemiştir."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "editor": "Kiro veri görevi, 2026-09-15",
+    "minutesSpent": 18
+  },
+  {
+    "id": "gate-a-great-zimbabwe-1100-1450",
+    "entityRef": {"kind": "settlement", "id": "great-zimbabwe"},
+    "claimPredicate": "temporal_focus_basis",
+    "claimStatement": "Büyük Zimbabve'nin taş yapılaşma dönemi UNESCO kaydında MS 1100–1450 olarak verilir; bu tarih Şona kültürünün varlık süresi veya yerleşimin bütün kullanım tarihi değildir.",
+    "status": "ready_for_review",
+    "extent": {
+      "startEarliest": 1100,
+      "startLatest": 1100,
+      "endEarliestExclusive": 1451,
+      "endLatestExclusive": 1451,
+      "calendarSystem": "proleptic Gregorian, astronomical year numbering",
+      "precision": "century",
+      "rationale": "Kaynak açık bir aralık verir (1100–1450 AD); certain/possible ayrımı için ek belirsizlik kaynakta yok, bu yüzden ikisi eşit tutuldu. Kaynağın kendisi 11.-15. yüzyıl arası sürekli iskan ile 1100–1450 yapılaşma dönemini ayırıyor; burada ikincisi kullanıldı."
+    },
+    "originalExpression": "built between 1100 and 1450 AD",
+    "editorialClass": "scholarly_reconstruction",
+    "rationale": "Kaynak metni açıkça 'Scientific research has proved that Great Zimbabwe was founded in the 11th century' diyerek bunun arkeolojik/bilimsel araştırma sonucu olduğunu belirtiyor; bu yüzden 'documented' değil 'scholarly_reconstruction' seçildi.",
+    "evidence": [
+      {
+        "sourceId": "ed-unesco-364",
+        "locator": "Brief synthesis, ilk paragraf ve dördüncü paragraf",
+        "relation": "supports",
+        "sourceStatement": "\"The property, built between 1100 and 1450 AD, extends over almost 800 ha\" ve \"Scientific research has proved that Great Zimbabwe was founded in the 11th century ... About 1450, the capital was abandoned\".",
+        "editorialInference": "1100–1450 AD, kentin taş yapılaşma/başkent olma dönemidir; bu yerleşimin veya Şona kültürünün başlangıç/bitiş tarihi olarak sunulmaz (1505'te Portekizlilerin bölgeye gelişi ve sonraki Torwa/Mwene-Mutapa ayrımı, yapılaşma dönemi dışındadır)."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "editor": "Kiro veri görevi, 2026-09-15",
+    "minutesSpent": 16
+  },
+  {
+    "id": "gate-a-roman-empire-117-boundary",
+    "entityRef": {"kind": "boundary_record", "id": "cliopatria-1235"},
+    "claimPredicate": "geometry_and_extent_basis",
+    "claimStatement": "Roma İmparatorluğu'nun MS 117 sınır kaydı, Cliopatria'nın 1235 numaralı POLITY kaydına (it_roman_principate, Wikidata Q12544) dayanır ve kaynağın MS 117–126 yıl aralığını yansıtır; bu, imparatorluğun kuruluş/yıkılış tarihi değildir.",
+    "status": "ready_for_review",
+    "extent": {
+      "startEarliest": 117,
+      "startLatest": 117,
+      "endEarliestExclusive": 127,
+      "endLatestExclusive": 127,
+      "calendarSystem": "proleptic Gregorian, astronomical year numbering",
+      "precision": "year",
+      "rationale": "data/boundary-collection.json içindeki cliopatria-1235 kaydının period.start=117, period.endExclusive=127 alanlarıyla birebir eşleşir; kaynak yılı zaten tam sayı olduğundan ek belirsizlik eklenmedi."
+    },
+    "originalExpression": "sourceFromYear 117, sourceToYear 126 (Cliopatria POLITY record #1235)",
+    "editorialClass": "scholarly_reconstruction",
+    "rationale": "docs/13-sourced-boundaries.md, Cliopatria sınırlarının 'tarihsel alan yorumu' olduğunu ve kayıt aralığının devletin kuruluş/yıkılış tarihi anlamına gelmediğini açıkça belirtiyor; bu yüzden 'documented' değil 'scholarly_reconstruction' seçildi. Bu aday yeni geometri eklemez, mevcut data/boundary-collection.json kaydına atıf yapar; üretilmiş GeoJSON elle düzenlenmedi.",
+    "evidence": [
+      {
+        "sourceId": "ed-cliopatria-v0-2-0",
+        "locator": "cliopatria_polities_only.geojson arşiv üyesi, POLITY kaydı #1235 (data/boundary-collection.json içindeki cliopatria-1235 ile eşleşir)",
+        "relation": "supports",
+        "sourceStatement": "Kaynak POLITY kaydı #1235, Roman Empire / it_roman_principate için MS 117–126 yıl aralığını ve ilişkili geometriyi verir (sourceAreaKm2, wikidata Q12544 ile birlikte).",
+        "editorialInference": "Bu aralık, MS 117 keşif durağında Roma İmparatorluğu'nun gösterilen sınırının kaynağıdır; MS 127'de bu kayıt kapsam dışına çıkar ve imparatorluğun sona erdiği anlamına gelmez (bkz. docs/13-sourced-boundaries.md örnek: Han kaydı MS 127'de kalır)."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "editor": "Kiro veri görevi, 2026-09-15",
+    "minutesSpent": 20
+  },
+  {
+    "id": "gate-a-waldseemuller-1507-perspective",
+    "entityRef": {"kind": "perspective", "id": "waldseemuller-1507"},
+    "claimPredicate": "artifact_and_knowledge_date_separation",
+    "claimStatement": "Waldseemüller haritasının 1507 basım/katalog tarihi ile haritanın temsil ettiği coğrafi bilginin tek bir tarihi olmadığı ayrı tutulur; katalog kaydı on iki yapraklık dijital bileşimi tarif eder.",
+    "status": "ready_for_review",
+    "extent": {
+      "startEarliest": 1507,
+      "startLatest": 1507,
+      "endEarliestExclusive": 1508,
+      "endLatestExclusive": 1508,
+      "calendarSystem": "proleptic Gregorian, astronomical year numbering",
+      "precision": "year",
+      "rationale": "Bu extent haritanın basım/katalog yılı içindir (artifact date), haritanın tasvir ettiği coğrafi bilginin tarihi değildir; data/historical-maps.json içindeki knowledgeDate alanı ayrı ve tek bir yıla indirilemeyecek şekilde metinsel tutulur."
+    },
+    "originalExpression": "LOC katalog 2003626426; G3200 1507 .W3 — on iki ayrı yapraktan oluşan dijital bileşim",
+    "editorialClass": "documented",
+    "rationale": "LOC katalog kaydı fiziksel eseri (başlık, yıl, yaprak sayısı, çağrı numarası) doğrudan tarif eder; bu 'documented' sınıfına girer. Haritanın gösterdiği coğrafi bilginin (Batlamyus geleneği + Vespucci-dönemi raporlar) tek bir tarihi olmadığı bilgisi ayrı bir alan olarak korunur, bu adaya karıştırılmaz.",
+    "evidence": [
+      {
+        "sourceId": "ed-loc-waldseemuller-1507",
+        "locator": "Katalog 2003626426; çağrı numarası G3200 1507 .W3",
+        "relation": "supports",
+        "sourceStatement": "Katalog kaydı haritayı 1507 tarihli, on iki yapraktan oluşan ve dijital olarak birleştirilmiş bir eser olarak tanımlar (bkz. data/historical-maps.json sourceLocator alanı).",
+        "editorialInference": "1507, eserin basım/katalog (copyDate) tarihidir; haritanın temsil ettiği coğrafi bilginin (knowledgeDate) tek bir yılı yoktur ve bu ikisi karıştırılmadan ayrı alanlarda tutulur."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "editor": "Kiro veri görevi, 2026-09-15",
+    "minutesSpent": 14
+  },
+  {
+    "id": "gate-a-roman-117-alternative-blocked",
+    "entityRef": {"kind": "boundary_record", "id": "cliopatria-1235"},
+    "claimPredicate": "alternative_interpretation_attempt",
+    "claimStatement": "Roma İmparatorluğu'nun MS 117 sınırı için Cliopatria'dan bağımsız, kullanılabilir bir ikinci kaynaklı yorum aranmıştır; uygun bir aday bulunamamıştır.",
+    "status": "blocked",
+    "blockedReason": "İncelenen tek özgür lisanslı alternatif, Wikimedia Commons'taki 'File:RomanEmpire 117.svg' dosyasıydı. Dosyanın kendi açıklama sayfası 'A source (reference) has not been provided for the data in this self-made map' ifadesini taşıyor; yani geometri için doğrulanabilir bir kaynak/kanıt zinciri yok. Bu proje kaynak ifadesi ile editör çıkarımını ayırmayı ve her geometri için kanıt gerektirdiğinden (bkz. docs/02-sources-and-editorial.md), kaynaksız bir haritayı 'alternatif yorum' olarak kabul etmek kuralları ihlal eder. Aynı ailedeki türetilmiş sürümler (RomanEmpire_117_es.svg, RomanEmpire_117-pt.svg, RomanEmpire_117_it.svg vb.) aynı kaynaksız temel dosyaya dayanır. Makine tarafından işlenebilir, kaynaklı ve CC uyumlu bir ikinci geometri bu oturumda bulunamadı; arama burada durduruldu ve aday engellendi.",
+    "evidence": [
+      {
+        "sourceId": "ed-wikimedia-romanempire117-svg",
+        "locator": "Dosya açıklama sayfası, alt başlık/Caption bölümü",
+        "relation": "context",
+        "sourceStatement": "\"A source (reference) has not been provided for the data in this self-made map.\"",
+        "editorialInference": "Kaynak/referans belirtilmediği için bu dosya bağımsız ikinci yorum olarak kullanılamaz; kanıt zinciri kurulamadığından aday engellendi, sahte bir çelişki veya destek ilişkisi uydurulmadı."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "editor": "Kiro veri görevi, 2026-09-15",
+    "minutesSpent": 22
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "title": "TemporalExtent",
+  "description": "Mirrors packages/domain/src/chronology.mjs validateTemporalExtent. Astronomical years, half-open intervals: [startEarliest, endLatestExclusive) is the possible range, [startLatest, endEarliestExclusive) is the certain range. This file intentionally duplicates the shape already used informally in packages/contracts/openapi.json rather than importing it, to keep the editorial contract self-contained for this task's file scope.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["startEarliest", "startLatest", "endEarliestExclusive", "endLatestExclusive"],
+  "properties": {
+    "startEarliest": {"type": "integer"},
+    "startLatest": {"type": "integer"},
+    "endEarliestExclusive": {"type": "integer"},
+    "endLatestExclusive": {"type": "integer"},
+    "calendarSystem": {"type": "string"},
+    "precision": {"enum": ["year", "month", "day", "century", "approximate"]},
+    "rationale": {"type": "string"}
+  }
+}
