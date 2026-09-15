@@ -15,7 +15,7 @@ from shapely.geometry.polygon import orient
 from shapely.validation import explain_validity
 
 ROOT = Path(__file__).resolve().parents[1]
-config = json.loads((ROOT / 'data/boundary-import.json').read_text())
+config = json.loads((ROOT / 'data/boundary-import.json').read_text(encoding='utf-8'))
 source = config['source']
 archive = Path(sys.argv[1])
 if archive.stat().st_size > 60_000_000:
@@ -93,7 +93,7 @@ for polity in config['polities']:
 bundle = json.dumps({'type': 'FeatureCollection', 'features': output}, ensure_ascii=False, separators=(',', ':')) + '\n'
 geometry_path = ROOT / 'apps/web/public/data/polity-boundaries.geojson'
 geometry_path.parent.mkdir(parents=True, exist_ok=True)
-geometry_path.write_text(bundle)
+geometry_path.write_text(bundle, encoding='utf-8', newline='\n')
 collection = {
     'source': source,
     'geometryPath': '/data/polity-boundaries.geojson',
@@ -101,6 +101,6 @@ collection = {
     'polities': [{key: polity[key] for key in ['id', 'name', 'sourceName', 'color']} for polity in config['polities']],
     'records': sorted(records, key=lambda record: (record['period']['start'], record['id']))
 }
-(ROOT / 'data/boundary-collection.json').write_text(json.dumps(collection, ensure_ascii=False, indent=2) + '\n')
+(ROOT / 'data/boundary-collection.json').write_text(json.dumps(collection, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(f'{len(collection["polities"])} polities; {len(records)} records; {len(bundle.encode())} geometry bytes')
 print('All source and derived polygons are valid. No geometry repairs or interpolation performed.')

@@ -82,6 +82,7 @@
     "evidence": [
       {
         "sourceId": "ed-cliopatria-v0-2-0",
+        "sourceRevision": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
         "locator": "cliopatria_polities_only.geojson arşiv üyesi, POLITY kaydı #1235 (data/boundary-collection.json içindeki cliopatria-1235 ile eşleşir)",
         "relation": "supports",
         "sourceStatement": "Kaynak POLITY kaydı #1235, Roman Empire / it_roman_principate için MS 117–126 yıl aralığını ve ilişkili geometriyi verir (sourceAreaKm2, wikidata Q12544 ile birlikte).",

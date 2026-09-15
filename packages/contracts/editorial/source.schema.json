@@ -4,49 +4,228 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "id", "title", "authorOrInstitution", "sourceType", "language", "locatorUrl",
-    "accessedOn", "licenseName", "mandatoryAttribution", "reuseScope",
-    "rightsStatus", "rightsNote", "checksumBasis"
+    "id",
+    "title",
+    "authorOrInstitution",
+    "sourceType",
+    "language",
+    "locatorUrl",
+    "accessedOn",
+    "licenseName",
+    "mandatoryAttribution",
+    "reuseScope",
+    "rightsStatus",
+    "rightsNote",
+    "checksumBasis"
   ],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "Stable slug, unique within the sources file."},
-    "title": {"type": "string", "minLength": 1},
-    "authorOrInstitution": {"type": "string", "minLength": 1},
-    "sourceType": {"type": "string", "minLength": 1, "description": "e.g. museum-catalogue, peer-reviewed-article, primary-artifact-record."},
-    "language": {"type": "string", "minLength": 1},
-    "locatorUrl": {"type": "string", "format": "uri", "pattern": "^https://"},
-    "doiOrIsbn": {"type": "string", "minLength": 1},
-    "publishedOn": {"type": "string", "format": "date"},
-    "publishedOnNote": {"type": "string", "minLength": 1, "description": "Required instead of publishedOn when no exact publication date exists. Must not be filled in when publishedOn is present."},
-    "accessedOn": {"type": "string", "format": "date"},
-    "licenseName": {"type": "string", "minLength": 1},
-    "licenseVersion": {"type": "string", "minLength": 1},
-    "licenseUrl": {"type": "string", "format": "uri", "pattern": "^https://"},
-    "mandatoryAttribution": {"type": "string", "minLength": 1},
-    "reuseScope": {"type": "string", "minLength": 1, "description": "What use this source's rights status actually permits, e.g. 'excerpted text and derived summary only'."},
-    "rightsStatus": {"$ref": "#/$defs/rightsStatus"},
-    "rightsNote": {"type": "string", "minLength": 1, "description": "Why this rights status was assigned, or what is unresolved."},
-    "checksumBasis": {"enum": ["sha256_of_archived_file", "sha256_of_pinned_commit", "not_applicable_text_reference"]},
-    "checksum": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Stable slug, unique within the sources file."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorOrInstitution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceType": {
+      "type": "string",
+      "minLength": 1,
+      "description": "e.g. museum-catalogue, peer-reviewed-article, primary-artifact-record."
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locatorUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "doiOrIsbn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable revision/version identifier of this exact source state, e.g. a pinned commit or dataset version. Separate from 'id' (source identity) per P02-001. Required unless 'revisionNote' explains why none exists."
+    },
+    "revisionNote": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Required instead of 'revision' when the source has no stable revision identifier (e.g. a page the institution updates in place). Must not be filled in when 'revision' is present."
+    },
+    "publishedOn": {
+      "type": "string",
+      "format": "date"
+    },
+    "publishedOnNote": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Required instead of publishedOn when no exact publication date exists. Must not be filled in when publishedOn is present."
+    },
+    "accessedOn": {
+      "type": "string",
+      "format": "date"
+    },
+    "licenseName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "licenseVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "licenseUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "mandatoryAttribution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reuseScope": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What use this source's rights status actually permits, e.g. 'excerpted text and derived summary only'."
+    },
+    "rightsStatus": {
+      "$ref": "#/$defs/rightsStatus"
+    },
+    "rightsNote": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Why this rights status was assigned, or what is unresolved."
+    },
+    "checksumBasis": {
+      "enum": [
+        "sha256_of_archived_file",
+        "sha256_of_pinned_commit",
+        "not_applicable_text_reference"
+      ]
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
     "objectRightsExceptions": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["objectLocator", "rightsStatus", "note"],
+        "required": [
+          "objectLocator",
+          "rightsStatus",
+          "note"
+        ],
         "properties": {
-          "objectLocator": {"type": "string", "minLength": 1, "description": "Locator of the specific object within this source that this exception applies to."},
-          "rightsStatus": {"$ref": "#/$defs/rightsStatus"},
-          "note": {"type": "string", "minLength": 1}
+          "objectLocator": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Locator of the specific object within this source that this exception applies to."
+          },
+          "rightsStatus": {
+            "$ref": "#/$defs/rightsStatus"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       },
-      "description": "A general source license does not automatically cover every object inside it (e.g. a CC0 dataset containing one rights-managed image). List per-object overrides here."
+      "description": "A general source license does not automatically cover every object inside it (e.g. a CC0 dataset containing one rights-managed image). List per-object overrides here. objectLocator values must be unique. Evidence that names no locator inherits the most restrictive status on this source, not the general one."
     }
   },
-  "if": {"required": ["checksumBasis"], "properties": {"checksumBasis": {"const": "not_applicable_text_reference"}}},
-  "then": {"not": {"required": ["checksum"]}},
-  "else": {"required": ["checksum"]},
   "$defs": {
-    "rightsStatus": {"enum": ["unknown", "approved", "rejected", "revoked"]}
-  }
+    "rightsStatus": {
+      "enum": [
+        "unknown",
+        "approved",
+        "rejected",
+        "revoked"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "checksumBasis"
+        ],
+        "properties": {
+          "checksumBasis": {
+            "const": "not_applicable_text_reference"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": [
+            "checksum"
+          ]
+        }
+      },
+      "else": {
+        "required": [
+          "checksum"
+        ]
+      }
+    },
+    {
+      "description": "revision and revisionNote are mutually exclusive; exactly one is required.",
+      "oneOf": [
+        {
+          "required": [
+            "revision"
+          ],
+          "not": {
+            "required": [
+              "revisionNote"
+            ]
+          }
+        },
+        {
+          "required": [
+            "revisionNote"
+          ],
+          "not": {
+            "required": [
+              "revision"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "description": "publishedOn and publishedOnNote are mutually exclusive; exactly one is required.",
+      "oneOf": [
+        {
+          "required": [
+            "publishedOn"
+          ],
+          "not": {
+            "required": [
+              "publishedOnNote"
+            ]
+          }
+        },
+        {
+          "required": [
+            "publishedOnNote"
+          ],
+          "not": {
+            "required": [
+              "publishedOn"
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }
