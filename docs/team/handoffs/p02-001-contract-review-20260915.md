@@ -1,3 +1,5 @@
+> Güncel durum: PR #48 GitHub’da mevcut. Codex build doğrulamasını tamamladı ve ek bir yayın kontrolü hatasını düzeltti. Ayrıntılar [tamamlayıcı kayıtta](p02-001-codex-validation-20260915.md). Aşağıdaki push/build engeli notları önceki oturumun geçmiş kaydıdır.
+
 # Görev devir kaydı — P02-001 sözleşmesinin bağımsız incelemesi ve düzeltmeleri
 
 - Görev / issue: [P02-001 #6](https://github.com/hturkmen/civilisation-atlas/issues/6); katkı olarak [P02-002 #7](https://github.com/hturkmen/civilisation-atlas/issues/7) ve [P02-004 #9](https://github.com/hturkmen/civilisation-atlas/issues/9)

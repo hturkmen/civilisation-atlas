@@ -10,7 +10,7 @@ Bu dizin, kaynak/kanıt sözleşmesinin yalnızca **yapısal** JSON Schema tanı
 
 ## Yayın kapısı
 
-Yapısal geçerlilik yayın onayı değildir. `packages/domain/src/editorial.mjs` içindeki `evaluatePublishability`, bir adayın gerçekten dışa aktarılabilir sayılması için üç bağımsız koşulu kontrol eder:
+Yapısal geçerlilik yayın onayı değildir. Yayın kapısı doğrudan çağrıldığında da kaynak ve aday sözleşmesini doğrular; önceden başka bir validator çağrılmış olduğunu varsaymaz. Eksik iddia, inceleyen veya zaman alanı, eşleşen bir inceleme hash’i olsa bile reddedilir; bozuk girdi kapıdan olumlu sonuç alamaz. Mevcut varlık kayıtlarına karşı kimlik çözümlemesi ayrıca CLI betiğindeki registry kontrolüyle yapılır; bu modül canlı sunucu yetkilendirmesinin yerine geçmez. `packages/domain/src/editorial.mjs` içindeki `evaluatePublishability`, bir adayın gerçekten dışa aktarılabilir sayılması için üç bağımsız koşulu kontrol eder:
 
 1. `status` değeri `ready_for_review` olmalı (`blocked` adaylar hiçbir zaman yayınlanamaz).
 2. `reviewStatus` değeri `independently_reviewed` olmalı **ve** kayıtlı `reviewedContentHash`, adayın güncel içerik hash'iyle eşleşmeli. İçerik incelemeden sonra değişirse eski inceleme geçersiz sayılır.

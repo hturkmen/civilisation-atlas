@@ -296,6 +296,19 @@ export function evaluatePublishability(candidate, sources) {
   if (!candidate || typeof candidate !== 'object') return {publishable: false, reasons: ['candidate is not an object']};
   if (!Array.isArray(sources)) return {publishable: false, reasons: ['sources must be an array']};
 
+
+  // This exported gate must not depend on callers remembering a separate
+  // validation step. A matching review hash cannot legitimize invalid data.
+  try {
+    validateEditorialCandidates([candidate], sources);
+  } catch (error) {
+    const invalidReasons = ['Invalid editorial input: ' + (error instanceof Error ? error.message : 'validation failed')];
+    if (!Array.isArray(candidate.evidence) || candidate.evidence.length === 0) {
+      invalidReasons.push('candidate carries no evidence link; publication requires at least one');
+    }
+    return {publishable: false, reasons: invalidReasons};
+  }
+
   if (candidate.status === 'blocked') {
     reasons.push('candidate is blocked: ' + candidate.blockedReason);
   } else if (candidate.status !== 'ready_for_review') {

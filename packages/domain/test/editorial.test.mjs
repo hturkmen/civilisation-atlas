@@ -49,7 +49,7 @@ test('the Roman 117 boundary candidate references the existing boundary record, 
 
 test('fixture: rights unknown/rejected/revoked sources block publishability even with a real-shaped review', () => {
   const baseSource = {
-    id: 'fixture-source', title: 'Fixture', authorOrInstitution: 'Fixture Author', sourceType: 'fixture',
+    id: 'fixture-source', revisionNote: 'Fixture has no stable revision', publishedOnNote: 'Fixture has no publication date', title: 'Fixture', authorOrInstitution: 'Fixture Author', sourceType: 'fixture',
     language: 'en', locatorUrl: 'https://example.invalid/fixture', accessedOn: '2026-09-15',
     licenseName: 'Fixture License', mandatoryAttribution: 'Fixture attribution', reuseScope: 'fixture-only',
     rightsStatus: 'approved', rightsNote: 'fixture', checksumBasis: 'not_applicable_text_reference'
@@ -76,7 +76,7 @@ test('fixture: rights unknown/rejected/revoked sources block publishability even
 
 test('fixture: an object-level rights exception overrides a generally approved source license', () => {
   const source = {
-    id: 'fixture-cc0-with-exception', title: 'Fixture CC0 dataset', authorOrInstitution: 'Fixture Author',
+    id: 'fixture-cc0-with-exception', revisionNote: 'Fixture has no stable revision', publishedOnNote: 'Fixture has no publication date', title: 'Fixture CC0 dataset', authorOrInstitution: 'Fixture Author',
     sourceType: 'fixture', language: 'en', locatorUrl: 'https://example.invalid/fixture', accessedOn: '2026-09-15',
     licenseName: 'CC0', mandatoryAttribution: 'none required', reuseScope: 'unrestricted-for-dataset',
     rightsStatus: 'approved', rightsNote: 'Dataset is CC0.', checksumBasis: 'not_applicable_text_reference',
@@ -163,7 +163,7 @@ test('fixture: contradicting sources and editorial inference stay distinguishabl
 
 test('fixture: a stale reviewedContentHash after a content edit blocks publication', () => {
   const source = {
-    id: 'fixture-stale-source', title: 'Fixture', authorOrInstitution: 'Fixture Author', sourceType: 'fixture',
+    id: 'fixture-stale-source', revisionNote: 'Fixture has no stable revision', publishedOnNote: 'Fixture has no publication date', title: 'Fixture', authorOrInstitution: 'Fixture Author', sourceType: 'fixture',
     language: 'en', locatorUrl: 'https://example.invalid/fixture', accessedOn: '2026-09-15',
     licenseName: 'Fixture License', mandatoryAttribution: 'fixture', reuseScope: 'fixture',
     rightsStatus: 'approved', rightsNote: 'fixture', checksumBasis: 'not_applicable_text_reference'
@@ -188,7 +188,7 @@ test('fixture: a stale reviewedContentHash after a content edit blocks publicati
 
 test('fixture: an unreviewed candidate is never reported publishable regardless of rights status', () => {
   const source = {
-    id: 'fixture-unreviewed-source', title: 'Fixture', authorOrInstitution: 'Fixture Author', sourceType: 'fixture',
+    id: 'fixture-unreviewed-source', revisionNote: 'Fixture has no stable revision', publishedOnNote: 'Fixture has no publication date', title: 'Fixture', authorOrInstitution: 'Fixture Author', sourceType: 'fixture',
     language: 'en', locatorUrl: 'https://example.invalid/fixture', accessedOn: '2026-09-15',
     licenseName: 'Fixture License', mandatoryAttribution: 'fixture', reuseScope: 'fixture',
     rightsStatus: 'approved', rightsNote: 'fixture', checksumBasis: 'not_applicable_text_reference'
@@ -417,4 +417,39 @@ test('every real candidate resolves to an entity that exists in the shipped coll
     perspective: maps.map(map => map.id)
   };
   assert.equal(validateEditorialCandidates(candidates, sources, registry), candidates);
+});
+
+
+test('regression: direct publication checks reject incomplete claims despite a matching review hash', () => {
+  // Synthetic review only; no real candidate or review is written to disk.
+  const candidate = structuredClone(candidates[0]);
+  candidate.status = 'ready_for_review';
+  candidate.reviewStatus = 'independently_reviewed';
+  candidate.reviewer = 'synthetic-validator-test-reviewer';
+  candidate.reviewedContentHash = contentHash(candidate);
+  assert.equal(evaluatePublishability(candidate, sources).publishable, true);
+  for (const field of ['claimStatement', 'reviewer', 'extent']) {
+    const invalid = structuredClone(candidate);
+    delete invalid[field];
+    invalid.reviewedContentHash = contentHash(invalid);
+    const result = evaluatePublishability(invalid, sources);
+    assert.equal(result.publishable, false, field + ' must be required even on a direct gate call');
+    assert.match(result.reasons.join(' '), /Invalid editorial input/);
+  }
+});
+
+test('regression: direct publication checks return a rejection for malformed containers', () => {
+  const candidate = structuredClone(candidates[0]);
+  candidate.status = 'ready_for_review';
+  candidate.reviewStatus = 'independently_reviewed';
+  candidate.reviewer = 'synthetic-validator-test-reviewer';
+  candidate.reviewedContentHash = contentHash(candidate);
+  for (const invalidEvidence of [{}, 42, 'invalid']) {
+    const invalid = {...candidate, evidence: invalidEvidence};
+    invalid.reviewedContentHash = contentHash(invalid);
+    assert.equal(evaluatePublishability(invalid, sources).publishable, false);
+  }
+  const malformedSources = structuredClone(sources);
+  malformedSources[0].objectRightsExceptions = {};
+  assert.equal(evaluatePublishability(candidate, malformedSources).publishable, false);
 });
