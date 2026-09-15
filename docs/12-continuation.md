@@ -12,7 +12,7 @@ Kullanıcının istediği sıklık üç saatti. Sonraki servis okumasında dört
 
 ## Devam edecek çalışma için başlangıç
 
-1. README, docs/11-visual-priorities.md, backlog/issues.json ve güncel GitHub görevlerini oku. Tamamlanan işleri tekrar yapma; açık kabul ölçütlerini kontrol et.
+1. AGENTS.md, README, docs/team/README.md, docs/11-visual-priorities.md, backlog/issues.json ve güncel GitHub görevleri/açık PR kayıtlarını oku. Tamamlanan işleri tekrar yapma; açık kabul ölçütlerini kontrol et.
 2. Demo kaynak deposu mevcut Sites projesine bağlıdır: `appgprj_6aa638d93f3c819188b55444e79f992a`. Yeni Site oluşturma; mevcut özel erişimi koru. Ana uygulama: https://github.com/hturkmen/civilisation-atlas.
 3. GitHub ana uygulaması Node sunucu girişini, demo ise statik giriş uyarlamasını kullanır. Ortak bileşen/veri değişikliklerini ikisine aktar; birinin giriş/hosting ayarını diğerine yanlışlıkla kopyalama. Büyük arşiv görselleri doğrulanan indirme betiğiyle hazırlanır.
 4. Kaynaklı koleksiyon 17 siyasi yapı / 35 kayda genişletildi. Önce docs/14-collection-discovery.md, docs/13-sourced-boundaries.md ve sabit kaynak kayıtlarını oku. Sonraki somut iş, genel aramada siyasi yapıların diğer kaynaklı dönemlerini bulup o yıla geçişi sağlamak ve seçili alan detayına kaynaklı kısa anlatılar eklemek. Kayıt dönemi ile devletin yaşam süresini karıştırma. Kaynak yeterli değilse uydurma; ikinci arşiv perspektifi ve lisanslı görseller gibi bağımsız işleri ilerlet.
@@ -38,6 +38,23 @@ Boş yılda en yakın önceki/sonraki gerçek kaynaklı yıl önerisi, üç sani
 
 23 alan/veri testi, iki üretim derlemesi ve dört yeni Node tarayıcı senaryosu geçti. Statik demoda 17 senaryo doğrulandı: 16 toplu koşumda, ilk haritanın soğuk açılışındaki zaman aşımı için yalnız işlevsel bekleme toleransı artırılan bir kontrol hedefli tekrarda geçti. Tek temiz toplu koşum veya üretim performansı iddia edilmez. Masaüstü ve 360 px mobil ekranlar incelendi. Fiziksel cihaz, diğer tarayıcılar ve bağımsız tarihçi incelemesi bekliyor.
 
-Bu kayıt hazırlanırken yeni kaynak aktarımı/yayın henüz tamamlanmadı; son doğrulanmış yayın üstteki sürüm 3'tür. Sonraki adım mevcut özel Site'ın kaynağını kaydedip yayımlamak, hizmetin gerçek sonucunu bu kayda eklemektir. Ana Node girişi ile demo statik girişi korunur; erişim kitlesi değiştirilmez.
+Kaynak aktarımı ve özel yayın tamamlandı; doğrulanmış sürüm 4 sonucu aşağıdadır. Ana Node girişi ile demo statik girişi korundu; erişim kitlesi değiştirilmedi.
 
 Sonraki somut geliştirme: dönemler arası siyasi yapı araması ve kaynaklı kısa anlatılar. İkinci arşiv perspektifi, daha yoğun kaynak kapsamı, güvenli sunucu üyelik/admin ve mobil uygulama henüz tamamlanmadı. Sağlayıcı / veri bölgesi / ücret kararları kullanıcıya somut seçeneklerle sunulmadan bağlayıcı kurulum yapılmaz.
+
+
+## Son doğrulanmış yayın — 15 Eylül 2026
+
+Uygulama kaynak commit'i: `5ff5b3d3afe5a98bba9a493e08d2e4db11bf423f`. Ana GitHub dalından tekrar okunarak doğrulandı. Demo kaynak commit'i: `fcbe5f67a1065b996fab32440831b9411ce06396`; başarılı push sonrasında tam HEAD okundu.
+
+Mevcut özel Site **sürüm 4**, 15 Eylül 2026 10:46:18 UTC'de hizmetten `succeeded` olarak doğrulandı: https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site. Kayıtlı sürüm: `appgprj_6aa638d93f3c819188b55444e79f992a~appgver_1d296ed4f68c8191a88726ffe5efb359`. Dağıtım: `appgdep_6aa921c475208191b2bf5f5fb65a61ac`. Build/paket başarılı; canlı adrese ek tarayıcı testi uygulanmadı. Erişim yalnız sahibinde kaldı.
+
+## 15 Eylül — yerel ajanlarla görev devri
+
+Kullanıcı Kiro veya Claude Code'un yerelde çalışıp GitHub'a teslim ederek devam edebilmesi için promptlar istedi. Ortak kurallar `AGENTS.md`, iş akışı ve kullanım `docs/team/README.md`, veri/arayüz/devralma promptları `docs/team/prompts/` altında. Çalışma kayıt şablonu mevcut; bu belgeler yerel araçların başlatıldığı veya görevleri yaptığı anlamına gelmez.
+
+Hazır görev ayrımı: veri çalışanı P02-001 kaynak/kanıt sözleşmesi + beş adaylık sınırlı Gate A paketi; arayüz çalışanı mevcut kaynaklı dönemler arasında arama/geçiş. Tek araçla veri promptu kullanılabilir; iki araçla ayrı görev ve checkout/worktree. Ortak ilerleme dosyaları entegrasyonda tek yazıcıyla güncellenir. Aktif iş sahipliği açık PR ve devir kayıtlarından okunur; eski sohbet veya eski 12 kayıt sayısı esas alınmaz.
+
+**Codex için bir sonraki somut adım:** önce açık PR'ları ve `docs/team/handoffs/` kayıtlarını kontrol et; hazır işi incele/entegre et ve gerekiyorsa mevcut özel demoya taşı. Yerel ajana ayrılmış veri sözleşmesi veya dönemler arası arama dilimini eşzamanlı yeniden uygulama. Hazır PR yoksa dosya alanı çakışmayan bağımsız işi seç; ikinci arşiv perspektifinin kaynak/lisans incelemesi adaydır. Kullanıcı araç değiştirince proje sıfırlanmaz. Yerel ajanların GitHub geliştirmesi Codex veya Sites erişimini beklemez; erişimsiz demo yayını `deployment_pending` olarak kaydedilir.
+
+Bu devir belgeleri uygulama davranışını değiştirmez; önceki uygulama testlerini tekrar koşmak yerine belge bağlantıları, komutların repo ile uyumu ve GitHub aktarımı kontrol edilir. Tüm dünya kapsamı, bağımsız tarihçi incelemesi, kalıcı veri/inceleme sistemi, kullanıcı/admin ve mobil uygulama açık kalır. Otomatik devam görevi bu nedenle kapatılmaz.
