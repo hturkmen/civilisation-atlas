@@ -6,28 +6,32 @@ import {formatYear} from '@atlas/domain/chronology';
 import {archiveMapsAtYear} from '@atlas/domain/archive';
 import {archiveMaps} from '@/lib/archive';
 import {visibleBoundaries} from '@atlas/domain/boundaries';
-import {nearbyCoveredYears} from '@atlas/domain/collection';
+import {nearbyCoveredYears, searchOtherPeriods} from '@atlas/domain/collection';
 import {boundaryCollection} from '@/lib/boundaries';
 import {BoundarySource, PolityDetail} from './polity-detail';
 import {AtlasMap} from './atlas-map';
 import {ArchivePanel, ArchivePreview, ArchiveSource, HistoricalMap} from './historical-map';
 import {Timeline} from './timeline';
 import {CoverageGuide} from './coverage-guide';
+import {PeriodSearch} from './period-search';
 import {Icon} from './icon';
 
 export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; initialView: View; maxYear: number}) {
   const [view, setView] = useState(initialView);
   const [query, setQuery] = useState('');
   const [shared, setShared] = useState('');
+  const searchInput = useRef<HTMLInputElement>(null);
+  const searchQuery = query.trim();
   const sourceDialog = useRef<HTMLDialogElement>(null);
   const detailHeading = useRef<HTMLHeadingElement>(null);
   const visible = visiblePlaces(catalog.places, view.year);
-  const results = visiblePlaces(catalog.places, view.year, query);
+  const results = visiblePlaces(catalog.places, view.year, searchQuery);
   const selected = visible.find(place => place.id === view.selectedId);
   const boundaries = visibleBoundaries(boundaryCollection, view.year);
-  const boundaryResults = visibleBoundaries(boundaryCollection, view.year, query);
+  const boundaryResults = visibleBoundaries(boundaryCollection, view.year, searchQuery);
   const selectedBoundary = boundaries.find(item => item.polity.id === view.selectedPolityId);
   const archiveMap = archiveMapsAtYear(archiveMaps, view.year)[0];
+  const otherPeriods = searchOtherPeriods(catalog.places, boundaryCollection, view.year, searchQuery);
   const nearby = nearbyCoveredYears(catalog.places, boundaryCollection, view.year);
 
   useEffect(() => {window.history.replaceState(null, '', viewQuery(view));}, [view]);
@@ -56,6 +60,7 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
       selectedPolityId: visibleBoundaries(boundaryCollection, year).some(item => item.polity.id === current.selectedPolityId) ? current.selectedPolityId : undefined}));
   }, [catalog.places]);
 
+  function clearSearch() {setQuery(''); searchInput.current?.focus();}
   function selectPlace(id: string) {setView(current => ({...current, selectedId: id, selectedPolityId: undefined}));}
   function selectPolity(id: string) {setView(current => ({...current, selectedId: null, selectedPolityId: id}));}
   function jumpToPolity(year: number, polityId: string) {setQuery(''); setView({year, mode: 'history', selectedId: null, selectedPolityId: polityId});}
@@ -117,11 +122,12 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
           <p className="eyebrow">DÜNYANIN ORTAK HİKÂYESİ</p>
           <h1>Tarihin<br/><em>izini sür.</em></h1>
           <p className="intro-copy">Bir yıl seç. Haritadaki bir alana veya yerleşime dokun. Geçmişi kaynaklarıyla keşfet.</p>
-          <label className="search-box"><Icon name="search" size={18}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Medeniyet veya yerleşim ara" aria-label="Medeniyet veya yerleşim ara"/>{query && <button aria-label="Aramayı temizle" onClick={() => setQuery('')}><Icon name="close" size={16}/></button>}</label>
+          <div className="search-box"><Icon name="search" size={18}/><input ref={searchInput} onKeyDown={e => {if (e.key === 'Escape') {e.preventDefault(); clearSearch();}}} value={query} onChange={e => setQuery(e.target.value)} placeholder="Medeniyet veya yerleşim ara" aria-label="Medeniyet veya yerleşim ara"/>{query && <button aria-label="Aramayı temizle" onClick={clearSearch}><Icon name="close" size={16}/></button>}</div>
           <div className="section-heading results-heading"><h2>Bu tarihte keşfet</h2><span aria-live="polite">{boundaryResults.length} alan · {results.length} yer</span></div>
           {boundaryResults.length > 0 && <ul className="polity-list" aria-label="Bu tarihteki siyasi yapılar">{boundaryResults.map(({polity, record}) => <li key={record.id}><button style={{'--polity-color': polity.color} as React.CSSProperties} onClick={() => selectPolity(polity.id)}><i className="polity-swatch"/><span><strong>{polity.name}</strong><small>Yaklaşık alan · {formatYear(record.period.start)} – {formatYear(record.period.endExclusive - 1)}</small></span><Icon name="arrow" size={17}/></button></li>)}</ul>}
           {results.length > 0 && <ul className="place-list">{results.map((place, index) => <li key={place.id}><button onClick={() => selectPlace(place.id)}><span className="place-number">0{index + 1}</span><span><strong>{place.name}</strong><small>{place.culture}</small></span><Icon name="arrow" size={18}/></button></li>)}</ul>}
-          {!results.length && !boundaryResults.length && <div className="empty-state"><Icon name="search"/><h3>{query ? 'Bu tarihte eşleşme yok' : 'Bu yıl için kayıt eklenmedi'}</h3><p>{query ? 'Aramayı temizle veya aşağıdan başka bir döneme geç.' : 'Bu, o dönemde toplum olmadığı anlamına gelmez. Koleksiyon seçilmiş kaynak dönemleriyle sınırlı.'}</p>{query && <button className="text-button" onClick={() => setQuery('')}>Aramayı temizle</button>}</div>}
+          {!results.length && !boundaryResults.length && <div className="empty-state"><Icon name="search"/><h3>{searchQuery ? 'Bu tarihte eşleşme yok' : 'Bu yıl için kayıt eklenmedi'}</h3><p>{searchQuery ? 'Aşağıdaki kaynak dönemlerini incele veya başka bir ad ara.' : 'Bu, o dönemde toplum olmadığı anlamına gelmez. Koleksiyon seçilmiş kaynak dönemleriyle sınırlı.'}</p>{query && <button className="text-button" onClick={clearSearch}>Aramayı temizle</button>}</div>}
+          {searchQuery && <PeriodSearch results={otherPeriods} onPolity={jumpToPolity} onPlace={jump}/>}
           <div className="collection-note"><Icon name="info" size={17}/><p>{boundaryCollection.polities.length} siyasi yapıdan seçilmiş {boundaryCollection.records.length} alan kaydı ve {catalog.places.length} yerleşim. Renkli alanlar yaklaşık rekonstrüksiyonlardır. Boş alanlar, orada toplum olmadığı anlamına gelmez.</p></div>
           <button className="boundary-teaser" onClick={() => jumpToCollection(1500)}><span><small>GENİŞLEYEN KOLEKSİYON</small><strong>1500’de dünyaya bak</strong><span>Mali, Ming, Aztek, İnka ve Osmanlı</span></span><Icon name="arrow" size={19}/></button>
           <section className="journeys"><p className="eyebrow">BAŞKA BİR ZAMANA GİT</p>{catalog.places.map(place => <button key={place.id} onClick={() => jump(place)}><span><strong>{place.name}</strong><small>{formatYear(place.suggestedYear)}</small></span><Icon name="arrow" size={17}/></button>)}</section>

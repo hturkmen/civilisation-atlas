@@ -256,3 +256,44 @@ test('360px empty-year shortcuts remain in view and open a sourced period', asyn
   await page.locator('.polity-list').getByRole('button', {name: /Osmanlı İmparatorluğu/}).click();
   await expect(page.getByRole('heading', {name: 'Osmanlı İmparatorluğu', exact: true})).toBeInViewport();
 });
+
+
+test('cross-period search opens a source sample, survives reload and clears an obsolete selection', async ({page}) => {
+  await page.goto('/?year=1700&era=CE&mode=history');
+  await page.getByRole('textbox', {name: 'Medeniyet veya yerleşim ara'}).fill('MALİ');
+  await expect(page.getByRole('heading', {name: 'Bu tarihte eşleşme yok'})).toBeVisible();
+  const periods = page.getByRole('region', {name: 'Diğer dönemlerde keşfet'});
+  await expect(periods.getByRole('heading', {name: 'Mali İmparatorluğu'})).toHaveCount(1);
+  await expect(periods.getByRole('button')).toHaveCount(2);
+  await periods.getByRole('button', {name: 'Mali İmparatorluğu, MS 1500 örneğini aç', exact: true}).click();
+  await expect(page.getByRole('heading', {name: 'Mali İmparatorluğu', exact: true})).toBeFocused();
+  await expect(page).toHaveURL(/year=1500&era=CE&mode=history&polity=/);
+  await page.reload();
+  await expect(page.getByRole('heading', {name: 'Mali İmparatorluğu', exact: true})).toBeVisible();
+  await page.getByRole('textbox', {name: 'Yıl', exact: true}).fill('1700');
+  await page.getByRole('button', {name: 'Yıla git'}).click();
+  await expect(page).not.toHaveURL(/polity=/);
+  await expect(page.getByRole('textbox', {name: 'Medeniyet veya yerleşim ara'})).toHaveValue('');
+});
+
+test('cross-period search supports keyboard clearing and place discovery on a narrow screen', async ({page}) => {
+  await page.setViewportSize({width: 360, height: 800});
+  await page.goto('/?year=1700&era=CE&mode=history');
+  const search = page.getByRole('textbox', {name: 'Medeniyet veya yerleşim ara'});
+  await search.fill('Roman');
+  await expect(page.getByRole('region', {name: 'Diğer dönemlerde keşfet'}).getByRole('button')).toHaveCount(2);
+  await search.press('Escape');
+  await expect(search).toHaveValue('');
+  await expect(search).toBeFocused();
+  await search.fill('zzzzzz');
+  await expect(page.getByText('Diğer kaynak dönemlerinde de eşleşme yok. Başka bir ad deneyebilirsin.')).toBeVisible();
+  await page.getByRole('button', {name: 'Aramayı temizle', exact: true}).first().click();
+  await expect(search).toBeFocused();
+  await search.fill('Mohenjo');
+  const target = page.getByRole('button', {name: /Mohenjo-daro, MÖ .* örneğini aç/});
+  await target.focus();
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('heading', {name: 'Mohenjo-daro', exact: true})).toBeFocused();
+  await expect(page).toHaveURL(/era=BCE&mode=history&place=mohenjo-daro/);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
