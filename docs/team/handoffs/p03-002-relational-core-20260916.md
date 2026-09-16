@@ -19,3 +19,5 @@ PGlite 0.5.8 ayrı database dev bağımlılığı/lockfile olarak kuruldu; root/
 P03-002 kapanmadı: native PostgreSQL/PostGIS staging, iki bağlantılı concurrency, DB pin/import adaptörü, RLS/runtime yetkileri, gerçek bağımsız inceleme, public aktivasyon, migration runner ve restore eksik. Sonraki somut iş: PostGIS geometri kolonları ve mevcut artifact kayıtlarını domain revizyon pinlerine bağlayan import adaptörü; boş yerel DB üzerinde doğrulanmalı. Ücretli servis/veri bölgesi kararı alınmadı ve uzak DB'ye migration uygulanmadı.
 
 Son doğrulama: 12/12 SQL senaryosu, 53/53 domain/veri testi, plan kontrolü, revizyon pinleri, editoryal kapı (0 publishable) ve sınır validator geçti. Root/web bağımlılıkları, runtime kodu ve veriler değişmediğinden build/Playwright tekrarlanmadı. Yeni veri tabanı yalnız bellek içi test ortamındadır.
+
+GitHub teslimi: `d8f1876ba3eb7b976a1e322047d8a9088bb9e142` doğrudan main’e kaydedildi; PR açılmadı. #13 ilerleme notu güncellendi, eksik kabul ölçütleri nedeniyle açık bırakıldı. Sonraki iş yukarıdaki PostGIS/import dilimidir.

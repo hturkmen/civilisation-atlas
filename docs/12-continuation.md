@@ -143,3 +143,5 @@ Teslim doğrulandı: `94f9c67ddfec0b6625174466978c6f0d39c9dbed` doğrudan main�
 Web ekranları ve runtime koleksiyonu değişmedi; yeni demo yayını yok. Sıradaki somut iş: PostGIS kolonları ve domain pinlerini DB'ye bağlayan import adaptörü; ardından native staging/yetkili inceleme/publicasyon. P03-002 partial, genel ürün kapsamı açık.
 
 Son doğrulama: 12/12 SQL senaryosu, 53/53 domain/veri testi, plan kontrolü, revizyon pinleri, editoryal kapı (0 publishable) ve sınır validator geçti. Root/web bağımlılıkları, runtime kodu ve veriler değişmediğinden build/Playwright tekrarlanmadı. Yeni veri tabanı yalnız bellek içi test ortamındadır.
+
+GitHub teslimi: `d8f1876ba3eb7b976a1e322047d8a9088bb9e142` doğrudan main’e kaydedildi; PR açılmadı. #13 ilerleme notu güncellendi, eksik kabul ölçütleri nedeniyle açık bırakıldı. Sonraki iş yukarıdaki PostGIS/import dilimidir.
