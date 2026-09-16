@@ -132,3 +132,5 @@ Kullanıcı artık PR açılmasını istemiyor; kısa kapsam özeti ardından te
 Kalan: P03-002 yerel DB migration ve revizyon FK/immutable yayın negatif testleri, ardından yetkili inceleme servisi/transaction entegrasyonu. P02-004 tümüyle kapalı değildir; kullanıcı/admin, bağımsız tarihçi incelemesi ve kapsam genişletmesi açık.
 
 Son doğrulama: üretim build, TypeScript ve plan kontrolü geçti. Hazırlama betiği ikinci `--write` çalışmasında 0 pin ekledi (idempotent). Kod/girdiler test sonrası değişmedi; yalnız açıklama/kayıtlar tamamlandı.
+
+Teslim doğrulandı: `94f9c67ddfec0b6625174466978c6f0d39c9dbed` doğrudan main’e normal ileri güncelleme ile kaydedildi ve uzak HEAD okunarak doğrulandı. PR oluşturulmadı. Bu geliştirme dilimi tamamlandı; P02-004/P03-002 ve genel ürün kapsamı açık. Bu son kayıt yalnız belgedir, uygulama/test girdilerini değiştirmez.
