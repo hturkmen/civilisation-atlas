@@ -1,6 +1,6 @@
 # Veritabanı uygulama sınırı
 
-16 Eylül 2026: ilişkisel migration, PostGIS ve beş Gate A adayını revizyon pinleriyle aktaran yerel adaptör uygulandı. Ana web/demo henüz DB kullanmaz. Üretim sağlayıcısı veya veri bölgesi seçilmedi.
+16 Eylül 2026: ilişkisel migration, PostGIS, beş Gate A adayını revizyon pinleriyle aktaran yerel adaptör ve sınırlı yerel paket karantinası uygulandı. Ana web/demo henüz DB kullanmaz. Üretim sağlayıcısı veya veri bölgesi seçilmedi.
 
 ## İçerik
 
@@ -26,7 +26,7 @@ npm test --prefix database
 
 Test bağımlılıkları yalnız `database/package.json`/lockfile içindedir; web uygulamasına eklenmez. PGlite 0.5.8 ve pglite-postgis 0.2.8 sabitlenmiştir. Temel testler sentetik kayıtlarla, import testleri mevcut beş gerçek adayın yerel kopyasıyla çalışır. Tarihçi onayı üretilmez. Test bitince bellek içi DB kapanır.
 
-Mevcut sonuç: 19/19 SQL/import senaryosu (12 temel + 7 import). FK, zaman, immutable yayın, yetkisiz rol kontrollerine ek olarak tekrar aktarım, eski kaynak revizyonunun korunması, eksik/eski pin reddi, hatalı geometride tüm transaction'ın geri alınması ve gerçek PostGIS sorgusu doğrulandı. Test motoru PostgreSQL 18.3, PostGIS 3.6 bildirdi.
+Mevcut sonuç: 28/28 SQL/import senaryosu (12 temel + 7 import + 9 paket/karantina). FK, zaman, immutable yayın, yetkisiz rol kontrollerine ek olarak tekrar aktarım, eski kaynak revizyonunun korunması, eksik/eski pin reddi, hatalı geometride tüm transaction'ın geri alınması ve gerçek PostGIS sorgusu doğrulandı. Paket testleri boyut/derinlik/düğüm/kayıt/vertex bütçelerini, karantina tekrarını, URL/son dosya symlink reddini ve altyapı hatalarının veri hatası sayılmamasını kapsar. Test motoru PostgreSQL 18.3, PostGIS 3.6 bildirdi.
 
 PGlite tek bağlantılı gömülü motordur. Bu sonuç çok bağlantılı PostgreSQL sunucu concurrency testi, staging migration, restore veya query plan/performance testi değildir. Native PostgreSQL/PostGIS staging ortamı sağlandığında aynı migration ve negatif testler orada da çalıştırılmalı; iki bağlantıda import ve üye ekleme–yayın kilitleme yarışları ayrıca sınanmalı.
 
@@ -47,6 +47,19 @@ Yerel runner yalnız migration sürüm sırasını denetler ve eksik migration'�
 
 ## Kalan / sonraki migration
 
-P02-003/P03-002 kısmi: genel import için byte/vertex sınırları, karantina/editoryal kuyruk, kimliği doğrulanmış inceleme kayıtları, runtime rol/RLS politikaları ve güvenli public aktivasyon bekliyor. Üretime taşımadan migration runner/checksum, yedek-restore ve native eşzamanlılık testleri gereklidir. Bu migration otomatik olarak hiçbir uzak DB'ye uygulanmaz; geri alma için veri silen down migration eklenmedi.
+P02-003/P03-002 kısmi: yerel JSON paketinde byte/vertex ve karantina sınırları vardır; production upload taraması, worker kuyruğu/editoryal kuyruk, kimliği doğrulanmış inceleme kayıtları, runtime rol/RLS politikaları ve güvenli public aktivasyon bekliyor. Üretime taşımadan migration runner/checksum, yedek-restore ve native eşzamanlılık testleri gereklidir. Bu migration otomatik olarak hiçbir uzak DB'ye uygulanmaz; geri alma için veri silen down migration eklenmedi.
+
+## Sınırlı yerel paket karantinası
+
+`0003_local_import_jobs.sql` ve `import-bundle-local.mjs`, yalnızca kullanıcı tarafından açıkça seçilen mutlak yerel `.json` paketini işler. Ağ URL'si, redirect, arşiv, son dosya bileşeninde sembolik link, keyfi SVG/HTML veya uzak veritabanı kabul edilmez. Üst dizinler yerel operatörün güven sınırındadır; bu bir filesystem sandbox değildir. Paket en fazla 8 MiB, 64 iç içelik, 200.000 JSON düğümü, her listede 100 kayıt ve toplam 50.000 koordinat içerir. JSON/şema/geometri/constraint hataları `local_import_job` içinde kodlanmış gerekçeyle `quarantined` tutulur; atlas revision tablolarına kısmi veri yazılmaz. Byte sınırı CPU/süre veya eşzamanlı iş kotası değildir; bunlar production worker için açık kalır.
+
+```sh
+# Mevcut beş adayı, inceleme değiştirmeden repo dışına paketle.
+node database/scripts/export-local-bundle.mjs --output /absolute/path/gate-a.json
+# Ayrı yerel DB'de sınır kontrollü aktarım.
+node database/scripts/import-bundle-local.mjs --input /absolute/path/gate-a.json --data-dir /absolute/path/atlas-local-db
+```
+
+Başarılı paketin aynı checksum/adaptör/politika sürümüyle tekrarı önceki iş kaydını yeniden kullanır. Karantina verisi ham dosyayı veya yolu saklamaz; okunabilen dosyada SHA-256, gözlenen byte sayısı ve güvenli hata kodu tutulur. Bu akış henüz `apps/worker` veya HTTP endpoint değildir; prod upload, malware taraması, queue lease/heartbeat, object storage ve yetkili editoryal inceleme açık işlerdir.
 
 Referans: [PostgreSQL constraints](https://www.postgresql.org/docs/16/ddl-constraints.html), [trigger davranışı](https://www.postgresql.org/docs/16/sql-createtrigger.html), [PGlite çalışma ve tek bağlantı sınırı](https://pglite.dev/docs/). Mimari: [teknik tasarım](../docs/04-low-level-design.md).

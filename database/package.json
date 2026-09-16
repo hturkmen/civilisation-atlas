@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.mjs",
-    "import:check": "node scripts/import-local.mjs"
+    "import:check": "node scripts/import-local.mjs",
+    "import:bundle": "node scripts/import-bundle-local.mjs",
+    "export:bundle": "node scripts/export-local-bundle.mjs"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.8",
