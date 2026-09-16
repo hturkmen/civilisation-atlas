@@ -145,3 +145,11 @@ Web ekranları ve runtime koleksiyonu değişmedi; yeni demo yayını yok. Sıra
 Son doğrulama: 12/12 SQL senaryosu, 53/53 domain/veri testi, plan kontrolü, revizyon pinleri, editoryal kapı (0 publishable) ve sınır validator geçti. Root/web bağımlılıkları, runtime kodu ve veriler değişmediğinden build/Playwright tekrarlanmadı. Yeni veri tabanı yalnız bellek içi test ortamındadır.
 
 GitHub teslimi: `d8f1876ba3eb7b976a1e322047d8a9088bb9e142` doğrudan main’e kaydedildi; PR açılmadı. #13 ilerleme notu güncellendi, eksik kabul ölçütleri nedeniyle açık bırakıldı. Sonraki iş yukarıdaki PostGIS/import dilimidir.
+
+## 16 Eylül — PostGIS ve idempotent yerel aktarım
+
+0002 migration ve revizyon pinli import adaptörü tamamlandı. Özgün geometri PostGIS MultiPolygon/4326 ve GiST ile saklanır; bozuk geometri transaction'ı geri alır. Dört Gate A adayı ile gerekçeli bir blocked kayıt içe aktarılır; hepsi unreviewed, yayın sayısı sıfır. Waldseemüller için bilinmeyen bilgi tarihi eser yılından türetilmez. Detay: `database/README.md`, `docs/team/handoffs/p02-003-spatial-import-20260916.md`.
+
+19/19 SQL/import ve 53/53 domain testi geçti; plan, sınır, editoryal kapı ve beş revizyon pini doğrulandı. Aynı yerel DB iki ayrı süreçte açıldı: ikinci import 0 yeni / 5 unchanged döndürdü. Web/runtime değişmediği için build/typecheck/tarayıcı testleri tekrarlanmadı ve demo sürüm 5 yeniden yayımlanmadı. Uzak teslim sonucu aşağıya kaydedilecek.
+
+P02-003/P03-002 partial. Sonraki somut iş: dosya boyutu/vertex sınırları ve karantina sonucu taşıyan yerel import iş kaydı. Native staging, çok bağlantılı yarış testleri, sunucu rol/RLS, yetkili inceleme/public aktivasyon ve bağımsız tarihçi onayı açık. Sağlayıcı veya veri bölgesi seçilmedi. Genel ürün tamamlanmadı; devam görevi açık kalır.

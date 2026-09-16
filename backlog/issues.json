@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "repo_target": "hturkmen/civilisation-atlas",
-  "revision_progress_2026_09_16": "P02-004: local claim/entity/geometry/source content pins and revision-aware gate implemented; DB constraints and authenticated reviews remain pending. See docs/team/handoffs/p02-004-revision-pins-20260916.md.",
-  "database_progress_2026_09_16": "P03-002 partial: relational migration and 12 PGlite SQL scenarios; native staging, concurrency, PostGIS and authenticated publication pending. See database/README.md.",
+  "revision_progress_2026_09_16": "P02-004: local claim/entity/geometry/source content pins and revision-aware gate implemented; Local DB constraints and import are implemented; authenticated reviews and production validation remain pending. See docs/team/handoffs/p02-004-revision-pins-20260916.md.",
+  "database_progress_2026_09_16": "P02-003/P03-002 partial: relational + PostGIS migrations, revision-pinned local import and 19 PGlite SQL/import scenarios; native staging/concurrency, general upload quarantine and authenticated publication pending. See database/README.md.",
   "status_note": "Initial GitHub import complete: 45 tasks, 44 open and 1 closed. Live task status is maintained in GitHub Issues. Estimates exclude historical digitisation, licensing waits and independent expert review.",
   "projects": [
     {
@@ -254,7 +254,7 @@
         "number": 8,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/8"
       },
-      "implementation_note": "Sabit hashli kaynak ZIP'ten tekrar üretilebilir alt küme aktarımı ve derleme doğrulaması eklendi; veritabanı idempotency, karantina ve editoryal kuyruk bekliyor."
+      "implementation_note": "Sabit hashli sınır alt kümesine ek olarak beş Gate A adayı için revizyon pinli, transaction içinde idempotent yerel DB adaptörü uygulandı. Tekrarda 0 yeni kayıt; blocked gerekçesi korunur. Genel upload byte/vertex sınırları, karantina ve editoryal kuyruk bekliyor."
     },
     {
       "id": "P02-004",

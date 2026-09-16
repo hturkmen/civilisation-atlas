@@ -2,6 +2,12 @@
   "name": "atlas-database-tests",
   "private": true,
   "type": "module",
-  "scripts": {"test": "node --test test/*.test.mjs"},
-  "devDependencies": {"@electric-sql/pglite": "0.5.8"}
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "import:check": "node scripts/import-local.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@electric-sql/pglite-postgis": "0.2.8"
+  }
 }
