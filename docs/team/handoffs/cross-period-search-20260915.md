@@ -1,6 +1,6 @@
 # Dönemler arası koleksiyon araması — 16 Eylül 2026
 
-Durum: ready_for_review; demo deployment_pending. Yazar: Codex. PR: [#49](https://github.com/hturkmen/civilisation-atlas/pull/49). Dal: `agent/codex/cross-period-search-20260915`.
+Durum: merged_and_deployed; bu arama dilimi tamamlandı. Yazar: Codex. PR: [#49](https://github.com/hturkmen/civilisation-atlas/pull/49). Dal: `agent/codex/cross-period-search-20260915`.
 
 Başlangıç main: `63305adc047ff466b5093b6d9fc57ddca7ae6502`. Görev sahipliği commit'i: `e073de0f7063f222be13300a455eb9e4db99f93f`. Ayrı çalışma alanı kullanıldı; başlangıçta açık başka PR yoktu. 15 Eylül taslak PR isteği kullanım limiti nedeniyle yürütülmedi; 16 Eylül tekrarında #49 açıldı.
 
@@ -27,3 +27,12 @@ Statik demo hedefli regresyon sonuçlarını ve gerçek yayın sonucunu devam ka
 Sonraki somut iş: P02-004/P03 revizyon ve kanıt kimliği entegrasyonunu mevcut sözleşme üzerinde ilerlet; sağlayıcı/bölge/maliyet kararı olmadan ücretli altyapı kurma. Görsel bağımsız alternatif: ikinci arşiv perspektifinin kaynak/lisans değerlendirmesi.
 
 Statik demo regresyonu: 4/4 geçti (iki yeni arama senaryosu, mevcut MS 1500 araması ve Bilinen dünya/ESC). Tam 19 senaryonun temiz toplu koşumu iddia edilmez.
+
+
+## Doğrulanmış entegrasyon ve yayın — 16 Eylül 2026
+
+PR #49 birleşti: `ab0b48b0009d54d77f6baec82c800131c692e29a`. Test edilen uygulama commit'i: `4c3972b2cea39ce5affc96db0b2b45919bed8ffb`; merge kaynak ağacı aynı. Ana dal GitHub'dan doğrulandı.
+
+Mevcut özel demo sürüm 5 yayımlandı. Site kaynak SHA: `35aa8ab3e5c18acfcd1c02600a6d1bfa60a7f37f`. Kaynak push sonrası tam HEAD okundu; doğrulanmış statik build paketlendi. Sürüm: `appgprj_6aa638d93f3c819188b55444e79f992a~appgver_a3c814ad2ce08191bb66368595c88c88`; dağıtım: `appgdep_6aaa48422df48191a3979d9d2da6765f`. Yayın hizmeti 2026-09-16T07:42:06.009698+00:00 tarihinde `succeeded` döndürdü. URL: https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site . Erişim genişletilmedi, yeni Site oluşturulmadı. Canlı URL üzerinde ek bulut tarayıcı testi yapılmadı; statik paket yerelde doğrulandı.
+
+Sonuç: bu arama dilimi tamamlandı; önceki deployment_pending notu kapandı. Projenin tüm kapsamı tamamlanmadı. Sonraki ajan dönemler arası aramayı yeniden uygulamamalı; P02-004/P03 revizyon/kanıt entegrasyonu veya ikinci kaynaklı arşiv perspektifi ile devam etmeli. Kullanıcı/admin, tam veri kapsamı ve bağımsız inceleme hâlâ açık.
