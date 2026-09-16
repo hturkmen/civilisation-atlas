@@ -2,6 +2,7 @@
   "schema_version": "1.0",
   "repo_target": "hturkmen/civilisation-atlas",
   "revision_progress_2026_09_16": "P02-004: local claim/entity/geometry/source content pins and revision-aware gate implemented; DB constraints and authenticated reviews remain pending. See docs/team/handoffs/p02-004-revision-pins-20260916.md.",
+  "database_progress_2026_09_16": "P03-002 partial: relational migration and 12 PGlite SQL scenarios; native staging, concurrency, PostGIS and authenticated publication pending. See database/README.md.",
   "status_note": "Initial GitHub import complete: 45 tasks, 44 open and 1 closed. Live task status is maintained in GitHub Issues. Estimates exclude historical digitisation, licensing waits and independent expert review.",
   "projects": [
     {
@@ -361,7 +362,7 @@
       "id": "P03-002",
       "project_id": "P03",
       "title": "Postgres/PostGIS şemasını ve revizyon ilişkilerini kur",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {

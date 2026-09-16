@@ -134,3 +134,12 @@ Kalan: P03-002 yerel DB migration ve revizyon FK/immutable yayın negatif testle
 Son doğrulama: üretim build, TypeScript ve plan kontrolü geçti. Hazırlama betiği ikinci `--write` çalışmasında 0 pin ekledi (idempotent). Kod/girdiler test sonrası değişmedi; yalnız açıklama/kayıtlar tamamlandı.
 
 Teslim doğrulandı: `94f9c67ddfec0b6625174466978c6f0d39c9dbed` doğrudan main’e normal ileri güncelleme ile kaydedildi ve uzak HEAD okunarak doğrulandı. PR oluşturulmadı. Bu geliştirme dilimi tamamlandı; P02-004/P03-002 ve genel ürün kapsamı açık. Bu son kayıt yalnız belgedir, uygulama/test girdilerini değiştirmez.
+
+
+## 16 Eylül — P03-002 ilişkisel migration
+
+İlk SQL migration ve 12 yerel SQL senaryosu tamamlandı. Kaynak/iddia/geometri/perspektif ilişkileri FK'lerle bağlı; revizyonlar append-only; doğrulanmış yayın üyeliği kilitli. PUBLIC şema erişimi yok ve public `active` yayına geçiş henüz desteklenmiyor. PGlite testi gerçek staging/PostGIS/eşzamanlılık testi olarak sayılmadı. Ayrıntı: `database/README.md`, `docs/team/handoffs/p03-002-relational-core-20260916.md`.
+
+Web ekranları ve runtime koleksiyonu değişmedi; yeni demo yayını yok. Sıradaki somut iş: PostGIS kolonları ve domain pinlerini DB'ye bağlayan import adaptörü; ardından native staging/yetkili inceleme/publicasyon. P03-002 partial, genel ürün kapsamı açık.
+
+Son doğrulama: 12/12 SQL senaryosu, 53/53 domain/veri testi, plan kontrolü, revizyon pinleri, editoryal kapı (0 publishable) ve sınır validator geçti. Root/web bağımlılıkları, runtime kodu ve veriler değişmediğinden build/Playwright tekrarlanmadı. Yeni veri tabanı yalnız bellek içi test ortamındadır.
