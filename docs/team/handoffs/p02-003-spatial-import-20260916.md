@@ -1,6 +1,6 @@
 # P02-003 / P03-002 — yerel revizyonlu PostGIS aktarımı
 
-16 Eylül 2026. Başlangıç main: `c2125191d0dc488e280b33f2cbe56591ee20f3cf`. Ayrı çalışma alanı; başlangıçta açık PR yok. Kullanıcı talimatıyla PR açılmadan doğrudan main teslimi. Durum: uygulama ve yerel doğrulama tamamlandı; uzak teslim SHA'sı son kayıtta eklenecek.
+16 Eylül 2026. Başlangıç main: `c2125191d0dc488e280b33f2cbe56591ee20f3cf`. Ayrı çalışma alanı; başlangıçta açık PR yok. Kullanıcı talimatıyla PR açılmadan doğrudan main teslimi. Durum: bu dilim tamamlandı; doğrudan main teslimi GitHub üzerinden doğrulandı: `02f0adc9de931793e9bd0e62c094efd6dd625e18`. P02-003/P03-002 bütünü açık kalır.
 
 ## Uygulanan dilim
 
@@ -27,3 +27,5 @@
 P02-003/P03-002 partial. PGlite tek bağlantılı yerel testtir: native PostgreSQL/PostGIS staging, iki bağlantılı import ve yayın kilitleme yarışı, backup/restore veya performans kanıtı değildir. Genel upload byte/vertex sınırları, karantina/kuyruk, kimliği doğrulanmış inceleme, runtime rol/RLS ve public aktivasyon yok. Güvenilen migration sahibi dışında uygulama rolüne yetki verilmedi. Bağımsız tarihçi incelemesi yapılmadı.
 
 Sonraki somut iş: yerel adaptörün önüne dosya boyutu/vertex sınırları ve karantina sonucu olan import iş kaydı ekle; ağdan keyfi URL indirme veya onay verme yetkisi ekleme. Native staging sağlayıcısı/veri bölgesi kararı olmadan bağımsız yerel işleri ilerlet. Aynı içerikleri veya sınır geometrisini yeniden üretme. Mevcut demo/hosting girişlerini değiştirme.
+
+Teslim sonrası #8 ve #13 ilerleme notları güncellendi; kabul ölçütleri tamamlanmadığından açık bırakıldı. Bu son kayıt yalnız belgedir; test edilen kod değişmedi.
