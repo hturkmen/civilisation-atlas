@@ -1,6 +1,7 @@
 {
   "schema_version": "1.0",
   "repo_target": "hturkmen/civilisation-atlas",
+  "revision_progress_2026_09_16": "P02-004: local claim/entity/geometry/source content pins and revision-aware gate implemented; DB constraints and authenticated reviews remain pending. See docs/team/handoffs/p02-004-revision-pins-20260916.md.",
   "status_note": "Initial GitHub import complete: 45 tasks, 44 open and 1 closed. Live task status is maintained in GitHub Issues. Estimates exclude historical digitisation, licensing waits and independent expert review.",
   "projects": [
     {

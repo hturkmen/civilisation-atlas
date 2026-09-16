@@ -288,6 +288,9 @@ export function contentHash(candidate) {
  * rights "approved". Rights and historical review are independent gates:
  * passing one never substitutes for the other.
  *
+ * This is the candidate/rights sub-gate. Storage/export callers must use
+ * evaluateRevisionPublishability from editorial-revisions.mjs to also bind
+ * resolved entity/geometry and complete source content to a reviewed revision.
  * This function fails closed. It never reports publishable=true for a record
  * it could not fully check.
  */

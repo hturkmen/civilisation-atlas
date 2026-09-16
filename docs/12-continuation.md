@@ -119,3 +119,16 @@ PR #49 birleşti: `ab0b48b0009d54d77f6baec82c800131c692e29a`. Test edilen uygula
 Mevcut özel demo sürüm 5 yayımlandı. Site kaynak SHA: `35aa8ab3e5c18acfcd1c02600a6d1bfa60a7f37f`. Kaynak push sonrası tam HEAD okundu; doğrulanmış statik build paketlendi. Sürüm: `appgprj_6aa638d93f3c819188b55444e79f992a~appgver_a3c814ad2ce08191bb66368595c88c88`; dağıtım: `appgdep_6aaa48422df48191a3979d9d2da6765f`. Yayın hizmeti 2026-09-16T07:42:06.009698+00:00 tarihinde `succeeded` döndürdü. URL: https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site . Erişim genişletilmedi, yeni Site oluşturulmadı. Canlı URL üzerinde ek bulut tarayıcı testi yapılmadı; statik paket yerelde doğrulandı.
 
 Sonuç: bu arama dilimi tamamlandı; önceki deployment_pending notu kapandı. Projenin tüm kapsamı tamamlanmadı. Sonraki ajan dönemler arası aramayı yeniden uygulamamalı; P02-004/P03 revizyon/kanıt entegrasyonu veya ikinci kaynaklı arşiv perspektifi ile devam etmeli. Kullanıcı/admin, tam veri kapsamı ve bağımsız inceleme hâlâ açık.
+
+
+## 16 Eylül — P02-004 revizyon bağlantısı
+
+Kullanıcı artık PR açılmasını istemiyor; kısa kapsam özeti ardından test edilmiş dilimler doğrudan main'e normal ileri güncelleme ile teslim edilir. Ortak ajan belgeleri güncellendi.
+
+İddia + çözülmüş varlık/geometri/perspektif + kullanılan kaynak içerikleri aynı revizyon pinine bağlandı. Eski revizyon incelemesi değişmiş içeriğe taşınamaz; sırf genel kaynakça veya locator'sız kanıt yayın için yeterli değildir. Mevcut beş aday için pin manifesti üretildi, hiçbir onay durumu değiştirilmedi. CLI yetkili inceleme kaydı uydurmadığından sıfır aday yayınlanabilir.
+
+53 test ve kaynak/sınır/revizyon doğrulaması geçti. Son build/typecheck/plan ve main teslim sonucu aşağıya kaydedilecek. Yeni görünür UI veya çalışma zamanı verisi olmadığından özel demo sürüm 5 yeniden yayımlanmadı. Devir: `docs/team/handoffs/p02-004-revision-pins-20260916.md`.
+
+Kalan: P03-002 yerel DB migration ve revizyon FK/immutable yayın negatif testleri, ardından yetkili inceleme servisi/transaction entegrasyonu. P02-004 tümüyle kapalı değildir; kullanıcı/admin, bağımsız tarihçi incelemesi ve kapsam genişletmesi açık.
+
+Son doğrulama: üretim build, TypeScript ve plan kontrolü geçti. Hazırlama betiği ikinci `--write` çalışmasında 0 pin ekledi (idempotent). Kod/girdiler test sonrası değişmedi; yalnız açıklama/kayıtlar tamamlandı.

@@ -26,3 +26,8 @@ node scripts/validate-editorial.mjs
 ```
 
 Ayrıca `npm test` çalıştırıldığında `packages/domain/test/editorial.test.mjs` bu dosyaları ve validator'ı birlikte test eder.
+
+
+## Revizyon pinleri — 16 Eylül
+
+`revisions.json` mevcut beş adayın iddia, çözülmüş varlık/geometri/perspektif ve kullanılan kaynak içeriklerini SHA-256 kimliklerine bağlar. Kaynakların yayımladığı sürüm numarası değildir. `node scripts/prepare-editorial-revisions.mjs` güncel pinlerin varlığını kontrol eder; `--write` eski pinleri koruyarak yenilerini ekler, hiçbir adayın inceleme durumunu değiştirmez. Genel editoryal validator da bu pinleri zorunlu kontrol eder. Henüz yetkili inceleme servisi ve DB olmadığı için CLI yayın izni üretemez.

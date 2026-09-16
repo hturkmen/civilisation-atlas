@@ -1,35 +1,19 @@
 import {readFile} from 'node:fs/promises';
-import {validateEditorialCandidates, validateEditorialSources, evaluatePublishability} from '../packages/domain/src/editorial.mjs';
+import {validateEditorialCandidates} from '../packages/domain/src/editorial.mjs';
+import {createEditorialRevision, validateRevisionManifest, evaluateRevisionPublishability} from '../packages/domain/src/editorial-revisions.mjs';
+import {loadEditorialInputs} from './lib/editorial-inputs.mjs';
 
-const read = async path => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
-
-const sources = await read('../data/editorial/sources.json');
-const candidates = await read('../data/editorial/candidates.json');
-
-// An entityRef that points at nothing is a broken claim, not a valid draft.
-// The ids come from the collections that already exist; the domain module
-// stays file-system free and only receives the resolved lists.
-const [preview, boundaries, maps] = await Promise.all([
-  read('../data/preview-collection.json'),
-  read('../data/boundary-collection.json'),
-  read('../data/historical-maps.json')
-]);
-const entityRegistry = {
-  settlement: preview.places.map(place => place.id),
-  boundary_record: boundaries.records.map(record => record.id),
-  perspective: maps.map(map => map.id)
-};
-
-validateEditorialSources(sources);
-validateEditorialCandidates(candidates, sources, entityRegistry);
-
-const report = candidates.map(candidate => ({id: candidate.id, status: candidate.status, reviewStatus: candidate.reviewStatus, ...evaluatePublishability(candidate, sources)}));
-for (const entry of report) {
-  console.log(`${entry.id}: publishable=${entry.publishable}${entry.reasons.length ? ' (' + entry.reasons.join('; ') + ')' : ''}`);
-}
-
-const publishedCount = report.filter(entry => entry.publishable).length;
-console.log(`\nEditorial contract: ${sources.length} source(s), ${candidates.length} candidate(s) structurally valid against ${entityRegistry.settlement.length + entityRegistry.boundary_record.length + entityRegistry.perspective.length} existing entities, ${publishedCount} publishable.`);
-if (publishedCount > 0) {
-  console.warn('Warning: at least one candidate reports publishable=true. Verify this is expected before any export step relies on it.');
-}
+const {sources, candidates, entities, resolveEntity} = await loadEditorialInputs();
+const registry = Object.fromEntries(['settlement', 'boundary_record', 'perspective'].map(kind => [kind, entities.filter(entity => entity.kind === kind).map(entity => entity.id)]));
+validateEditorialCandidates(candidates, sources, registry);
+const revisions = validateRevisionManifest(JSON.parse(await readFile(new URL('../data/editorial/revisions.json', import.meta.url), 'utf8')));
+// No authenticated review service exists yet. Never manufacture an attestation from candidate flags.
+const report = candidates.map(candidate => {
+  const entity = resolveEntity(candidate.entityRef);
+  const current = createEditorialRevision(candidate, sources, entity);
+  const revision = revisions.find(item => item.revisionId === current.revisionId);
+  if (!revision) throw new Error('Missing current revision pin: ' + candidate.id + '. Run prepare-editorial-revisions.mjs after reviewing the change.');
+  return {id: candidate.id, ...evaluateRevisionPublishability(candidate, sources, entity, revision)};
+});
+for (const entry of report) console.log(`${entry.id}: publishable=${entry.publishable} (${entry.reasons.join('; ')})`);
+console.log(`\nEditorial contract: ${sources.length} sources, ${candidates.length} candidates, ${entities.length} existing entities, ${report.filter(entry => entry.publishable).length} publishable. Revision pins verified; authenticated reviews not implemented.`);

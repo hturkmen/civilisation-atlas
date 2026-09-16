@@ -8,7 +8,7 @@ Bu kurallar Kiro, Claude Code, Codex ve işi devralan diğer geliştirme araçla
 
 Kiro/veri görevi: P02-001 kaynak/kanıt sözleşmesi ve sınırlı Gate A denemesi. Claude Code/arayüz görevi: mevcut koleksiyon üzerinde dönemler arası arama. Araç adı zorunlu sahip değildir; kullanıcı aynı görevi başka araca verebilir. Codex'in varsayılan devam işi bu iki işi yeniden yazmak değil, PR incelemesi/entegrasyon ve erişebildiği mevcut özel demo yayınıdır.
 
-Her görevde tek yazıcı, ayrı dal ve ayrı checkout/worktree kullan. Aynı dizinde iki ajanın branch değiştirmesine izin verme. Başlamadan ilgili açık PR ve devir kaydını kontrol et; mevcut işi sürdür veya çakışmayan görevi al. GitHub'a erişemiyorsan yeni ortak görev sahipliğini doğrulanmış sayma.
+Kullanıcının 16 Eylül talimatı: geliştirmeden önce kısa kapsam özeti ver; PR açmak zorunlu değildir, doğrulanan değişiklikleri doğrudan güncel `main` dalına normal ileri güncelleme ile kaydet. Her görevde tek yazıcı ve ayrı çalışma alanı kullan. Aynı dizinde iki ajanın branch değiştirmesine izin verme. Başlamadan ilgili açık PR ve devir kaydını kontrol et; mevcut işi sürdür veya çakışmayan görevi al. GitHub'a erişemiyorsan yeni ortak görev sahipliğini doğrulanmış sayma.
 
 ## Uygulama sınırları
 
@@ -25,4 +25,4 @@ Her görevde tek yazıcı, ayrı dal ve ayrı checkout/worktree kullan. Aynı di
 
 Projedeki gerçek komutları kullan: `npm ci`, `npm test`, `npm run check:plan`, `node scripts/validate-boundaries.mjs`, `npm run build`, `npm run typecheck`; değişen davranış için gerekli tarayıcı/veri kontrollerini ekle. Yalnız belge değişiminde bağlantı/tutarlılık kontrolü yeterlidir. Eksik ortam aracını veya başarısız kontrolü başarılı sayma; testi geçirtmek için kapsamı ya da güvenlik koşulunu zayıflatma.
 
-Her PR'ın kendi `docs/team/handoffs/` kaydı olur. Ortak README/backlog/devam kaydı değişiklikleri entegrasyonda tek yazıcı tarafından birleştirilir. Doğrulanmış sonuç, kalan kabul ölçütleri, tam commit, çalıştırılan komutlar, engeller ve ilk sonraki adım kaydedilir. GitHub kuralları ve gerekli kontroller sağlanınca PR birleştirilebilir; Codex'in çevrimiçi olması zorunlu değildir. Ayrıntılı süreç ve görev promptları `docs/team/README.md` içinde.
+Her geliştirme diliminin kendi `docs/team/handoffs/` kaydı olur; PR olmadan yapılan teslimler de burada izlenir. Ortak README/backlog/devam kaydı değişiklikleri entegrasyonda tek yazıcı tarafından birleştirilir. Doğrulanmış sonuç, kalan kabul ölçütleri, tam commit, çalıştırılan komutlar, engeller ve ilk sonraki adım kaydedilir. GitHub kuralları ve gerekli kontroller sağlanınca PR birleştirilebilir; Codex'in çevrimiçi olması zorunlu değildir. Ayrıntılı süreç ve görev promptları `docs/team/README.md` içinde.

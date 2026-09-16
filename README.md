@@ -38,7 +38,7 @@ Teknik dizinler: apps/web, apps/worker, packages/domain, packages/contracts, dat
 
 ## Kiro / Claude Code ile devam
 
-[Yerel ekip çalışma rehberi](docs/team/README.md): [kaynak/kanıt görevi](docs/team/prompts/kiro-data.md), [dönemler arası arama görevi](docs/team/prompts/claude-code-ux.md) ve [kesintiden devralma / entegrasyon](docs/team/prompts/continue-and-integrate.md). Araçlar ayrı görev dalları ve devir kayıtlarıyla çalışır; ortak kurallar [AGENTS.md](AGENTS.md) içindedir.
+[Yerel ekip çalışma rehberi](docs/team/README.md): [kaynak/kanıt görevi](docs/team/prompts/kiro-data.md), [dönemler arası arama görevi](docs/team/prompts/claude-code-ux.md) ve [kesintiden devralma / entegrasyon](docs/team/prompts/continue-and-integrate.md). Güncel kullanıcı talimatıyla doğrulanan dilimler PR zorunluluğu olmadan doğrudan main’e kaydedilir; devir kayıtları tutulur; ortak kurallar [AGENTS.md](AGENTS.md) içindedir.
 
 ## Çalıştırma
 

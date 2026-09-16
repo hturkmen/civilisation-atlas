@@ -1,0 +1,78 @@
+{
+  "title": "EditorialRevisionPin",
+  "description": "Local content identities, not external source versions or approval. Runtime also recomputes revisionId over all other fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "candidateId",
+    "claimHash",
+    "entity",
+    "sources",
+    "revisionId"
+  ],
+  "properties": {
+    "formatVersion": {
+      "const": 1
+    },
+    "candidateId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claimHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "contentHash"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "settlement",
+            "boundary_record",
+            "perspective"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sourceId",
+          "contentHash"
+        ],
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contentHash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "revisionId": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

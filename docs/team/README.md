@@ -2,6 +2,10 @@
 
 15 Eylül 2026. Bu dosya kullanıcı isteğiyle Kiro, Claude Code ve Codex arasında iş devri için hazırlandı. Yeni mimari veya ayrı proje oluşturmaz. Araçlar birbirlerinin sohbetini, yerel dosyalarını veya kota durumunu kendiliğinden göremez; ortak durum GitHub'daki dal, PR ve devir kayıtlarıdır. Bu belgelerin varlığı bir yerel ajanı başlatmaz.
 
+## Güncel teslim kuralı — 16 Eylül 2026
+
+Kullanıcı PR oluşturmayı gereksiz buldu ve doğrudan `main`/mevcut geliştirme dalına teslimi açıkça istedi. Bundan sonra varsayılan: önce kısa kapsam özeti, güncel main ve aktif işler kontrolü, ayrı çalışma alanında uygulama/test, devir kaydı, normal ileri güncelleme ile doğrudan main'e commit. PR/taslak PR zorunlu değildir; aşağıdaki önceki dal/PR adımları bu talimatla değişmiştir. Koruma/CI şartı varsa aşılmaz; remote ilerlerse değişiklikler uzlaştırılmadan push edilmez. Kaynaklı içerik ve güvenlik koşulları aynen geçerlidir. Dönemler arası arama #49 ile tamamlandı; eski arayüz görev promptu yeniden başlatılmamalı.
+
 ## Kullanım
 
 - Tek araç kullanacaksan [veri görevi promptunu](prompts/kiro-data.md) Kiro'ya **veya** Claude Code'a ver. Aynı veri görevini ikisinde eşzamanlı başlatma.

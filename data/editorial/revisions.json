@@ -1,0 +1,87 @@
+[
+  {
+    "formatVersion": 1,
+    "candidateId": "gate-a-mohenjo-daro-3rd-millennium",
+    "claimHash": "fe30ce60a27db7a1094eb8db1add159cfe21145d6544b4bb0de533f2e8836b63",
+    "entity": {
+      "kind": "settlement",
+      "id": "mohenjo-daro",
+      "contentHash": "17563cf8260fb65c730ab7ee00304696dddc9201a1585ad89e7f458b86a9b497"
+    },
+    "sources": [
+      {
+        "sourceId": "ed-unesco-138",
+        "contentHash": "cd6051544723abb494d477fca848ca15a07daee820297088f8a603d9700aa621"
+      }
+    ],
+    "revisionId": "0519e676e8fe6a8a4b41bc492758a138a2549c3e42139b2f9da42f62581bc162"
+  },
+  {
+    "formatVersion": 1,
+    "candidateId": "gate-a-great-zimbabwe-1100-1450",
+    "claimHash": "89dcc8bf9d7453fdd3de0b8df193179e5d85c253b23efe0d09f8b93be56de7aa",
+    "entity": {
+      "kind": "settlement",
+      "id": "great-zimbabwe",
+      "contentHash": "bf6754e2d2749c417feffc54d31c49c38a3f79d152d126178c92098f659baaa6"
+    },
+    "sources": [
+      {
+        "sourceId": "ed-unesco-364",
+        "contentHash": "c39cc7bc7dd31dc050953df1b660842e314ee3a20c5968d1fb7c313fe2afd0a2"
+      }
+    ],
+    "revisionId": "bd9f7fc2402133089d8cf4416a13711fd49d8d7e3acb84cb0496bc31fdd1f438"
+  },
+  {
+    "formatVersion": 1,
+    "candidateId": "gate-a-roman-empire-117-boundary",
+    "claimHash": "14e3dc81a682a0f7cc442bcf8266ddb62de9e5b5e59d38937ba1dfeab1a3a15e",
+    "entity": {
+      "kind": "boundary_record",
+      "id": "cliopatria-1235",
+      "contentHash": "83b91827b0ac2c1e88e5691761d6b1c516af89000e0288a17e131ae716aae7f4"
+    },
+    "sources": [
+      {
+        "sourceId": "ed-cliopatria-v0-2-0",
+        "contentHash": "f7526ac0adffa778eeebdc4111fc58f4a0c70ee1fb3bdfc37bdf068f6f139966"
+      }
+    ],
+    "revisionId": "6a3bfe6ca205e331b400a79f1decc1d417e1ca078d67d40405931ad4ed5654cd"
+  },
+  {
+    "formatVersion": 1,
+    "candidateId": "gate-a-waldseemuller-1507-perspective",
+    "claimHash": "8d6b1be2554aec8c900dc463e0bf2be445bbf55ffd2aa82576aa070fad5faeb5",
+    "entity": {
+      "kind": "perspective",
+      "id": "waldseemuller-1507",
+      "contentHash": "dd79d9efff600f2572c9fb2f9a99b4ff9e553395d00df0700a47de82d67a17a6"
+    },
+    "sources": [
+      {
+        "sourceId": "ed-loc-waldseemuller-1507",
+        "contentHash": "ab65a1626d52c3e963f9c854a40848bf905d275e6f958b038444ace11be04e8c"
+      }
+    ],
+    "revisionId": "8c3fb9f681b9fa21a47c7fc34bd0e49e229672f9dd813bb8a4b9c7c02e1ea2ed"
+  },
+  {
+    "formatVersion": 1,
+    "candidateId": "gate-a-roman-117-alternative-blocked",
+    "claimHash": "f8d5a0054c0b48a56ef7156a28d4ebbc7c9930f272a4cf0918cc7a99941d27cc",
+    "entity": {
+      "kind": "boundary_record",
+      "id": "cliopatria-1235",
+      "contentHash": "83b91827b0ac2c1e88e5691761d6b1c516af89000e0288a17e131ae716aae7f4"
+    },
+    "sources": [
+      {
+        "sourceId": "ed-wikimedia-romanempire117-svg",
+        "contentHash": "c8c749242de503ddc85f3a1423832a1f6fa569ef19a4169b459b87c2d19613ed"
+      }
+    ],
+    "revisionId": "6e0eed2a0d9cc170ce472a6697a08ed809cb67172851ed0dc129c44d5a78a848"
+  }
+]
