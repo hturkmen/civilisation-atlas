@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {collectionStops, nearbyCoveredYears} from '../src/collection.mjs';
+import {collectionStops, nearbyCoveredYears, searchOtherPeriods} from '../src/collection.mjs';
 import {formatYear} from '../src/chronology.mjs';
 
 const collection = JSON.parse(readFileSync(new URL('../../../data/boundary-collection.json', import.meta.url)));
@@ -34,4 +34,34 @@ test('coverage suggestions preserve the BCE/CE boundary and never invent results
   const empty = {...collection, polities: [], records: []};
   assert.deepEqual(nearbyCoveredYears([], empty, 1), {previous: null, next: null});
   assert.deepEqual(collectionStops([], empty), []);
+});
+
+test('period search groups actual records by identity without bridging gaps', () => {
+  const result = searchOtherPeriods([], collection, 1700, '  MALİ  ');
+  assert.equal(result.polities.length, 1);
+  const records = result.polities[0].records;
+  assert.deepEqual(records.map(r => r.sampleYear), [1325, 1500]);
+  assert.ok(records[0].period.endExclusive < records[1].period.start);
+  assert.deepEqual(searchOtherPeriods([], collection, 1500, 'Mali').polities[0].records.map(r => r.sampleYear), [1325]);
+  assert.equal(searchOtherPeriods([], collection, 1700, 'Roman').polities[0].polity.name, 'Roma İmparatorluğu');
+  assert.deepEqual(searchOtherPeriods([], collection, 1700, '   '), {polities: [], places: []});
+  assert.deepEqual(searchOtherPeriods([], collection, 1700, 'unmatched'), {polities: [], places: []});
+});
+
+test('period search preserves BCE endpoints, matches place aliases and leaves input untouched', () => {
+  // Synthetic records test chronology and grouping, not historical assertions.
+  const fixture = {...collection, polities: [{id: 'one', name: 'Örnek', sourceName: 'Fixture'}, {id: 'two', name: 'Örnek', sourceName: 'Fixture'}], records: [
+    {id: 'b', polityId: 'one', period: {start: 0, endExclusive: 1}, sampleYear: 0},
+    {id: 'a', polityId: 'one', period: {start: -10, endExclusive: -5}, sampleYear: -7},
+    {id: 'c', polityId: 'two', period: {start: 0, endExclusive: 1}, sampleYear: 0},
+  ]};
+  const before = JSON.stringify(fixture);
+  const result = searchOtherPeriods([], fixture, 1, 'ORNEK');
+  assert.equal(result.polities.length, 2);
+  assert.deepEqual(result.polities[0].records.map(r => r.id), ['a', 'b']);
+  assert.equal(formatYear(result.polities[0].records[1].period.endExclusive - 1), 'MÖ 1');
+  assert.equal(JSON.stringify(fixture), before);
+  const places = [{id: 'test', name: 'Örnek', culture: 'Test', region: 'Test', aliases: ['Ancient test'], period: {start: 0, endExclusive: 1}, suggestedYear: 0}];
+  assert.equal(searchOtherPeriods(places, fixture, 1, 'ancient').places[0], places[0]);
+  assert.equal(searchOtherPeriods(places, fixture, 0, 'ancient').places.length, 0);
 });

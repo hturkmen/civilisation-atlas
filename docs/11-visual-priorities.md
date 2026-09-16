@@ -37,3 +37,8 @@ Sınırlar görsel açıdan en büyük kazanımdır; uygun kanıt bulunmadan çi
 ## Doğrulama
 
 Üretim derlemesi ve TypeScript kontrolü geçti. 14 alan/veri testi, statik dağıtım üzerinde 9 Chromium senaryosu geçti. Yeni senaryolar yayım yılına sadakati, yakınlaştırmayı, bağlantıdan açılışı, koleksiyon duraklarını ve mobil taşmayı kapsar. Ana Node sunucu uygulamasında arşiv ve mobil akışı kapsayan 2 ek tarayıcı kontrolü de geçti. Masaüstünde sürükleme ve tam ekran, mobil görünümde seçili durağın görünürlüğü ayrıca kontrol edildi. Görselin önbelleksiz indirilip hash ile doğrulanması başarılı oldu. Gerçek cihazlar ve diğer tarayıcılar henüz doğrulanmadı.
+
+
+## 16 Eylül eklemesi — dönemler arası arama
+
+PR #49 seçili yıl dışındaki koleksiyon kayıtlarını ayrı kaynak aralıklarıyla bulmayı ekler. Türkçe/kaynak adı ve yerleşim alias araması; örnek tarihe tek işlemle geçiş, klavye ve 360px görünüm doğrulandı. Bu dilim dönem adları, olay araması veya tam küresel kapsama sağlamaz. Gerçek yayın durumu `docs/12-continuation.md` son kaydından izlenir.

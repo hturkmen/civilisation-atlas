@@ -97,3 +97,16 @@ Ek kod incelemesinde `evaluatePublishability` doğrudan çağrıldığında, `cl
 Son değişikliklerle `npm test` 45/45, editoryal validator, sınır validator, `npm run build`, `npm run typecheck` ve `npm run check:plan` geçti. Beş gerçek aday yapısal olarak geçerli, sıfırı yayınlanabilir. Arayüz/çalışma zamanı koleksiyonu değişmediği için Playwright yeniden çalıştırılmadı ve yeni demo yayını gerekmiyor. Gerçek Windows, canlı auth/admin veya tarihçi incelemesi yapılmadı.
 
 Kod ve kayıtlar aynı PR #48'e aktarılacak; birleştirme sonucu GitHub PR kaydından doğrulanmalı. P02-004 canlı revizyon/kanıt entegrasyonu, bağımsız inceleme ve üretim yetkilendirmesi açık kalır. Sonraki somut iş: PR #48 birleştirildikten sonra güncel main'den dönemler arası arama görevini devral; açık başka bir arayüz PR'ı varsa aynı işi yeniden yazma.
+
+
+## 16 Eylül — dönemler arası arama
+
+PR #48 artık birleşti; doğrulanmış main merge SHA: `63305adc047ff466b5093b6d9fc57ddca7ae6502`. Yukarıdaki eski push/build/merge bekleme notları bu doğrulamayla tarihsel kayıttır.
+
+PR #49 mevcut koleksiyon üzerinde dönemler arası aramayı uygular. 1700'de Mali veya Roma aranabilir; ayrı kaynak dönemleri ve örnek tarihleri listelenir, seçim yılı ve detayı birlikte açar. Yerleşim alias'ları, Türkçe arama, Escape/odak, URL/reload ve mobil geçiş kapsandı. Veri/lisans/inceleme durumu değişmedi.
+
+47/47 birim/veri testi, plan/sınır/editoryal kontrolü, ana ve statik üretim derlemeleri, ana TypeScript kontrolü ve iki yeni Node tarayıcı senaryosu geçti. Masaüstü/360px görüntüleri incelendi. Statik regresyon ve yayın terminal sonucu henüz kaydedilmeli; GitHub kaydı demo yayını sayılmaz. Ayrıntılı devir: `docs/team/handoffs/cross-period-search-20260915.md`.
+
+Sonraki iş: revizyon/kanıt entegrasyonu P02-004/P03; kaynak genişletme, bağımsız tarihçi incelemesi, gerçek kullanıcı/admin, üretim altyapısı ve mobil ürün açık kalır. #20/#21 yalnız bu dilimle kapanmaz.
+
+Statik demo regresyonu: 4/4 geçti (iki yeni arama senaryosu, mevcut MS 1500 araması ve Bilinen dünya/ESC). Tam 19 senaryonun temiz toplu koşumu iddia edilmez.

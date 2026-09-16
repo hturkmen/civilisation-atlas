@@ -1,4 +1,4 @@
-import {visiblePlaces} from './catalog.mjs';
+import {visiblePlaces, normalize} from './catalog.mjs';
 import {visibleBoundaries} from './boundaries.mjs';
 
 function historyStop(places, boundaries, year) {
@@ -25,4 +25,18 @@ export function nearbyCoveredYears(places, boundaries, year) {
     previous: previous.length ? historyStop(places, boundaries, Math.max(...previous)) : null,
     next: next.length ? historyStop(places, boundaries, Math.min(...next)) : null,
   };
+}
+
+/** Search only published collection records; gaps are never combined into a lifetime. */
+export function searchOtherPeriods(places, boundaries, year, query) {
+  const needle = normalize(query.trim());
+  if (!needle) return {polities: [], places: []};
+  const polities = boundaries.polities.filter(polity => normalize(polity.name + ' ' + polity.sourceName).includes(needle))
+    .map(polity => ({polity, records: boundaries.records
+      .filter(record => record.polityId === polity.id && !(record.period.start <= year && year < record.period.endExclusive))
+      .sort((a, b) => a.period.start - b.period.start || a.id.localeCompare(b.id))}))
+    .filter(group => group.records.length);
+  const settlements = places.filter(place => !(place.period.start <= year && year < place.period.endExclusive)
+    && normalize([place.name, place.culture, place.region, ...place.aliases].join(' ')).includes(needle));
+  return {polities, places: settlements};
 }
