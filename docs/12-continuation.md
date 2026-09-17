@@ -171,3 +171,11 @@ Teslim tamamlandı: `77b7dfee42cd617d5dfe4c18c04fbefcc7a16a58` doğrudan main'e 
 P02-003/P03-002 ve genel ürün partial. Süre kontrolü commit'i korur; senkron JS parse'ı/CPU'yu çalışırken zorla kesmez. Native PostgreSQL statement_timeout ve iki bağlantılı lease/kilit yarışları bu PGlite ortamında doğrulanmadı. Sonraki somut iş: parser için ayrı süreçte gerçek süre aşımı ve native DB yarış test paketi. Runtime rol/RLS, auth/admin, bağımsız tarihçi incelemesi, üretim scheduler/provider ve public aktivasyon bekliyor. Bu dilimde yeni hizmet veya veri bölgesi seçilmedi.
 
 GitHub teslimi doğrulandı: `8551206ea81b5a39c9fa173b31527e600bb3d6c2` doğrudan main'e kaydedildi; PR yok. Kaynak kod GitHub'dan devralınabilir. Bu son kayıt yalnız belge değişikliğidir. Demo sürüm 5 aynı; backend'i üretime bağlama veya yeni yayın yapılmadı. Genel iş tamamlanmadığı için devam görevi kapatılmaz.
+
+## 17 Eylül — ön doğrulamayı ayrı süreçte sonlandırma
+
+Yerel paket read/hash/JSON parse/ön doğrulaması DB erişimi olmayan sabit çocuk sürece taşındı. 20 saniye sonunda SIGKILL uygulanır; süreç kapanışı beklenir. Parent environment/secrets/Node injection flag'leri devralınmaz; shell yoktur. Eski byte/depth/node/record/vertex ve karantina kuralları aynen korunur. Timeout, veri hatası diye karantinaya yazılmaz; mevcut sınırlı tekrar mekanizmasına TIME_BUDGET olarak girer. Beş supervisor regresyon testi eklendi.
+
+Sınır: bu bütün import işi için hard timeout değildir. Enqueue okuması, parent pin doğrulaması ve DB/PostGIS aşaması ayrı kalır; lease/atomik son commit koruması sürer. OS sandbox, native PostgreSQL statement timeout/çok bağlantılı yarışlar ve Windows/macOS doğrulaması yapılmadı. Native PostgreSQL/Docker mevcut ortamda bulunmadı. Sonraki somut iş native iki bağlantılı yarış test paketi ve gerçek PostgreSQL doğrulaması; P02-003/P03-002 ve genel ürün partial.
+
+UI/veri koleksiyonu/hosting değişmedi, özel demo V5 yeniden yayımlanmadı. Beş aday unreviewed; public onay verilmedi. Test ve teslim sonucu: `docs/team/handoffs/p02-003-preflight-20260917.md`.

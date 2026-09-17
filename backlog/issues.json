@@ -1,5 +1,6 @@
 {
   "schema_version": "1.0",
+  "preflight_progress_2026_09_17": "P02-003 partial: local bundle preflight isolated in a credential-free child with a 20-second kill deadline; native PostgreSQL concurrency and whole-job timeout remain pending. See docs/team/handoffs/p02-003-preflight-20260917.md.",
   "worker_progress_2026_09_17": "P02-003 partial: local durable tasks, claim fencing, heartbeat/deadline, three-attempt retry and atomic receipt completion; 38 DB/import tests. Native concurrency, hard process timeout, runtime roles/RLS and production scheduling remain open. See apps/worker/README.md.",
   "repo_target": "hturkmen/civilisation-atlas",
   "revision_progress_2026_09_16": "P02-004: local claim/entity/geometry/source content pins and revision-aware gate implemented; Local DB constraints and import are implemented; authenticated reviews and production validation remain pending. See docs/team/handoffs/p02-004-revision-pins-20260916.md.",
