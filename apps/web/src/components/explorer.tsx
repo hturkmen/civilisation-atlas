@@ -24,12 +24,15 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
   const searchQuery = query.trim();
   const sourceDialog = useRef<HTMLDialogElement>(null);
   const detailHeading = useRef<HTMLHeadingElement>(null);
+  const [expanded, setExpanded] = useState(true);
+  const returnName = useRef('');
   const visible = visiblePlaces(catalog.places, view.year);
   const results = visiblePlaces(catalog.places, view.year, searchQuery);
   const selected = visible.find(place => place.id === view.selectedId);
   const boundaries = visibleBoundaries(boundaryCollection, view.year);
   const boundaryResults = visibleBoundaries(boundaryCollection, view.year, searchQuery);
   const selectedBoundary = boundaries.find(item => item.polity.id === view.selectedPolityId);
+  const hasDetail = view.mode === 'history' && Boolean(selected || selectedBoundary);
   const archiveMap = archiveMapsAtYear(archiveMaps, view.year)[0];
   const otherPeriods = searchOtherPeriods(catalog.places, boundaryCollection, view.year, searchQuery);
   const nearby = nearbyCoveredYears(catalog.places, boundaryCollection, view.year);
@@ -42,11 +45,12 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
   }, [maxYear, catalog]);
   useEffect(() => {
     if (!selected && !selectedBoundary) return;
-    detailHeading.current?.focus({preventScroll: true});
+    setExpanded(true);
+    const frame = requestAnimationFrame(() => detailHeading.current?.focus({preventScroll: true}));
     if (window.matchMedia('(max-width: 760px)').matches) {
-      document.getElementById('explore-panel')?.scrollIntoView({block: 'start',
-        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+      document.getElementById('map-stage')?.scrollIntoView({block: 'start', behavior: 'instant'});
     }
+    return () => cancelAnimationFrame(frame);
   }, [selected?.id, selectedBoundary?.polity.id]);
   useEffect(() => {
     if (!shared) return;
@@ -61,6 +65,18 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
   }, [catalog.places]);
 
   function clearSearch() {setQuery(''); searchInput.current?.focus();}
+  function closeDetail() {
+    returnName.current = selectedBoundary?.polity.name ?? selected?.name ?? '';
+    setView(current => ({...current, selectedId:null, selectedPolityId:undefined}));
+    requestAnimationFrame(() => {
+      const target = Array.from(document.querySelectorAll<HTMLButtonElement>('.polity-list button,.place-list button')).find(button => button.querySelector('strong')?.textContent === returnName.current);
+      (target ?? searchInput.current)?.focus();
+    });
+  }
+  function toggleDetail() {
+    setExpanded(current => !current);
+    if (!expanded) requestAnimationFrame(() => detailHeading.current?.focus({preventScroll:true}));
+  }
   function selectPlace(id: string) {setView(current => ({...current, selectedId: id, selectedPolityId: undefined}));}
   function selectPolity(id: string) {setView(current => ({...current, selectedId: null, selectedPolityId: id}));}
   function jumpToPolity(year: number, polityId: string) {setQuery(''); setView({year, mode: 'history', selectedId: null, selectedPolityId: polityId});}
@@ -94,9 +110,11 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
     </header>
 
     <main className="workspace">
-      <aside className="explore-panel" id="explore-panel" aria-label="Koleksiyon ve bilgiler" tabIndex={-1}>
-        {view.mode === 'known' ? <ArchivePanel map={archiveMap} maps={archiveMaps} year={view.year} onOpen={openArchive} onShare={share}/> : selectedBoundary ? <PolityDetail boundary={selectedBoundary} collection={boundaryCollection} year={view.year} headingRef={detailHeading} onBack={() => setView(current => ({...current, selectedPolityId: undefined}))} onShare={share} onJump={jumpToPolity}/> : selected ? <div className="detail-panel" key={selected.id}>
-          <button className="text-button back-button" onClick={() => setView(current => ({...current, selectedId: null}))}><Icon name="back" size={17}/>Yerleşimlere dön</button>
+      <aside className={'explore-panel' + (hasDetail ? ' mobile-detail-sheet' : '') + (!expanded ? ' detail-collapsed' : '')} id="explore-panel" aria-label="Koleksiyon ve bilgiler" tabIndex={-1} onKeyDown={event => {if(event.key==='Escape' && hasDetail){event.stopPropagation();closeDetail();}}}>
+        {hasDetail && <div className="mobile-detail-bar"><button className="detail-toggle" aria-expanded={expanded} aria-controls="explore-content" onClick={toggleDetail}><span className="sheet-grip" aria-hidden="true"/><strong>{selectedBoundary?.polity.name ?? selected?.name}</strong><span>{expanded ? 'Haritaya yer aç' : 'Detayları aç'}</span></button><button className="icon-button" aria-label="Detayı kapat ve listeye dön" onClick={closeDetail}><Icon name="close"/></button></div>}
+        <div id="explore-content" className="explore-content">
+        {view.mode === 'known' ? <ArchivePanel map={archiveMap} maps={archiveMaps} year={view.year} onOpen={openArchive} onShare={share}/> : selectedBoundary ? <PolityDetail boundary={selectedBoundary} collection={boundaryCollection} year={view.year} headingRef={detailHeading} onBack={closeDetail} onShare={share} onJump={jumpToPolity}/> : selected ? <div className="detail-panel" key={selected.id}>
+          <button className="text-button back-button" onClick={closeDetail}><Icon name="back" size={17}/>Yerleşimlere dön</button>
           <p className="eyebrow">{selected.region}</p>
           <h1 ref={detailHeading} tabIndex={-1}>{selected.name}</h1>
           <p className="culture-name">{selected.culture}</p>
@@ -134,6 +152,7 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
           <button className="archive-teaser" onClick={() => openArchive(archiveMaps[0].publicationYear)}><span className="archive-teaser-icon"><Icon name="map" size={27}/></span><span><small>YENİ · TARİHÎ HARİTA</small><strong>1507’de dünyaya bak</strong><span>Waldseemüller arşivini aç</span></span><Icon name="arrow" size={17}/></button>
         </>}
         <div className="panel-footnote"><span className="small-compass">✧</span> Her hikâyenin bir kaynağı var.</div>
+        </div>
       </aside>
 
       <section id="map-stage" className={'map-stage' + (view.mode === 'known' ? ' known-stage' : '')} aria-label={view.mode === 'history' ? 'Tarihsel dünya görünümü' : 'Bilinen dünya görünümü'}>

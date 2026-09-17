@@ -312,6 +312,23 @@ button,a{touch-action:manipulation}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* Source periods stay separate: a gap does not imply a polity's lifetime. */
+.mobile-detail-bar{display:none}
+@media(max-width:760px){
+  .mobile-detail-sheet{position:fixed;inset:auto 0 0;z-index:20;padding:0;max-height:62dvh;display:flex;flex-direction:column;background:var(--paper);border-radius:20px 20px 0 0;box-shadow:0 -8px 30px #213b3329;border:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .mobile-detail-bar{display:flex;align-items:center;gap:10px;padding:8px 16px;flex-shrink:0;border-bottom:1px solid var(--line)}
+  .mobile-detail-bar>.icon-button{min-width:44px;min-height:44px;flex-shrink:0}
+  .detail-toggle{position:relative;flex:1;min-width:0;min-height:64px;text-align:left;padding:12px 0 4px}
+  .detail-toggle strong{display:block;font:1.125rem/1.3 var(--serif);overflow-wrap:anywhere}
+  .detail-toggle>span:last-child{display:block;font-size:.875rem;margin-top:4px;color:var(--muted)}
+  .sheet-grip{position:absolute;top:0;left:50%;width:32px;height:3px;background:#84998b;border-radius:3px}
+  .mobile-detail-sheet .explore-content{overflow-y:auto;overscroll-behavior:contain;padding:16px 20px 24px;min-height:0}
+  .mobile-detail-sheet.detail-collapsed .explore-content{display:none}
+  .mobile-detail-sheet .detail-panel h1{font-size:2rem;overflow-wrap:anywhere}
+  .mobile-detail-sheet .place-summary,.mobile-detail-sheet .detail-section p{font-size:1rem;line-height:1.65}
+  .mobile-detail-sheet .source-card p,.mobile-detail-sheet .source-card summary,.mobile-detail-sheet .source-link,.mobile-detail-sheet .location-note p,.mobile-detail-sheet .location-note summary,.mobile-detail-sheet .detail-section h2,.mobile-detail-sheet .boundary-period p,.mobile-detail-sheet .boundary-uncertainty p,.mobile-detail-sheet .boundary-license,.mobile-detail-sheet .evidence-list dd,.mobile-detail-sheet .evidence-list dt{font-size:.875rem;line-height:1.6;overflow-wrap:anywhere}
+  .mobile-detail-sheet .text-button{min-height:44px;font-size:.875rem}
+  .mobile-detail-sheet .boundary-period strong{font-size:1.125rem;overflow-wrap:anywhere}
+}
 .period-search{margin-top:24px;padding-top:20px;border-top:1px solid #d6dbcf}
 .period-search-note,.period-search-empty{font-size:11px;line-height:1.7;color:var(--muted);margin-bottom:14px}
 .period-search-list{display:grid;gap:12px;list-style:none;padding:0}

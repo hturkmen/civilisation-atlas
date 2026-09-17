@@ -602,7 +602,7 @@
       "id": "P04-005",
       "project_id": "P04",
       "title": "Mobil alt panel, klavye ve WebGL fallback geliştir",
-      "status": "todo",
+      "status": "partial",
       "priority": "P1",
       "phase": "web-beta",
       "estimate_hours": {
@@ -622,7 +622,8 @@
       "github": {
         "number": 22,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/22"
-      }
+      },
+      "implementation_note": "Mobilde non-modal sabit alt detay paneli, küçült/aç, iç scroll ve Escape/listede odağa dönüş eklendi. 22 statik Chromium senaryosu geçti; gerçek cihazlar, Safari/Firefox ve tüm sayfada %200 metin bekliyor."
     },
     {
       "id": "P04-006",

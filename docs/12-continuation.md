@@ -6,14 +6,12 @@
 
 | Alan | Güncel durum / yeniden yapılmayacak iş |
 |---|---|
-| Arayüz | Dönemler arası arama tamam; özel demo V5. Node/statik girişler ayrı. |
-| Veri | 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; Gate A beş aday unreviewed. Yeni onay yok. |
-| DB/import | 0001–0004, PostGIS, pinli idempotent import, karantina, worker lease/retry ve ayrı süreç ön doğrulama uygulanmış. Bunları yeniden tasarlama. |
-| Son teslim edilen kod | `b6cf95619a87dc5d8a895120737fc69a10ebcfc9` uzak main okunarak doğrulandı. Bu SHA'dan sonra yalnız teslim belgeleri güncellendi. |
-| Bu dilim | Native PostgreSQL için yedi senaryolu `database/scripts/test-native.mjs` hazır; **native çalıştırma henüz doğrulanmadı**. Ayrıntı: [devir](team/handoffs/p02-003-native-tests-20260917.md). |
-| Bu dilimin testleri | 46/46 yerel DB/süreç/config ve 53/53 domain testi geçti. Native yedi senaryo bu sayılara dahil değil. |
-| Engel | Bu ortamda native PostgreSQL/PostGIS veya Docker yok. PGlite başarısını native başarı sayma; yeni sağlayıcı/ücretli servis açma. |
-| İlk sonraki adım | Native ortam varsa `database/NATIVE-TESTS.md` ile mevcut paketi çalıştır. Yoksa yeniden paket yazma veya aynı engeli tekrar teşhis etme; bağımsız **P04-005 mobil detay paneli/odak yönetimi** dilimini güncel UI'da inceleyip ilerlet. |
+| Arayüz | Dönemler arası arama tamam. Mobil detay alt paneli, küçült/aç ve liste odağı uygulandı; üç yeni E2E eklendi. |
+| Veri ve DB | Önceki 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; pinli import, karantina ve worker tamamlanan dilimleri korunur. Beş Gate A adayı unreviewed. |
+| Bu dilimin testleri | Statik demo build/TypeScript ve 22/22 Chromium senaryosu geçti. Gerçek telefon/Safari/Firefox ve tüm sayfada %200 metin henüz doğrulanmadı. |
+| Yayın | Demo source SHA 67585e0d65a11b1933c7cda1ee50e4c5f09ed4c8 hazır. İlk source push 503 döndü; yayın teyidi bekliyor, V6 canlı denmez. |
+| İlk sonraki adım | Mevcut demo source push/yayınını tamamla; UI'yı yeniden yazma. Ardından P04-005 kalan büyük metin/timeline akışını genişlet. Native PostgreSQL paketi hazır fakat sunucu yokken yeniden hazırlanmaz. |
+
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
 
