@@ -9,8 +9,8 @@
 | Arayüz | Dönemler arası arama tamam. Mobil detay alt paneli, küçült/aç ve liste odağı uygulandı; üç yeni E2E eklendi. |
 | Veri ve DB | Önceki 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; pinli import, karantina ve worker tamamlanan dilimleri korunur. Beş Gate A adayı unreviewed. |
 | Bu dilimin testleri | Statik demo build/TypeScript ve 22/22 Chromium senaryosu geçti. Gerçek telefon/Safari/Firefox ve tüm sayfada %200 metin henüz doğrulanmadı. |
-| Yayın | Demo source SHA 67585e0d65a11b1933c7cda1ee50e4c5f09ed4c8 hazır. İlk source push 503 döndü; yayın teyidi bekliyor, V6 canlı denmez. |
-| İlk sonraki adım | Mevcut demo source push/yayınını tamamla; UI'yı yeniden yazma. Ardından P04-005 kalan büyük metin/timeline akışını genişlet. Native PostgreSQL paketi hazır fakat sunucu yokken yeniden hazırlanmaz. |
+| Son kod/yayın | Main 36ea56332d76cf2d2236fbf99c79052e40658a69 doğrulandı. Özel demo V6, 2026-09-17T20:18:28.852623+00:00 tarihinde succeeded; erişim genişletilmedi. |
+| İlk sonraki adım | P04-005: zaman çizelgesi ve arama kontrollerinde tüm sayfa %200 metin/klavye akışını genişlet. Alt paneli yeniden yazma; V6 yayını tamam. Gerçek cihaz/Safari/Firefox hâlâ açık. Native PostgreSQL paketi hazır fakat sunucu yokken yeniden hazırlanmaz. |
 
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
@@ -196,3 +196,7 @@ Sınır: bu bütün import işi için hard timeout değildir. Enqueue okuması, 
 UI/veri koleksiyonu/hosting değişmedi, özel demo V5 yeniden yayımlanmadı. Beş aday unreviewed; public onay verilmedi. Test ve teslim sonucu: `docs/team/handoffs/p02-003-preflight-20260917.md`.
 
 Teslim doğrulandı: `1d1d03f0bd7776d5c97b9d4bc1c5da21bfd678d0` doğrudan main. Son temiz koşum 43/43 DB/import/süreç ve 53/53 domain testi; plan, editoryal, sınır ve revizyon pin kontrolleri geçti. Yeni demo dağıtımı yok; genel proje tamamlanmadı.
+
+## 17 Eylül — mobil panel teslim/yayın teyidi
+
+Main kod: 36ea56332d76cf2d2236fbf99c79052e40658a69; demo source: 67585e0d65a11b1933c7cda1ee50e4c5f09ed4c8. Mevcut özel Site V6 sürümü yayımlandı: appgdep_6aac4b08fe548191836690216e350807, succeeded 2026-09-17T20:18:28.852623+00:00. URL: https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site. İlk geçici 503 sonrası aynı kaynak normal push ile gönderildi; yeni Site/audience değişimi yok. Statik build/TypeScript ve 22 Chromium testi geçti. Bu son teslimde Node sunucu build yeniden çalıştırılmadı; giriş/hosting ayarları korunur. P04-005 partial, genel ürün tamamlanmadı. Devir: docs/team/handoffs/p04-005-mobile-detail-20260917.md.
