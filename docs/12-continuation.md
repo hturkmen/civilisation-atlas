@@ -1,5 +1,22 @@
 # Devam kaydı
 
+## Güncel devir noktası — 17 Eylül 2026
+
+**Önce bu bölümü oku.** Aşağıdaki tarihli kayıtlar geçmiş sonuçlardır; eski “sonraki iş” cümleleri görev kuyruğu değildir. Uzak main ilerlemişse bu özeti güncel kod/devir kayıtlarıyla uzlaştır; tamamlanan dilimi yeniden başlatma.
+
+| Alan | Güncel durum / yeniden yapılmayacak iş |
+|---|---|
+| Arayüz | Dönemler arası arama tamam; özel demo V5. Node/statik girişler ayrı. |
+| Veri | 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; Gate A beş aday unreviewed. Yeni onay yok. |
+| DB/import | 0001–0004, PostGIS, pinli idempotent import, karantina, worker lease/retry ve ayrı süreç ön doğrulama uygulanmış. Bunları yeniden tasarlama. |
+| Son doğrulanmış önceki kod | `1d1d03f0bd7776d5c97b9d4bc1c5da21bfd678d0`; 43 DB/import/süreç + 53 domain testi. |
+| Bu dilim | Native PostgreSQL için yedi senaryolu `database/scripts/test-native.mjs` hazır; **native çalıştırma henüz doğrulanmadı**. Ayrıntı: [devir](team/handoffs/p02-003-native-tests-20260917.md). |
+| Bu dilimin testleri | 46/46 yerel DB/süreç/config ve 53/53 domain testi geçti. Native yedi senaryo bu sayılara dahil değil. |
+| Engel | Bu ortamda native PostgreSQL/PostGIS veya Docker yok. PGlite başarısını native başarı sayma; yeni sağlayıcı/ücretli servis açma. |
+| İlk sonraki adım | Native ortam varsa `database/NATIVE-TESTS.md` ile mevcut paketi çalıştır. Yoksa yeniden paket yazma veya aynı engeli tekrar teşhis etme; bağımsız **P04-005 mobil detay paneli/odak yönetimi** dilimini güncel UI'da inceleyip ilerlet. |
+
+Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
+
 ## Kullanıcı yönlendirmesi
 
 Görsel öncelikle geliştir; tüm hedef tamamlanana kadar ilerle. Süre veya token nedeniyle iş kesilirse üç saatte bir devamı tetikleyecek otomasyon istendi.
@@ -15,7 +32,7 @@ Kullanıcının istediği sıklık üç saatti. Sonraki servis okumasında dört
 1. AGENTS.md, README, docs/team/README.md, docs/11-visual-priorities.md, backlog/issues.json ve güncel GitHub görevleri/açık PR kayıtlarını oku. Tamamlanan işleri tekrar yapma; açık kabul ölçütlerini kontrol et.
 2. Demo kaynak deposu mevcut Sites projesine bağlıdır: `appgprj_6aa638d93f3c819188b55444e79f992a`. Yeni Site oluşturma; mevcut özel erişimi koru. Ana uygulama: https://github.com/hturkmen/civilisation-atlas.
 3. GitHub ana uygulaması Node sunucu girişini, demo ise statik giriş uyarlamasını kullanır. Ortak bileşen/veri değişikliklerini ikisine aktar; birinin giriş/hosting ayarını diğerine yanlışlıkla kopyalama. Büyük arşiv görselleri doğrulanan indirme betiğiyle hazırlanır.
-4. Kaynaklı koleksiyon 17 siyasi yapı / 35 kayda genişletildi. Önce docs/14-collection-discovery.md, docs/13-sourced-boundaries.md ve sabit kaynak kayıtlarını oku. Sonraki somut iş, genel aramada siyasi yapıların diğer kaynaklı dönemlerini bulup o yıla geçişi sağlamak ve seçili alan detayına kaynaklı kısa anlatılar eklemek. Kayıt dönemi ile devletin yaşam süresini karıştırma. Kaynak yeterli değilse uydurma; ikinci arşiv perspektifi ve lisanslı görseller gibi bağımsız işleri ilerlet.
+4. Kaynaklı koleksiyon 17 siyasi yapı / 35 kayda genişletildi; dönemler arası arama tamamlandı. Bu eski başlangıç sırasını yeniden uygulama: sıradaki somut işi yukarıdaki güncel devir noktasından al. Veri çalışmasında docs/14-collection-discovery.md, docs/13-sourced-boundaries.md ve sabit kaynak kayıtlarını oku. Kayıt dönemi ile devletin yaşam süresini karıştırma; kaynak yeterli değilse uydurma.
 5. Gerçek üyelik/admin öncesinde sağlayıcı, veri bölgesi ve bütçe gibi henüz kararlaştırılmamış taahhütleri somut seçeneklerle kullanıcıya getir. Sunucu yetkilendirmesini UI görünürlüğüyle ikame etme.
 6. Anlamlı değişiklikleri doğrula, GitHub ve mevcut demoyu güncelle, çalışma sonunda neyin bittiğini/ne kaldığını kaydet. Başarısız yayını veya eksik işlevi tamamlandı diye yazma.
 

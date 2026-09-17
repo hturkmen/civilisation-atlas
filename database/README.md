@@ -2,7 +2,7 @@
 
 16 Eylül 2026: ilişkisel migration, PostGIS, beş Gate A adayını revizyon pinleriyle aktaran yerel adaptör ve sınırlı yerel paket karantinası uygulandı. Ana web/demo henüz DB kullanmaz. Üretim sağlayıcısı veya veri bölgesi seçilmedi.
 
-17 Eylül: `0004_import_tasks.sql` ile kalıcı yerel iş kuyruğu, sahiplik token'ı, lease/deadline, üç deneme sınırı ve durum geçmişi eklendi. Son toplam 38/38 DB/import testi; [worker çalıştırma ve sınırlar](../apps/worker/README.md). Önceki migration dosyaları değiştirilmedi; yeni migration mevcut veriyi silmez. Yeni tablo/fonksiyonlar PUBLIC erişimine açılmadı.
+17 Eylül: `0004_import_tasks.sql` ile kalıcı yerel iş kuyruğu, sahiplik token'ı, lease/deadline, üç deneme sınırı ve durum geçmişi eklendi; ardından ayrı süreç ön doğrulama ve native test runner hazırlandı. Güncel yerel toplam 46/46 DB/import/süreç/config testi; yedi native senaryo henüz çalıştırılmadı. [Worker çalıştırma ve sınırlar](../apps/worker/README.md), [native test rehberi](NATIVE-TESTS.md). Önceki migration dosyaları değiştirilmedi; mevcut veri silinmez. Yeni tablo/fonksiyonlar PUBLIC erişimine açılmadı.
 
 ## İçerik
 
@@ -62,6 +62,9 @@ node database/scripts/export-local-bundle.mjs --output /absolute/path/gate-a.jso
 node database/scripts/import-bundle-local.mjs --input /absolute/path/gate-a.json --data-dir /absolute/path/atlas-local-db
 ```
 
-Başarılı paketin aynı checksum/adaptör/politika sürümüyle tekrarı önceki iş kaydını yeniden kullanır. Karantina verisi ham dosyayı veya yolu saklamaz; okunabilen dosyada SHA-256, gözlenen byte sayısı ve güvenli hata kodu tutulur. Bu akış henüz `apps/worker` veya HTTP endpoint değildir; prod upload, malware taraması, queue lease/heartbeat, object storage ve yetkili editoryal inceleme açık işlerdir.
+Başarılı paketin aynı checksum/adaptör/politika sürümüyle tekrarı önceki iş kaydını yeniden kullanır. Karantina verisi ham dosyayı veya yolu saklamaz; okunabilen dosyada SHA-256, gözlenen byte sayısı ve güvenli hata kodu tutulur. Yerel `apps/worker` lease/heartbeat entegrasyonu tamamlandı; HTTP endpoint, prod upload, malware taraması, object storage ve yetkili editoryal inceleme açık işlerdir.
 
 Referans: [PostgreSQL constraints](https://www.postgresql.org/docs/16/ddl-constraints.html), [trigger davranışı](https://www.postgresql.org/docs/16/sql-createtrigger.html), [PGlite çalışma ve tek bağlantı sınırı](https://pglite.dev/docs/). Mimari: [teknik tasarım](../docs/04-low-level-design.md).
+## Güncel native doğrulama noktası
+
+17 Eylül: [yedi senaryolu native test paketi](NATIVE-TESTS.md) hazır. PGlite testleri native concurrency kanıtı değildir; native koşum ortam eksikliği nedeniyle bekliyor. `npm run test:native --prefix database` yalnız açıkça onaylanan, boş, yerel test DB'sinde çalışır; üretim DB'si kullanma. Önce [devam kaydının güncel tablosunu](../docs/12-continuation.md) oku.

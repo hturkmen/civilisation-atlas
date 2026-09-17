@@ -4,12 +4,14 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.mjs",
+    "test:native": "node scripts/test-native.mjs",
     "import:check": "node scripts/import-local.mjs",
     "import:bundle": "node scripts/import-bundle-local.mjs",
     "export:bundle": "node scripts/export-local-bundle.mjs",
     "worker:once": "node scripts/worker-local.mjs"
   },
   "devDependencies": {
+    "pg": "8.23.0",
     "@electric-sql/pglite": "0.5.8",
     "@electric-sql/pglite-postgis": "0.2.8"
   }
