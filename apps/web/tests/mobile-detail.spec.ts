@@ -1,5 +1,22 @@
 import {test,expect} from '@playwright/test';
 
+test('mobile timeline and search enlarge and remain keyboard operable',async({page})=>{
+  await page.setViewportSize({width:360,height:800});await page.goto('/?year=1500&era=CE');
+  const search=page.getByRole('textbox',{name:'Medeniyet veya yerleşim ara'});
+  const initial=await search.evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+  const rootSize=await page.locator('html').evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+  await page.addStyleTag({content:`html{font-size:${rootSize*2}px !important}`});
+  expect(await search.evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBe(initial*2);
+  const year=page.getByRole('textbox',{name:'Yıl',exact:true});
+  await year.fill('1600');await year.press('Enter');await expect(page).toHaveURL(/year=1600/);
+  for(const selector of ['.time-input form','.track-heading','.search-box']){
+    const box=await page.locator(selector).boundingBox();expect(box).not.toBeNull();
+    expect(box!.x).toBeGreaterThanOrEqual(0);expect(box!.x+box!.width).toBeLessThanOrEqual(361);
+  }
+  await search.fill('Roma');await search.press('Escape');await expect(search).toHaveValue('');await expect(search).toBeFocused();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
 test('mobile sheet collapses and restores list keyboard focus',async({page},info)=>{
   await page.setViewportSize({width:360,height:800});await page.goto('/?year=1500&era=CE');
   const item=page.locator('.polity-list').getByRole('button',{name:/Mali İmparatorluğu/});

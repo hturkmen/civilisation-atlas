@@ -341,3 +341,29 @@ button,a{touch-action:manipulation}
 .period-search-list small{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}
 .period-search-list strong{display:block;font-size:12px;font-weight:500;line-height:1.5}
 .period-search-action{display:block;font-size:11px;color:#355d45;margin-top:6px}
+
+/* Text enlargement must resize controls as well as their labels. */
+@media(max-width:760px){
+ .search-box{height:auto;min-height:48px}
+ .search-box input{font-size:1rem;height:auto;min-height:44px}
+ .search-box button{min-width:44px;min-height:44px;flex-shrink:0}
+ .results-heading{flex-wrap:wrap;gap:8px}
+ .results-heading>span,.polity-list small,.place-list small{font-size:.75rem}
+ .polity-list strong,.place-list strong{font-size:1rem;overflow-wrap:anywhere}
+ .place-list button>span:nth-child(2){min-width:0}
+ .time-input form{width:100%;flex-wrap:wrap}
+ .time-input select{font-size:1rem;width:auto;min-height:44px;height:auto}
+ .time-input input{font-size:1.75rem;width:5ch;min-height:44px;height:auto;min-width:0}
+ .time-input form button{min-width:44px;min-height:44px}
+ .time-input>.eyebrow{font-size:.75rem;max-width:none}
+ .track-heading{height:auto;min-height:44px;flex-wrap:wrap;gap:8px;font-size:.75rem}
+ .play-button{font-size:.875rem;min-height:44px;flex-wrap:wrap}
+ .track-caption{font-size:.75rem;overflow-wrap:anywhere}
+ .time-ticks{height:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px;margin:0}
+ .time-ticks button{position:static;transform:none!important;font-size:.75rem;min-height:44px}
+ .collection-stops strong{font-size:.875rem}
+ .collection-stops span{font-size:.75rem}
+ .period-search-note,.period-search-empty,.period-search-kind,.period-search-list small,.period-search-action{font-size:.75rem}
+ .period-search-list h3{font-size:1.25rem;overflow-wrap:anywhere}
+ .period-search-list strong{font-size:.875rem;overflow-wrap:anywhere}
+}
