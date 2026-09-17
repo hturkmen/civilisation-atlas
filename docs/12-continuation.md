@@ -179,3 +179,5 @@ Yerel paket read/hash/JSON parse/ön doğrulaması DB erişimi olmayan sabit ço
 Sınır: bu bütün import işi için hard timeout değildir. Enqueue okuması, parent pin doğrulaması ve DB/PostGIS aşaması ayrı kalır; lease/atomik son commit koruması sürer. OS sandbox, native PostgreSQL statement timeout/çok bağlantılı yarışlar ve Windows/macOS doğrulaması yapılmadı. Native PostgreSQL/Docker mevcut ortamda bulunmadı. Sonraki somut iş native iki bağlantılı yarış test paketi ve gerçek PostgreSQL doğrulaması; P02-003/P03-002 ve genel ürün partial.
 
 UI/veri koleksiyonu/hosting değişmedi, özel demo V5 yeniden yayımlanmadı. Beş aday unreviewed; public onay verilmedi. Test ve teslim sonucu: `docs/team/handoffs/p02-003-preflight-20260917.md`.
+
+Teslim doğrulandı: `1d1d03f0bd7776d5c97b9d4bc1c5da21bfd678d0` doğrudan main. Son temiz koşum 43/43 DB/import/süreç ve 53/53 domain testi; plan, editoryal, sınır ve revizyon pin kontrolleri geçti. Yeni demo dağıtımı yok; genel proje tamamlanmadı.
