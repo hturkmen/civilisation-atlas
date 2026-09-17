@@ -623,7 +623,7 @@
         "number": 22,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/22"
       },
-      "implementation_note": "Mobilde non-modal sabit alt detay paneli, küçült/aç, iç scroll ve Escape/listede odağa dönüş eklendi. 22 statik Chromium senaryosu geçti; gerçek cihazlar, Safari/Firefox ve tüm sayfada %200 metin bekliyor."
+      "implementation_note": "Mobil alt panel ve odak dönüşü korunuyor. Zaman çizelgesi/arama iki kat metinle büyür, 44 px kontroller ve satır sarma eklendi. Mevcut 22 Chromium senaryosu + hedefli 4/4 (bir yeni, üç mevcut) geçti; statik build/TypeScript geçti. Gerçek cihaz/Safari/Firefox ve tüm sayfa denetimi açık. Kullanıcı önceliği nedeniyle önce 1400–1750 kaynaklı veri genişletilecek."
     },
     {
       "id": "P04-006",
@@ -1225,5 +1225,11 @@
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/45"
       }
     }
-  ]
+  ],
+  "data_priority_2026_09_17": {
+    "period": "1400–1750",
+    "status": "next",
+    "instruction": "Mobil kontrol dilimi tamamlandı. Önce kaynaklı veri kapsamını genişlet; sonra P04-005 kalan kabul ölçütlerine dön.",
+    "guardrails": "Kaynak/lisans/hash doğrula; mevcut kayıtları tekrarlama; geometri üretimini pinli importer ile yap, sınır uydurma."
+  }
 }

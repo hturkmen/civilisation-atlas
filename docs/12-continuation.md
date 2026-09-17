@@ -6,11 +6,11 @@
 
 | Alan | Güncel durum / yeniden yapılmayacak iş |
 |---|---|
-| Arayüz | Dönemler arası arama tamam. Mobil detay alt paneli, küçült/aç ve liste odağı uygulandı; üç yeni E2E eklendi. |
+| Arayüz | Dönemler arası arama ve mobil alt panel tamamlanan dilimlerdir. Zaman çizelgesi/arama metinle büyür, kontroller sarılır; 360 px iki kat metin ve klavye testi eklendi. |
 | Veri ve DB | Önceki 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; pinli import, karantina ve worker tamamlanan dilimleri korunur. Beş Gate A adayı unreviewed. |
-| Bu dilimin testleri | Statik demo build/TypeScript ve 22/22 Chromium senaryosu geçti. Gerçek telefon/Safari/Firefox ve tüm sayfada %200 metin henüz doğrulanmadı. |
-| Son kod/yayın | Main 36ea56332d76cf2d2236fbf99c79052e40658a69 doğrulandı. Özel demo V6, 2026-09-17T20:18:28.852623+00:00 tarihinde succeeded; erişim genişletilmedi. |
-| İlk sonraki adım | P04-005: zaman çizelgesi ve arama kontrollerinde tüm sayfa %200 metin/klavye akışını genişlet. Alt paneli yeniden yazma; V6 yayını tamam. Gerçek cihaz/Safari/Firefox hâlâ açık. Native PostgreSQL paketi hazır fakat sunucu yokken yeniden hazırlanmaz. |
+| Bu dilimin testleri | Statik build/TypeScript geçti. İlk koşuda mevcut 22 senaryo geçti; yeni testin başlangıç font ölçümü düzeltildikten sonra mobil 4/4 geçti (toplam 23 ayrı senaryo). Gerçek cihaz, Safari/Firefox ve tüm sayfa erişilebilirlik denetimi hâlâ açık; ana Node build bu dilimde çalıştırılmadı. |
+| Son kod/yayın | Main deab66852189baeebc38bed392c461777c1ed3a9 doğrulandı. Özel demo V7, 2026-09-17T20:44:03.688437+00:00 tarihinde succeeded; erişim genişletilmedi. |
+| İlk sonraki adım | Kullanıcının yeni önceliği: 1400–1750 veri kapsamını genişlet. Pinli Cliopatria arşivini hash ile doğrula, mevcut seçimlerle tekrarları ayır, kaynaklı dönem/bölge dilimlerini importer ile üret ve test et. Yeni veri bu UI diliminde eklenmedi. Veri çalışmasının ardından P04-005 gerçek cihaz/Safari/Firefox ve kalan sayfa erişilebilirliğine dön; alt paneli yeniden yazma. Native PostgreSQL paketi hazır fakat sunucu yokken yeniden hazırlanmaz. |
 
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
