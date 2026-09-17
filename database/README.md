@@ -2,6 +2,8 @@
 
 16 Eylül 2026: ilişkisel migration, PostGIS, beş Gate A adayını revizyon pinleriyle aktaran yerel adaptör ve sınırlı yerel paket karantinası uygulandı. Ana web/demo henüz DB kullanmaz. Üretim sağlayıcısı veya veri bölgesi seçilmedi.
 
+17 Eylül: `0004_import_tasks.sql` ile kalıcı yerel iş kuyruğu, sahiplik token'ı, lease/deadline, üç deneme sınırı ve durum geçmişi eklendi. Son toplam 38/38 DB/import testi; [worker çalıştırma ve sınırlar](../apps/worker/README.md). Önceki migration dosyaları değiştirilmedi; yeni migration mevcut veriyi silmez. Yeni tablo/fonksiyonlar PUBLIC erişimine açılmadı.
+
 ## İçerik
 
 `migrations/0001_revision_core.sql` ayrı `atlas` şemasında varlık, kaynak, zaman, iddia/geometri/perspektif revizyonları, kanıt bağlantıları ve tipli yayın üyelerini kurar. SQL migration transaction içinde çalışır; boş ve projeye ayrılmış veritabanında yalnız bir kez uygulanır. Tekrar çalıştırma veya mevcut `atlas` şeması hata verir; mevcut veriyi silerek yeniden kurmaz. Migration sürümü `atlas.schema_migration` tablosuna yazılır.

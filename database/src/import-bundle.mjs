@@ -135,10 +135,17 @@ async function record(tx, receipt, outcome, reasonCode, result) {
     VALUES ($1,$2,$3,$4,$5,$6,$7,$8)`,[jobId,ADAPTER,POLICY,receipt.sha256,receipt.bytesObserved,outcome,reasonCode,JSON.stringify(result)]);
   return {jobId,outcome,reasonCode,result,reused:false};
 }
-export async function importBundleFile(db,file) {
+// Reuse the same bounded file reader for enqueue; file identity is checked again at execution.
+export async function bundleChecksum(file) {
+  const receipt={sha256:null,bytesObserved:0};
+  await readBounded(file,receipt);
+  return receipt.sha256;
+}
+export async function importBundleFile(db,file,{expectedSha256}={}) {
   const receipt={sha256:null,bytesObserved:0};
   try {
     const raw=await readBounded(file,receipt);
+    if(expectedSha256!==undefined && receipt.sha256!==expectedSha256)throw Object.assign(new Error('Queued input changed'),{code:'INPUT_CHANGED'});
     const {inputs,pins,current}=prepareBundle(parseBounded(raw));
     return await db.transaction(async tx=>{
       await tx.exec('LOCK TABLE atlas.local_import_job IN SHARE ROW EXCLUSIVE MODE');
@@ -157,6 +164,7 @@ export async function importBundleFile(db,file) {
       return job;
     });
   } catch(error) {
+    if(expectedSha256!==undefined && error instanceof Rejection && receipt.sha256===null)throw Object.assign(new Error('Queued input unavailable'),{code:'INPUT_UNAVAILABLE'});
     if(!(error instanceof Rejection))throw error;
     // Atlas writes rolled back before the rejection receipt is written in a separate transaction.
     return db.transaction(async tx=>{
