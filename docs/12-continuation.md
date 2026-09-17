@@ -9,7 +9,7 @@
 | Arayüz | Dönemler arası arama tamam; özel demo V5. Node/statik girişler ayrı. |
 | Veri | 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; Gate A beş aday unreviewed. Yeni onay yok. |
 | DB/import | 0001–0004, PostGIS, pinli idempotent import, karantina, worker lease/retry ve ayrı süreç ön doğrulama uygulanmış. Bunları yeniden tasarlama. |
-| Son doğrulanmış önceki kod | `1d1d03f0bd7776d5c97b9d4bc1c5da21bfd678d0`; 43 DB/import/süreç + 53 domain testi. |
+| Son teslim edilen kod | `b6cf95619a87dc5d8a895120737fc69a10ebcfc9` uzak main okunarak doğrulandı. Bu SHA'dan sonra yalnız teslim belgeleri güncellendi. |
 | Bu dilim | Native PostgreSQL için yedi senaryolu `database/scripts/test-native.mjs` hazır; **native çalıştırma henüz doğrulanmadı**. Ayrıntı: [devir](team/handoffs/p02-003-native-tests-20260917.md). |
 | Bu dilimin testleri | 46/46 yerel DB/süreç/config ve 53/53 domain testi geçti. Native yedi senaryo bu sayılara dahil değil. |
 | Engel | Bu ortamda native PostgreSQL/PostGIS veya Docker yok. PGlite başarısını native başarı sayma; yeni sağlayıcı/ücretli servis açma. |
