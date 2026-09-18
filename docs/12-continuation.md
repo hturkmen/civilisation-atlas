@@ -9,8 +9,8 @@
 | Arayüz | Dönemler arası arama ve mobil alt panel tamamlanan dilimlerdir. Zaman çizelgesi/arama metinle büyür, kontroller sarılır; 360 px iki kat metin ve klavye testi eklendi. |
 | Veri ve DB | 24 siyasi yapı / 225 alan; 1400–1750 için 190 yeni kaynak kaydı. Önceki 35 kayıt aynen korundu. Üç yerleşim / bir arşiv ve beş unreviewed Gate A adayı değişmedi. |
 | Bu dilimin testleri | 54/54 ana depo domain testi, editoryal revizyon pinleri, sınır ve plan validator geçti. Demo build/TypeScript ve 24/24 Chromium geçti. Node build, gerçek cihaz/Safari/Firefox bu dilimde çalıştırılmadı. |
-| Son kod/yayın | 1400–1750 veri dilimi doğrulandı; bu kayıtla GitHub’a aktarılıyor. Yeni demo yayını henüz doğrulanmadı; son doğrulanmış yayın V7. Başarılı yayın ardından bu satır güncellenecek. |
-| İlk sonraki adım | Önce bu 225 kayıtlı sürümün demo yayını ve terminal sonucunu kaydet. Ardından 1400–1750 Avrupa/Amerika verilerini kaynak kimliği ve örtüşmelerle değerlendir; sonra kalan P04-005 cihaz/erişilebilirlik işlerine dön. Tamamlanan mobil paneli ve veri dilimini yeniden başlatma. Ayrıntı: docs/15-early-modern-collection.md. |
+| Son kod/yayın | Main veri commit: f6c61ffb7eead1b54d7bd6f6f864245b52d5dba7. Demo kaynak: fd91d4b7fdcb9d30fd6b8215879ddab0a2519be2. V8 succeeded, 2026-09-18T06:50:51.288100+00:00. Erişim owner-private korundu. Canlı Site üzerinde ayrıca tarayıcı testi yapılmadı. |
+| İlk sonraki adım | 1400–1750 Avrupa/Amerika kaynak kayıtlarını adlandırma, koloni-ana devlet ilişkisi ve örtüşmeler açısından incele; tekrarsız verilerle genişlet. Ardından P04-005 kalan cihaz/erişilebilirlik işlerine dön. 225 kayıt ve V8 yayını tamam; yeniden başlatma. |
 
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
