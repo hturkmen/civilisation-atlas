@@ -4,7 +4,7 @@ MÖ 4000'den günümüze tarih seçerek dünya medeniyetlerini harita üzerinde 
 
 **Durum: ilk etkileşimli demo yayında.** [Demoyu aç](https://civilisation-atlas-hturkmen.halilturkmen.chatgpt.site) — erişim proje sahibine özeldir. Tarih seçimi, MapLibre haritası, üç kaynaklı yerleşim, arama ve bilgi paneli uygulanmıştır. Tam tarihsel sınır koleksiyonu, kullanıcı girişi, admin ve veritabanı/API henüz yoktur. [Demo kapsamı ve doğrulama](docs/10-live-demo.md).
 
-**Kaynaklı alan katmanı:** 24 siyasi yapı ve 225 seçilmiş kayıt; MS 1500'de sekiz siyasi yapı, boş yıllardan en yakın kaynaklı yıla geçiş ve duraklara göre oynatma. [Güncel kapsam ve doğrulama](docs/15-early-modern-collection.md).
+**Kaynaklı alan katmanı:** 28 siyasi yapı ve 389 seçilmiş kayıt; MS 1500'de on bir siyasi yapı, boş yıllardan en yakın kaynaklı yıla geçiş ve duraklara göre oynatma. [Güncel kapsam ve doğrulama](docs/16-europe-americas-collection.md).
 
 **13 Eylül görsel geliştirmesi:** 1507 Waldseemüller haritası, arşiv inceleyicisi, koleksiyon durakları ve aynı dönemdeki yerleşimler arasında geçiş eklendi. [Görsel öncelikler ve kalanlar](docs/11-visual-priorities.md) · [Devam ve otomasyon durumu](docs/12-continuation.md).
 

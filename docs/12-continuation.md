@@ -7,10 +7,10 @@
 | Alan | Güncel durum / yeniden yapılmayacak iş |
 |---|---|
 | Arayüz | Dönemler arası arama ve mobil alt panel tamamlanan dilimlerdir. Zaman çizelgesi/arama metinle büyür, kontroller sarılır; 360 px iki kat metin ve klavye testi eklendi. |
-| Veri ve DB | 24 siyasi yapı / 225 alan; 1400–1750 için 190 yeni kaynak kaydı. Önceki 35 kayıt aynen korundu. Üç yerleşim / bir arşiv ve beş unreviewed Gate A adayı değişmedi. |
-| Bu dilimin testleri | 54/54 ana depo domain testi, editoryal revizyon pinleri, sınır ve plan validator geçti. Demo build/TypeScript ve 24/24 Chromium geçti. Node build, gerçek cihaz/Safari/Firefox bu dilimde çalıştırılmadı. |
-| Son kod/yayın | Main veri commit: f6c61ffb7eead1b54d7bd6f6f864245b52d5dba7. Demo kaynak: fd91d4b7fdcb9d30fd6b8215879ddab0a2519be2. V8 succeeded, 2026-09-18T06:50:51.288100+00:00. Erişim owner-private korundu. Canlı Site üzerinde ayrıca tarayıcı testi yapılmadı. |
-| İlk sonraki adım | 1400–1750 Avrupa/Amerika kaynak kayıtlarını adlandırma, koloni-ana devlet ilişkisi ve örtüşmeler açısından incele; tekrarsız verilerle genişlet. Ardından P04-005 kalan cihaz/erişilebilirlik işlerine dön. 225 kayıt ve V8 yayını tamam; yeniden başlatma. |
+| Veri ve DB | 28 siyasi yapı / 389 alan; bu dilimde Avrupa/Amerika için 164 yeni kaynak kaydı. Önceki 225 metadata/geometri korunur. Üç yerleşim / bir arşiv ve beş unreviewed Gate A adayı değişmedi. |
+| Bu dilimin testleri | 54/54 domain; editoryal pin/sınır validator; demo build/TypeScript ve 25/25 Chromium geçti. Fransa/Yeni Fransa ortak dönemli 34 kaynak çifti kesişmez. Ana Node build/gerçek cihaz/Safari/Firefox yapılmadı. |
+| Son kod/yayın | 389 kayıtlı dilim doğrulandı, demo yayını sırada. Son doğrulanmış yayın V8; yeni yayının terminal sonucu bu satıra yazılacak. |
+| İlk sonraki adım | Bu 389 kayıtlı dilimi yayımla ve doğrula; sonra P04-005 kalan mobil büyük metin/klavye işlerine ve veri boyutu için P04-006 ölçümüne dön. İngiltere/İspanya/diğer koloniler tarih-kimlik incelemesi bekliyor. Tamamlanan veri dilimini yeniden başlatma; docs/16-europe-americas-collection.md. |
 
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.

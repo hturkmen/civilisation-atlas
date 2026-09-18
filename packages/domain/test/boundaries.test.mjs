@@ -11,8 +11,8 @@ const ids = year => visibleBoundaries(collection, year).map(item => item.polity.
 
 test('boundary export is pinned to evidence and the exact geometry artifact', () => {
   validateBoundaryCollection(collection);
-  assert.equal(collection.polities.length, 24);
-  assert.equal(collection.records.length, 225);
+  assert.equal(collection.polities.length, 28);
+  assert.equal(collection.records.length, 389);
   assert.equal(createHash('sha256').update(rawGeometry).digest('hex'), collection.geometrySha256);
   validateBoundaryGeometry(JSON.parse(rawGeometry), collection);
 });
@@ -30,23 +30,23 @@ test('CE boundaries retain independent source coverage and never interpolate gap
   assert.deepEqual(ids(117), ['han-dynasty', 'roman-empire']);
   assert.deepEqual(ids(126), ['han-dynasty', 'roman-empire']);
   assert.deepEqual(ids(127), ['han-dynasty']);
-  assert.deepEqual(ids(1601), ['ethiopian-empire', 'kingdom-of-kongo', 'ming-dynasty', 'mughal-empire', 'ottoman-empire', 'safavid-dynasty', 'songhai-empire', 'tokugawa-shogunate']);
+  assert.deepEqual(ids(1601), ['ethiopian-empire', 'kingdom-of-france', 'kingdom-of-kongo', 'ming-dynasty', 'mughal-empire', 'ottoman-empire', 'republic-of-venice', 'safavid-dynasty', 'songhai-empire', 'tokugawa-shogunate']);
   assert.deepEqual(ids(1602), ids(1601));
   assert.notEqual(visibleBoundaries(collection,1601).find(x=>x.polity.id==='ottoman-empire').record.id, visibleBoundaries(collection,1602).find(x=>x.polity.id==='ottoman-empire').record.id);
   assert.deepEqual(ids(1914), ['ottoman-empire']);
   assert.deepEqual(ids(1915), []);
 });
 
-test('expanded world snapshot links eight selected political areas to independent records', () => {
-  assert.deepEqual(ids(1500), ['aztec-triple-alliance', 'ethiopian-empire', 'inca-empire', 'kingdom-of-kongo', 'mali-empire', 'ming-dynasty', 'ottoman-empire', 'songhai-empire']);
+test('expanded world snapshot links eleven selected political areas to independent records', () => {
+  assert.deepEqual(ids(1500), ['aztec-triple-alliance', 'ethiopian-empire', 'inca-empire', 'kingdom-of-france', 'kingdom-of-kongo', 'kingdom-of-portugal', 'mali-empire', 'ming-dynasty', 'ottoman-empire', 'republic-of-venice', 'songhai-empire']);
   assert.deepEqual(ids(1000), ['byzantine-empire', 'ghana-empire', 'khmer-empire']);
   assert.deepEqual(ids(-249), ['maurya-empire']);
   assert.equal(visibleBoundaries(collection, 1500, 'İNKA')[0].polity.id, 'inca-empire');
 });
 
 test('early modern coverage retains source ranges through 1750', () => {
-  assert.deepEqual(ids(1700), ['ethiopian-empire','mughal-empire','ottoman-empire','qing-dynasty','safavid-dynasty','tokugawa-shogunate']);
-  assert.deepEqual(ids(1750), ['ethiopian-empire','mughal-empire','ottoman-empire','qing-dynasty','tokugawa-shogunate']);
+  assert.deepEqual(ids(1700), ['ethiopian-empire','kingdom-of-france','kingdom-of-portugal','mughal-empire','new-france','ottoman-empire','qing-dynasty','republic-of-venice','safavid-dynasty','tokugawa-shogunate']);
+  assert.deepEqual(ids(1750), ['ethiopian-empire','kingdom-of-france','kingdom-of-portugal','mughal-empire','new-france','ottoman-empire','qing-dynasty','republic-of-venice','tokugawa-shogunate']);
   for(let year=1400;year<=1750;year++) assert.equal(visibleBoundaries(collection,year).filter(x=>x.polity.id==='ottoman-empire').length,1);
   for(const r of collection.records){
     assert.ok(visibleBoundaries(collection,r.period.start).some(x=>x.record.id===r.id));

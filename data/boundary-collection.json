@@ -18,7 +18,7 @@
     "uncertainty": "Sınırlar, Cliopatria'nın tarihsel alan yorumudur. Kesinlik ve ayrıntı döneme göre değişir. Kaydın tarih aralığı her yıl için ayrı gözlem veya devletin kuruluş ve bitiş tarihi değildir."
   },
   "geometryPath": "/data/polity-boundaries.geojson",
-  "geometrySha256": "0f864fa889f2bb40777e68bd08d47093a43a09cd44efa9ecb6f28e1976c71801",
+  "geometrySha256": "32e504900e02ad6b2d7297781f471b1642083d9d9af7593fb94d7991ac78ab63",
   "polities": [
     {
       "id": "sumer",
@@ -163,6 +163,30 @@
       "name": "Etiyopya İmparatorluğu",
       "sourceName": "Ethiopian Empire",
       "color": "#7f763f"
+    },
+    {
+      "id": "kingdom-of-france",
+      "name": "Fransa Krallığı",
+      "sourceName": "Kingdom of France",
+      "color": "#657dac"
+    },
+    {
+      "id": "kingdom-of-portugal",
+      "name": "Portekiz Krallığı",
+      "sourceName": "Kingdom of Portugal",
+      "color": "#668454"
+    },
+    {
+      "id": "republic-of-venice",
+      "name": "Venedik Cumhuriyeti",
+      "sourceName": "Republic of Venice",
+      "color": "#ad7350"
+    },
+    {
+      "id": "new-france",
+      "name": "Yeni Fransa (Fransız kolonisi)",
+      "sourceName": "New France",
+      "color": "#9076a9"
     }
   ],
   "records": [
@@ -692,6 +716,31 @@
       ]
     },
     {
+      "id": "cliopatria-5724",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 5724,
+      "sourceFromYear": 1250,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1250,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 91910.93765342019,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -9.571975,
+        36.997059,
+        -6.254164,
+        42.106277
+      ]
+    },
+    {
       "id": "cliopatria-6265",
       "polityId": "ethiopian-empire",
       "sourceIndex": 6265,
@@ -792,6 +841,56 @@
       ]
     },
     {
+      "id": "cliopatria-6772",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 6772,
+      "sourceFromYear": 1395,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1395,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 24167.95001662691,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        23.461712,
+        38.351467
+      ],
+      "bbox": [
+        11.998926,
+        35.000969,
+        26.225334,
+        45.824295
+      ]
+    },
+    {
+      "id": "cliopatria-6794",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 6794,
+      "sourceFromYear": 1395,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1395,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 221639.57745836067,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        5.449618,
+        47.762964
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.939755,
+        50.578861
+      ]
+    },
+    {
       "id": "cliopatria-6830",
       "polityId": "ottoman-empire",
       "sourceIndex": 6830,
@@ -814,6 +913,56 @@
         36.674877,
         39.519646,
         45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-6836",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 6836,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1406,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1407
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 25587.567641697384,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        23.461712,
+        38.351467
+      ],
+      "bbox": [
+        11.998926,
+        35.000969,
+        26.225334,
+        45.824295
+      ]
+    },
+    {
+      "id": "cliopatria-6867",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 6867,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1406,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1407
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 238779.73223360378,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        0.171711,
+        46.677235
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        9.970182,
+        50.912201
       ]
     },
     {
@@ -867,6 +1016,56 @@
       ]
     },
     {
+      "id": "cliopatria-6889",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 6889,
+      "sourceFromYear": 1407,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1407,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1407,
+      "sourceAreaKm2": 257823.64475213966,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        0.171711,
+        46.677235
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        9.970182,
+        50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-6900",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 6900,
+      "sourceFromYear": 1407,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1407,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1407,
+      "sourceAreaKm2": 30277.20704081764,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        11.831988,
+        45.988167
+      ],
+      "bbox": [
+        10.533594,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
       "id": "cliopatria-6914",
       "polityId": "ottoman-empire",
       "sourceIndex": 6914,
@@ -889,6 +1088,31 @@
         37.835243,
         41.05941,
         45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-6927",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 6927,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 246639.96656503528,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        -0.415741,
+        46.447384
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        50.312523
       ]
     },
     {
@@ -942,6 +1166,56 @@
       ]
     },
     {
+      "id": "cliopatria-6966",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 6966,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 36865.054105847266,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        11.831988,
+        45.988167
+      ],
+      "bbox": [
+        10.533594,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-6968",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 6968,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 92060.95198864726,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -9.571975,
+        35.773273,
+        -5.334535,
+        42.106277
+      ]
+    },
+    {
       "id": "cliopatria-6975",
       "polityId": "ethiopian-empire",
       "sourceIndex": 6975,
@@ -992,6 +1266,81 @@
       ]
     },
     {
+      "id": "cliopatria-7000",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7000,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1428,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1429
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 43790.63215777715,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.281012,
+        45.9554
+      ],
+      "bbox": [
+        10.533594,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7006",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7006,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 92981.22364742152,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -17.170469,
+        32.621628,
+        -5.334535,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7026",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7026,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1428,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1429
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 125721.67753172883,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        5.571196,
+        45.136881
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        47.664101
+      ]
+    },
+    {
       "id": "cliopatria-7040",
       "polityId": "ming-dynasty",
       "sourceIndex": 7040,
@@ -1014,6 +1363,31 @@
         16.036131,
         141.556625,
         53.192196
+      ]
+    },
+    {
+      "id": "cliopatria-7059",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7059,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 51728.38452249459,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.281,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
       ]
     },
     {
@@ -1067,6 +1441,56 @@
       ]
     },
     {
+      "id": "cliopatria-7089",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7089,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1430,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1431
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 124857.54047775628,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        5.538426,
+        45.071476
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        47.532333
+      ]
+    },
+    {
+      "id": "cliopatria-7092",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7092,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 5759.28284988099,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.761084,
+        19.186228
+      ],
+      "bbox": [
+        -99.261818,
+        18.736217,
+        -98.241516,
+        19.636236
+      ]
+    },
+    {
       "id": "cliopatria-7114",
       "polityId": "ottoman-empire",
       "sourceIndex": 7114,
@@ -1089,6 +1513,31 @@
         36.223988,
         40.185711,
         45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7137",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7137,
+      "sourceFromYear": 1431,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1431,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1431,
+      "sourceAreaKm2": 131431.3479728655,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        -0.137236,
+        45.955382
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        49.316288
       ]
     },
     {
@@ -1117,6 +1566,106 @@
       ]
     },
     {
+      "id": "cliopatria-7158",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7158,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 93887.870347639,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.586214,
+        32.621628,
+        -5.334535,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7160",
+      "polityId": "inca-empire",
+      "sourceIndex": 7160,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 8783.28179087286,
+      "wikidata": "Q28573",
+      "seshatId": "pe_inca_emp",
+      "labelPoint": [
+        -72.524573,
+        -13.471879
+      ],
+      "bbox": [
+        -73.074234,
+        -14.050468,
+        -71.932037,
+        -13.021866
+      ]
+    },
+    {
+      "id": "cliopatria-7162",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7162,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 46201.62858324564,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.281,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7168",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7168,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 15135.94780728671,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.745729,
+        19.121941
+      ],
+      "bbox": [
+        -100.218781,
+        18.221918,
+        -98.229927,
+        19.700523
+      ]
+    },
+    {
       "id": "cliopatria-7169",
       "polityId": "kingdom-of-kongo",
       "sourceIndex": 7169,
@@ -1139,6 +1688,31 @@
         -8.457451,
         16.59304,
         -4.278756
+      ]
+    },
+    {
+      "id": "cliopatria-7181",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7181,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 205981.4442784082,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        1.825081,
+        47.532341
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        50.245983
       ]
     },
     {
@@ -1167,6 +1741,31 @@
       ]
     },
     {
+      "id": "cliopatria-7201",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7201,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1452,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1453
+      },
+      "sampleYear": 1450,
+      "sourceAreaKm2": 54171.17507366902,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.831456,
+        19.475518
+      ],
+      "bbox": [
+        -100.218781,
+        18.286205,
+        -96.273636,
+        20.729105
+      ]
+    },
+    {
       "id": "cliopatria-7215",
       "polityId": "ming-dynasty",
       "sourceIndex": 7215,
@@ -1189,6 +1788,56 @@
         18.221918,
         129.887589,
         46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-7223",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7223,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1452,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1453
+      },
+      "sampleYear": 1450,
+      "sourceAreaKm2": 219155.88065473546,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_1",
+      "labelPoint": [
+        1.825081,
+        47.532341
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        50.245983
+      ]
+    },
+    {
+      "id": "cliopatria-7246",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7246,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1462,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1463
+      },
+      "sampleYear": 1450,
+      "sourceAreaKm2": 96735.7510545577,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        32.621628,
+        -5.334535,
+        42.106277
       ]
     },
     {
@@ -1217,6 +1866,31 @@
       ]
     },
     {
+      "id": "cliopatria-7249",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7249,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1452,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1453
+      },
+      "sampleYear": 1450,
+      "sourceAreaKm2": 52087.623850626274,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.26465,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
       "id": "cliopatria-7253",
       "polityId": "ottoman-empire",
       "sourceIndex": 7253,
@@ -1242,6 +1916,31 @@
       ]
     },
     {
+      "id": "cliopatria-7265",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7265,
+      "sourceFromYear": 1453,
+      "sourceToYear": 1458,
+      "period": {
+        "start": 1453,
+        "endExclusive": 1459
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 52182.96730971377,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.26465,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
       "id": "cliopatria-7269",
       "polityId": "ottoman-empire",
       "sourceIndex": 7269,
@@ -1264,6 +1963,31 @@
         36.223988,
         40.185711,
         45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7297",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7297,
+      "sourceFromYear": 1453,
+      "sourceToYear": 1458,
+      "period": {
+        "start": 1453,
+        "endExclusive": 1459
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 238895.5806227476,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        -0.415741,
+        46.447384
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        7.940821,
+        50.245983
       ]
     },
     {
@@ -1317,6 +2041,81 @@
       ]
     },
     {
+      "id": "cliopatria-7324",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7324,
+      "sourceFromYear": 1459,
+      "sourceToYear": 1462,
+      "period": {
+        "start": 1459,
+        "endExclusive": 1463
+      },
+      "sampleYear": 1459,
+      "sourceAreaKm2": 51752.7076194837,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.26465,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7336",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7336,
+      "sourceFromYear": 1459,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1459,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1459,
+      "sourceAreaKm2": 102282.81846837609,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -96.433496,
+        18.993366
+      ],
+      "bbox": [
+        -100.218781,
+        17.193314,
+        -94.931114,
+        20.729105
+      ]
+    },
+    {
+      "id": "cliopatria-7340",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7340,
+      "sourceFromYear": 1459,
+      "sourceToYear": 1462,
+      "period": {
+        "start": 1459,
+        "endExclusive": 1463
+      },
+      "sampleYear": 1459,
+      "sourceAreaKm2": 244278.78011940134,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        -0.415741,
+        46.447384
+      ],
+      "bbox": [
+        -2.210532,
+        42.561192,
+        9.970182,
+        50.245983
+      ]
+    },
+    {
       "id": "cliopatria-7362",
       "polityId": "songhai-empire",
       "sourceIndex": 7362,
@@ -1342,6 +2141,31 @@
       ]
     },
     {
+      "id": "cliopatria-7363",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7363,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 242880.60664789847,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        -0.220906,
+        46.316105
+      ],
+      "bbox": [
+        -2.210532,
+        42.366177,
+        7.940821,
+        50.245983
+      ]
+    },
+    {
       "id": "cliopatria-7389",
       "polityId": "ottoman-empire",
       "sourceIndex": 7389,
@@ -1364,6 +2188,56 @@
         36.223988,
         41.14975,
         45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7391",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7391,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1467,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1468
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 98253.6497888023,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        14.878947,
+        -5.334535,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7394",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7394,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 51996.123952628135,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.26465,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
       ]
     },
     {
@@ -1414,6 +2288,31 @@
         18.221918,
         129.887589,
         46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-7441",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7441,
+      "sourceFromYear": 1468,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1468,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1468,
+      "sourceAreaKm2": 102872.87049776885,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        14.750372,
+        -5.334535,
+        42.106277
       ]
     },
     {
@@ -1492,6 +2391,106 @@
       ]
     },
     {
+      "id": "cliopatria-7468",
+      "polityId": "inca-empire",
+      "sourceIndex": 7468,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 434544.54306785046,
+      "wikidata": "Q28573",
+      "seshatId": "pe_inca_emp",
+      "labelPoint": [
+        -78.095338,
+        -7.621713
+      ],
+      "bbox": [
+        -81.03038,
+        -16.236256,
+        -69.479774,
+        0.992826
+      ]
+    },
+    {
+      "id": "cliopatria-7469",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7469,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 104625.45894231928,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        14.750372,
+        -5.244067,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7475",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7475,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 50712.51542003546,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.26465,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7485",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7485,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 120240.83191398538,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -99.293176,
+        18.929079
+      ],
+      "bbox": [
+        -101.145676,
+        17.193314,
+        -94.920006,
+        20.729105
+      ]
+    },
+    {
       "id": "cliopatria-7486",
       "polityId": "songhai-empire",
       "sourceIndex": 7486,
@@ -1514,6 +2513,106 @@
         12.114578,
         1.719503,
         18.029055
+      ]
+    },
+    {
+      "id": "cliopatria-7495",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7495,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 242676.40428079513,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        -0.220906,
+        46.316105
+      ],
+      "bbox": [
+        -2.210532,
+        42.366177,
+        7.940821,
+        50.245983
+      ]
+    },
+    {
+      "id": "cliopatria-7522",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7522,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 49198.68570174116,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.26465,
+        45.955382
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7525",
+      "polityId": "inca-empire",
+      "sourceIndex": 7525,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 537148.7587201019,
+      "wikidata": "Q28573",
+      "seshatId": "pe_inca_emp",
+      "labelPoint": [
+        -78.512317,
+        -7.589569
+      ],
+      "bbox": [
+        -81.474663,
+        -16.236256,
+        -69.479774,
+        0.992826
+      ]
+    },
+    {
+      "id": "cliopatria-7527",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7527,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 105630.73589671007,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        4.978658,
+        -1.283635,
+        42.106277
       ]
     },
     {
@@ -1542,6 +2641,106 @@
       ]
     },
     {
+      "id": "cliopatria-7538",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7538,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 147324.5595435914,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.160906,
+        19.057654
+      ],
+      "bbox": [
+        -101.133453,
+        17.193314,
+        -94.920006,
+        21.243395
+      ]
+    },
+    {
+      "id": "cliopatria-7556",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7556,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 339191.12032304495,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.222147,
+        46.578688
+      ],
+      "bbox": [
+        -2.210532,
+        42.366177,
+        7.940821,
+        50.845493
+      ]
+    },
+    {
+      "id": "cliopatria-7560",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7560,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 339077.77353899885,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.222147,
+        46.578688
+      ],
+      "bbox": [
+        -2.210532,
+        42.366177,
+        7.940821,
+        50.845493
+      ]
+    },
+    {
+      "id": "cliopatria-7576",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7576,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 148949.66164312547,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.160906,
+        19.057654
+      ],
+      "bbox": [
+        -101.133453,
+        17.193314,
+        -94.920006,
+        21.243395
+      ]
+    },
+    {
       "id": "cliopatria-7580",
       "polityId": "ottoman-empire",
       "sourceIndex": 7580,
@@ -1564,6 +2763,56 @@
         36.030804,
         41.14975,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7583",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7583,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 52614.07623714704,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7588",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7588,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 106348.89432015743,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        4.850083,
+        -1.283635,
+        42.106277
       ]
     },
     {
@@ -1592,6 +2841,56 @@
       ]
     },
     {
+      "id": "cliopatria-7605",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7605,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1492,
+      "sourceAreaKm2": 153220.18628780314,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -98.160906,
+        19.057654
+      ],
+      "bbox": [
+        -101.133453,
+        14.750372,
+        -92.101685,
+        21.243395
+      ]
+    },
+    {
+      "id": "cliopatria-7609",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7609,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1492,
+      "sourceAreaKm2": 377331.0034984813,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.201793,
+        46.578688
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.940821,
+        50.845493
+      ]
+    },
+    {
       "id": "cliopatria-7629",
       "polityId": "ottoman-empire",
       "sourceIndex": 7629,
@@ -1617,6 +2916,56 @@
       ]
     },
     {
+      "id": "cliopatria-7630",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7630,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1492,
+      "sourceAreaKm2": 63607.190018207984,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        34.550625,
+        34.542076,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7635",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7635,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1492,
+      "sourceAreaKm2": 108987.77339860574,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portugal_k",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        4.850083,
+        -1.283635,
+        42.106277
+      ]
+    },
+    {
       "id": "cliopatria-7642",
       "polityId": "inca-empire",
       "sourceIndex": 7642,
@@ -1639,6 +2988,56 @@
         -35.651798,
         -62.527802,
         0.992826
+      ]
+    },
+    {
+      "id": "cliopatria-7644",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7644,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1497,
+      "sourceAreaKm2": 113407.14337013425,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        0.028513,
+        8.899169,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7671",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7671,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1497,
+      "sourceAreaKm2": 366013.8851546166,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.941881,
+        50.778809
       ]
     },
     {
@@ -1692,6 +3091,31 @@
       ]
     },
     {
+      "id": "cliopatria-7680",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7680,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 211713.98400008006,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -97.92382,
+        18.768361
+      ],
+      "bbox": [
+        -101.716743,
+        14.750372,
+        -92.101685,
+        21.371967
+      ]
+    },
+    {
       "id": "cliopatria-7698",
       "polityId": "safavid-dynasty",
       "sourceIndex": 7698,
@@ -1717,6 +3141,31 @@
       ]
     },
     {
+      "id": "cliopatria-7704",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7704,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 472221.8289852966,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        37.964268,
+        18.438118,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-7720",
       "polityId": "ethiopian-empire",
       "sourceIndex": 7720,
@@ -1739,6 +3188,31 @@
         5.428671,
         42.293785,
         16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-7724",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7724,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 62939.25503514249,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        34.550625,
+        34.542076,
+        46.677208
       ]
     },
     {
@@ -1792,6 +3266,81 @@
       ]
     },
     {
+      "id": "cliopatria-7738",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7738,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 100981.7131633193,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        22.914846,
+        59.274246,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7742",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7742,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1511,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1512
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 63919.70367796874,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        34.550625,
+        34.542076,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7757",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7757,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1511,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1512
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 404878.83317126957,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        10.532552,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-7763",
       "polityId": "safavid-dynasty",
       "sourceIndex": 7763,
@@ -1839,6 +3388,56 @@
         36.030804,
         41.806068,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7796",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7796,
+      "sourceFromYear": 1512,
+      "sourceToYear": 1525,
+      "period": {
+        "start": 1512,
+        "endExclusive": 1526
+      },
+      "sampleYear": 1512,
+      "sourceAreaKm2": 63758.071445365946,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.310473,
+        34.550625,
+        34.542076,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7810",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7810,
+      "sourceFromYear": 1512,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1512,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1512,
+      "sourceAreaKm2": 391296.096586515,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        10.453374,
+        50.912201
       ]
     },
     {
@@ -1917,6 +3516,56 @@
       ]
     },
     {
+      "id": "cliopatria-7831",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7831,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 393206.72966779524,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        10.453374,
+        50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-7843",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7843,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 103917.76255727914,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        12.757454,
+        59.274246,
+        42.106277
+      ]
+    },
+    {
       "id": "cliopatria-7845",
       "polityId": "ottoman-empire",
       "sourceIndex": 7845,
@@ -1939,6 +3588,31 @@
         36.030804,
         44.031296,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7874",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7874,
+      "sourceFromYear": 1519,
+      "sourceToYear": 1520,
+      "period": {
+        "start": 1519,
+        "endExclusive": 1521
+      },
+      "sampleYear": 1519,
+      "sourceAreaKm2": 103554.85714367538,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        12.757454,
+        59.274246,
+        42.106277
       ]
     },
     {
@@ -1967,6 +3641,31 @@
       ]
     },
     {
+      "id": "cliopatria-7883",
+      "polityId": "aztec-triple-alliance",
+      "sourceIndex": 7883,
+      "sourceFromYear": 1519,
+      "sourceToYear": 1520,
+      "period": {
+        "start": 1519,
+        "endExclusive": 1521
+      },
+      "sampleYear": 1519,
+      "sourceAreaKm2": 211713.98400008006,
+      "wikidata": "Q2608489",
+      "seshatId": "mx_aztec_emp",
+      "labelPoint": [
+        -97.92382,
+        18.768361
+      ],
+      "bbox": [
+        -101.716743,
+        14.750372,
+        -92.101685,
+        21.371967
+      ]
+    },
+    {
       "id": "cliopatria-7891",
       "polityId": "safavid-dynasty",
       "sourceIndex": 7891,
@@ -1989,6 +3688,56 @@
         25.03639,
         66.357765,
         41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-7896",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7896,
+      "sourceFromYear": 1519,
+      "sourceToYear": 1520,
+      "period": {
+        "start": 1519,
+        "endExclusive": 1521
+      },
+      "sampleYear": 1519,
+      "sourceAreaKm2": 393183.22672123625,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        10.453374,
+        50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-7910",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 7910,
+      "sourceFromYear": 1521,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1521,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1521,
+      "sourceAreaKm2": 173326.42797987937,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        12.757454,
+        59.274246,
+        42.106277
       ]
     },
     {
@@ -2042,6 +3791,31 @@
       ]
     },
     {
+      "id": "cliopatria-7935",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7935,
+      "sourceFromYear": 1521,
+      "sourceToYear": 1525,
+      "period": {
+        "start": 1521,
+        "endExclusive": 1526
+      },
+      "sampleYear": 1521,
+      "sourceAreaKm2": 414496.51120348886,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        -0.424464,
+        46.447384
+      ],
+      "bbox": [
+        -4.911746,
+        41.911442,
+        10.453374,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-7938",
       "polityId": "ottoman-empire",
       "sourceIndex": 7938,
@@ -2064,6 +3838,56 @@
         12.693166,
         47.05851,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7946",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 7946,
+      "sourceFromYear": 1526,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1526,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1526,
+      "sourceAreaKm2": 63666.173405408015,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_3",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        34.550625,
+        34.542076,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-7956",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 7956,
+      "sourceFromYear": 1526,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1526,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1526,
+      "sourceAreaKm2": 384280.68616088806,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.941881,
+        50.912201
       ]
     },
     {
@@ -2192,6 +4016,31 @@
       ]
     },
     {
+      "id": "cliopatria-8022",
+      "polityId": "inca-empire",
+      "sourceIndex": 8022,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 2077939.68951987,
+      "wikidata": "Q28573",
+      "seshatId": "",
+      "labelPoint": [
+        -67.100414,
+        -17.393439
+      ],
+      "bbox": [
+        -81.474663,
+        -35.651798,
+        -62.527802,
+        0.992826
+      ]
+    },
+    {
       "id": "cliopatria-8023",
       "polityId": "ethiopian-empire",
       "sourceIndex": 8023,
@@ -2317,6 +4166,31 @@
       ]
     },
     {
+      "id": "cliopatria-8071",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8071,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 484703.3692786531,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        1.692437,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        8.581819,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-8087",
       "polityId": "ethiopian-empire",
       "sourceIndex": 8087,
@@ -2339,6 +4213,31 @@
         5.428671,
         40.415634,
         16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8089",
+      "polityId": "inca-empire",
+      "sourceIndex": 8089,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 4864.459942666766,
+      "wikidata": "Q28573",
+      "seshatId": "",
+      "labelPoint": [
+        -73.448064,
+        -12.925434
+      ],
+      "bbox": [
+        -73.782715,
+        -13.407591,
+        -73.061737,
+        -12.700428
       ]
     },
     {
@@ -2389,6 +4288,31 @@
         12.628879,
         48.600475,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-8102",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8102,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 484570.63802196283,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        1.692437,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        8.581819,
+        50.912201
       ]
     },
     {
@@ -2517,6 +4441,31 @@
       ]
     },
     {
+      "id": "cliopatria-8161",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8161,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 491464.92599474953,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        1.692437,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        8.581819,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-8164",
       "polityId": "safavid-dynasty",
       "sourceIndex": 8164,
@@ -2589,6 +4538,31 @@
         12.628879,
         59.274246,
         48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8206",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 8206,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 100862.62034068616,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        22.914846,
+        59.274246,
+        42.106277
       ]
     },
     {
@@ -2667,6 +4641,31 @@
       ]
     },
     {
+      "id": "cliopatria-8238",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8238,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 502478.6462291199,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        1.671932,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        41.327385,
+        9.577608,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-8244",
       "polityId": "mughal-empire",
       "sourceIndex": 8244,
@@ -2717,6 +4716,56 @@
       ]
     },
     {
+      "id": "cliopatria-8250",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 8250,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 62544.6384608602,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        34.550625,
+        34.542076,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-8253",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 8253,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1581,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1582
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 170634.1911768902,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_1",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        22.914846,
+        59.274246,
+        42.106277
+      ]
+    },
+    {
       "id": "cliopatria-8256",
       "polityId": "ethiopian-empire",
       "sourceIndex": 8256,
@@ -2739,6 +4788,56 @@
         5.428671,
         42.792809,
         16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8258",
+      "polityId": "inca-empire",
+      "sourceIndex": 8258,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 4864.459942666766,
+      "wikidata": "Q28573",
+      "seshatId": "",
+      "labelPoint": [
+        -73.448064,
+        -12.925434
+      ],
+      "bbox": [
+        -73.782715,
+        -13.407591,
+        -73.061737,
+        -12.700428
+      ]
+    },
+    {
+      "id": "cliopatria-8277",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8277,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 392707.67797038134,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.460639,
+        50.912201
       ]
     },
     {
@@ -2792,6 +4891,31 @@
       ]
     },
     {
+      "id": "cliopatria-8301",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8301,
+      "sourceFromYear": 1572,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1572,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1572,
+      "sourceAreaKm2": 392567.2623198066,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        0.18358,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.460639,
+        50.912201
+      ]
+    },
+    {
       "id": "cliopatria-8316",
       "polityId": "mughal-empire",
       "sourceIndex": 8316,
@@ -2839,6 +4963,31 @@
         10.057378,
         51.74725,
         48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8328",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 8328,
+      "sourceFromYear": 1572,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1572,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1572,
+      "sourceAreaKm2": 50434.06962994057,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
       ]
     },
     {
@@ -2892,6 +5041,31 @@
       ]
     },
     {
+      "id": "cliopatria-8354",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8354,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 393580.73941197735,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        1.624731,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.460639,
+        51.112431
+      ]
+    },
+    {
       "id": "cliopatria-8366",
       "polityId": "ethiopian-empire",
       "sourceIndex": 8366,
@@ -2914,6 +5088,31 @@
         5.428671,
         42.863323,
         16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8368",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 8368,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 49861.0123499582,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
       ]
     },
     {
@@ -3042,6 +5241,31 @@
       ]
     },
     {
+      "id": "cliopatria-8419",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8419,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 387308.3317326027,
+      "wikidata": "Q207162",
+      "seshatId": "fr_valois_k_2",
+      "labelPoint": [
+        1.624731,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.206159,
+        51.112431
+      ]
+    },
+    {
       "id": "cliopatria-8433",
       "polityId": "mughal-empire",
       "sourceIndex": 8433,
@@ -3139,6 +5363,31 @@
         18.479067,
         90.937752,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8480",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8480,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1601,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1602
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 461517.5480303498,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.624731,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.206159,
+        51.112431
       ]
     },
     {
@@ -3292,6 +5541,31 @@
       ]
     },
     {
+      "id": "cliopatria-8507",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 8507,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 49512.6438420579,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
+      ]
+    },
+    {
       "id": "cliopatria-8526",
       "polityId": "safavid-dynasty",
       "sourceIndex": 8526,
@@ -3364,6 +5638,31 @@
         15.714691,
         -3.65454,
         15.843266
+      ]
+    },
+    {
+      "id": "cliopatria-8541",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8541,
+      "sourceFromYear": 1602,
+      "sourceToYear": 1621,
+      "period": {
+        "start": 1602,
+        "endExclusive": 1622
+      },
+      "sampleYear": 1602,
+      "sourceAreaKm2": 465991.75138231745,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.625351,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.206159,
+        51.112431
       ]
     },
     {
@@ -3464,6 +5763,31 @@
         25.03639,
         66.694435,
         41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8570",
+      "polityId": "new-france",
+      "sourceIndex": 8570,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1611,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1612
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 2509.108693348691,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -71.289837,
+        46.940084
+      ],
+      "bbox": [
+        -71.624878,
+        44.581291,
+        -65.280327,
+        47.137375
       ]
     },
     {
@@ -3592,6 +5916,31 @@
       ]
     },
     {
+      "id": "cliopatria-8620",
+      "polityId": "new-france",
+      "sourceIndex": 8620,
+      "sourceFromYear": 1612,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1612,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1612,
+      "sourceAreaKm2": 17818.47534548514,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -44.57432,
+        -2.832283
+      ],
+      "bbox": [
+        -71.624878,
+        -3.314441,
+        -43.852589,
+        47.137375
+      ]
+    },
+    {
       "id": "cliopatria-8651",
       "polityId": "ming-dynasty",
       "sourceIndex": 8651,
@@ -3614,6 +5963,31 @@
         18.221918,
         124.725349,
         42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8670",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8670,
+      "sourceFromYear": 1622,
+      "sourceToYear": 1628,
+      "period": {
+        "start": 1622,
+        "endExclusive": 1629
+      },
+      "sampleYear": 1622,
+      "sourceAreaKm2": 464236.93790188595,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.625351,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.206159,
+        51.112431
       ]
     },
     {
@@ -3742,6 +6116,31 @@
       ]
     },
     {
+      "id": "cliopatria-8719",
+      "polityId": "new-france",
+      "sourceIndex": 8719,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1628,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1629
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 3997.124706570293,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -71.289837,
+        46.940084
+      ],
+      "bbox": [
+        -71.624878,
+        17.707617,
+        -59.786049,
+        47.137375
+      ]
+    },
+    {
       "id": "cliopatria-8723",
       "polityId": "ming-dynasty",
       "sourceIndex": 8723,
@@ -3767,6 +6166,56 @@
       ]
     },
     {
+      "id": "cliopatria-8727",
+      "polityId": "new-france",
+      "sourceIndex": 8727,
+      "sourceFromYear": 1629,
+      "sourceToYear": 1631,
+      "period": {
+        "start": 1629,
+        "endExclusive": 1632
+      },
+      "sampleYear": 1629,
+      "sourceAreaKm2": 222.37768286497325,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -62.997341,
+        18.221917
+      ],
+      "bbox": [
+        -63.082104,
+        18.093342,
+        -62.926857,
+        18.286205
+      ]
+    },
+    {
+      "id": "cliopatria-8728",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8728,
+      "sourceFromYear": 1629,
+      "sourceToYear": 1631,
+      "period": {
+        "start": 1629,
+        "endExclusive": 1632
+      },
+      "sampleYear": 1629,
+      "sourceAreaKm2": 465345.7342018289,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.625351,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.206159,
+        51.112431
+      ]
+    },
+    {
       "id": "cliopatria-8777",
       "polityId": "ming-dynasty",
       "sourceIndex": 8777,
@@ -3789,6 +6238,106 @@
         18.221918,
         122.712883,
         41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-8782",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8782,
+      "sourceFromYear": 1632,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1632,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1632,
+      "sourceAreaKm2": 465991.7513823174,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.625351,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.206159,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8783",
+      "polityId": "new-france",
+      "sourceIndex": 8783,
+      "sourceFromYear": 1632,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1632,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1632,
+      "sourceAreaKm2": 17556.224038900487,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -60.801918,
+        46.316105
+      ],
+      "bbox": [
+        -71.624878,
+        17.707617,
+        -59.786049,
+        47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-8794",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8794,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 478543.34962850285,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.625351,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        7.529808,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8795",
+      "polityId": "new-france",
+      "sourceIndex": 8795,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 21270.78126284465,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -60.801918,
+        46.316105
+      ],
+      "bbox": [
+        -71.721146,
+        14.428933,
+        -59.786049,
+        47.137375
       ]
     },
     {
@@ -3892,6 +6441,56 @@
       ]
     },
     {
+      "id": "cliopatria-8832",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8832,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1641,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1642
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 495131.290455181,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.625351,
+        46.940106
+      ],
+      "bbox": [
+        -4.911746,
+        42.561192,
+        8.115007,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8834",
+      "polityId": "new-france",
+      "sourceIndex": 8834,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1641,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1642
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 21430.970154395673,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -60.801918,
+        46.316105
+      ],
+      "bbox": [
+        -71.769302,
+        14.428933,
+        -59.786049,
+        47.137375
+      ]
+    },
+    {
       "id": "cliopatria-8840",
       "polityId": "ming-dynasty",
       "sourceIndex": 8840,
@@ -3992,6 +6591,81 @@
       ]
     },
     {
+      "id": "cliopatria-8862",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 8862,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 101052.63025711525,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_2",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        22.914846,
+        59.280067,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-8893",
+      "polityId": "new-france",
+      "sourceIndex": 8893,
+      "sourceFromYear": 1642,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1642,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1642,
+      "sourceAreaKm2": 29369.13106541716,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -60.801918,
+        46.316105
+      ],
+      "bbox": [
+        -74.480186,
+        14.428933,
+        -59.786049,
+        47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-8895",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8895,
+      "sourceFromYear": 1642,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1642,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1642,
+      "sourceAreaKm2": 515028.3635168997,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        2.213634,
+        45.824299
+      ],
+      "bbox": [
+        -4.911746,
+        40.549641,
+        8.115007,
+        51.112431
+      ]
+    },
+    {
       "id": "cliopatria-8897",
       "polityId": "ming-dynasty",
       "sourceIndex": 8897,
@@ -4014,6 +6688,31 @@
         18.221918,
         122.712883,
         41.197685
+      ]
+    },
+    {
+      "id": "cliopatria-8920",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 8920,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 49588.05111612977,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        35.000969,
+        26.225334,
+        46.677208
       ]
     },
     {
@@ -4064,6 +6763,81 @@
         32.493073,
         141.556625,
         53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-8943",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8943,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 516487.40210467775,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.396854,
+        46.11931
+      ],
+      "bbox": [
+        -4.911746,
+        41.262531,
+        8.952536,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8944",
+      "polityId": "new-france",
+      "sourceIndex": 8944,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 31907.37242888171,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -60.801918,
+        46.316105
+      ],
+      "bbox": [
+        -74.480186,
+        -25.236528,
+        47.091225,
+        47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-8955",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 8955,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 44741.92510098234,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.001593,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        35.129658,
+        25.383142,
+        46.677208
       ]
     },
     {
@@ -4167,6 +6941,81 @@
       ]
     },
     {
+      "id": "cliopatria-8984",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 8984,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 489363.758245304,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.396854,
+        46.11931
+      ],
+      "bbox": [
+        -4.911746,
+        41.262531,
+        7.788793,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8999",
+      "polityId": "new-france",
+      "sourceIndex": 8999,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 33214.9886359798,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -60.801918,
+        46.316105
+      ],
+      "bbox": [
+        -74.480186,
+        -25.236528,
+        47.091225,
+        47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-9000",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9000,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 483574.6082350806,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.692437,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.788793,
+        51.112431
+      ]
+    },
+    {
       "id": "cliopatria-9001",
       "polityId": "qing-dynasty",
       "sourceIndex": 9001,
@@ -4239,6 +7088,56 @@
         18.221918,
         141.556625,
         53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9027",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9027,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 487601.2008823506,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        1.692437,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.788793,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-9028",
+      "polityId": "new-france",
+      "sourceIndex": 9028,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 23422.01904802488,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_1",
+      "labelPoint": [
+        -73.567453,
+        46.250501
+      ],
+      "bbox": [
+        -74.480186,
+        -25.236528,
+        47.091225,
+        47.137375
       ]
     },
     {
@@ -4342,6 +7241,56 @@
       ]
     },
     {
+      "id": "cliopatria-9086",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9086,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 488453.44361868076,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        1.692437,
+        46.677214
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.788793,
+        51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-9087",
+      "polityId": "new-france",
+      "sourceIndex": 9087,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 24446.517233429622,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.567453,
+        46.250501
+      ],
+      "bbox": [
+        -74.480186,
+        -25.236528,
+        47.091225,
+        47.664101
+      ]
+    },
+    {
       "id": "cliopatria-9113",
       "polityId": "ottoman-empire",
       "sourceIndex": 9113,
@@ -4392,6 +7341,31 @@
       ]
     },
     {
+      "id": "cliopatria-9138",
+      "polityId": "new-france",
+      "sourceIndex": 9138,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 69710.78620036664,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.567453,
+        46.250501
+      ],
+      "bbox": [
+        -85.004402,
+        -25.236528,
+        55.769493,
+        47.664101
+      ]
+    },
+    {
       "id": "cliopatria-9139",
       "polityId": "qing-dynasty",
       "sourceIndex": 9139,
@@ -4417,6 +7391,56 @@
       ]
     },
     {
+      "id": "cliopatria-9140",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9140,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 491581.7292397493,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        1.650893,
+        46.775761
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.788793,
+        51.246017
+      ]
+    },
+    {
+      "id": "cliopatria-9145",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9145,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 521229.6214638503,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        1.372895,
+        47.565271
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.788793,
+        52.788067
+      ]
+    },
+    {
       "id": "cliopatria-9146",
       "polityId": "qing-dynasty",
       "sourceIndex": 9146,
@@ -4439,6 +7463,56 @@
         18.221918,
         141.556625,
         53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9148",
+      "polityId": "new-france",
+      "sourceIndex": 9148,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 95431.21323148542,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -74.045326,
+        45.693266
+      ],
+      "bbox": [
+        -88.322487,
+        3.950056,
+        -16.169859,
+        47.664101
+      ]
+    },
+    {
+      "id": "cliopatria-9159",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9159,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 43990.96923543637,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        25.285975,
+        46.677208
       ]
     },
     {
@@ -4542,6 +7616,31 @@
       ]
     },
     {
+      "id": "cliopatria-9202",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9202,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 537976.0280194002,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.361797,
+        47.203173
+      ],
+      "bbox": [
+        -4.911746,
+        42.366177,
+        7.788793,
+        51.915127
+      ]
+    },
+    {
       "id": "cliopatria-9203",
       "polityId": "qing-dynasty",
       "sourceIndex": 9203,
@@ -4567,6 +7666,56 @@
       ]
     },
     {
+      "id": "cliopatria-9204",
+      "polityId": "new-france",
+      "sourceIndex": 9204,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 104036.81865796167,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -74.473309,
+        45.693266
+      ],
+      "bbox": [
+        -88.322487,
+        3.950056,
+        -16.169859,
+        47.664101
+      ]
+    },
+    {
+      "id": "cliopatria-9239",
+      "polityId": "new-france",
+      "sourceIndex": 9239,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 114427.93005505989,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.48567,
+        46.152096
+      ],
+      "bbox": [
+        -90.000206,
+        3.950056,
+        -16.169859,
+        48.19175
+      ]
+    },
+    {
       "id": "cliopatria-9240",
       "polityId": "qing-dynasty",
       "sourceIndex": 9240,
@@ -4589,6 +7738,31 @@
         18.221918,
         141.556625,
         53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9241",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9241,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 537774.0948070653,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.112675,
+        51.179214
       ]
     },
     {
@@ -4667,6 +7841,56 @@
       ]
     },
     {
+      "id": "cliopatria-9292",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9292,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 65217.75734799089,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        25.285975,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-9300",
+      "polityId": "new-france",
+      "sourceIndex": 9300,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 123462.32384793092,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.48567,
+        46.152096
+      ],
+      "bbox": [
+        -96.976151,
+        3.950056,
+        -3.176635,
+        52.519085
+      ]
+    },
+    {
       "id": "cliopatria-9301",
       "polityId": "qing-dynasty",
       "sourceIndex": 9301,
@@ -4692,6 +7916,56 @@
       ]
     },
     {
+      "id": "cliopatria-9302",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9302,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 547796.5215785141,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.112675,
+        51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9311",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9311,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 579220.789445512,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.17661,
+        46.381731
+      ],
+      "bbox": [
+        -64.591972,
+        41.586884,
+        8.112675,
+        51.179214
+      ]
+    },
+    {
       "id": "cliopatria-9313",
       "polityId": "qing-dynasty",
       "sourceIndex": 9313,
@@ -4714,6 +7988,31 @@
         18.221918,
         141.556625,
         56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9314",
+      "polityId": "new-france",
+      "sourceIndex": 9314,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 121669.56873384595,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.48567,
+        46.152096
+      ],
+      "bbox": [
+        -91.989738,
+        3.950056,
+        -3.176635,
+        52.519085
       ]
     },
     {
@@ -4767,6 +8066,56 @@
       ]
     },
     {
+      "id": "cliopatria-9341",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9341,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 64892.26694129879,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        25.285975,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-9348",
+      "polityId": "new-france",
+      "sourceIndex": 9348,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 124991.60081572537,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.029564,
+        3.950056,
+        -3.176635,
+        57.21294
+      ]
+    },
+    {
       "id": "cliopatria-9349",
       "polityId": "qing-dynasty",
       "sourceIndex": 9349,
@@ -4789,6 +8138,56 @@
         18.221918,
         141.556625,
         56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9350",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9350,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 562109.6369572412,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.120074,
+        46.480219
+      ],
+      "bbox": [
+        -64.591972,
+        41.976379,
+        8.274838,
+        51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9357",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9357,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 64799.69160756501,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        25.285975,
+        46.677208
       ]
     },
     {
@@ -4817,6 +8216,56 @@
       ]
     },
     {
+      "id": "cliopatria-9379",
+      "polityId": "new-france",
+      "sourceIndex": 9379,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1701,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1702
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 140655.01635604163,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.029564,
+        3.950056,
+        -3.176635,
+        57.21294
+      ]
+    },
+    {
+      "id": "cliopatria-9380",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9380,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1701,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1702
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 532958.146273822,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.115007,
+        51.179214
+      ]
+    },
+    {
       "id": "cliopatria-9382",
       "polityId": "qing-dynasty",
       "sourceIndex": 9382,
@@ -4839,6 +8288,31 @@
         18.221918,
         141.556625,
         56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9390",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9390,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 64632.19318896931,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        25.285975,
+        46.677208
       ]
     },
     {
@@ -4892,6 +8366,31 @@
       ]
     },
     {
+      "id": "cliopatria-9431",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9431,
+      "sourceFromYear": 1702,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1702,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1702,
+      "sourceAreaKm2": 555784.6697377713,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.342402,
+        47.104484
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.113841,
+        51.781143
+      ]
+    },
+    {
       "id": "cliopatria-9432",
       "polityId": "qing-dynasty",
       "sourceIndex": 9432,
@@ -4917,6 +8416,56 @@
       ]
     },
     {
+      "id": "cliopatria-9433",
+      "polityId": "new-france",
+      "sourceIndex": 9433,
+      "sourceFromYear": 1702,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1702,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1702,
+      "sourceAreaKm2": 149610.8105729092,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.029564,
+        3.950056,
+        -3.176635,
+        57.21294
+      ]
+    },
+    {
+      "id": "cliopatria-9438",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9438,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 535016.1758442814,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.113841,
+        51.179214
+      ]
+    },
+    {
       "id": "cliopatria-9440",
       "polityId": "qing-dynasty",
       "sourceIndex": 9440,
@@ -4939,6 +8488,31 @@
         18.221918,
         141.556625,
         56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9441",
+      "polityId": "new-france",
+      "sourceIndex": 9441,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 149889.32928904783,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.029564,
+        3.950056,
+        -3.176635,
+        57.21294
       ]
     },
     {
@@ -5017,6 +8591,31 @@
       ]
     },
     {
+      "id": "cliopatria-9461",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 9461,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 113220.52728192753,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_2",
+      "labelPoint": [
+        -7.875151,
+        39.546605
+      ],
+      "bbox": [
+        -28.845711,
+        32.621628,
+        -3.745228,
+        42.106277
+      ]
+    },
+    {
       "id": "cliopatria-9477",
       "polityId": "mughal-empire",
       "sourceIndex": 9477,
@@ -5042,6 +8641,81 @@
       ]
     },
     {
+      "id": "cliopatria-9486",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9486,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 64839.88694758828,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        25.285975,
+        46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-9489",
+      "polityId": "kingdom-of-portugal",
+      "sourceIndex": 9489,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1808,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1809
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 96466.64389669744,
+      "wikidata": "Q45670",
+      "seshatId": "pt_portuguese_emp_2",
+      "labelPoint": [
+        -8.286942,
+        39.578937
+      ],
+      "bbox": [
+        -28.845711,
+        32.621628,
+        -6.254164,
+        42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-9508",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9508,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 532141.3691574879,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.115007,
+        51.179214
+      ]
+    },
+    {
       "id": "cliopatria-9511",
       "polityId": "safavid-dynasty",
       "sourceIndex": 9511,
@@ -5064,6 +8738,56 @@
         25.03639,
         66.694435,
         41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9528",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9528,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 528660.5342901181,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.115007,
+        51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9529",
+      "polityId": "new-france",
+      "sourceIndex": 9529,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 147266.17112547418,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -91.989738,
+        3.950056,
+        -3.176635,
+        48.588123
       ]
     },
     {
@@ -5167,6 +8891,31 @@
       ]
     },
     {
+      "id": "cliopatria-9571",
+      "polityId": "new-france",
+      "sourceIndex": 9571,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1720,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1721
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 163526.7994049773,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.314774,
+        3.950056,
+        -3.176635,
+        48.720371
+      ]
+    },
+    {
       "id": "cliopatria-9572",
       "polityId": "qing-dynasty",
       "sourceIndex": 9572,
@@ -5189,6 +8938,31 @@
         18.221918,
         141.556625,
         56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9586",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9586,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 45226.141432755074,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        23.116798,
+        46.677208
       ]
     },
     {
@@ -5292,6 +9066,31 @@
       ]
     },
     {
+      "id": "cliopatria-9603",
+      "polityId": "new-france",
+      "sourceIndex": 9603,
+      "sourceFromYear": 1721,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1721,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1721,
+      "sourceAreaKm2": 200440.91294192505,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.314774,
+        3.950056,
+        -3.176635,
+        48.720371
+      ]
+    },
+    {
       "id": "cliopatria-9615",
       "polityId": "mughal-empire",
       "sourceIndex": 9615,
@@ -5314,6 +9113,31 @@
         13.014604,
         90.798073,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9634",
+      "polityId": "new-france",
+      "sourceIndex": 9634,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 203870.60727154647,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -73.127332,
+        46.381731
+      ],
+      "bbox": [
+        -93.314774,
+        3.950056,
+        -3.176635,
+        48.720371
       ]
     },
     {
@@ -5467,6 +9291,81 @@
       ]
     },
     {
+      "id": "cliopatria-9680",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9680,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 532934.2796502416,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        8.115007,
+        51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9682",
+      "polityId": "new-france",
+      "sourceIndex": 9682,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 235164.93702183987,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -72.238647,
+        46.611531
+      ],
+      "bbox": [
+        -96.569771,
+        3.950056,
+        -3.176635,
+        50.645493
+      ]
+    },
+    {
+      "id": "cliopatria-9706",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9706,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 45085.401371290296,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        23.116798,
+        46.677208
+      ]
+    },
+    {
       "id": "cliopatria-9707",
       "polityId": "ottoman-empire",
       "sourceIndex": 9707,
@@ -5542,6 +9441,56 @@
       ]
     },
     {
+      "id": "cliopatria-9723",
+      "polityId": "new-france",
+      "sourceIndex": 9723,
+      "sourceFromYear": 1738,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1738,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1738,
+      "sourceAreaKm2": 242924.7767381129,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -71.886114,
+        46.611531
+      ],
+      "bbox": [
+        -98.634773,
+        3.950056,
+        -3.176635,
+        54.206123
+      ]
+    },
+    {
+      "id": "cliopatria-9731",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9731,
+      "sourceFromYear": 1738,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1738,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1738,
+      "sourceAreaKm2": 45226.141432755074,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        23.116798,
+        46.677208
+      ]
+    },
+    {
       "id": "cliopatria-9734",
       "polityId": "mughal-empire",
       "sourceIndex": 9734,
@@ -5589,6 +9538,31 @@
         10.057378,
         48.600475,
         48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9757",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9757,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1747,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1748
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 45111.2684200873,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        23.116798,
+        46.677208
       ]
     },
     {
@@ -5642,6 +9616,106 @@
       ]
     },
     {
+      "id": "cliopatria-9781",
+      "polityId": "new-france",
+      "sourceIndex": 9781,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1743,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1744
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 245651.5000354532,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -71.886114,
+        46.611531
+      ],
+      "bbox": [
+        -101.23851,
+        3.950056,
+        -3.176635,
+        54.206123
+      ]
+    },
+    {
+      "id": "cliopatria-9782",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9782,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1743,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1744
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 544827.3404973956,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        14.211981,
+        51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9784",
+      "polityId": "new-france",
+      "sourceIndex": 9784,
+      "sourceFromYear": 1744,
+      "sourceToYear": 1751,
+      "period": {
+        "start": 1744,
+        "endExclusive": 1752
+      },
+      "sampleYear": 1744,
+      "sourceAreaKm2": 247341.27722782365,
+      "wikidata": "Q170604",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        -71.886114,
+        46.611531
+      ],
+      "bbox": [
+        -101.23851,
+        3.950056,
+        -3.177961,
+        54.206123
+      ]
+    },
+    {
+      "id": "cliopatria-9786",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9786,
+      "sourceFromYear": 1744,
+      "sourceToYear": 1747,
+      "period": {
+        "start": 1744,
+        "endExclusive": 1748
+      },
+      "sampleYear": 1744,
+      "sourceAreaKm2": 532486.2712274564,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        10.278442,
+        51.179214
+      ]
+    },
+    {
       "id": "cliopatria-9805",
       "polityId": "mughal-empire",
       "sourceIndex": 9805,
@@ -5692,6 +9766,31 @@
       ]
     },
     {
+      "id": "cliopatria-9832",
+      "polityId": "kingdom-of-france",
+      "sourceIndex": 9832,
+      "sourceFromYear": 1748,
+      "sourceToYear": 1756,
+      "period": {
+        "start": 1748,
+        "endExclusive": 1757
+      },
+      "sampleYear": 1748,
+      "sourceAreaKm2": 528750.4767233927,
+      "wikidata": "Q207162",
+      "seshatId": "fr_bourbon_k_2",
+      "labelPoint": [
+        2.122955,
+        46.775761
+      ],
+      "bbox": [
+        -64.591972,
+        42.366177,
+        10.278442,
+        51.179214
+      ]
+    },
+    {
       "id": "cliopatria-9849",
       "polityId": "ottoman-empire",
       "sourceIndex": 9849,
@@ -5739,6 +9838,31 @@
         18.029055,
         92.071487,
         33.071609
+      ]
+    },
+    {
+      "id": "cliopatria-9861",
+      "polityId": "republic-of-venice",
+      "sourceIndex": 9861,
+      "sourceFromYear": 1748,
+      "sourceToYear": 1771,
+      "period": {
+        "start": 1748,
+        "endExclusive": 1772
+      },
+      "sampleYear": 1748,
+      "sourceAreaKm2": 45085.401371290296,
+      "wikidata": "Q4948",
+      "seshatId": "it_venetian_rep_4",
+      "labelPoint": [
+        12.021978,
+        45.726015
+      ],
+      "bbox": [
+        9.308683,
+        36.159592,
+        23.116798,
+        46.677208
       ]
     },
     {

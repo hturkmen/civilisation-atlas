@@ -21,8 +21,8 @@ test('discovery stops combine simultaneous areas without merging the archive mod
   const stops = collectionStops([], collection, [{publicationYear: 1500, title: 'Test archive'}]);
   const simultaneous = stops.filter(stop => stop.year === 1500);
   assert.deepEqual(simultaneous.map(stop => stop.mode), ['history', 'known']);
-  assert.equal(simultaneous[0].areaCount, 8);
-  assert.equal(simultaneous[0].names.length, 8);
+  assert.equal(simultaneous[0].areaCount, 11);
+  assert.equal(simultaneous[0].names.length, 11);
   assert.equal(stops.filter(stop => stop.year === 1453 && stop.mode === 'history').length, 1);
 });
 

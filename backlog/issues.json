@@ -1229,9 +1229,9 @@
   "data_priority_2026_09_17": {
     "period": "1400–1750",
     "status": "partial",
-    "completed": "190 yeni kaynak kaydı: 24 siyasi yapı / 225 kayıt. 54 domain ve 24 Chromium testi geçti. Ayrıntı docs/15-early-modern-collection.md.",
-    "next": "1400–1750 Avrupa/Amerika kapsamasını değerlendir; ardından P04-005 kalanlarına dön.",
-    "limits": "Bağımsız tarihçi onayı yok; editoryal adaylar unreviewed kalır. Bütün dünya kapsamı değildir.",
+    "completed": "İki dilimde 354 yeni kayıt: 28 siyasi yapı / 389 alan. Son dilimde 164 Avrupa/Amerika kaydı; 54 domain, 25 Chromium testi geçti.",
+    "next": "389 kayıtlı demoyu yayımla; ardından P04-005 kalan mobil kabulü ve P04-006 boyut/performans ölçümü.",
+    "limits": "Bağımsız tarihçi onayı yok; adaylar unreviewed. İngiltere/İspanya/diğer koloniler tarih ve kimlik incelemesi bekliyor. Tam dünya kapsamı değil.",
     "publication": "Main veri commit: f6c61ffb7eead1b54d7bd6f6f864245b52d5dba7. Demo kaynak: fd91d4b7fdcb9d30fd6b8215879ddab0a2519be2. V8 succeeded, 2026-09-18T06:50:51.288100+00:00. Erişim owner-private korundu. Canlı Site üzerinde ayrıca tarayıcı testi yapılmadı."
   }
 }
