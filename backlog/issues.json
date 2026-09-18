@@ -623,7 +623,7 @@
         "number": 22,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/22"
       },
-      "implementation_note": "Mobil alt panel ve odak dönüşü korunuyor. Zaman çizelgesi/arama iki kat metinle büyür, 44 px kontroller ve satır sarma eklendi. Mevcut 22 Chromium senaryosu + hedefli 4/4 (bir yeni, üç mevcut) geçti; statik build/TypeScript geçti. Gerçek cihaz/Safari/Firefox ve tüm sayfa denetimi açık. Kullanıcı önceliği nedeniyle önce 1400–1750 kaynaklı veri genişletilecek."
+      "implementation_note": "Uzun dönem listeleri (>8) açılır bölüm, 44 px önceki/sonraki kontrollerle sadeleştirildi. Aynı siyasi yapıda kayıt değişiminde panel scroll/heading focus düzeltildi. Statik build/TypeScript ve 27/27 Chromium geçti. Fiziksel cihaz/Safari/Firefox ve bütün sayfa erişilebilirlik kabulü açık."
     },
     {
       "id": "P04-006",
@@ -649,7 +649,8 @@
       "github": {
         "number": 23,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/23"
-      }
+      },
+      "implementation_note": "İlk yerel ölçüm eklendi: 389 kayıt, 2.884.759 ham GeoJSON baytı; gzip-9 çevrimdışı 181.771 bayt; 1440x1000 yazılım GPU hazır-bayrağı gözlemi 1267 ms. Tek yerel örnek, üretim/ağ/telefon/paint ölçümü değil. Kontrollü tekrarlı mobil ölçüm ve performans bütçesi bekliyor."
     },
     {
       "id": "P05-001",

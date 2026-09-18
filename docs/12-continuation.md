@@ -6,11 +6,11 @@
 
 | Alan | Güncel durum / yeniden yapılmayacak iş |
 |---|---|
-| Arayüz | Dönemler arası arama ve mobil alt panel tamamlanan dilimlerdir. Zaman çizelgesi/arama metinle büyür, kontroller sarılır; 360 px iki kat metin ve klavye testi eklendi. |
+| Arayüz | Uzun (>8) dönem listesi açılır bölüm ve önceki/sonraki kontrollerle sadeleştirildi. Aynı devletin başka kaydına geçince panel başa ve odak başlığa döner. Önceki mobil alt panel/büyük metin işleri korunur. |
 | Veri ve DB | 28 siyasi yapı / 389 alan; bu dilimde Avrupa/Amerika için 164 yeni kaynak kaydı. Önceki 225 metadata/geometri korunur. Üç yerleşim / bir arşiv ve beş unreviewed Gate A adayı değişmedi. |
-| Bu dilimin testleri | 54/54 domain; editoryal pin/sınır validator; demo build/TypeScript ve 25/25 Chromium geçti. Fransa/Yeni Fransa ortak dönemli 34 kaynak çifti kesişmez. Ana Node build/gerçek cihaz/Safari/Firefox yapılmadı. |
-| Son kod/yayın | Main veri commit: ad27e3f1be27eecb5ef1f411a4ea1758b9d8abe7. Demo kaynak: a89948e711e765b0892b035091fbda2b211e58a8. V9 succeeded, 2026-09-18T07:04:51.696563+00:00. Özel erişim korundu; canlı Site üzerinde ek tarayıcı testi yapılmadı. |
-| İlk sonraki adım | P04-005 kalan mobil büyük metin/klavye kabulünü ve büyüyen veri için P04-006 ölçümünü ele al. 389 kayıt ve V9 yayını tamam; yeniden başlatma. İngiltere/İspanya/diğer koloniler tarih ve kimlik incelemesi bekliyor. |
+| Bu dilimin testleri | Demo build/TypeScript ve 27/27 Chromium geçti. Yerel 1440×1000 yazılım GPU ölçümü: hazır bayrağı gözlemi 1267 ms; GeoJSON 2.884.759 bayt; çevrimdışı gzip-9 181.771 bayt. Gerçek ağ/telefon veya tam görsel çizim metriği değildir. Node build/gerçek cihaz/Safari/Firefox yapılmadı. |
+| Son kod/yayın | Main 4441e4481badcbc60b2db0fd4c3ebc4f212bd19f; demo kaynak b6825eb77aa4f8a3050ebce5517d1658301a091d; V10 succeeded, 2026-09-18T11:22:29.543915+00:00. Özel erişim korundu; canlı Site üzerinde ek tarayıcı testi yapılmadı. |
+| İlk sonraki adım | P04-006: 389 kayıtlı sürümde kontrollü mobil viewport/CPU-ağ koşullarında tekrarlı ölçüm ve açık bütçe kaydı hazırla; bunun gerçek cihaz olmadığını belirt. P04-005 fiziksel cihaz/Safari/Firefox kabulü açık. Uzun liste/odak ve V10 yayını tamam, yeniden yapma. |
 
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
