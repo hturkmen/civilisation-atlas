@@ -336,7 +336,7 @@
         "number": 11,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/11"
       },
-      "implementation_note": "17 siyasi yapı, 35 kaynaklı alan kaydı ve üç yerleşim; yeni bölgeler ve kaynak dönemleri docs/14-collection-discovery.md içinde. İkinci perspektif ve bağımsız inceleme/efor ölçümü bekliyor."
+      "implementation_note": "28 siyasi yapı / 389 kaynaklı alan, üç yerleşim, bir arşiv haritası ve 10 kaynaklı genel bağlam anlatısı. İkinci perspektif ve bağımsız inceleme/efor ölçümü bekliyor."
     },
     {
       "id": "P03-001",
@@ -596,7 +596,7 @@
         "number": 21,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/21"
       },
-      "implementation_note": "Kaynak ve belirsizlik gösterimine en yakın kaynaklı yıl geçişleri eklendi. 17 siyasi yapı / 35 kayıt sayıları veriden hesaplanıyor. Tam bölge/dönem kapsama matrisi ve bağımsız inceleme bekliyor."
+      "implementation_note": "Kaynak/belirsizlik UI ve 28 siyasi yapı / 389 kayıt korunur. V11: 10 genel bağlam anlatısı, görünür bağımsız inceleme uyarısı, seçili yıl kapsam notu, kaynak locator ve lisans bağlantısı. Tam kapsama matrisi ve bağımsız inceleme hâlâ açık."
     },
     {
       "id": "P04-005",
@@ -1231,8 +1231,16 @@
     "period": "1400–1750",
     "status": "partial",
     "completed": "İki dilimde 354 yeni kayıt: 28 siyasi yapı / 389 alan. Son dilimde 164 Avrupa/Amerika kaydı; 54 domain, 25 Chromium testi geçti.",
-    "next": "P04-005 kalan mobil kabulü ve P04-006 boyut/performans ölçümü; diğer Avrupa/koloni kayıtları için kaynak incelemesi.",
+    "next": "İkinci kaynaklı/lisanslı arşiv haritası ve eser seçicisi; ardından 1400–1750 İngiltere/İspanya/koloni verileri. Performans/gerçek cihaz kabulü kullanıcı önceliğiyle ertelendi.",
     "limits": "Bağımsız tarihçi onayı yok; adaylar unreviewed. İngiltere/İspanya/diğer koloniler tarih ve kimlik incelemesi bekliyor. Tam dünya kapsamı değil.",
     "publication": "Main veri commit: ad27e3f1be27eecb5ef1f411a4ea1758b9d8abe7. Demo kaynak: a89948e711e765b0892b035091fbda2b211e58a8. V9 succeeded, 2026-09-18T07:04:51.696563+00:00. Özel erişim korundu; canlı Site üzerinde ek tarayıcı testi yapılmadı."
+  },
+  "provisional_content_progress_2026_09_18": {
+    "status": "partial",
+    "completed": "10 siyasi yapı için 9 UNESCO kaynağından kültür/tarih anlatısı; kaynak locator, atıf ve CC BY-SA 3.0 IGO; görünür unreviewed ve seçili yıla özgü değil notları.",
+    "verification": "Anlatı/sınır validator, statik build/TypeScript ve 1/1 hedefli mobil Chromium testi geçti. Tam paket, Node build ve fiziksel cihaz testi çalıştırılmadı.",
+    "publication": "V11 succeeded 2026-09-18T12:03:00.891466+00:00; main code 6c3b172d7a3943f46906ad82dc0a04630361f014",
+    "next": "İkinci arşiv haritası ve eser seçicisi",
+    "handoff": "docs/team/handoffs/p04-provisional-stories-20260918.md"
   }
 }

@@ -1,17 +1,19 @@
 # Devam kaydı
 
-## Güncel devir noktası — 18 Eylül 2026
+## Güncel devir noktası — 18 Eylül 2026 / kaynaklı anlatılar
 
-**Önce bu bölümü oku.** Aşağıdaki tarihli kayıtlar geçmiş sonuçlardır; eski “sonraki iş” cümleleri görev kuyruğu değildir. Uzak main ilerlemişse bu özeti güncel kod/devir kayıtlarıyla uzlaştır; tamamlanan dilimi yeniden başlatma.
+**Önce bu bölümü oku.** Aşağıdaki eski sonraki-adım notları güncel kuyruk değildir. Kullanıcı 3/4/5 kapsamındaki veri, zengin bilgi panelleri ve ikinci arşiv perspektifini önceliklendirdi; performans ve fiziksel cihaz kabulü ertelendi.
 
-| Alan | Güncel durum / yeniden yapılmayacak iş |
+| Alan | Güncel durum |
 |---|---|
-| Arayüz | Uzun (>8) dönem listesi açılır bölüm ve önceki/sonraki kontrollerle sadeleştirildi. Aynı devletin başka kaydına geçince panel başa ve odak başlığa döner. Önceki mobil alt panel/büyük metin işleri korunur. |
-| Veri ve DB | 28 siyasi yapı / 389 alan; bu dilimde Avrupa/Amerika için 164 yeni kaynak kaydı. Önceki 225 metadata/geometri korunur. Üç yerleşim / bir arşiv ve beş unreviewed Gate A adayı değişmedi. |
-| Bu dilimin testleri | Demo build/TypeScript ve 27/27 Chromium geçti. Yerel 1440×1000 yazılım GPU ölçümü: hazır bayrağı gözlemi 1267 ms; GeoJSON 2.884.759 bayt; çevrimdışı gzip-9 181.771 bayt. Gerçek ağ/telefon veya tam görsel çizim metriği değildir. Node build/gerçek cihaz/Safari/Firefox yapılmadı. |
-| Son kod/yayın | Main 4441e4481badcbc60b2db0fd4c3ebc4f212bd19f; demo kaynak b6825eb77aa4f8a3050ebce5517d1658301a091d; V10 succeeded, 2026-09-18T11:22:29.543915+00:00. Özel erişim korundu; canlı Site üzerinde ek tarayıcı testi yapılmadı. |
-| İlk sonraki adım | P04-006: 389 kayıtlı sürümde kontrollü mobil viewport/CPU-ağ koşullarında tekrarlı ölçüm ve açık bütçe kaydı hazırla; bunun gerçek cihaz olmadığını belirt. P04-005 fiziksel cihaz/Safari/Firefox kabulü açık. Uzun liste/odak ve V10 yayını tamam, yeniden yapma. |
+| Arayüz/içerik | 10 siyasi yapı için kaynaklı kültür/tarih kartı yayımlandı: Osmanlı, Babür, Ming, Qing, Venedik, İnka, Aztek, Yeni Fransa, Etiyopya, Safevî. Yerler, kısa olay notları ve açılır kaynak/lisans bilgisi bulunur. |
+| Doğruluk | Her kart unreviewed ve general-context: görünür bağımsız inceleme uyarısı ile seçili yıla özgü olmadığı notu vardır. Dokuz UNESCO açıklaması Türkçe kısaltılıp uyarlandı, CC BY-SA 3.0 IGO atıfları korundu. Bu katman bağımsız tarihçi onayı veya editoryal yayın kapısının geçildiği anlamına gelmez. |
+| Veri | 28 siyasi yapı / 389 sınır kaydı, üç yerleşim, bir arşiv haritası korunur. Bu dilimde 10 anlatı eklendi; yeni geometri veya görsel eklenmedi. |
+| Kontroller | Anlatı validator'ı, sınır validator'ı, statik build/TypeScript ve hedefli 360×800 Chromium testi 1/1 geçti. Tam test zinciri, Node build ve fiziksel cihaz/Safari/Firefox bu dilimde çalıştırılmadı. |
+| Kod/yayın | Main kod 6c3b172d7a3943f46906ad82dc0a04630361f014; demo kaynak 46601f53b490c9ee3e205ed4d8fafdd11b565775. V11 succeeded: 2026-09-18T12:03:00.891466+00:00. Özel erişim korundu. Canlı Site üzerinde ek tarayıcı testi yapılmadı. |
+| İlk sonraki iş | Lisansı ve kaynağı doğrulanmış ikinci arşiv haritasını ekle; Bilinen dünya modunda eser seçicisi sun. Ardından 1400–1750 İngiltere/İspanya/koloni kayıtlarını kaynak kimliği ve dönemleriyle genişlet. |
 
+Detay: docs/team/handoffs/p04-provisional-stories-20260918.md. Kaynaklı fakat bağımsız incelemesi bitmemiş içerik kullanıcı talebiyle görünür notla gösterilebilir; geometri uydurulmaz, belirsiz haklar atlanmaz. Hedefli kontroller yeterliyse tam paketi her dilimde tekrarlama; atlananları geçti diye yazma.
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
 
