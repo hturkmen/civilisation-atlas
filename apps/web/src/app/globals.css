@@ -374,3 +374,18 @@ button,a{touch-action:manipulation}
 .polity-periods button:disabled{opacity:.5;cursor:not-allowed}
 .all-periods summary{cursor:pointer;min-height:44px;padding:12px 0;font-size:.875rem;line-height:1.5;overflow-wrap:anywhere}
 .all-periods summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+.polity-story{margin:24px 0;padding:20px 18px;background:#f0f2e7;border:1px solid #d9dfcc;border-radius:14px;overflow-wrap:anywhere}
+.polity-story h2{font:1.5rem/1.25 var(--serif);margin:14px 0 10px}
+.polity-story p{font-size:.9375rem;line-height:1.7;margin:10px 0}
+.polity-story .story-status{display:inline-block;margin:0;padding:6px 9px;border-radius:6px;background:#f8e6bd;color:#694d20;font-size:.75rem;line-height:1.5}
+.polity-story .story-scope{font-size:.75rem;color:var(--muted)}
+.story-places{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:14px 0}
+.story-places li{background:#fffdf7;border:1px solid #d7ddcf;border-radius:16px;padding:5px 10px;font-size:.8125rem}
+.story-highlights{list-style:none;padding:0 0 0 14px;border-left:2px solid #9bad88;margin:20px 0}
+.story-highlights li{margin:0 0 16px}
+.story-highlights strong{font-size:.875rem;color:#3d5d43}
+.polity-story details{border-top:1px solid #d1dac5;padding-top:6px;font-size:.8125rem;line-height:1.6}
+.polity-story summary{cursor:pointer;min-height:44px;padding:10px 0}
+.polity-story details p{font-size:.75rem}
+.polity-story a{text-decoration:underline;text-underline-offset:3px}

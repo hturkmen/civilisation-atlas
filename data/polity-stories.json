@@ -1,0 +1,298 @@
+[
+  {
+    "polityId": "ottoman-empire",
+    "title": "İstanbul: saraylar ve külliyeler",
+    "summary": "Boğaz kıyısındaki İstanbul, Osmanlı yönetimi ve mimarisinin önemli merkezlerinden biriydi. Topkapı Sarayı ve Süleymaniye Külliyesi; saray, eğitim, ibadet ve kamusal hizmetlerin kentte nasıl bir araya geldiğini gösterir.",
+    "places": [
+      "İstanbul",
+      "Topkapı",
+      "Süleymaniye"
+    ],
+    "highlights": [
+      {
+        "label": "15. yüzyıl",
+        "text": "Topkapı Sarayı, sonraki yüzyıllarda genişleyen bir saray kompleksi olarak gelişti."
+      },
+      {
+        "label": "1550–1557",
+        "text": "Mimar Sinan’ın Süleymaniye Külliyesi inşa edildi."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Historic Areas of Istanbul",
+      "url": "https://whc.unesco.org/en/list/356/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Brief synthesis; Criterion (i), (iv)",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "mughal-empire",
+    "title": "Agra: Babür sanatının izleri",
+    "summary": "Agra’daki Tac Mahal, Şah Cihan’ın Mümtaz Mahal anısına yaptırdığı anıt mezardır. Bahçesi, mermer işçiliği ve farklı bölgelerden gelen zanaatkârların emeği, Babür saray kültürünü tanımak için bir başlangıç sunar.",
+    "places": [
+      "Agra",
+      "Tac Mahal",
+      "Yamuna"
+    ],
+    "highlights": [
+      {
+        "label": "1632–1648",
+        "text": "UNESCO’nun Brief synthesis bölümüne göre ana anıtın yapımı bu aralıktadır."
+      },
+      {
+        "label": "1653",
+        "text": "Cami, konuk evi ve diğer ek yapıların tamamlanması bu tarihe uzanır."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Taj Mahal",
+      "url": "https://whc.unesco.org/en/list/252/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Brief synthesis; açılış özeti 1631 verir, burada ayrıntılı bölümün 1632 tarihi kullanılır",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "ming-dynasty",
+    "title": "Pekin: Yasak Şehir",
+    "summary": "Ming imparatoru Zhu Di döneminde inşa edilen Yasak Şehir, saray yaşamını ve devlet düzenini aynı yerleşimde buluşturur. Merkezî ekseni, simetrisi ve iç-dış avlu ayrımı, imparatorluk mimarisindeki düzen anlayışını yansıtır.",
+    "places": [
+      "Pekin",
+      "Yasak Şehir"
+    ],
+    "highlights": [
+      {
+        "label": "1406–1420",
+        "text": "Pekin’deki saray kompleksi Ming döneminde inşa edildi."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang",
+      "url": "https://whc.unesco.org/en/list/439/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Brief synthesis",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "qing-dynasty",
+    "title": "İki saray, iki merkez",
+    "summary": "Qing tarihinin saray mirası Pekin ile Shenyang arasında izlenebilir. Shenyang’daki kompleks hanedanın Mançu kökenlerine, Pekin’deki Yasak Şehir ise daha sonraki imparatorluk yönetimine ışık tutar.",
+    "places": [
+      "Shenyang",
+      "Pekin"
+    ],
+    "highlights": [
+      {
+        "label": "1625–1637",
+        "text": "Shenyang sarayının yapım dönemi."
+      },
+      {
+        "label": "1644",
+        "text": "Qing yönetimi Pekin’e yerleşti; Shenyang sarayı ikincil merkez olarak kullanıldı."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang",
+      "url": "https://whc.unesco.org/en/list/439/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Brief synthesis",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "republic-of-venice",
+    "title": "Lagün üzerinde bir deniz gücü",
+    "summary": "Venedik, küçük adalar üzerinde gelişen bir kent ve deniz gücüydü. Ticaret yolları için rekabet, lagünü savunma ihtiyacı ve sanat üretimi kentin tarihini birlikte şekillendirdi.",
+    "places": [
+      "Venedik",
+      "Venedik Lagünü"
+    ],
+    "highlights": [
+      {
+        "label": "5. yüzyıl",
+        "text": "Lagündeki yerleşmelerin gelişimi."
+      },
+      {
+        "label": "10. yüzyıl",
+        "text": "Venedik önemli bir deniz gücü hâline geldi."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Venice and its Lagoon",
+      "url": "https://whc.unesco.org/en/list/394/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Brief synthesis",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "inca-empire",
+    "title": "Cusco: Andlar’da bir yönetim merkezi",
+    "summary": "Cusco, İnka yönetiminde dinî ve idarî işlevleri ayrılmış bir başkent olarak düzenlendi. Taş işçiliği, tapınakları ve çevresindeki üretim alanları, kentin yalnız bir saray merkezi olmadığını gösterir.",
+    "places": [
+      "Cusco",
+      "Qoricancha",
+      "Andlar"
+    ],
+    "highlights": [
+      {
+        "label": "15. yüzyıl",
+        "text": "Pachacutec döneminde kent yeniden düzenlendi."
+      },
+      {
+        "label": "16. yüzyıl",
+        "text": "İspanyol fethinden sonra İnka yapılarının üzerinde yeni kilise ve saraylar yükseldi."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "City of Cuzco",
+      "url": "https://whc.unesco.org/en/list/273/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Description; Brief synthesis",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "aztec-triple-alliance",
+    "title": "Tenochtitlan: gölün içindeki kent",
+    "summary": "Aztek başkenti Tenochtitlan, Texcoco Gölü içindeki bir ada üzerinde gelişti. Xochimilco’nun kanalları ve chinampa tarımı, bölgedeki toplumların suyla çevrili ortamı üretim ve yerleşim için nasıl kullandığını gösterir.",
+    "places": [
+      "Tenochtitlan",
+      "Texcoco",
+      "Xochimilco"
+    ],
+    "highlights": [
+      {
+        "label": "İspanyol fethi sonrası",
+        "text": "Mexico City, Tenochtitlan’ın kalıntıları üzerinde kuruldu; bu kart iki kenti aynı dönem olarak göstermez."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Historic Centre of Mexico City and Xochimilco",
+      "url": "https://whc.unesco.org/en/list/412/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Description; Brief synthesis",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "new-france",
+    "title": "Québec: tahkim edilmiş koloni kenti",
+    "summary": "Québec, Fransız koloni tarihinin kent ölçeğindeki izlerini taşır. Yukarı kent dinî ve idarî işlevleriyle, aşağı kent ise eski mahalleleriyle birlikte gelişmiş bir yerleşim oluşturur.",
+    "places": [
+      "Québec",
+      "Yukarı Kent",
+      "Aşağı Kent"
+    ],
+    "highlights": [
+      {
+        "label": "17. yüzyıl başı",
+        "text": "Champlain tarafından kurulan Québec, tahkim edilmiş bir koloni kenti olarak gelişti."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Historic District of Old Québec",
+      "url": "https://whc.unesco.org/en/list/300/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Description",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "ethiopian-empire",
+    "title": "Gondar: saray ve ibadet yapıları",
+    "summary": "Gondar’daki Fasil Ghebbi, Fasilides ve ardıllarının saray çevresini tanıtır. Surlar içindeki saraylar, kiliseler ve manastırlar farklı mimari etkilerin buluştuğu bir yerleşim oluşturur.",
+    "places": [
+      "Gondar",
+      "Fasil Ghebbi"
+    ],
+    "highlights": [
+      {
+        "label": "Saray mirası",
+        "text": "Kompleksin mimarisinde Hint ve Arap etkileri ile daha sonraki Barok etkiler birlikte görülür."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Fasil Ghebbi, Gondar Region",
+      "url": "https://whc.unesco.org/en/list/19/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Description; açık tarih ataması yapılmadı",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  },
+  {
+    "polityId": "safavid-dynasty",
+    "title": "İsfahan: meydan çevresinde yaşam",
+    "summary": "İsfahan’daki meydan, anıtsal yapıları ve iki katlı revaklarıyla Safevî döneminin kent yaşamına açılan bir penceredir. Camiler ve çarşı girişi, kamusal mekânın farklı işlevlerini yan yana getirir.",
+    "places": [
+      "İsfahan",
+      "Meydan-ı İmam",
+      "Kayseriye"
+    ],
+    "highlights": [
+      {
+        "label": "17. yüzyıl başı",
+        "text": "Şah Abbas döneminde meydan ve çevresindeki anıtsal düzenleme gelişti."
+      }
+    ],
+    "reviewStatus": "unreviewed",
+    "scope": "general-context",
+    "source": {
+      "title": "Meidan Emam, Esfahan",
+      "url": "https://whc.unesco.org/en/list/115/",
+      "publisher": "UNESCO World Heritage Centre",
+      "locator": "Description",
+      "accessedOn": "2026-09-18",
+      "license": "CC BY-SA 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+      "adaptation": "Türkçe kısaltma ve uyarlama: Civilisation Atlas. UNESCO onayı anlamına gelmez."
+    }
+  }
+]

@@ -4,6 +4,7 @@ import type {RefObject} from 'react';
 import type {BoundaryCollection, VisibleBoundary} from '@atlas/domain/boundaries';
 import {formatYear} from '@atlas/domain/chronology';
 import {Icon} from './icon';
+import {PolityStory} from './polity-story';
 
 export function BoundarySource({collection}: {collection: BoundaryCollection}) {
   const source = collection.source;
@@ -28,6 +29,7 @@ export function PolityDetail({boundary, collection, year, headingRef, onBack, on
     <p className="place-summary">Haritadaki renkli alan, Cliopatria’nın bu dönem için yayımladığı {polity.name} kaydını gösterir.</p>
     <section className="boundary-period"><span className="eyebrow">SINIR KAYDININ DÖNEMİ</span><strong>{formatYear(record.period.start)} — {formatYear(record.period.endExclusive - 1)}</strong><p>Bu aralık kaydın kapsamıdır; kuruluş veya sona eriş tarihi değildir.</p></section>
     <div className="boundary-uncertainty"><Icon name="info" size={17}/><p>Sınırlar dönemsel bir rekonstrüksiyondur. Aynı alanın her yıl değişmeden kaldığı veya sınırın kesin olarak bilindiği anlamına gelmez.</p></div>
+    <PolityStory polityId={polity.id}/>
     {records.length > 1 && <section className="polity-periods"><p className="eyebrow">BU ALANIN DİĞER DÖNEMLERİ</p>
       {records.length > 8 ? <>
         <nav className="period-neighbors" aria-label="Komşu kaynak dönemleri">
