@@ -367,3 +367,10 @@ button,a{touch-action:manipulation}
  .period-search-list h3{font-size:1.25rem;overflow-wrap:anywhere}
  .period-search-list strong{font-size:.875rem;overflow-wrap:anywhere}
 }
+
+/* Keep source details reachable when a polity has dozens of periods. */
+.polity-periods .period-options,.period-neighbors{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.polity-periods button{min-height:44px;font-size:.875rem;overflow-wrap:anywhere}
+.polity-periods button:disabled{opacity:.5;cursor:not-allowed}
+.all-periods summary{cursor:pointer;min-height:44px;padding:12px 0;font-size:.875rem;line-height:1.5;overflow-wrap:anywhere}
+.all-periods summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}

@@ -46,12 +46,15 @@ export function Explorer({catalog, initialView, maxYear}: {catalog: Catalog; ini
   useEffect(() => {
     if (!selected && !selectedBoundary) return;
     setExpanded(true);
-    const frame = requestAnimationFrame(() => detailHeading.current?.focus({preventScroll: true}));
+    const frame = requestAnimationFrame(() => {
+      document.getElementById('explore-content')?.scrollTo({top:0});
+      detailHeading.current?.focus({preventScroll: true});
+    });
     if (window.matchMedia('(max-width: 760px)').matches) {
       document.getElementById('map-stage')?.scrollIntoView({block: 'start', behavior: 'instant'});
     }
     return () => cancelAnimationFrame(frame);
-  }, [selected?.id, selectedBoundary?.polity.id]);
+  }, [selected?.id, selectedBoundary?.polity.id, selectedBoundary?.record.id]);
   useEffect(() => {
     if (!shared) return;
     const timer = window.setTimeout(() => setShared(''), 4000);

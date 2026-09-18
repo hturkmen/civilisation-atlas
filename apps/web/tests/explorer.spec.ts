@@ -190,6 +190,7 @@ test('mobile polity selection, period switching and sources remain usable', asyn
   await page.locator('.polity-list').getByRole('button', {name: /Osmanlı İmparatorluğu/}).click();
   await expect(page.getByRole('heading', {name: 'Osmanlı İmparatorluğu', exact: true})).toBeInViewport();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.getByText('Tüm dönemleri göster (64)', {exact: true}).click();
   await page.locator('.polity-periods').getByRole('button', {name: 'MS 1800', exact: true}).click();
   await expect(page.locator('.boundary-period')).toContainText('MS 1800 — MS 1802');
   await page.getByRole('link', {name: 'CC BY 4.0 · uyarlanmış veri'}).scrollIntoViewIfNeeded();
