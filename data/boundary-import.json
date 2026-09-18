@@ -19,22 +19,422 @@
   },
   "simplifyToleranceDegrees": 0.025,
   "polities": [
-    {"id": "sumer", "name": "Sümer şehir devletleri", "sourceName": "Sumerian City-States", "color": "#987445", "years": [-3000, -2500]},
-    {"id": "old-kingdom-egypt", "name": "Eski Krallık Mısırı", "sourceName": "Old Kingdom of Egypt", "color": "#b28e40", "years": [-2500]},
-    {"id": "achaemenid", "name": "Ahameniş İmparatorluğu", "sourceName": "Achaemenid Empire", "color": "#716594", "years": [-500]},
-    {"id": "roman-empire", "name": "Roma İmparatorluğu", "sourceName": "Roman Empire", "color": "#a65a48", "years": [117, 200]},
-    {"id": "han-dynasty", "name": "Han Hanedanı", "sourceName": "Han Dynasty", "color": "#53816e", "years": [117, 200]},
-    {"id": "ottoman-empire", "name": "Osmanlı İmparatorluğu", "sourceName": "Ottoman Empire", "color": "#568487", "years": [1453, 1500, 1600, 1800, 1914]},
-    {"id": "maurya-empire", "name": "Maurya İmparatorluğu", "sourceName": "Maurya Empire", "color": "#97833e", "years": [-250, -200]},
-    {"id": "gupta-empire", "name": "Gupta İmparatorluğu", "sourceName": "Gupta Empire", "color": "#9f7550", "years": [400, 500]},
-    {"id": "abbasid-caliphate", "name": "Abbâsî Halifeliği", "sourceName": "Abbasid Caliphate", "color": "#627b55", "years": [800, 900]},
-    {"id": "byzantine-empire", "name": "Bizans İmparatorluğu", "sourceName": "Byzantine Empire", "color": "#8b6390", "years": [1000, 1200]},
-    {"id": "mongol-empire", "name": "Moğol İmparatorluğu", "sourceName": "Mongol Empire", "color": "#998248", "years": [1250]},
-    {"id": "mali-empire", "name": "Mali İmparatorluğu", "sourceName": "Mali Empire", "color": "#ad7951", "years": [1325, 1500]},
-    {"id": "ming-dynasty", "name": "Ming Hanedanı", "sourceName": "Ming Dynasty", "color": "#687eaa", "years": [1453, 1500, 1600]},
-    {"id": "aztec-triple-alliance", "name": "Aztek Üçlü İttifakı", "sourceName": "Aztec Triple Alliance", "color": "#ad6355", "years": [1453, 1500]},
-    {"id": "inca-empire", "name": "İnka İmparatorluğu", "sourceName": "Inca Empire", "color": "#7a8d59", "years": [1453, 1500]},
-    {"id": "khmer-empire", "name": "Kmer İmparatorluğu", "sourceName": "Khmer Empire", "color": "#a47896", "years": [1000, 1200, 1453]},
-    {"id": "ghana-empire", "name": "Gana İmparatorluğu", "sourceName": "Ghana Empire", "color": "#9b824f", "years": [1000]}
+    {
+      "id": "sumer",
+      "name": "Sümer şehir devletleri",
+      "sourceName": "Sumerian City-States",
+      "color": "#987445",
+      "years": [
+        -3000,
+        -2500
+      ]
+    },
+    {
+      "id": "old-kingdom-egypt",
+      "name": "Eski Krallık Mısırı",
+      "sourceName": "Old Kingdom of Egypt",
+      "color": "#b28e40",
+      "years": [
+        -2500
+      ]
+    },
+    {
+      "id": "achaemenid",
+      "name": "Ahameniş İmparatorluğu",
+      "sourceName": "Achaemenid Empire",
+      "color": "#716594",
+      "years": [
+        -500
+      ]
+    },
+    {
+      "id": "roman-empire",
+      "name": "Roma İmparatorluğu",
+      "sourceName": "Roman Empire",
+      "color": "#a65a48",
+      "years": [
+        117,
+        200
+      ]
+    },
+    {
+      "id": "han-dynasty",
+      "name": "Han Hanedanı",
+      "sourceName": "Han Dynasty",
+      "color": "#53816e",
+      "years": [
+        117,
+        200
+      ]
+    },
+    {
+      "id": "ottoman-empire",
+      "name": "Osmanlı İmparatorluğu",
+      "sourceName": "Ottoman Empire",
+      "color": "#568487",
+      "years": [
+        1400,
+        1402,
+        1407,
+        1415,
+        1422,
+        1429,
+        1431,
+        1440,
+        1450,
+        1453,
+        1459,
+        1463,
+        1468,
+        1475,
+        1482,
+        1487,
+        1500,
+        1502,
+        1507,
+        1512,
+        1516,
+        1519,
+        1521,
+        1526,
+        1529,
+        1534,
+        1540,
+        1547,
+        1552,
+        1556,
+        1564,
+        1572,
+        1579,
+        1588,
+        1595,
+        1600,
+        1602,
+        1609,
+        1612,
+        1626,
+        1636,
+        1640,
+        1645,
+        1648,
+        1662,
+        1670,
+        1673,
+        1677,
+        1683,
+        1687,
+        1691,
+        1696,
+        1700,
+        1706,
+        1713,
+        1718,
+        1727,
+        1734,
+        1738,
+        1741,
+        1744,
+        1748,
+        1800,
+        1914
+      ]
+    },
+    {
+      "id": "maurya-empire",
+      "name": "Maurya İmparatorluğu",
+      "sourceName": "Maurya Empire",
+      "color": "#97833e",
+      "years": [
+        -250,
+        -200
+      ]
+    },
+    {
+      "id": "gupta-empire",
+      "name": "Gupta İmparatorluğu",
+      "sourceName": "Gupta Empire",
+      "color": "#9f7550",
+      "years": [
+        400,
+        500
+      ]
+    },
+    {
+      "id": "abbasid-caliphate",
+      "name": "Abbâsî Halifeliği",
+      "sourceName": "Abbasid Caliphate",
+      "color": "#627b55",
+      "years": [
+        800,
+        900
+      ]
+    },
+    {
+      "id": "byzantine-empire",
+      "name": "Bizans İmparatorluğu",
+      "sourceName": "Byzantine Empire",
+      "color": "#8b6390",
+      "years": [
+        1000,
+        1200
+      ]
+    },
+    {
+      "id": "mongol-empire",
+      "name": "Moğol İmparatorluğu",
+      "sourceName": "Mongol Empire",
+      "color": "#998248",
+      "years": [
+        1250
+      ]
+    },
+    {
+      "id": "mali-empire",
+      "name": "Mali İmparatorluğu",
+      "sourceName": "Mali Empire",
+      "color": "#ad7951",
+      "years": [
+        1325,
+        1500
+      ]
+    },
+    {
+      "id": "ming-dynasty",
+      "name": "Ming Hanedanı",
+      "sourceName": "Ming Dynasty",
+      "color": "#687eaa",
+      "years": [
+        1400,
+        1402,
+        1407,
+        1415,
+        1422,
+        1429,
+        1440,
+        1453,
+        1500,
+        1516,
+        1547,
+        1552,
+        1564,
+        1579,
+        1582,
+        1588,
+        1595,
+        1600,
+        1619,
+        1622,
+        1626,
+        1629,
+        1632,
+        1636,
+        1640,
+        1642
+      ]
+    },
+    {
+      "id": "aztec-triple-alliance",
+      "name": "Aztek Üçlü İttifakı",
+      "sourceName": "Aztec Triple Alliance",
+      "color": "#ad6355",
+      "years": [
+        1453,
+        1500
+      ]
+    },
+    {
+      "id": "inca-empire",
+      "name": "İnka İmparatorluğu",
+      "sourceName": "Inca Empire",
+      "color": "#7a8d59",
+      "years": [
+        1453,
+        1500
+      ]
+    },
+    {
+      "id": "khmer-empire",
+      "name": "Kmer İmparatorluğu",
+      "sourceName": "Khmer Empire",
+      "color": "#a47896",
+      "years": [
+        1000,
+        1200,
+        1453
+      ]
+    },
+    {
+      "id": "ghana-empire",
+      "name": "Gana İmparatorluğu",
+      "sourceName": "Ghana Empire",
+      "color": "#9b824f",
+      "years": [
+        1000
+      ]
+    },
+    {
+      "id": "mughal-empire",
+      "name": "Babür İmparatorluğu",
+      "sourceName": "Mughal Empire",
+      "color": "#a97852",
+      "years": [
+        1529,
+        1534,
+        1540,
+        1547,
+        1556,
+        1564,
+        1572,
+        1579,
+        1588,
+        1595,
+        1600,
+        1612,
+        1626,
+        1640,
+        1648,
+        1653,
+        1659,
+        1662,
+        1670,
+        1673,
+        1677,
+        1687,
+        1691,
+        1700,
+        1706,
+        1709,
+        1713,
+        1718,
+        1721,
+        1727,
+        1734,
+        1738,
+        1741,
+        1744,
+        1748
+      ]
+    },
+    {
+      "id": "qing-dynasty",
+      "name": "Qing Hanedanı",
+      "sourceName": "Qing Dynasty",
+      "color": "#526a9e",
+      "years": [
+        1645,
+        1648,
+        1653,
+        1659,
+        1670,
+        1673,
+        1677,
+        1683,
+        1687,
+        1691,
+        1696,
+        1700,
+        1702,
+        1706,
+        1718,
+        1721,
+        1727,
+        1734,
+        1738
+      ]
+    },
+    {
+      "id": "safavid-dynasty",
+      "name": "Safevî Hanedanı",
+      "sourceName": "Safavid Dynasty",
+      "color": "#956388",
+      "years": [
+        1502,
+        1507,
+        1512,
+        1516,
+        1519,
+        1521,
+        1526,
+        1529,
+        1534,
+        1540,
+        1547,
+        1552,
+        1556,
+        1579,
+        1588,
+        1595,
+        1600,
+        1609,
+        1612,
+        1626,
+        1636,
+        1640,
+        1648,
+        1706,
+        1709,
+        1713,
+        1718,
+        1721,
+        1727,
+        1734
+      ]
+    },
+    {
+      "id": "songhai-empire",
+      "name": "Songhay İmparatorluğu",
+      "sourceName": "Songhai Empire",
+      "color": "#b08546",
+      "years": [
+        1463,
+        1468,
+        1475,
+        1497,
+        1564,
+        1595,
+        1600,
+        1602
+      ]
+    },
+    {
+      "id": "kingdom-of-kongo",
+      "name": "Kongo Krallığı",
+      "sourceName": "Kingdom of Kongo",
+      "color": "#567858",
+      "years": [
+        1440,
+        1492,
+        1662
+      ]
+    },
+    {
+      "id": "tokugawa-shogunate",
+      "name": "Tokugawa Şogunluğu",
+      "sourceName": "Tokugawa Shogunate",
+      "color": "#a66065",
+      "years": [
+        1600,
+        1602,
+        1609
+      ]
+    },
+    {
+      "id": "ethiopian-empire",
+      "name": "Etiyopya İmparatorluğu",
+      "sourceName": "Ethiopian Empire",
+      "color": "#7f763f",
+      "years": [
+        1400,
+        1415,
+        1502,
+        1529,
+        1534,
+        1540,
+        1547,
+        1564,
+        1579,
+        1636
+      ]
+    }
   ]
 }

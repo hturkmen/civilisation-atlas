@@ -63,7 +63,7 @@ test('archive opens at its own date, zooms, shares its state and never fills adj
   page.on('request', request => {if (/^https?:/.test(request.url()) && !request.url().startsWith('http://127.0.0.1:3100')) external.push(request.url());});
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await page.getByRole('navigation', {name: 'Koleksiyonda keşfedilecek tarihler'}).getByRole('button', {name: /MS 1507/}).click();
+  await page.getByRole('navigation', {name: 'Koleksiyonda keşfedilecek tarihler'}).getByRole('button', {name: 'MS 1507 Arşiv haritası', exact: true}).click();
   await expect(page.locator('.archive-sheet')).toHaveAttribute('data-ready', 'true');
   await expect(page).toHaveURL(/year=1507&era=CE&mode=known/);
   await page.getByRole('button', {name: 'Tarihî haritayı yakınlaştır', exact: true}).click();
@@ -87,7 +87,7 @@ test('collection stops and contemporary places keep year and mode consistent', a
   await expect(page).toHaveURL(/year=2500&era=BCE&mode=history&place=mohenjo-daro/);
   await page.getByRole('button', {name: 'Sonraki koleksiyon durağı'}).click();
   await expect(page.locator('.polity-list')).toContainText('Ahameniş İmparatorluğu');
-  await page.getByRole('navigation', {name: 'Koleksiyonda keşfedilecek tarihler'}).getByRole('button', {name: /MS 1507/}).click();
+  await page.getByRole('navigation', {name: 'Koleksiyonda keşfedilecek tarihler'}).getByRole('button', {name: 'MS 1507 Arşiv haritası', exact: true}).click();
   await expect(page.getByTestId('historical-viewer')).toBeVisible();
   await page.getByRole('button', {name: 'Önceki koleksiyon durağı'}).click();
   await expect(page.getByTestId('atlas-map')).toBeVisible();
@@ -199,9 +199,22 @@ test('mobile polity selection, period switching and sources remain usable', asyn
   await expect(page).not.toHaveURL(/polity=/);
 });
 
-test('expanded 1500 snapshot exposes five sourced areas and Turkish search', async ({page}) => {
-  await page.goto('/?year=1500&era=CE');
+test('1700 and 1750 expose new sourced Asian and African periods', async ({page}) => {
+  await page.goto('/?year=1700&era=CE');
+  await expect(page.locator('.polity-list li')).toHaveCount(6);
+  await page.locator('.polity-list').getByRole('button', {name: /Qing Hanedanı/}).click();
+  await expect(page.getByRole('heading', {name: 'Qing Hanedanı',exact:true})).toBeVisible();
+  await expect(page.locator('.boundary-period')).toContainText('MS 1700 — MS 1701');
+  await expect(page.getByRole('link', {name: 'CC BY 4.0 · uyarlanmış veri'})).toBeVisible();
+  await page.goto('/?year=1750&era=CE');
   await expect(page.locator('.polity-list li')).toHaveCount(5);
+  await expect(page.locator('.polity-list')).toContainText('Babür İmparatorluğu');
+  await expect(page.locator('.polity-list')).toContainText('Etiyopya İmparatorluğu');
+});
+
+test('expanded 1500 snapshot exposes eight sourced areas and Turkish search', async ({page}) => {
+  await page.goto('/?year=1500&era=CE');
+  await expect(page.locator('.polity-list li')).toHaveCount(8);
   await expect(page.getByTestId('atlas-map')).toHaveAttribute('data-ready', 'true');
   await page.getByRole('textbox', {name: 'Medeniyet veya yerleşim ara'}).fill('İNKA');
   await expect(page.locator('.polity-list li')).toHaveCount(1);
@@ -246,15 +259,15 @@ test('collection playback visits a short source period and stops on pause or a m
 
 test('360px empty-year shortcuts remain in view and open a sourced period', async ({page}) => {
   await page.setViewportSize({width: 360, height: 800});
-  await page.goto('/?year=1700&era=CE');
+  await page.goto('/?year=207&era=CE');
   const nearby = page.getByRole('navigation', {name: 'En yakın kaynaklı yıllar'});
   await expect(nearby).toBeInViewport();
-  await expect(nearby.getByRole('button', {name: 'Önceki kaynaklı yıl: MS 1618'})).toBeInViewport();
-  await expect(nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 1800'})).toBeInViewport();
+  await expect(nearby.getByRole('button', {name: 'Önceki kaynaklı yıl: MS 206'})).toBeInViewport();
+  await expect(nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 387'})).toBeInViewport();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  await nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 1800'}).click();
-  await page.locator('.polity-list').getByRole('button', {name: /Osmanlı İmparatorluğu/}).click();
-  await expect(page.getByRole('heading', {name: 'Osmanlı İmparatorluğu', exact: true})).toBeInViewport();
+  await nearby.getByRole('button', {name: 'Sonraki kaynaklı yıl: MS 387'}).click();
+  await page.locator('.polity-list').getByRole('button', {name: /Gupta İmparatorluğu/}).click();
+  await expect(page.getByRole('heading', {name: 'Gupta İmparatorluğu', exact: true})).toBeInViewport();
 });
 
 

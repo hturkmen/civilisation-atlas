@@ -1228,8 +1228,9 @@
   ],
   "data_priority_2026_09_17": {
     "period": "1400–1750",
-    "status": "next",
-    "instruction": "Mobil kontrol dilimi tamamlandı. Önce kaynaklı veri kapsamını genişlet; sonra P04-005 kalan kabul ölçütlerine dön.",
-    "guardrails": "Kaynak/lisans/hash doğrula; mevcut kayıtları tekrarlama; geometri üretimini pinli importer ile yap, sınır uydurma."
+    "status": "partial",
+    "completed": "190 yeni kaynak kaydı: 24 siyasi yapı / 225 kayıt. 54 domain ve 24 Chromium testi geçti. Ayrıntı docs/15-early-modern-collection.md.",
+    "next": "Demo yayınını doğrula; sonra Avrupa/Amerika kapsamasını değerlendir, ardından P04-005 kalanlarına dön.",
+    "limits": "Bağımsız tarihçi onayı yok; editoryal adaylar unreviewed kalır. Bütün dünya kapsamı değildir."
   }
 }

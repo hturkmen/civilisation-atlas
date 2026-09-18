@@ -18,7 +18,7 @@
     "uncertainty": "Sınırlar, Cliopatria'nın tarihsel alan yorumudur. Kesinlik ve ayrıntı döneme göre değişir. Kaydın tarih aralığı her yıl için ayrı gözlem veya devletin kuruluş ve bitiş tarihi değildir."
   },
   "geometryPath": "/data/polity-boundaries.geojson",
-  "geometrySha256": "fd5a005bde27cff18e7a1a497dcccecc420eedab5c850b6f675fcb5e90a7bb8d",
+  "geometrySha256": "0f864fa889f2bb40777e68bd08d47093a43a09cd44efa9ecb6f28e1976c71801",
   "polities": [
     {
       "id": "sumer",
@@ -121,6 +121,48 @@
       "name": "Gana İmparatorluğu",
       "sourceName": "Ghana Empire",
       "color": "#9b824f"
+    },
+    {
+      "id": "mughal-empire",
+      "name": "Babür İmparatorluğu",
+      "sourceName": "Mughal Empire",
+      "color": "#a97852"
+    },
+    {
+      "id": "qing-dynasty",
+      "name": "Qing Hanedanı",
+      "sourceName": "Qing Dynasty",
+      "color": "#526a9e"
+    },
+    {
+      "id": "safavid-dynasty",
+      "name": "Safevî Hanedanı",
+      "sourceName": "Safavid Dynasty",
+      "color": "#956388"
+    },
+    {
+      "id": "songhai-empire",
+      "name": "Songhay İmparatorluğu",
+      "sourceName": "Songhai Empire",
+      "color": "#b08546"
+    },
+    {
+      "id": "kingdom-of-kongo",
+      "name": "Kongo Krallığı",
+      "sourceName": "Kingdom of Kongo",
+      "color": "#567858"
+    },
+    {
+      "id": "tokugawa-shogunate",
+      "name": "Tokugawa Şogunluğu",
+      "sourceName": "Tokugawa Shogunate",
+      "color": "#a66065"
+    },
+    {
+      "id": "ethiopian-empire",
+      "name": "Etiyopya İmparatorluğu",
+      "sourceName": "Ethiopian Empire",
+      "color": "#7f763f"
     }
   ],
   "records": [
@@ -650,6 +692,31 @@
       ]
     },
     {
+      "id": "cliopatria-6265",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 6265,
+      "sourceFromYear": 1333,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1333,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 391810.49341439304,
+      "wikidata": "Q207521",
+      "seshatId": "et_ethiopian_k",
+      "labelPoint": [
+        38.581872,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.293785,
+        16.936163
+      ]
+    },
+    {
       "id": "cliopatria-6639",
       "polityId": "khmer-empire",
       "sourceIndex": 6639,
@@ -672,6 +739,431 @@
         8.514477,
         107.666916,
         14.557508
+      ]
+    },
+    {
+      "id": "cliopatria-6685",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 6685,
+      "sourceFromYear": 1385,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1385,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 4940729.642694435,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.812585,
+        33.296623
+      ],
+      "bbox": [
+        90.650169,
+        18.221918,
+        127.767639,
+        46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-6752",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 6752,
+      "sourceFromYear": 1395,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1395,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 403705.80835282826,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emirate",
+      "labelPoint": [
+        24.314111,
+        41.846518
+      ],
+      "bbox": [
+        20.467424,
+        37.835243,
+        41.05941,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-6830",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 6830,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1406,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1407
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 387699.4194433678,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emirate",
+      "labelPoint": [
+        24.53459,
+        42.171244
+      ],
+      "bbox": [
+        20.467424,
+        36.674877,
+        39.519646,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-6875",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 6875,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1406,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1407
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 5445666.647108678,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.291775,
+        33.36092
+      ],
+      "bbox": [
+        90.650169,
+        18.221918,
+        127.767639,
+        46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-6884",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 6884,
+      "sourceFromYear": 1407,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1407,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1407,
+      "sourceAreaKm2": 5579218.833086586,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.43826,
+        31.239783
+      ],
+      "bbox": [
+        90.650169,
+        16.036131,
+        127.767639,
+        46.348915
+      ]
+    },
+    {
+      "id": "cliopatria-6914",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 6914,
+      "sourceFromYear": 1407,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1407,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1407,
+      "sourceAreaKm2": 422154.3778862999,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.53459,
+        42.171244
+      ],
+      "bbox": [
+        20.467424,
+        37.835243,
+        41.05941,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-6944",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 6944,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 6266989.99756967,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        108.793197,
+        34.582788
+      ],
+      "bbox": [
+        90.359978,
+        16.036131,
+        141.556625,
+        53.192196
+      ]
+    },
+    {
+      "id": "cliopatria-6963",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 6963,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 439325.8610511699,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.31011,
+        41.846518
+      ],
+      "bbox": [
+        20.467424,
+        36.674877,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-6975",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 6975,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 392042.4264112826,
+      "wikidata": "Q207521",
+      "seshatId": "et_ethiopian_k",
+      "labelPoint": [
+        38.577098,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.293785,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-6998",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 6998,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1428,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1429
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 456556.0236953215,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.532065,
+        42.138757
+      ],
+      "bbox": [
+        19.248652,
+        36.674877,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7040",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 7040,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1428,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1429
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 6272928.759207577,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        108.793197,
+        34.582788
+      ],
+      "bbox": [
+        90.359978,
+        16.036131,
+        141.556625,
+        53.192196
+      ]
+    },
+    {
+      "id": "cliopatria-7062",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7062,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1430,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1431
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 549603.6898167394,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.322543,
+        41.878977
+      ],
+      "bbox": [
+        19.248652,
+        36.223988,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7075",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 7075,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 6139382.083063001,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        107.204155,
+        36.739308
+      ],
+      "bbox": [
+        90.359978,
+        18.221918,
+        141.539124,
+        53.192196
+      ]
+    },
+    {
+      "id": "cliopatria-7114",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7114,
+      "sourceFromYear": 1431,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1431,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1431,
+      "sourceAreaKm2": 562420.3252902437,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.322543,
+        41.878977
+      ],
+      "bbox": [
+        19.248652,
+        36.223988,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7147",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7147,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 562490.3264483951,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.322543,
+        41.878977
+      ],
+      "bbox": [
+        19.248652,
+        36.223988,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7169",
+      "polityId": "kingdom-of-kongo",
+      "sourceIndex": 7169,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 131582.51450888987,
+      "wikidata": "Q796583",
+      "seshatId": "",
+      "labelPoint": [
+        14.128884,
+        -6.239529
+      ],
+      "bbox": [
+        12.222416,
+        -8.457451,
+        16.59304,
+        -4.278756
+      ]
+    },
+    {
+      "id": "cliopatria-7190",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 7190,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 5503438.180304676,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.291775,
+        33.36092
+      ],
+      "bbox": [
+        90.650169,
+        18.221918,
+        129.887589,
+        46.348915
       ]
     },
     {
@@ -725,6 +1217,31 @@
       ]
     },
     {
+      "id": "cliopatria-7253",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7253,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1452,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1453
+      },
+      "sampleYear": 1450,
+      "sourceAreaKm2": 567243.8492976924,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.322543,
+        41.878977
+      ],
+      "bbox": [
+        19.248652,
+        36.223988,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
       "id": "cliopatria-7269",
       "polityId": "ottoman-empire",
       "sourceIndex": 7269,
@@ -775,6 +1292,106 @@
       ]
     },
     {
+      "id": "cliopatria-7321",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7321,
+      "sourceFromYear": 1459,
+      "sourceToYear": 1462,
+      "period": {
+        "start": 1459,
+        "endExclusive": 1463
+      },
+      "sampleYear": 1459,
+      "sourceAreaKm2": 652444.5863135513,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        21.787024,
+        40.841166
+      ],
+      "bbox": [
+        18.956757,
+        36.223988,
+        40.185711,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7362",
+      "polityId": "songhai-empire",
+      "sourceIndex": 7362,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1467,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1468
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 116860.1825391503,
+      "wikidata": "Q202687",
+      "seshatId": "ml_songhai_1",
+      "labelPoint": [
+        -0.544404,
+        16.486147
+      ],
+      "bbox": [
+        -2.481517,
+        14.428933,
+        1.722572,
+        18.029055
+      ]
+    },
+    {
+      "id": "cliopatria-7389",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7389,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1467,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1468
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 798747.2614422363,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        34.980249,
+        40.841166
+      ],
+      "bbox": [
+        16.261932,
+        36.223988,
+        41.14975,
+        45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7398",
+      "polityId": "songhai-empire",
+      "sourceIndex": 7398,
+      "sourceFromYear": 1468,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1468,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1468,
+      "sourceAreaKm2": 251494.6773739184,
+      "wikidata": "Q202687",
+      "seshatId": "ml_songhai_1",
+      "labelPoint": [
+        -2.771444,
+        16.164707
+      ],
+      "bbox": [
+        -7.670429,
+        14.428933,
+        1.722572,
+        18.029055
+      ]
+    },
+    {
       "id": "cliopatria-7416",
       "polityId": "ming-dynasty",
       "sourceIndex": 7416,
@@ -800,6 +1417,31 @@
       ]
     },
     {
+      "id": "cliopatria-7444",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7444,
+      "sourceFromYear": 1468,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1468,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1468,
+      "sourceAreaKm2": 895657.9364525586,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        35.176691,
+        40.71158
+      ],
+      "bbox": [
+        16.261932,
+        36.030804,
+        41.14975,
+        45.431332
+      ]
+    },
+    {
       "id": "cliopatria-7453",
       "polityId": "mali-empire",
       "sourceIndex": 7453,
@@ -822,6 +1464,131 @@
         9.543078,
         -6.471725,
         13.914631
+      ]
+    },
+    {
+      "id": "cliopatria-7463",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7463,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 904770.2683321475,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        35.212992,
+        40.71158
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.14975,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7486",
+      "polityId": "songhai-empire",
+      "sourceIndex": 7486,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 629260.4716394694,
+      "wikidata": "Q202687",
+      "seshatId": "ml_songhai_1",
+      "labelPoint": [
+        -8.905163,
+        15.103955
+      ],
+      "bbox": [
+        -14.503349,
+        12.114578,
+        1.719503,
+        18.029055
+      ]
+    },
+    {
+      "id": "cliopatria-7532",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7532,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 913756.1085352754,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        35.212992,
+        40.71158
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.14975,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7580",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7580,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 930516.4162534738,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        24.0904,
+        41.359815
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.14975,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7604",
+      "polityId": "kingdom-of-kongo",
+      "sourceIndex": 7604,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1492,
+      "sourceAreaKm2": 131582.51450888987,
+      "wikidata": "Q796583",
+      "seshatId": "ao_kongo_2",
+      "labelPoint": [
+        14.128884,
+        -6.239529
+      ],
+      "bbox": [
+        12.222416,
+        -8.457451,
+        16.59304,
+        -4.278756
       ]
     },
     {
@@ -875,6 +1642,31 @@
       ]
     },
     {
+      "id": "cliopatria-7672",
+      "polityId": "songhai-empire",
+      "sourceIndex": 7672,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1497,
+      "sourceAreaKm2": 629260.4716394694,
+      "wikidata": "Q202687",
+      "seshatId": "ml_songhai_2",
+      "labelPoint": [
+        -8.905163,
+        15.103955
+      ],
+      "bbox": [
+        -14.503349,
+        12.114578,
+        1.719503,
+        18.029055
+      ]
+    },
+    {
       "id": "cliopatria-7677",
       "polityId": "aztec-triple-alliance",
       "sourceIndex": 7677,
@@ -897,6 +1689,1581 @@
         14.750372,
         -92.101685,
         21.371967
+      ]
+    },
+    {
+      "id": "cliopatria-7698",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7698,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 159055.70566122053,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        46.548215,
+        38.803449
+      ],
+      "bbox": [
+        43.736988,
+        36.546032,
+        50.56572,
+        40.873566
+      ]
+    },
+    {
+      "id": "cliopatria-7720",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 7720,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1528,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1529
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 392042.4264112826,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        38.577098,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.293785,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-7729",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7729,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 931833.9867992473,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        23.975327,
+        41.359815
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.14975,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7734",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7734,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1511,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1512
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 933158.9516877243,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        23.975327,
+        41.359815
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.806068,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7763",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7763,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1511,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1512
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 1390021.1994904415,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        51.69596,
+        33.393065
+      ],
+      "bbox": [
+        40.93277,
+        25.164974,
+        61.065639,
+        41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-7788",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7788,
+      "sourceFromYear": 1512,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1512,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1512,
+      "sourceAreaKm2": 933062.3236129975,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        23.975327,
+        41.359815
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        41.806068,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7815",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7815,
+      "sourceFromYear": 1512,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1512,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1512,
+      "sourceAreaKm2": 2846209.7662168057,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.571309,
+        33.393062
+      ],
+      "bbox": [
+        37.958027,
+        25.03639,
+        66.357765,
+        41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-7828",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 7828,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 3735332.5264762845,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        97.589081,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-7830",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7830,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 2768531.4562507956,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.665749,
+        33.232335
+      ],
+      "bbox": [
+        37.958027,
+        25.03639,
+        66.357765,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-7845",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7845,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 1064114.9379830894,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_1",
+      "labelPoint": [
+        23.975327,
+        41.359815
+      ],
+      "bbox": [
+        16.264099,
+        36.030804,
+        44.031296,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7879",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7879,
+      "sourceFromYear": 1519,
+      "sourceToYear": 1520,
+      "period": {
+        "start": 1519,
+        "endExclusive": 1521
+      },
+      "sampleYear": 1519,
+      "sourceAreaKm2": 2690844.3609719067,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        28.377259,
+        29.697303
+      ],
+      "bbox": [
+        -1.027766,
+        12.693166,
+        47.05851,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7891",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7891,
+      "sourceFromYear": 1519,
+      "sourceToYear": 1520,
+      "period": {
+        "start": 1519,
+        "endExclusive": 1521
+      },
+      "sampleYear": 1519,
+      "sourceAreaKm2": 2768630.7490110416,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.665749,
+        33.232335
+      ],
+      "bbox": [
+        37.958027,
+        25.03639,
+        66.357765,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-7917",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7917,
+      "sourceFromYear": 1521,
+      "sourceToYear": 1525,
+      "period": {
+        "start": 1521,
+        "endExclusive": 1526
+      },
+      "sampleYear": 1521,
+      "sourceAreaKm2": 2782608.936397941,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        28.39147,
+        29.697303
+      ],
+      "bbox": [
+        16.264099,
+        12.693166,
+        47.05851,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7931",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7931,
+      "sourceFromYear": 1521,
+      "sourceToYear": 1525,
+      "period": {
+        "start": 1521,
+        "endExclusive": 1526
+      },
+      "sampleYear": 1521,
+      "sourceAreaKm2": 2768414.587036031,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.665749,
+        33.232335
+      ],
+      "bbox": [
+        37.958027,
+        25.03639,
+        66.357765,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-7938",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7938,
+      "sourceFromYear": 1526,
+      "sourceToYear": 1528,
+      "period": {
+        "start": 1526,
+        "endExclusive": 1529
+      },
+      "sampleYear": 1526,
+      "sourceAreaKm2": 2794711.4307705252,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        28.39147,
+        29.697303
+      ],
+      "bbox": [
+        16.264099,
+        12.693166,
+        47.05851,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7964",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7964,
+      "sourceFromYear": 1526,
+      "sourceToYear": 1528,
+      "period": {
+        "start": 1526,
+        "endExclusive": 1529
+      },
+      "sampleYear": 1526,
+      "sourceAreaKm2": 2384094.276471105,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.742092,
+        33.039469
+      ],
+      "bbox": [
+        37.958027,
+        25.03639,
+        65.695068,
+        40.873566
+      ]
+    },
+    {
+      "id": "cliopatria-7977",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 7977,
+      "sourceFromYear": 1529,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1529,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1529,
+      "sourceAreaKm2": 2767862.018263347,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.658254,
+        33.232335
+      ],
+      "bbox": [
+        37.958027,
+        25.03639,
+        66.357765,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-7995",
+      "polityId": "mughal-empire",
+      "sourceIndex": 7995,
+      "sourceFromYear": 1529,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1529,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1529,
+      "sourceAreaKm2": 1200132.4253850223,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.206625,
+        30.564971
+      ],
+      "bbox": [
+        63.89267,
+        23.493437,
+        84.960899,
+        37.577259
+      ]
+    },
+    {
+      "id": "cliopatria-7998",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 7998,
+      "sourceFromYear": 1529,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1529,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1529,
+      "sourceAreaKm2": 2816366.7159728627,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        28.61419,
+        30.62924
+      ],
+      "bbox": [
+        15.225769,
+        12.693166,
+        47.05851,
+        48.522022
+      ]
+    },
+    {
+      "id": "cliopatria-8007",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8007,
+      "sourceFromYear": 1529,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1529,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1529,
+      "sourceAreaKm2": 381441.53668160096,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        38.577098,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.293785,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8023",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8023,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 126100.20170708827,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        38.160727,
+        13.625336
+      ],
+      "bbox": [
+        36.47876,
+        10.121666,
+        39.534966,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8026",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8026,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 3178642.290502401,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        28.39147,
+        29.697303
+      ],
+      "bbox": [
+        9.99395,
+        12.693166,
+        48.600475,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-8028",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8028,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 955783.5115621217,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.38006,
+        28.443821
+      ],
+      "bbox": [
+        69.279442,
+        22.079117,
+        84.960899,
+        34.807949
+      ]
+    },
+    {
+      "id": "cliopatria-8039",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8039,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 2381990.5031384598,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        55.564087,
+        33.168051
+      ],
+      "bbox": [
+        42.436634,
+        25.03639,
+        66.357765,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8066",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8066,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 2429787.511754,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        55.550551,
+        33.682409
+      ],
+      "bbox": [
+        42.436634,
+        25.03639,
+        66.357765,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-8087",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8087,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 126817.98519897704,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        38.160727,
+        13.625336
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        40.415634,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8093",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8093,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 344712.5999243542,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        72.226278,
+        31.143382
+      ],
+      "bbox": [
+        69.279442,
+        26.836584,
+        75.867401,
+        34.807949
+      ]
+    },
+    {
+      "id": "cliopatria-8099",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8099,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 3196354.6629445166,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        28.39147,
+        29.697303
+      ],
+      "bbox": [
+        15.225769,
+        12.628879,
+        48.600475,
+        47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-8104",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8104,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 2429574.5413320195,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        55.550066,
+        33.682409
+      ],
+      "bbox": [
+        42.436634,
+        25.03639,
+        66.357765,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-8111",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8111,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 3735553.476225521,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        97.589081,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8124",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8124,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 316589.4495304746,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        67.218745,
+        33.489503
+      ],
+      "bbox": [
+        63.89267,
+        29.408054,
+        71.655754,
+        37.577259
+      ]
+    },
+    {
+      "id": "cliopatria-8128",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8128,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 3260056.7921967017,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.922011,
+        30.404299
+      ],
+      "bbox": [
+        15.225769,
+        12.693166,
+        48.600475,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8135",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8135,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 526424.8399508451,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        39.267933,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.792809,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8164",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8164,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 2365885.9762361585,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        55.550066,
+        33.682409
+      ],
+      "bbox": [
+        44.031296,
+        25.03639,
+        66.357765,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-8170",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8170,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 3735748.2267136383,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        97.589081,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8185",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8185,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 3484129.8759773923,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        11.539045,
+        12.628879,
+        59.274246,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8210",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8210,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 506138.2744874009,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        70.745423,
+        32.107422
+      ],
+      "bbox": [
+        65.892921,
+        26.708,
+        78.923325,
+        37.577259
+      ]
+    },
+    {
+      "id": "cliopatria-8214",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8214,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 3691277.8133743345,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        12.628879,
+        56.053169,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8228",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8228,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 2581653.94661997,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        56.080412,
+        33.553807
+      ],
+      "bbox": [
+        44.031296,
+        25.03639,
+        66.70327,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-8244",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8244,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 1076240.853807708,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        75.709356,
+        29.279494
+      ],
+      "bbox": [
+        65.892921,
+        21.436253,
+        84.997215,
+        37.577259
+      ]
+    },
+    {
+      "id": "cliopatria-8246",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8246,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 3643424.0546959694,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8256",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8256,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 523786.77953008836,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        39.267933,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.792809,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8285",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8285,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 3663902.5002055657,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        98.15815,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8293",
+      "polityId": "songhai-empire",
+      "sourceIndex": 8293,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 665729.5306235802,
+      "wikidata": "Q202687",
+      "seshatId": "ml_songhai_2",
+      "labelPoint": [
+        -8.905163,
+        15.103955
+      ],
+      "bbox": [
+        -16.830828,
+        12.114578,
+        1.719503,
+        18.029055
+      ]
+    },
+    {
+      "id": "cliopatria-8316",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8316,
+      "sourceFromYear": 1572,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1572,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1572,
+      "sourceAreaKm2": 1385896.9327710157,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        75.86052,
+        28.990234
+      ],
+      "bbox": [
+        65.892921,
+        20.407675,
+        84.997215,
+        37.577259
+      ]
+    },
+    {
+      "id": "cliopatria-8324",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8324,
+      "sourceFromYear": 1572,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1572,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1572,
+      "sourceAreaKm2": 3784288.648371183,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8350",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8350,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1581,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1582
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 3663958.1090743854,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        98.15815,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8351",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8351,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 2581730.4793854672,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        56.080412,
+        33.553807
+      ],
+      "bbox": [
+        44.031296,
+        25.03639,
+        66.70327,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-8366",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8366,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 523872.13711553597,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        39.275334,
+        11.18241
+      ],
+      "bbox": [
+        36.47876,
+        5.428671,
+        42.863323,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8370",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8370,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 3870576.298742411,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8375",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8375,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 1961491.3356107972,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.311088,
+        28.990234
+      ],
+      "bbox": [
+        65.892921,
+        20.407675,
+        90.937752,
+        37.577259
+      ]
+    },
+    {
+      "id": "cliopatria-8393",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8393,
+      "sourceFromYear": 1582,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1582,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1582,
+      "sourceAreaKm2": 3663919.418394357,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        98.15815,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8411",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8411,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 2196352.62777286,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        57.586109,
+        33.425224
+      ],
+      "bbox": [
+        48.916889,
+        25.03639,
+        66.694435,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8414",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8414,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 3663863.809525538,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        98.15815,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8433",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8433,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 2360283.533672367,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        75.378719,
+        29.343772
+      ],
+      "bbox": [
+        65.898613,
+        20.407675,
+        90.937752,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8439",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8439,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 4254573.183397323,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8456",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8456,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 4255329.44343697,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8458",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8458,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 2714075.6334620286,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.816065,
+        28.411678
+      ],
+      "bbox": [
+        64.576187,
+        18.479067,
+        90.937752,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8485",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8485,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 3663833.7672618623,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.506164,
+        31.528989
+      ],
+      "bbox": [
+        98.15815,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8489",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8489,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 2166303.526967591,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        57.517383,
+        33.200188
+      ],
+      "bbox": [
+        48.916889,
+        25.03639,
+        66.694435,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8498",
+      "polityId": "songhai-empire",
+      "sourceIndex": 8498,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 112.19838860990774,
+      "wikidata": "Q202687",
+      "seshatId": "",
+      "labelPoint": [
+        -3.728601,
+        15.746835
+      ],
+      "bbox": [
+        -3.802668,
+        15.714691,
+        -3.65454,
+        15.778978
+      ]
+    },
+    {
+      "id": "cliopatria-8501",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8501,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1611,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1612
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 2825891.031433009,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.816065,
+        28.411678
+      ],
+      "bbox": [
+        64.771065,
+        18.479067,
+        90.937752,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8503",
+      "polityId": "tokugawa-shogunate",
+      "sourceIndex": 8503,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1601,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1602
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 163989.77291821674,
+      "wikidata": "Q205662",
+      "seshatId": "",
+      "labelPoint": [
+        139.36439,
+        36.449411
+      ],
+      "bbox": [
+        123.690506,
+        24.264904,
+        142.089737,
+        41.521996
       ]
     },
     {
@@ -925,6 +3292,31 @@
       ]
     },
     {
+      "id": "cliopatria-8526",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8526,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 2166491.309712897,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        57.517383,
+        33.200188
+      ],
+      "bbox": [
+        48.916889,
+        25.03639,
+        66.694435,
+        41.327385
+      ]
+    },
+    {
       "id": "cliopatria-8532",
       "polityId": "ming-dynasty",
       "sourceIndex": 8532,
@@ -947,6 +3339,2406 @@
         18.221918,
         124.725349,
         42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8539",
+      "polityId": "songhai-empire",
+      "sourceIndex": 8539,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1601,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1602
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 224.36375561898035,
+      "wikidata": "Q202687",
+      "seshatId": "",
+      "labelPoint": [
+        -3.729081,
+        15.778979
+      ],
+      "bbox": [
+        -3.875286,
+        15.714691,
+        -3.65454,
+        15.843266
+      ]
+    },
+    {
+      "id": "cliopatria-8546",
+      "polityId": "songhai-empire",
+      "sourceIndex": 8546,
+      "sourceFromYear": 1602,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1602,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1602,
+      "sourceAreaKm2": 224.36375561898035,
+      "wikidata": "Q202687",
+      "seshatId": "",
+      "labelPoint": [
+        -3.729081,
+        15.778979
+      ],
+      "bbox": [
+        -3.875286,
+        15.714691,
+        -3.65454,
+        15.843266
+      ]
+    },
+    {
+      "id": "cliopatria-8550",
+      "polityId": "tokugawa-shogunate",
+      "sourceIndex": 8550,
+      "sourceFromYear": 1602,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1602,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1602,
+      "sourceAreaKm2": 328728.1092626604,
+      "wikidata": "Q205662",
+      "seshatId": "",
+      "labelPoint": [
+        138.418422,
+        36.320597
+      ],
+      "bbox": [
+        123.690506,
+        24.264904,
+        142.089737,
+        42.23621
+      ]
+    },
+    {
+      "id": "cliopatria-8551",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8551,
+      "sourceFromYear": 1602,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1602,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1602,
+      "sourceAreaKm2": 4255126.217142354,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8564",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8564,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1611,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1612
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 2625034.3282058598,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        54.571989,
+        33.200188
+      ],
+      "bbox": [
+        42.681126,
+        25.03639,
+        66.694435,
+        41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8581",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8581,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1611,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1612
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 3802082.03787469,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.988229,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8582",
+      "polityId": "tokugawa-shogunate",
+      "sourceIndex": 8582,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1798,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1799
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 328728.1092626604,
+      "wikidata": "Q205662",
+      "seshatId": "jp_tokugawa_shogunate",
+      "labelPoint": [
+        138.418422,
+        36.320597
+      ],
+      "bbox": [
+        123.690506,
+        24.264904,
+        142.089737,
+        42.23621
+      ]
+    },
+    {
+      "id": "cliopatria-8604",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8604,
+      "sourceFromYear": 1612,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1612,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1612,
+      "sourceAreaKm2": 2838210.370532434,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.816065,
+        28.411678
+      ],
+      "bbox": [
+        64.771065,
+        18.479067,
+        91.495125,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8607",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8607,
+      "sourceFromYear": 1612,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1612,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1612,
+      "sourceAreaKm2": 3776546.5549184177,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.974966,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8616",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8616,
+      "sourceFromYear": 1612,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1612,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1612,
+      "sourceAreaKm2": 2599368.367728061,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        56.024805,
+        33.650263
+      ],
+      "bbox": [
+        43.578472,
+        25.03639,
+        66.694435,
+        42.756287
+      ]
+    },
+    {
+      "id": "cliopatria-8651",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8651,
+      "sourceFromYear": 1619,
+      "sourceToYear": 1621,
+      "period": {
+        "start": 1619,
+        "endExclusive": 1622
+      },
+      "sampleYear": 1619,
+      "sourceAreaKm2": 3845977.301030646,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.400885,
+        31.432586
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        124.725349,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8674",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8674,
+      "sourceFromYear": 1622,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1622,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1622,
+      "sourceAreaKm2": 3805014.879752064,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.400885,
+        31.432586
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        124.661873,
+        42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8701",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8701,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 2814658.6776951607,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.816065,
+        28.411678
+      ],
+      "bbox": [
+        65.553421,
+        18.479067,
+        91.495125,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8705",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8705,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 3585167.570665441,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        29.988229,
+        30.340029
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8712",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8712,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 2814712.6032360606,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.773364,
+        33.875309
+      ],
+      "bbox": [
+        41.357746,
+        25.03639,
+        66.694435,
+        42.756287
+      ]
+    },
+    {
+      "id": "cliopatria-8717",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8717,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1628,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1629
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 3774498.809035515,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.124509,
+        30.693508
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        122.712883,
+        41.197685
+      ]
+    },
+    {
+      "id": "cliopatria-8723",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8723,
+      "sourceFromYear": 1629,
+      "sourceToYear": 1631,
+      "period": {
+        "start": 1629,
+        "endExclusive": 1632
+      },
+      "sampleYear": 1629,
+      "sourceAreaKm2": 3782507.9855622104,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.447222,
+        30.950578
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        122.712883,
+        41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-8777",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8777,
+      "sourceFromYear": 1632,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1632,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1632,
+      "sourceAreaKm2": 3743339.2054468915,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.447222,
+        30.950578
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        122.712883,
+        41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-8797",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8797,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 2810832.468544891,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        53.773364,
+        33.875309
+      ],
+      "bbox": [
+        41.357746,
+        25.03639,
+        66.694435,
+        42.756287
+      ]
+    },
+    {
+      "id": "cliopatria-8804",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8804,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 3508714.202540166,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.124509,
+        30.693508
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        122.712883,
+        41.197685
+      ]
+    },
+    {
+      "id": "cliopatria-8825",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8825,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 3381330.556857552,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        36.528492,
+        32.203833
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        51.74725,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8830",
+      "polityId": "ethiopian-empire",
+      "sourceIndex": 8830,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1768,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1769
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 587413.8053221263,
+      "wikidata": "Q207521",
+      "seshatId": "",
+      "labelPoint": [
+        38.478685,
+        11.407416
+      ],
+      "bbox": [
+        35.03175,
+        5.428671,
+        42.863323,
+        16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8840",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8840,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1641,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1642
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 3508559.54938079,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.124509,
+        30.693508
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        122.712883,
+        41.197685
+      ]
+    },
+    {
+      "id": "cliopatria-8843",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8843,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 2593946.9372470644,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        56.024805,
+        33.650263
+      ],
+      "bbox": [
+        43.555649,
+        25.03639,
+        66.694435,
+        42.756287
+      ]
+    },
+    {
+      "id": "cliopatria-8854",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8854,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 3524238.8599286284,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        45.696263,
+        32.203833
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8857",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8857,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 2871484.386194977,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.816065,
+        28.411678
+      ],
+      "bbox": [
+        64.771065,
+        18.479067,
+        92.766762,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8897",
+      "polityId": "ming-dynasty",
+      "sourceIndex": 8897,
+      "sourceFromYear": 1642,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1642,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1642,
+      "sourceAreaKm2": 3360498.2158364914,
+      "wikidata": "Q9903",
+      "seshatId": "cn_ming_dyn",
+      "labelPoint": [
+        111.124509,
+        30.693508
+      ],
+      "bbox": [
+        96.935463,
+        18.221918,
+        122.712883,
+        41.197685
+      ]
+    },
+    {
+      "id": "cliopatria-8922",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8922,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 3519273.615735258,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        45.696263,
+        32.203833
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8941",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 8941,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 3630357.5577502493,
+      "wikidata": "Q8733",
+      "seshatId": "",
+      "labelPoint": [
+        121.117558,
+        43.049087
+      ],
+      "bbox": [
+        99.896172,
+        32.493073,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-8959",
+      "polityId": "mughal-empire",
+      "sourceIndex": 8959,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 2814658.6776951607,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.816065,
+        28.411678
+      ],
+      "bbox": [
+        65.553421,
+        18.479067,
+        91.495125,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-8963",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 8963,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 3523693.162679875,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        45.696263,
+        32.203833
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8976",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 8976,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 2617498.6300843367,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        55.933111,
+        33.811007
+      ],
+      "bbox": [
+        43.555649,
+        25.03639,
+        66.694435,
+        42.756287
+      ]
+    },
+    {
+      "id": "cliopatria-8983",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 8983,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 4112508.3477167445,
+      "wikidata": "Q8733",
+      "seshatId": "",
+      "labelPoint": [
+        110.130161,
+        39.869981
+      ],
+      "bbox": [
+        99.896172,
+        26.129364,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9001",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9001,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 6029709.884943084,
+      "wikidata": "Q8733",
+      "seshatId": "",
+      "labelPoint": [
+        112.580619,
+        36.964836
+      ],
+      "bbox": [
+        96.996613,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9023",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9023,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 2870414.898478136,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.898776,
+        28.250963
+      ],
+      "bbox": [
+        65.553421,
+        18.157629,
+        91.495125,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9026",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9026,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 6228686.293988946,
+      "wikidata": "Q8733",
+      "seshatId": "",
+      "labelPoint": [
+        112.580619,
+        36.964836
+      ],
+      "bbox": [
+        96.996613,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9046",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9046,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 3210362.7168462873,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.071959,
+        28.025956
+      ],
+      "bbox": [
+        65.553421,
+        17.900478,
+        91.495125,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9072",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9072,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 3526437.7897045477,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        45.696263,
+        32.203833
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-9074",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9074,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 3272338.4270463665,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.071959,
+        28.025956
+      ],
+      "bbox": [
+        65.553421,
+        17.643328,
+        92.766762,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9083",
+      "polityId": "kingdom-of-kongo",
+      "sourceIndex": 9083,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 131582.51450888987,
+      "wikidata": "Q796583",
+      "seshatId": "ao_kongo_2",
+      "labelPoint": [
+        14.128884,
+        -6.239529
+      ],
+      "bbox": [
+        12.222416,
+        -8.457451,
+        16.59304,
+        -4.278756
+      ]
+    },
+    {
+      "id": "cliopatria-9113",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9113,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 3531298.433193399,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        45.696263,
+        32.203833
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-9118",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9118,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 3321950.900156485,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.659542,
+        27.575933
+      ],
+      "bbox": [
+        65.553421,
+        16.936163,
+        92.766762,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9139",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9139,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 6228016.9927025605,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        112.580619,
+        36.964836
+      ],
+      "bbox": [
+        96.996613,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9146",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9146,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 5292713.593392175,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        108.871481,
+        39.029535
+      ],
+      "bbox": [
+        96.996613,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9163",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9163,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 3640022.001631136,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        44.087225,
+        33.360917
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        50.312523
+      ]
+    },
+    {
+      "id": "cliopatria-9165",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9165,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 3291991.066232632,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.659542,
+        27.575933
+      ],
+      "bbox": [
+        65.553421,
+        16.936163,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9182",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9182,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 3588811.726797735,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        36.993607,
+        33.039467
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        49.647934
+      ]
+    },
+    {
+      "id": "cliopatria-9185",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9185,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 3291934.6322275577,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.659542,
+        27.575933
+      ],
+      "bbox": [
+        65.553421,
+        17.00045,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9203",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9203,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 4337129.3084873725,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        108.871481,
+        39.029535
+      ],
+      "bbox": [
+        96.996613,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9240",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9240,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 6269317.391358062,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        112.580619,
+        36.964836
+      ],
+      "bbox": [
+        96.996613,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9267",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9267,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 3593358.4189955126,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_2",
+      "labelPoint": [
+        36.993607,
+        33.039467
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        49.647934
+      ]
+    },
+    {
+      "id": "cliopatria-9286",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9286,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 3407632.2332945745,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        74.659542,
+        27.575933
+      ],
+      "bbox": [
+        65.553421,
+        16.807587,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9288",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9288,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 3510480.670473836,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        36.993607,
+        33.039467
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        49.647934
+      ]
+    },
+    {
+      "id": "cliopatria-9301",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9301,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 6004223.492388596,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        112.580619,
+        36.964836
+      ],
+      "bbox": [
+        97.589081,
+        18.221918,
+        141.556625,
+        53.664711
+      ]
+    },
+    {
+      "id": "cliopatria-9313",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9313,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 6301296.597407972,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        112.266957,
+        38.190109
+      ],
+      "bbox": [
+        97.589081,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9334",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9334,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 3735808.632647662,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        78.488926,
+        25.325705
+      ],
+      "bbox": [
+        65.553421,
+        12.050291,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9337",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9337,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 3490207.520615475,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        36.993607,
+        33.039467
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        49.647934
+      ]
+    },
+    {
+      "id": "cliopatria-9349",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9349,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 8472505.523124797,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        109.405276,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9362",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9362,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 3441800.0279892758,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9382",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9382,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1701,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1702
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 8886173.74873047,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9391",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9391,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 3438225.6251770626,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        -2.121233,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9395",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9395,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 3760244.449847558,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        79.695377,
+        24.650644
+      ],
+      "bbox": [
+        65.553421,
+        10.932109,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9432",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9432,
+      "sourceFromYear": 1702,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1702,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1702,
+      "sourceAreaKm2": 8935841.186067408,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9440",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9440,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 8932552.623781582,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9446",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9446,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 2578223.8154392475,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        56.080361,
+        33.553807
+      ],
+      "bbox": [
+        43.648197,
+        25.03639,
+        66.694435,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9456",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9456,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 3149211.5553600793,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        10.008607,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9458",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9458,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 3712445.787719221,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        79.695377,
+        24.650644
+      ],
+      "bbox": [
+        65.553421,
+        10.932109,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9477",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9477,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 3687718.540653704,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        79.695377,
+        24.650644
+      ],
+      "bbox": [
+        65.553421,
+        10.932109,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9511",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9511,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 2572993.306536198,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        56.080361,
+        33.553807
+      ],
+      "bbox": [
+        43.648197,
+        25.03639,
+        66.694435,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9536",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9536,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 2025985.1777236883,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        54.619539,
+        33.650263
+      ],
+      "bbox": [
+        43.648197,
+        25.357851,
+        66.380524,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9550",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9550,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 2882924.154263626,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9551",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9551,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 3599387.4905415233,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        78.329372,
+        25.807899
+      ],
+      "bbox": [
+        63.751743,
+        13.014604,
+        92.471886,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9567",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9567,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1720,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1721
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 2025050.1775880433,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        54.619539,
+        33.650263
+      ],
+      "bbox": [
+        43.648197,
+        25.357851,
+        66.380524,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9572",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9572,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1720,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1721
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 8950979.52926441,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9589",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9589,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1720,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1721
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 3234527.1457289928,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        75.194679,
+        25.679313
+      ],
+      "bbox": [
+        65.553421,
+        13.014604,
+        90.798073,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9593",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9593,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 2840688.0904790433,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9597",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9597,
+      "sourceFromYear": 1721,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1721,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1721,
+      "sourceAreaKm2": 1372706.904938789,
+      "wikidata": "Q161205",
+      "seshatId": "ir_safavid_emp",
+      "labelPoint": [
+        51.403163,
+        33.585953
+      ],
+      "bbox": [
+        43.648197,
+        25.357851,
+        61.316498,
+        41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9601",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9601,
+      "sourceFromYear": 1721,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1721,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1721,
+      "sourceAreaKm2": 8932552.623781582,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9615",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9615,
+      "sourceFromYear": 1721,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1721,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1721,
+      "sourceAreaKm2": 3131940.1920637856,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        75.194679,
+        25.679313
+      ],
+      "bbox": [
+        65.553421,
+        13.014604,
+        90.798073,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9635",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9635,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 9164458.8734951,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9640",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9640,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 98.43692752981866,
+      "wikidata": "Q161205",
+      "seshatId": "",
+      "labelPoint": [
+        55.028089,
+        37.96427
+      ],
+      "bbox": [
+        54.96299,
+        37.899754,
+        55.119419,
+        38.028786
+      ]
+    },
+    {
+      "id": "cliopatria-9650",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9650,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 3143969.988085373,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        46.081574,
+        32.268107
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.999538,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9652",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9652,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 2768634.6858879905,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.685829,
+        26.418684
+      ],
+      "bbox": [
+        65.553421,
+        14.428933,
+        92.071487,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9675",
+      "polityId": "safavid-dynasty",
+      "sourceIndex": 9675,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 248.98290207181282,
+      "wikidata": "Q161205",
+      "seshatId": "",
+      "labelPoint": [
+        66.281143,
+        35.354891
+      ],
+      "bbox": [
+        54.96299,
+        35.258358,
+        66.365791,
+        38.028786
+      ]
+    },
+    {
+      "id": "cliopatria-9679",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9679,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 9237269.513998466,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.53269,
+        38.190109
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9707",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9707,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 2902499.110956689,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9713",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9713,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 2768164.8565928275,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.685829,
+        26.418684
+      ],
+      "bbox": [
+        65.553421,
+        14.428933,
+        92.071487,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9722",
+      "polityId": "qing-dynasty",
+      "sourceIndex": 9722,
+      "sourceFromYear": 1738,
+      "sourceToYear": 1756,
+      "period": {
+        "start": 1738,
+        "endExclusive": 1757
+      },
+      "sampleYear": 1738,
+      "sourceAreaKm2": 9348957.548283096,
+      "wikidata": "Q8733",
+      "seshatId": "cn_qing_dyn_1",
+      "labelPoint": [
+        104.651302,
+        38.125576
+      ],
+      "bbox": [
+        87.730484,
+        18.221918,
+        141.556625,
+        56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9734",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9734,
+      "sourceFromYear": 1738,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1738,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1738,
+      "sourceAreaKm2": 2565453.747665355,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.685829,
+        26.418684
+      ],
+      "bbox": [
+        65.566139,
+        14.428933,
+        92.071487,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9739",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9739,
+      "sourceFromYear": 1738,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1738,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1738,
+      "sourceAreaKm2": 2843488.4029997992,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9764",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9764,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1743,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1744
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 1672447.932540853,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.89334,
+        26.418684
+      ],
+      "bbox": [
+        68.335938,
+        14.428933,
+        92.071487,
+        38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9766",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9766,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1743,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1744
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 2878777.0382375866,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9805",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9805,
+      "sourceFromYear": 1744,
+      "sourceToYear": 1747,
+      "period": {
+        "start": 1744,
+        "endExclusive": 1748
+      },
+      "sampleYear": 1744,
+      "sourceAreaKm2": 537533.2977973232,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.834372,
+        28.925952
+      ],
+      "bbox": [
+        69.362109,
+        18.029055,
+        92.071487,
+        33.071609
+      ]
+    },
+    {
+      "id": "cliopatria-9811",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9811,
+      "sourceFromYear": 1744,
+      "sourceToYear": 1747,
+      "period": {
+        "start": 1744,
+        "endExclusive": 1748
+      },
+      "sampleYear": 1744,
+      "sourceAreaKm2": 2835429.299184588,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9849",
+      "polityId": "ottoman-empire",
+      "sourceIndex": 9849,
+      "sourceFromYear": 1748,
+      "sourceToYear": 1751,
+      "period": {
+        "start": 1748,
+        "endExclusive": 1752
+      },
+      "sampleYear": 1748,
+      "sourceAreaKm2": 2878828.379944481,
+      "wikidata": "Q12560",
+      "seshatId": "tr_ottoman_emp_3",
+      "labelPoint": [
+        45.610544,
+        32.33238
+      ],
+      "bbox": [
+        15.803844,
+        10.057378,
+        48.600475,
+        48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9854",
+      "polityId": "mughal-empire",
+      "sourceIndex": 9854,
+      "sourceFromYear": 1748,
+      "sourceToYear": 1756,
+      "period": {
+        "start": 1748,
+        "endExclusive": 1757
+      },
+      "sampleYear": 1748,
+      "sourceAreaKm2": 537637.7150351014,
+      "wikidata": "Q33296",
+      "seshatId": "in_mughal_emp",
+      "labelPoint": [
+        73.834372,
+        28.925952
+      ],
+      "bbox": [
+        63.751743,
+        18.029055,
+        92.071487,
+        33.071609
       ]
     },
     {

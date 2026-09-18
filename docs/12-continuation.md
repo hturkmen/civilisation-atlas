@@ -1,16 +1,16 @@
 # Devam kaydı
 
-## Güncel devir noktası — 17 Eylül 2026
+## Güncel devir noktası — 18 Eylül 2026
 
 **Önce bu bölümü oku.** Aşağıdaki tarihli kayıtlar geçmiş sonuçlardır; eski “sonraki iş” cümleleri görev kuyruğu değildir. Uzak main ilerlemişse bu özeti güncel kod/devir kayıtlarıyla uzlaştır; tamamlanan dilimi yeniden başlatma.
 
 | Alan | Güncel durum / yeniden yapılmayacak iş |
 |---|---|
 | Arayüz | Dönemler arası arama ve mobil alt panel tamamlanan dilimlerdir. Zaman çizelgesi/arama metinle büyür, kontroller sarılır; 360 px iki kat metin ve klavye testi eklendi. |
-| Veri ve DB | Önceki 17 siyasi yapı / 35 alan, 3 yerleşim, 1 arşiv; pinli import, karantina ve worker tamamlanan dilimleri korunur. Beş Gate A adayı unreviewed. |
-| Bu dilimin testleri | Statik build/TypeScript geçti. İlk koşuda mevcut 22 senaryo geçti; yeni testin başlangıç font ölçümü düzeltildikten sonra mobil 4/4 geçti (toplam 23 ayrı senaryo). Gerçek cihaz, Safari/Firefox ve tüm sayfa erişilebilirlik denetimi hâlâ açık; ana Node build bu dilimde çalıştırılmadı. |
-| Son kod/yayın | Main deab66852189baeebc38bed392c461777c1ed3a9 doğrulandı. Özel demo V7, 2026-09-17T20:44:03.688437+00:00 tarihinde succeeded; erişim genişletilmedi. |
-| İlk sonraki adım | Kullanıcının yeni önceliği: 1400–1750 veri kapsamını genişlet. Pinli Cliopatria arşivini hash ile doğrula, mevcut seçimlerle tekrarları ayır, kaynaklı dönem/bölge dilimlerini importer ile üret ve test et. Yeni veri bu UI diliminde eklenmedi. Veri çalışmasının ardından P04-005 gerçek cihaz/Safari/Firefox ve kalan sayfa erişilebilirliğine dön; alt paneli yeniden yazma. Native PostgreSQL paketi hazır fakat sunucu yokken yeniden hazırlanmaz. |
+| Veri ve DB | 24 siyasi yapı / 225 alan; 1400–1750 için 190 yeni kaynak kaydı. Önceki 35 kayıt aynen korundu. Üç yerleşim / bir arşiv ve beş unreviewed Gate A adayı değişmedi. |
+| Bu dilimin testleri | 54/54 ana depo domain testi, editoryal revizyon pinleri, sınır ve plan validator geçti. Demo build/TypeScript ve 24/24 Chromium geçti. Node build, gerçek cihaz/Safari/Firefox bu dilimde çalıştırılmadı. |
+| Son kod/yayın | 1400–1750 veri dilimi doğrulandı; bu kayıtla GitHub’a aktarılıyor. Yeni demo yayını henüz doğrulanmadı; son doğrulanmış yayın V7. Başarılı yayın ardından bu satır güncellenecek. |
+| İlk sonraki adım | Önce bu 225 kayıtlı sürümün demo yayını ve terminal sonucunu kaydet. Ardından 1400–1750 Avrupa/Amerika verilerini kaynak kimliği ve örtüşmelerle değerlendir; sonra kalan P04-005 cihaz/erişilebilirlik işlerine dön. Tamamlanan mobil paneli ve veri dilimini yeniden başlatma. Ayrıntı: docs/15-early-modern-collection.md. |
 
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
