@@ -1230,8 +1230,8 @@
     "period": "1400–1750",
     "status": "partial",
     "completed": "İki dilimde 354 yeni kayıt: 28 siyasi yapı / 389 alan. Son dilimde 164 Avrupa/Amerika kaydı; 54 domain, 25 Chromium testi geçti.",
-    "next": "389 kayıtlı demoyu yayımla; ardından P04-005 kalan mobil kabulü ve P04-006 boyut/performans ölçümü.",
+    "next": "P04-005 kalan mobil kabulü ve P04-006 boyut/performans ölçümü; diğer Avrupa/koloni kayıtları için kaynak incelemesi.",
     "limits": "Bağımsız tarihçi onayı yok; adaylar unreviewed. İngiltere/İspanya/diğer koloniler tarih ve kimlik incelemesi bekliyor. Tam dünya kapsamı değil.",
-    "publication": "Main veri commit: f6c61ffb7eead1b54d7bd6f6f864245b52d5dba7. Demo kaynak: fd91d4b7fdcb9d30fd6b8215879ddab0a2519be2. V8 succeeded, 2026-09-18T06:50:51.288100+00:00. Erişim owner-private korundu. Canlı Site üzerinde ayrıca tarayıcı testi yapılmadı."
+    "publication": "Main veri commit: ad27e3f1be27eecb5ef1f411a4ea1758b9d8abe7. Demo kaynak: a89948e711e765b0892b035091fbda2b211e58a8. V9 succeeded, 2026-09-18T07:04:51.696563+00:00. Özel erişim korundu; canlı Site üzerinde ek tarayıcı testi yapılmadı."
   }
 }
