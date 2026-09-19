@@ -2,7 +2,7 @@
 
 ## Güncel kullanıcı önceliği — 18 Eylül 2026
 
-Veri genişletmesi (1400–1750), zengin bilgi panelleri ve ikinci arşiv perspektifi önceliklidir. On kaynaklı anlatı V11'de yayımlandı; bağımsız inceleme bekleyen içerik görünür notla sunulur. Sıradaki dilim ikinci arşiv haritası ve eser seçicisidir; ardından İngiltere/İspanya/koloni verileri. Performans ve gerçek cihaz kabulü açık fakat ertelendi. Odaklı veri/build/ekran kontrolleri kullanılır, çalıştırılmayan testler açıkça kaydedilir.
+Veri genişletmesi (1400–1750), zengin bilgi panelleri ve ikinci arşiv perspektifi önceliklidir. On kaynaklı anlatı V11'de yayımlandı; bağımsız inceleme bekleyen içerik görünür notla sunulur. 19 Eylül: ikinci arşiv haritası (Ortelius 1570) ve eser seçicisi V12 ile tamamlandı. Sırada İngiltere/İspanya/koloni verileri var. Performans ve gerçek cihaz kabulü açık fakat ertelendi. Odaklı veri/build/ekran kontrolleri kullanılır, çalıştırılmayan testler açıkça kaydedilir.
 
 Kullanıcının yönlendirmesi: kalan işleri listele; kullanıcıya görünür etkiye göre geliştirmeye devam et. Sıra görsel etkiye göredir; veri doğruluğu ve güvenlik bağımlılıkları atlanmaz.
 

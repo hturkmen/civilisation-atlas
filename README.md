@@ -6,6 +6,8 @@ MÖ 4000'den günümüze tarih seçerek dünya medeniyetlerini harita üzerinde 
 
 **Kaynaklı alan katmanı:** 28 siyasi yapı ve 389 seçilmiş kayıt; MS 1500'de on bir siyasi yapı, boş yıllardan en yakın kaynaklı yıla geçiş ve duraklara göre oynatma. [Güncel kapsam ve doğrulama](docs/16-europe-americas-collection.md).
 
+**19 Eylül arşiv genişlemesi:** Waldseemüller 1507 ve Ortelius 1570 arasında tarih uyumlu eser seçimi, yakınlaştırma ve kaynak/hak bilgisi. [Devir ve doğrulama](docs/team/handoffs/p06-second-archive-20260919.md). İki eser bağımsız tarihçi incelemesi tamamlandı anlamına gelmez.
+
 **13 Eylül görsel geliştirmesi:** 1507 Waldseemüller haritası, arşiv inceleyicisi, koleksiyon durakları ve aynı dönemdeki yerleşimler arasında geçiş eklendi. [Görsel öncelikler ve kalanlar](docs/11-visual-priorities.md) · [Devam ve otomasyon durumu](docs/12-continuation.md).
 
 Kapsam sahibi: hturkmen. Hazırlanma tarihi: 12 Eylül 2026. Proje adı teknik çalışma adıdır; marka/domain uygunluğu araştırılmadı.

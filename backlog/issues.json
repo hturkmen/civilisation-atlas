@@ -804,7 +804,7 @@
         "number": 29,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/29"
       },
-      "implementation_note": "İlk arşiv için yayım yılı, bilgi/kopya açıklaması, bakış açısı ve kaynak modeli eklendi. Çoklu perspektif ve DB modeli henüz yok."
+      "implementation_note": "İki arşiv kaydında yayım yılı, ayrı bilgi/kopya açıklaması ve bakış açısı. Aynı yıl çoklu eser URL kimliği ve yapılandırılmış tarih aralıkları/API kabulü açık."
     },
     {
       "id": "P06-002",
@@ -831,7 +831,7 @@
         "number": 30,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/30"
       },
-      "implementation_note": "İlk kamu malı eser seçildi: Waldseemüller 1507. İkinci perspektif eseri ve bağımsız editoryal inceleme bekliyor."
+      "implementation_note": "İki kamu malı kayıt: Waldseemüller 1507 ve Ortelius 1570. Ortelius tarih/atıf/PD-Art bilgisi erişilen Commons dosya kaydından doğrulandı; eski LOC bağlantısı 404, kurum kaydı bağımsız doğrulanamadı ve sınırlama UI'da yazılı. Bağımsız editoryal/hak incelemesi bekliyor; görev partial."
     },
     {
       "id": "P06-003",
@@ -858,7 +858,7 @@
         "number": 31,
         "url": "https://github.com/hturkmen/civilisation-atlas/issues/31"
       },
-      "implementation_note": "Gerçek tarama üzerinde zoom/pan, kaynaklar, tam ekran desteği ve mobil düzen hazır. Üretim rol/DB bağımlılıkları ve gerçek cihaz kontrolleri bekliyor."
+      "implementation_note": "İki gerçek tarama, yıl uyumlu eser seçicisi, zoom/pan, kaynak/haklar, tam ekran desteği ve mobil düzen hazır. 2 hedefli Chromium testi geçti; üretim rol/DB ve gerçek cihaz kabulü açık."
     },
     {
       "id": "P06-004",
@@ -1231,7 +1231,7 @@
     "period": "1400–1750",
     "status": "partial",
     "completed": "İki dilimde 354 yeni kayıt: 28 siyasi yapı / 389 alan. Son dilimde 164 Avrupa/Amerika kaydı; 54 domain, 25 Chromium testi geçti.",
-    "next": "İkinci kaynaklı/lisanslı arşiv haritası ve eser seçicisi; ardından 1400–1750 İngiltere/İspanya/koloni verileri. Performans/gerçek cihaz kabulü kullanıcı önceliğiyle ertelendi.",
+    "next": "1400–1750 İngiltere/İspanya ve koloni kayıtlarını sabit Cliopatria kaynağından kimlik, dönem, hak ve geometri tutarlılığıyla genişlet; mevcut 389 kaydı yeniden üretme işi olarak başa dönme. Üretilmiş GeoJSON elle düzenlenmez.",
     "limits": "Bağımsız tarihçi onayı yok; adaylar unreviewed. İngiltere/İspanya/diğer koloniler tarih ve kimlik incelemesi bekliyor. Tam dünya kapsamı değil.",
     "publication": "Main veri commit: ad27e3f1be27eecb5ef1f411a4ea1758b9d8abe7. Demo kaynak: a89948e711e765b0892b035091fbda2b211e58a8. V9 succeeded, 2026-09-18T07:04:51.696563+00:00. Özel erişim korundu; canlı Site üzerinde ek tarayıcı testi yapılmadı."
   },
@@ -1240,7 +1240,15 @@
     "completed": "10 siyasi yapı için 9 UNESCO kaynağından kültür/tarih anlatısı; kaynak locator, atıf ve CC BY-SA 3.0 IGO; görünür unreviewed ve seçili yıla özgü değil notları.",
     "verification": "Anlatı/sınır validator, statik build/TypeScript ve 1/1 hedefli mobil Chromium testi geçti. Tam paket, Node build ve fiziksel cihaz testi çalıştırılmadı.",
     "publication": "V11 succeeded 2026-09-18T12:03:00.891466+00:00; main code 6c3b172d7a3943f46906ad82dc0a04630361f014",
-    "next": "İkinci arşiv haritası ve eser seçicisi",
+    "next": "1400–1750 İngiltere/İspanya ve koloni kayıtlarını sabit Cliopatria kaynağından kimlik, dönem, hak ve geometri tutarlılığıyla genişlet; mevcut 389 kaydı yeniden üretme işi olarak başa dönme. Üretilmiş GeoJSON elle düzenlenmez.",
     "handoff": "docs/team/handoffs/p04-provisional-stories-20260918.md"
+  },
+  "archive_progress_2026_09_19": {
+    "status": "partial",
+    "completed": "İki tarihli eser ve seçim kontrolü. Ortelius 1570 Commons kaydı/hakları okundu; eski LOC bağlantısının erişim sınırlaması görünür. Bağımsız inceleme bekliyor.",
+    "verification": "3 domain + 2 hedefli Chromium testi; görsel hash kontrolü, sınır validator, statik build/TypeScript geçti. Tam paket/Node/gerçek cihaz çalıştırılmadı.",
+    "publication": "V12 succeeded 2026-09-19T02:35:12.726305+00:00; main 2e1a4c7dbe7d4512595cdf5621f856e2cb17242d",
+    "next": "1400–1750 İngiltere/İspanya ve koloni kayıtlarını sabit Cliopatria kaynağından kimlik, dönem, hak ve geometri tutarlılığıyla genişlet; mevcut 389 kaydı yeniden üretme işi olarak başa dönme. Üretilmiş GeoJSON elle düzenlenmez.",
+    "handoff": "docs/team/handoffs/p06-second-archive-20260919.md"
   }
 }

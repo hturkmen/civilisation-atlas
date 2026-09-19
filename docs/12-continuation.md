@@ -1,19 +1,19 @@
 # Devam kaydı
 
-## Güncel devir noktası — 18 Eylül 2026 / kaynaklı anlatılar
+## Güncel devir noktası — 19 Eylül 2026 / ikinci arşiv eseri
 
-**Önce bu bölümü oku.** Aşağıdaki eski sonraki-adım notları güncel kuyruk değildir. Kullanıcı 3/4/5 kapsamındaki veri, zengin bilgi panelleri ve ikinci arşiv perspektifini önceliklendirdi; performans ve fiziksel cihaz kabulü ertelendi.
+**Önce bu bölümü oku.** Veri, zengin bilgi panelleri ve arşiv perspektifleri kullanıcı önceliğidir. Eski sonraki-adım notları güncel görev kuyruğu değildir.
 
 | Alan | Güncel durum |
 |---|---|
-| Arayüz/içerik | 10 siyasi yapı için kaynaklı kültür/tarih kartı yayımlandı: Osmanlı, Babür, Ming, Qing, Venedik, İnka, Aztek, Yeni Fransa, Etiyopya, Safevî. Yerler, kısa olay notları ve açılır kaynak/lisans bilgisi bulunur. |
-| Doğruluk | Her kart unreviewed ve general-context: görünür bağımsız inceleme uyarısı ile seçili yıla özgü olmadığı notu vardır. Dokuz UNESCO açıklaması Türkçe kısaltılıp uyarlandı, CC BY-SA 3.0 IGO atıfları korundu. Bu katman bağımsız tarihçi onayı veya editoryal yayın kapısının geçildiği anlamına gelmez. |
-| Veri | 28 siyasi yapı / 389 sınır kaydı, üç yerleşim, bir arşiv haritası korunur. Bu dilimde 10 anlatı eklendi; yeni geometri veya görsel eklenmedi. |
-| Kontroller | Anlatı validator'ı, sınır validator'ı, statik build/TypeScript ve hedefli 360×800 Chromium testi 1/1 geçti. Tam test zinciri, Node build ve fiziksel cihaz/Safari/Firefox bu dilimde çalıştırılmadı. |
-| Kod/yayın | Main kod 6c3b172d7a3943f46906ad82dc0a04630361f014; demo kaynak 46601f53b490c9ee3e205ed4d8fafdd11b565775. V11 succeeded: 2026-09-18T12:03:00.891466+00:00. Özel erişim korundu. Canlı Site üzerinde ek tarayıcı testi yapılmadı. |
-| İlk sonraki iş | Lisansı ve kaynağı doğrulanmış ikinci arşiv haritasını ekle; Bilinen dünya modunda eser seçicisi sun. Ardından 1400–1750 İngiltere/İspanya/koloni kayıtlarını kaynak kimliği ve dönemleriyle genişlet. |
+| Arşiv | Waldseemüller 1507 + Ortelius 1570. Bilinen dünya panelinde eser seçici; seçim yayım yılına açıkça geçer, URL/yeniden yükleme korunur. Yakınlaştırma eser değişiminde sıfırlanır; boş yıllara eser taşınmaz. |
+| Doğruluk/haklar | Ortelius Commons kaydı okundu: 1570, yazar, LOC kaynak atfı, PD-Art/public domain. Eski LOC bağlantısı 404; kurum kaydı doğrudan doğrulanmış sayılmaz. Bu sınır UI locator'ında yazılı. Bağımsız inceleme bekliyor; iki eser iki farklı toplumun temsili olarak sunulmaz. |
+| Diğer içerik | 28 siyasi yapı / 389 sınır, üç yerleşim ve 10 kaynaklı ön bilgi kartı değişmedi. Tarihsel dünya ile eser perspektifi ayrı. |
+| Kontroller | 3/3 arşiv domain testi, 2/2 hedefli masaüstü/mobil Chromium testi, iki görselin hash kontrolü, sınır validator ve statik build/TypeScript geçti. Tam paket, Node build, fiziksel cihaz/Safari/Firefox çalıştırılmadı. |
+| Kod/yayın | Main kod 2e1a4c7dbe7d4512595cdf5621f856e2cb17242d; demo kaynak 43d7c36524a95756560c7c56985784b3d7e252d9. V12 succeeded, 2026-09-19T02:35:12.726305+00:00. Mevcut özel erişim korundu; canlıda ek tarayıcı testi yapılmadı. |
+| İlk sonraki iş | 1400–1750 İngiltere/İspanya ve koloni kayıtlarını sabit Cliopatria kaynağından kimlik, dönem, hak ve geometri tutarlılığıyla genişlet; mevcut 389 kaydı yeniden üretme işi olarak başa dönme. Üretilmiş GeoJSON elle düzenlenmez. |
 
-Detay: docs/team/handoffs/p04-provisional-stories-20260918.md. Kaynaklı fakat bağımsız incelemesi bitmemiş içerik kullanıcı talebiyle görünür notla gösterilebilir; geometri uydurulmaz, belirsiz haklar atlanmaz. Hedefli kontroller yeterliyse tam paketi her dilimde tekrarlama; atlananları geçti diye yazma.
+Detay: docs/team/handoffs/p06-second-archive-20260919.md. Performans/fiziksel cihaz kabulü ertelendi, tamamlanmış sayılmaz. 10 anlatı ve iki arşiv hazır; bunları yeniden yapma. Aynı yıla ait birden çok eser eklenirse URL'de eser kimliği desteği gerekir; bugünkü iki farklı yıl için mevcut yıl tabanlı seçim yeterlidir.
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
 
