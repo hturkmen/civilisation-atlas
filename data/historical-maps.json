@@ -23,5 +23,32 @@
       "width": 3840,
       "height": 2133
     }
+  },
+  {
+    "id": "ortelius-1570",
+    "title": "Ortelius’un dünya haritası",
+    "creator": "Abraham Ortelius",
+    "publicationYear": 1570,
+    "representation": "facsimile",
+    "knowledgeDate": "Görsel kaydı, temsil edilen bilginin ayrı bir tarih aralığını vermiyor. 1570 eser tarihi, bütün bilgilerin edinildiği tarih olarak yorumlanmaz.",
+    "copyDate": "Görsel kaydında 1570 olarak tarihlenen Typvs Orbis Terrarvm; dijital tarama kopyası.",
+    "perspective": "Ortelius’un dünya tasviri. Dönemin bütün toplumlarının coğrafya bilgisini veya gerçek siyasi sınırlarını temsil etmez.",
+    "summary": "Typvs Orbis Terrarvm, Abraham Ortelius’a atfedilen 1570 tarihli dünya haritasıdır. Bu dijital kopyayı yakınlaştırarak inceleyebilir, 1507 Waldseemüller eseriyle dönüşümlü olarak görüntüleyebilirsin.",
+    "holdingInstitution": "Library of Congress (Commons görsel kaydındaki kaynak atfı)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:OrteliusWorldMap1570.jpg",
+    "sourceLocator": "Wikimedia Commons, OrteliusWorldMap1570.jpg: Summary (başlık, yazar, 1570 tarihi, Library of Congress atfı), Licensing (PD-Art / public domain). Dosya geçmişi: 26 Mayıs 2009. Eski memory.loc.gov katalog bağlantısı bu kontrolde 404 döndürdü; kurum kaydı doğrudan doğrulanamadı.",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:OrteliusWorldMap1570.jpg",
+    "license": "Public domain · kamu malı (Commons PD-Art kaydı)",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "accessedOn": "2026-09-19",
+    "editionLabel": "TYPVS ORBIS TERRARVM",
+    "imageCredit": "Wikimedia Commons · Library of Congress kaynak atfı",
+    "image": {
+      "src": "/maps/ortelius-1570.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/OrteliusWorldMap1570.jpg/3840px-OrteliusWorldMap1570.jpg",
+      "sha256": "3839507553c7aeef28bc2ceb8747ef509a171d651993c443bba5530fc2f38c0c",
+      "width": 3840,
+      "height": 2615
+    }
   }
 ]

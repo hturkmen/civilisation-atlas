@@ -8,10 +8,10 @@ import {Icon} from './icon';
 export function ArchiveSource({map}: {map: ArchiveMap}) {
   return <section className="source-card archive-source">
     <div className="section-heading"><Icon name="book" size={17}/><h2>Eserin kaynağı</h2></div>
-    <a className="source-link" href={map.sourceUrl} target="_blank" rel="noopener noreferrer">Library of Congress kaydı<Icon name="external" size={15}/></a>
+    <a className="source-link" href={map.sourceUrl} target="_blank" rel="noopener noreferrer">Eser kaydı<Icon name="external" size={15}/></a>
     <p>{map.holdingInstitution}</p>
     <details><summary>Kanıt ve görsel kullanım bilgisi</summary>
-      <p>{map.sourceLocator}</p><p>Görsel: Library of Congress taramasının Wikimedia Commons kopyası. Harita yeniden çizilmedi veya modern koordinatlara oturtulmadı.</p>
+      <p>{map.sourceLocator}</p><p>Görsel: {map.imageCredit ?? 'Library of Congress / Wikimedia Commons'}. Harita yeniden çizilmedi veya modern koordinatlara oturtulmadı.</p>
       <a href={map.imageSourceUrl} target="_blank" rel="noopener noreferrer">Görsel kaydı ve hak bilgisi</a><br/>
       <a href={map.licenseUrl} target="_blank" rel="noopener noreferrer">{map.license}</a>
       <p>Kontrol: {map.accessedOn}. Bağımsız tarihçi incelemesi bekliyor.</p>
@@ -24,9 +24,19 @@ export function ArchivePanel({map, maps, year, onOpen, onShare}: {
 }) {
   return <div className="known-panel">
     <p className="eyebrow">ARŞİVİN İÇİNDEN</p>
+    <label className="archive-picker">Arşiv eseri seç
+      <select value={map?.id ?? ''} onChange={event => {
+        const selected = maps.find(item => item.id === event.target.value);
+        if (selected) onOpen(selected.publicationYear);
+      }}>
+        <option value="" disabled>Eserin tarihine geç…</option>
+        {maps.map(item => <option key={item.id} value={item.id}>{item.publicationYear} · {item.creator}</option>)}
+      </select>
+      <span>Seçim, zaman çizelgesini eserin tarihine taşır.</span>
+    </label>
     <h1>{map ? 'Dünya, onun gözünden.' : 'Bir harita. Başka bir dünya.'}</h1>
     {map ? <>
-      <div className="archive-author"><span className="archive-monogram" aria-hidden="true">MW</span><div><strong>{map.creator}</strong><span>{formatYear(map.publicationYear)} · Dünya haritası</span></div></div>
+      <div className="archive-author"><span className="archive-monogram" aria-hidden="true">{map.creator.split(' ').map(part => part[0]).join('')}</span><div><strong>{map.creator}</strong><span>{formatYear(map.publicationYear)} · Dünya haritası</span></div></div>
       <h2 className="archive-title">{map.title}</h2>
       <p className="archive-summary">{map.summary}</p>
       <dl className="archive-dates"><dt>ESERİN TARİHİ</dt><dd>{map.copyDate}</dd><dt>TEMSİL EDİLEN BİLGİ</dt><dd>{map.knowledgeDate}</dd></dl>
@@ -34,7 +44,7 @@ export function ArchivePanel({map, maps, year, onOpen, onShare}: {
       <ArchiveSource map={map}/>
       <button className="text-button share-button" onClick={onShare}><Icon name="share" size={16}/>Bu görünümü paylaş</button>
     </> : <>
-      <p><strong>{formatYear(year)}</strong> için arşivde henüz harita yok. Aşağıdaki eseri kendi tarihine geçerek inceleyebilirsin.</p>
+      <p><strong>{formatYear(year)}</strong> için arşivde henüz harita yok. Aşağıdaki eserleri kendi tarihine geçerek inceleyebilirsin.</p>
       <div className="archive-catalogue">{maps.map(item => <button key={item.id} className="archive-open-card" onClick={() => onOpen(item.publicationYear)}>
         <span className="eyebrow">{formatYear(item.publicationYear)} · ARŞİV ESERİ</span><strong>{item.title}</strong><span>{item.creator}</span><span className="archive-open-action">{formatYear(item.publicationYear)}’ye git <Icon name="arrow" size={17}/></span>
       </button>)}</div>
@@ -46,8 +56,8 @@ export function ArchivePanel({map, maps, year, onOpen, onShare}: {
 export function ArchivePreview({map, year, onOpen}: {map: ArchiveMap; year: number; onOpen: (year: number) => void}) {
   return <div className="archive-preview">
     <div className="archive-preview-copy"><p className="eyebrow">GEÇMİŞİN HARİTA ODASI</p><h2>Bir zamanlar<br/>dünya böyle çizildi.</h2><p>{formatYear(year)} için eser eklenmedi.<br/>Koleksiyondaki ilk haritayı keşfet.</p></div>
-    <button className="archive-preview-card" onClick={() => onOpen(map.publicationYear)} aria-label={formatYear(map.publicationYear) + ' tarihli Waldseemüller haritasını aç'}>
-      <img src={map.image.src} alt="On iki yapraktan oluşan 1507 dünya haritasının koleksiyon önizlemesi" width={map.image.width} height={map.image.height} loading="lazy"/>
+    <button className="archive-preview-card" onClick={() => onOpen(map.publicationYear)} aria-label={formatYear(map.publicationYear) + ' tarihli ' + map.title + ' eserini aç'}>
+      <img src={map.image.src} alt={map.title + ' · koleksiyon önizlemesi'} width={map.image.width} height={map.image.height} loading="lazy"/>
       <span><span><small>KOLEKSİYONDAN BİR ESER · {formatYear(map.publicationYear)}</small><strong>{map.title}</strong></span><Icon name="arrow" size={22}/></span>
     </button>
     <p className="archive-preview-credit">{map.holdingInstitution} · Kamu malı</p>
@@ -112,7 +122,7 @@ export function HistoricalMap({map}: {map: ArchiveMap}) {
   }
 
   return <div ref={stage} className="historical-viewer" data-testid="historical-viewer">
-    <div className="archive-viewer-heading"><div><span className="eyebrow">ORİJİNAL ESERİN DİJİTAL GÖRÜNTÜSÜ</span><strong>{formatYear(map.publicationYear)} <span>/ {map.creator}</span></strong></div><span className="archive-edition">12 YAPRAK · TEK DÜNYA</span></div>
+    <div className="archive-viewer-heading"><div><span className="eyebrow">ORİJİNAL ESERİN DİJİTAL GÖRÜNTÜSÜ</span><strong>{formatYear(map.publicationYear)} <span>/ {map.creator}</span></strong></div><span className="archive-edition">{map.editionLabel ?? '12 YAPRAK · TEK DÜNYA'}</span></div>
     <div ref={viewport} className={'archive-scroll' + (zoom > 1 ? ' zoomed' : '')} tabIndex={0} role="region" aria-label="Tarihî harita inceleyici" aria-describedby="archive-gesture-hint"
       onPointerDown={event => {
         if (event.pointerType !== 'mouse' || event.button !== 0 || zoom === 1) return;
@@ -140,7 +150,7 @@ export function HistoricalMap({map}: {map: ArchiveMap}) {
       {canFullscreen && <button aria-label={fullscreen ? 'Tam ekrandan çık' : 'Haritayı tam ekran aç'} aria-pressed={fullscreen} onClick={toggleFullscreen}><Icon name="expand"/></button>}
     </div>
     <div className="archive-footer"><p id="archive-gesture-hint">Yakınlaştır, ardından sürükle. Klavyeyle incelemek için haritaya odaklan ve ok tuşlarını kullan.</p>
-      <a href={map.imageSourceUrl} target="_blank" rel="noopener noreferrer">Library of Congress / Wikimedia Commons · Kamu malı <Icon name="external" size={12}/></a>
+      <a href={map.imageSourceUrl} target="_blank" rel="noopener noreferrer">{map.imageCredit ?? 'Library of Congress / Wikimedia Commons'} · Kamu malı <Icon name="external" size={12}/></a>
       {notice && <p role="status">{notice}</p>}
     </div>
   </div>;

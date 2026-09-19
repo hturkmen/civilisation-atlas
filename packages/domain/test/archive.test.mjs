@@ -21,3 +21,10 @@ test('archive publication needs separate knowledge/copy metadata and a pinned im
   const unsafe = structuredClone(maps); unsafe[0].image.src = '/../private.jpg';
   assert.throws(() => validateArchiveMaps(unsafe), /Unpinned archive image/);
 });
+
+test('Ortelius has its own source date and does not fill neighbouring years', () => {
+  assert.equal(archiveMapsAtYear(maps, 1570)[0].id, 'ortelius-1570');
+  assert.deepEqual(archiveMapsAtYear(maps, 1569), []);
+  assert.deepEqual(archiveMapsAtYear(maps, 1571), []);
+  assert.equal(archiveMapsAtYear(maps, 1507).length, 1);
+});

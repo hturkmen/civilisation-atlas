@@ -4,6 +4,7 @@ export interface ArchiveMap {
   perspective: string; summary: string; holdingInstitution: string;
   sourceUrl: string; sourceLocator: string; imageSourceUrl: string;
   license: string; licenseUrl: string; accessedOn: string;
+  editionLabel?: string; imageCredit?: string;
   image: {src: string; downloadUrl: string; sha256: string; width: number; height: number};
 }
 export function archiveMapsAtYear(maps: ArchiveMap[], year: number): ArchiveMap[];

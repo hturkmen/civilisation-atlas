@@ -389,3 +389,9 @@ button,a{touch-action:manipulation}
 .polity-story summary{cursor:pointer;min-height:44px;padding:10px 0}
 .polity-story details p{font-size:.75rem}
 .polity-story a{text-decoration:underline;text-underline-offset:3px}
+
+/* Source-dated archive selector; native control works with touch and keyboard. */
+.archive-picker {display:grid;gap:8px;margin:18px 0 24px;font-size:.85rem;font-weight:600;}
+.archive-picker select {width:100%;min-width:0;min-height:44px;padding:10px 12px;border:1px solid #c9c6b8;border-radius:8px;background:#fffdf7;color:#243d38;font:inherit;}
+.archive-picker > span {font-weight:400;font-size:.75rem;color:#62685f;line-height:1.5;}
+.archive-picker select:focus-visible {outline:2px solid #286958;outline-offset:3px;}
