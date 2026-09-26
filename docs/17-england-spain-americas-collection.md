@@ -36,7 +36,7 @@ Spot checks on derived geometries found no area intersection at 1700 between the
 
 - Import: 38 political entities / 562 records / 5,033,000 GeoJSON bytes; all selected source and derived geometries valid.
 - Previous 389 metadata and geometry objects compared equal by source record ID.
-- `node scripts/validate-boundaries.mjs` and 55 domain tests passed. The 1500 snapshot now has 15 selected areas, 1700 has 14, and 1750 has 13; these are collection counts, not worldwide totals.
+- `node scripts/validate-boundaries.mjs` and 56 domain tests passed. The 1500 snapshot now has 15 selected areas, 1700 has 14, and 1750 has 13; these are collection counts, not worldwide totals.
 - Independent historian review, complete region/period coverage, physical-device network/GPU measurement and the remaining source-identity questions are open. Further growth should assess bbox/tile loading; 5 MB of raw GeoJSON is not a measured mobile performance result.
 
 Next data slice: resolve the held British/Spanish transition rows and investigate separately sourced Indigenous American and colonial administrations, recording unavailable versus unresearched coverage explicitly. Keep P02-006 and P02-005 open.

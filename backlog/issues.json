@@ -1233,7 +1233,7 @@
     "completed": "Üç dilimde 527 yeni kayıt: 38 siyasi yapı / 562 alan. Son dilim 173 İngiltere/İspanya/koloni kaynak satırı; önceki 389 kayıt ve geometri değişmedi.",
     "next": "Tutulan Britanya/İspanya geçiş kimliklerini ve ayrı koloni/Yerli Amerika kaynaklarını çöz; kaynak, dönem, hak ve geometri incelemesini ayrı kaydet.",
     "limits": "Bağımsız tarihçi onayı yok; 562 seçilmiş alan unreviewed. İber Birliği 1582–1639, New Netherland ve İngiliz/Britanya sömürge geçiş satırları beklemede. Tam dünya kapsamı değil; 5 MB ham GeoJSON için mobil ölçüm açık.",
-    "publication": "Bu dilimin GitHub/demo sonucu docs/team/handoffs/p02-006-england-spain-20260926.md içinde tutulur. Önceki özel demo V12 korunur."
+    "publication": "Main veri commit d2a0cbc685ab4191575f4c06c882e772dc93bed3; demo kaynak 629d7dcea7614a74a75be1b20a445eab5d1a1b70. Özel V13 succeeded 2026-09-26T11:32:33Z. Canlı tarayıcı QA yapılmadı."
   },
   "provisional_content_progress_2026_09_18": {
     "status": "partial",
@@ -1255,7 +1255,7 @@
     "status": "partial",
     "completed": "Pinli Cliopatria v0.2.0 arşivinden 173 yeni satır: 38 siyasi yapı / 562 alan. Kimlik/çakışma ve kaynak boşlukları docs/17-england-spain-americas-collection.md içinde.",
     "verification": "56 domain testi, sınır validator, plan, Node build/TypeScript geçti; eski 389 metadata/geometri birebir korundu. Chromium ikilisi eksik/indirme bozuk; tarayıcı testi geçmedi.",
-    "publication": "Teslim sonucu handoff içinde güncellenecek.",
+    "publication": "Main veri commit d2a0cbc685ab4191575f4c06c882e772dc93bed3; demo kaynak 629d7dcea7614a74a75be1b20a445eab5d1a1b70. Özel V13 succeeded 2026-09-26T11:32:33Z. Canlı tarayıcı QA yapılmadı.",
     "next": "Tutan geçiş adaylarını ve ayrı koloni/Yerli Amerika alanlarını kaynak düzeyinde incele.",
     "handoff": "docs/team/handoffs/p02-006-england-spain-20260926.md"
   }

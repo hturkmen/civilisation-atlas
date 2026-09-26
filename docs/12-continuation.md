@@ -10,7 +10,7 @@
 | Doğruluk/haklar | Ortelius Commons kaydı okundu: 1570, yazar, LOC kaynak atfı, PD-Art/public domain. Eski LOC bağlantısı 404; kurum kaydı doğrudan doğrulanmış sayılmaz. Bu sınır UI locator'ında yazılı. Bağımsız inceleme bekliyor; iki eser iki farklı toplumun temsili olarak sunulmaz. |
 | Diğer içerik | 38 siyasi yapı / 562 sınır: 173 yeni kaynak satırı, eski 389 metadata/geometri korundu. Üç yerleşim, 10 anlatı ve iki arşiv eseri değişmedi. |
 | Kontroller | Kaynak SHA, Shapely geometri, sınır validator, domain testleri, plan, Node build/TypeScript geçti. Hedefli Chromium çalışmadı: tarayıcı ikilisi yok, indirme geçersiz arşiv döndürdü. Fiziksel cihaz ve bağımsız tarihçi incelemesi açık. |
-| Kod/yayın | Bu veri diliminin GitHub/demo teslim sonucu aşağıdaki handoff'a yazılır. Son doğrulanmış özel demo V12'dir; GitHub teslimi tek başına demo yayını sayılmaz. |
+| Kod/yayın | Main veri commit d2a0cbc685ab4191575f4c06c882e772dc93bed3; özel demo kaynak 629d7dcea7614a74a75be1b20a445eab5d1a1b70. V13 succeeded 2026-09-26T11:32:33Z; detay handoff içinde. Canlı tarayıcı QA yapılmadı. |
 | İlk sonraki iş | Tutulan İngiliz/Britanya ve İspanyol geçiş kimliklerini incele; ayrı koloni ve Yerli Amerika kaynaklarını tarih/kimlik/geometri/haklarıyla araştır. 562 kaydı baştan üretme; üretilmiş GeoJSON elle düzenlenmez. |
 
 Detay: docs/17-england-spain-americas-collection.md ve docs/team/handoffs/p02-006-england-spain-20260926.md. 5 MB ham veri için mobil ağ/GPU ölçümü açık; tarihçi onayı verilmedi. Aynı yıla ait birden çok arşiv eseri eklenirse URL'de eser kimliği gerekir.
