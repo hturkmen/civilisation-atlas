@@ -214,20 +214,20 @@ test('New France remains distinct from France and exposes its colonial label and
 
 test('1700 and 1750 expose new sourced Asian and African periods', async ({page}) => {
   await page.goto('/?year=1700&era=CE');
-  await expect(page.locator('.polity-list li')).toHaveCount(10);
+  await expect(page.locator('.polity-list li')).toHaveCount(14);
   await page.locator('.polity-list').getByRole('button', {name: /Qing Hanedanı/}).click();
   await expect(page.getByRole('heading', {name: 'Qing Hanedanı',exact:true})).toBeVisible();
   await expect(page.locator('.boundary-period')).toContainText('MS 1700 — MS 1701');
   await expect(page.getByRole('link', {name: 'CC BY 4.0 · uyarlanmış veri'})).toBeVisible();
   await page.goto('/?year=1750&era=CE');
-  await expect(page.locator('.polity-list li')).toHaveCount(9);
+  await expect(page.locator('.polity-list li')).toHaveCount(13);
   await expect(page.locator('.polity-list')).toContainText('Babür İmparatorluğu');
   await expect(page.locator('.polity-list')).toContainText('Etiyopya İmparatorluğu');
 });
 
-test('expanded 1500 snapshot exposes eleven sourced areas and Turkish search', async ({page}) => {
+test('expanded 1500 snapshot exposes fifteen sourced areas and Turkish search', async ({page}) => {
   await page.goto('/?year=1500&era=CE');
-  await expect(page.locator('.polity-list li')).toHaveCount(11);
+  await expect(page.locator('.polity-list li')).toHaveCount(15);
   await expect(page.getByTestId('atlas-map')).toHaveAttribute('data-ready', 'true');
   await page.getByRole('textbox', {name: 'Medeniyet veya yerleşim ara'}).fill('İNKA');
   await expect(page.locator('.polity-list li')).toHaveCount(1);

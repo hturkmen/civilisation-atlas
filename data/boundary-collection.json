@@ -18,7 +18,7 @@
     "uncertainty": "Sınırlar, Cliopatria'nın tarihsel alan yorumudur. Kesinlik ve ayrıntı döneme göre değişir. Kaydın tarih aralığı her yıl için ayrı gözlem veya devletin kuruluş ve bitiş tarihi değildir."
   },
   "geometryPath": "/data/polity-boundaries.geojson",
-  "geometrySha256": "32e504900e02ad6b2d7297781f471b1642083d9d9af7593fb94d7991ac78ab63",
+  "geometrySha256": "6cc17894e64e5dc1684433c4b9baff866aa2feebb37a853cded63e06c5faf31c",
   "polities": [
     {
       "id": "sumer",
@@ -187,6 +187,66 @@
       "name": "Yeni Fransa (Fransız kolonisi)",
       "sourceName": "New France",
       "color": "#9076a9"
+    },
+    {
+      "id": "kingdom-of-england",
+      "name": "İngiltere Krallığı",
+      "sourceName": "Kingdom of England",
+      "color": "#b7724f"
+    },
+    {
+      "id": "kingdom-of-scotland",
+      "name": "İskoçya Krallığı",
+      "sourceName": "Kingdom of Scotland",
+      "color": "#688e8a"
+    },
+    {
+      "id": "commonwealth-of-england",
+      "name": "İngiltere Commonwealth’i",
+      "sourceName": "Commonwealth of England",
+      "color": "#af715a"
+    },
+    {
+      "id": "crown-of-castile",
+      "name": "Kastilya Tacı",
+      "sourceName": "Crown of Castile",
+      "color": "#a56561"
+    },
+    {
+      "id": "crown-of-aragon",
+      "name": "Aragon Tacı",
+      "sourceName": "Crown of Aragon",
+      "color": "#ae8a50"
+    },
+    {
+      "id": "kingdom-of-spain",
+      "name": "İspanya Krallığı",
+      "sourceName": "Kingdom of Spain",
+      "color": "#a66755"
+    },
+    {
+      "id": "spanish-empire-component",
+      "name": "İspanyol İmparatorluğu (kaynak bileşeni)",
+      "sourceName": "Spanish Empire",
+      "color": "#c1826d"
+    },
+    {
+      "id": "english-colonial-component",
+      "name": "İngiliz sömürge alanları (kaynak bileşeni)",
+      "sourceName": "English Colonial Empire",
+      "color": "#789a79"
+    },
+    {
+      "id": "kingdom-of-great-britain",
+      "name": "Büyük Britanya Krallığı",
+      "sourceName": "Kingdom of Great Britain",
+      "color": "#667c9d"
+    },
+    {
+      "id": "british-colonial-component",
+      "name": "Britanya sömürge alanları (kaynak bileşeni)",
+      "sourceName": "British Colonial Empire",
+      "color": "#7895a7"
     }
   ],
   "records": [
@@ -741,6 +801,31 @@
       ]
     },
     {
+      "id": "cliopatria-6168",
+      "polityId": "kingdom-of-scotland",
+      "sourceIndex": 6168,
+      "sourceFromYear": 1314,
+      "sourceToYear": 1474,
+      "period": {
+        "start": 1314,
+        "endExclusive": 1475
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 86071.20070111276,
+      "wikidata": "Q230791",
+      "seshatId": "gb_scotland_k",
+      "labelPoint": [
+        -4.268175,
+        56.696713
+      ],
+      "bbox": [
+        -7.597295,
+        54.070625,
+        -1.8236,
+        58.736851
+      ]
+    },
+    {
       "id": "cliopatria-6265",
       "polityId": "ethiopian-empire",
       "sourceIndex": 6265,
@@ -816,6 +901,31 @@
       ]
     },
     {
+      "id": "cliopatria-6744",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 6744,
+      "sourceFromYear": 1395,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1395,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 130979.45482664178,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        15.627139,
+        43.016544
+      ]
+    },
+    {
       "id": "cliopatria-6752",
       "polityId": "ottoman-empire",
       "sourceIndex": 6752,
@@ -866,6 +976,31 @@
       ]
     },
     {
+      "id": "cliopatria-6787",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 6787,
+      "sourceFromYear": 1395,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1395,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 356051.9467110367,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-6794",
       "polityId": "kingdom-of-france",
       "sourceIndex": 6794,
@@ -888,6 +1023,56 @@
         42.561192,
         7.939755,
         50.578861
+      ]
+    },
+    {
+      "id": "cliopatria-6795",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 6795,
+      "sourceFromYear": 1395,
+      "sourceToYear": 1401,
+      "period": {
+        "start": 1395,
+        "endExclusive": 1402
+      },
+      "sampleYear": 1400,
+      "sourceAreaKm2": 193220.60394291015,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
+      "id": "cliopatria-6807",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 6807,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1406,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1407
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 130072.61328536761,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        15.627139,
+        43.016544
       ]
     },
     {
@@ -941,6 +1126,31 @@
       ]
     },
     {
+      "id": "cliopatria-6855",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 6855,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1406,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1407
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 357368.82580998336,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -13.862126,
+        28.829527,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-6867",
       "polityId": "kingdom-of-france",
       "sourceIndex": 6867,
@@ -963,6 +1173,31 @@
         42.561192,
         9.970182,
         50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-6868",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 6868,
+      "sourceFromYear": 1402,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1402,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1402,
+      "sourceAreaKm2": 186603.21693746408,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        2.090827,
+        55.908218
       ]
     },
     {
@@ -1041,6 +1276,31 @@
       ]
     },
     {
+      "id": "cliopatria-6894",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 6894,
+      "sourceFromYear": 1407,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1407,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1407,
+      "sourceAreaKm2": 360030.05659261136,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-6900",
       "polityId": "republic-of-venice",
       "sourceIndex": 6900,
@@ -1091,6 +1351,31 @@
       ]
     },
     {
+      "id": "cliopatria-6924",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 6924,
+      "sourceFromYear": 1407,
+      "sourceToYear": 1414,
+      "period": {
+        "start": 1407,
+        "endExclusive": 1415
+      },
+      "sampleYear": 1407,
+      "sourceAreaKm2": 138244.64494032488,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        24.08437,
+        43.016544
+      ]
+    },
+    {
       "id": "cliopatria-6927",
       "polityId": "kingdom-of-france",
       "sourceIndex": 6927,
@@ -1116,6 +1401,31 @@
       ]
     },
     {
+      "id": "cliopatria-6929",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 6929,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 192670.9230516885,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-6944",
       "polityId": "ming-dynasty",
       "sourceIndex": 6944,
@@ -1138,6 +1448,31 @@
         16.036131,
         141.556625,
         53.192196
+      ]
+    },
+    {
+      "id": "cliopatria-6953",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 6953,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 360273.2280859417,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
       ]
     },
     {
@@ -1241,6 +1576,31 @@
       ]
     },
     {
+      "id": "cliopatria-6981",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 6981,
+      "sourceFromYear": 1415,
+      "sourceToYear": 1421,
+      "period": {
+        "start": 1415,
+        "endExclusive": 1422
+      },
+      "sampleYear": 1415,
+      "sourceAreaKm2": 138907.14966366236,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        24.08437,
+        43.016544
+      ]
+    },
+    {
       "id": "cliopatria-6998",
       "polityId": "ottoman-empire",
       "sourceIndex": 6998,
@@ -1316,6 +1676,31 @@
       ]
     },
     {
+      "id": "cliopatria-7012",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7012,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1428,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1429
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 175568.55573739635,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        24.08437,
+        43.016544
+      ]
+    },
+    {
       "id": "cliopatria-7026",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7026,
@@ -1338,6 +1723,31 @@
         42.561192,
         7.940821,
         47.664101
+      ]
+    },
+    {
+      "id": "cliopatria-7027",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7027,
+      "sourceFromYear": 1422,
+      "sourceToYear": 1428,
+      "period": {
+        "start": 1422,
+        "endExclusive": 1429
+      },
+      "sampleYear": 1422,
+      "sourceAreaKm2": 294361.4142712695,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        5.822385,
+        55.908218
       ]
     },
     {
@@ -1416,6 +1826,31 @@
       ]
     },
     {
+      "id": "cliopatria-7073",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7073,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1449,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1450
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 185372.45581884845,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.203094,
+        35.773273,
+        24.08437,
+        43.342072
+      ]
+    },
+    {
       "id": "cliopatria-7075",
       "polityId": "ming-dynasty",
       "sourceIndex": 7075,
@@ -1438,6 +1873,31 @@
         18.221918,
         141.539124,
         53.192196
+      ]
+    },
+    {
+      "id": "cliopatria-7088",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7088,
+      "sourceFromYear": 1429,
+      "sourceToYear": 1430,
+      "period": {
+        "start": 1429,
+        "endExclusive": 1431
+      },
+      "sampleYear": 1429,
+      "sourceAreaKm2": 345915.42077920097,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        5.822385,
+        55.908218
       ]
     },
     {
@@ -1513,6 +1973,31 @@
         36.223988,
         40.185711,
         45.431332
+      ]
+    },
+    {
+      "id": "cliopatria-7136",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7136,
+      "sourceFromYear": 1431,
+      "sourceToYear": 1439,
+      "period": {
+        "start": 1431,
+        "endExclusive": 1440
+      },
+      "sampleYear": 1431,
+      "sourceAreaKm2": 339771.073304001,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        5.822385,
+        55.908218
       ]
     },
     {
@@ -1691,6 +2176,31 @@
       ]
     },
     {
+      "id": "cliopatria-7173",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7173,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1462,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1463
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 360768.09231154044,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-7181",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7181,
@@ -1713,6 +2223,31 @@
         42.561192,
         7.940821,
         50.245983
+      ]
+    },
+    {
+      "id": "cliopatria-7182",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7182,
+      "sourceFromYear": 1440,
+      "sourceToYear": 1458,
+      "period": {
+        "start": 1440,
+        "endExclusive": 1459
+      },
+      "sampleYear": 1440,
+      "sourceAreaKm2": 201300.7022941938,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        43.342072,
+        2.090827,
+        55.908218
       ]
     },
     {
@@ -1813,6 +2348,31 @@
         42.561192,
         7.940821,
         50.245983
+      ]
+    },
+    {
+      "id": "cliopatria-7241",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7241,
+      "sourceFromYear": 1450,
+      "sourceToYear": 1452,
+      "period": {
+        "start": 1450,
+        "endExclusive": 1453
+      },
+      "sampleYear": 1450,
+      "sourceAreaKm2": 243952.32577779895,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.203094,
+        35.773273,
+        24.08437,
+        43.342072
       ]
     },
     {
@@ -1966,6 +2526,31 @@
       ]
     },
     {
+      "id": "cliopatria-7284",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7284,
+      "sourceFromYear": 1453,
+      "sourceToYear": 1458,
+      "period": {
+        "start": 1453,
+        "endExclusive": 1459
+      },
+      "sampleYear": 1453,
+      "sourceAreaKm2": 243857.4805205229,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.203094,
+        35.773273,
+        24.08437,
+        43.342072
+      ]
+    },
+    {
       "id": "cliopatria-7297",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7297,
@@ -2013,6 +2598,31 @@
         18.157629,
         -94.931114,
         20.729105
+      ]
+    },
+    {
+      "id": "cliopatria-7309",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7309,
+      "sourceFromYear": 1459,
+      "sourceToYear": 1462,
+      "period": {
+        "start": 1459,
+        "endExclusive": 1463
+      },
+      "sampleYear": 1459,
+      "sourceAreaKm2": 166877.69632541484,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.203094,
+        35.773273,
+        15.627139,
+        43.342072
       ]
     },
     {
@@ -2116,6 +2726,56 @@
       ]
     },
     {
+      "id": "cliopatria-7341",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7341,
+      "sourceFromYear": 1459,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1459,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1459,
+      "sourceAreaKm2": 166431.97497798834,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        49.980007,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
+      "id": "cliopatria-7360",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7360,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 361913.4786557654,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-7362",
       "polityId": "songhai-empire",
       "sourceIndex": 7362,
@@ -2163,6 +2823,31 @@
         42.366177,
         7.940821,
         50.245983
+      ]
+    },
+    {
+      "id": "cliopatria-7380",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7380,
+      "sourceFromYear": 1463,
+      "sourceToYear": 1481,
+      "period": {
+        "start": 1463,
+        "endExclusive": 1482
+      },
+      "sampleYear": 1463,
+      "sourceAreaKm2": 162794.16921044263,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.203094,
+        35.773273,
+        15.627139,
+        43.342072
       ]
     },
     {
@@ -2466,6 +3151,31 @@
       ]
     },
     {
+      "id": "cliopatria-7483",
+      "polityId": "kingdom-of-scotland",
+      "sourceIndex": 7483,
+      "sourceFromYear": 1475,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1475,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1475,
+      "sourceAreaKm2": 88867.57441921948,
+      "wikidata": "Q230791",
+      "seshatId": "gb_scotland_k",
+      "labelPoint": [
+        -4.268175,
+        56.696713
+      ],
+      "bbox": [
+        -7.597295,
+        54.681122,
+        -0.805086,
+        60.839905
+      ]
+    },
+    {
       "id": "cliopatria-7485",
       "polityId": "aztec-triple-alliance",
       "sourceIndex": 7485,
@@ -2538,6 +3248,31 @@
         42.366177,
         7.940821,
         50.245983
+      ]
+    },
+    {
+      "id": "cliopatria-7513",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7513,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 152506.64042932866,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.41188,
+        40.71158
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        15.627139,
+        42.951466
       ]
     },
     {
@@ -2641,6 +3376,31 @@
       ]
     },
     {
+      "id": "cliopatria-7534",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7534,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 364321.40330954525,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-7538",
       "polityId": "aztec-triple-alliance",
       "sourceIndex": 7538,
@@ -2663,6 +3423,31 @@
         17.193314,
         -94.920006,
         21.243395
+      ]
+    },
+    {
+      "id": "cliopatria-7555",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7555,
+      "sourceFromYear": 1482,
+      "sourceToYear": 1486,
+      "period": {
+        "start": 1482,
+        "endExclusive": 1487
+      },
+      "sampleYear": 1482,
+      "sourceAreaKm2": 166387.92535438616,
+      "wikidata": "Q179876",
+      "seshatId": "gb_england_plantagenet",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        49.980007,
+        2.090827,
+        55.908218
       ]
     },
     {
@@ -2713,6 +3498,56 @@
         42.366177,
         7.940821,
         50.845493
+      ]
+    },
+    {
+      "id": "cliopatria-7561",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7561,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 166387.92535438616,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        49.980007,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
+      "id": "cliopatria-7574",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7574,
+      "sourceFromYear": 1487,
+      "sourceToYear": 1491,
+      "period": {
+        "start": 1487,
+        "endExclusive": 1492
+      },
+      "sampleYear": 1487,
+      "sourceAreaKm2": 377486.0754738139,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
       ]
     },
     {
@@ -2813,6 +3648,31 @@
         4.850083,
         -1.283635,
         42.106277
+      ]
+    },
+    {
+      "id": "cliopatria-7602",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7602,
+      "sourceFromYear": 1492,
+      "sourceToYear": 1496,
+      "period": {
+        "start": 1492,
+        "endExclusive": 1497
+      },
+      "sampleYear": 1492,
+      "sourceAreaKm2": 390719.3863076823,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -18.057467,
+        27.608078,
+        -0.432753,
+        43.733017
       ]
     },
     {
@@ -3016,6 +3876,31 @@
       ]
     },
     {
+      "id": "cliopatria-7655",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7655,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1497,
+      "sourceAreaKm2": 156544.94502301922,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        15.627139,
+        43.016544
+      ]
+    },
+    {
       "id": "cliopatria-7671",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7671,
@@ -3063,6 +3948,31 @@
         12.114578,
         1.719503,
         18.029055
+      ]
+    },
+    {
+      "id": "cliopatria-7674",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7674,
+      "sourceFromYear": 1497,
+      "sourceToYear": 1501,
+      "period": {
+        "start": 1497,
+        "endExclusive": 1502
+      },
+      "sampleYear": 1497,
+      "sourceAreaKm2": 412237.5666002308,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -71.293129,
+        18.221918,
+        -0.432753,
+        43.733017
       ]
     },
     {
@@ -3116,6 +4026,31 @@
       ]
     },
     {
+      "id": "cliopatria-7683",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7683,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 417008.9417842297,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -72.792564,
+        18.221918,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-7698",
       "polityId": "safavid-dynasty",
       "sourceIndex": 7698,
@@ -3141,6 +4076,31 @@
       ]
     },
     {
+      "id": "cliopatria-7703",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 7703,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 166475.98391469894,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -6.918199,
+        49.980007,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-7704",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7704,
@@ -3163,6 +4123,31 @@
         37.964268,
         18.438118,
         50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-7714",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7714,
+      "sourceFromYear": 1502,
+      "sourceToYear": 1506,
+      "period": {
+        "start": 1502,
+        "endExclusive": 1507
+      },
+      "sampleYear": 1502,
+      "sourceAreaKm2": 156735.696045997,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        15.627139,
+        43.016544
       ]
     },
     {
@@ -3316,6 +4301,31 @@
       ]
     },
     {
+      "id": "cliopatria-7752",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7752,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1511,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1512
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 225524.17583312423,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        18.435537,
+        43.016544
+      ]
+    },
+    {
       "id": "cliopatria-7757",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7757,
@@ -3363,6 +4373,56 @@
         25.164974,
         61.065639,
         41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-7772",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7772,
+      "sourceFromYear": 1507,
+      "sourceToYear": 1511,
+      "period": {
+        "start": 1507,
+        "endExclusive": 1512
+      },
+      "sampleYear": 1507,
+      "sourceAreaKm2": 479835.97074672545,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -74.444847,
+        17.579041,
+        -0.432753,
+        43.733017
+      ]
+    },
+    {
+      "id": "cliopatria-7777",
+      "polityId": "crown-of-aragon",
+      "sourceIndex": 7777,
+      "sourceFromYear": 1512,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1512,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1512,
+      "sourceAreaKm2": 225524.17583312423,
+      "wikidata": "Q204920",
+      "seshatId": "es_aragon_crown",
+      "labelPoint": [
+        -0.469069,
+        40.841173
+      ],
+      "bbox": [
+        -2.116528,
+        35.773273,
+        18.435537,
+        43.016544
       ]
     },
     {
@@ -3416,6 +4476,31 @@
       ]
     },
     {
+      "id": "cliopatria-7808",
+      "polityId": "crown-of-castile",
+      "sourceIndex": 7808,
+      "sourceFromYear": 1512,
+      "sourceToYear": 1515,
+      "period": {
+        "start": 1512,
+        "endExclusive": 1516
+      },
+      "sampleYear": 1512,
+      "sourceAreaKm2": 535546.3587335736,
+      "wikidata": "Q217196",
+      "seshatId": "es_castile_crown",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -78.416275,
+        7.871601,
+        13.607404,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-7810",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7810,
@@ -3463,6 +4548,31 @@
         25.03639,
         66.357765,
         41.716682
+      ]
+    },
+    {
+      "id": "cliopatria-7823",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 7823,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 256512.12661719666,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -77.77751,
+        21.532682
+      ],
+      "bbox": [
+        -84.797401,
+        7.871601,
+        13.607404,
+        36.932613
       ]
     },
     {
@@ -3541,6 +4651,31 @@
       ]
     },
     {
+      "id": "cliopatria-7835",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 7835,
+      "sourceFromYear": 1516,
+      "sourceToYear": 1518,
+      "period": {
+        "start": 1516,
+        "endExclusive": 1519
+      },
+      "sampleYear": 1516,
+      "sourceAreaKm2": 690074.9574582381,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.540756,
+        39.902341
+      ],
+      "bbox": [
+        -9.304603,
+        35.773273,
+        18.435537,
+        53.192196
+      ]
+    },
+    {
       "id": "cliopatria-7843",
       "polityId": "kingdom-of-portugal",
       "sourceIndex": 7843,
@@ -3588,6 +4723,31 @@
         36.030804,
         44.031296,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7855",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 7855,
+      "sourceFromYear": 1519,
+      "sourceToYear": 1520,
+      "period": {
+        "start": 1519,
+        "endExclusive": 1521
+      },
+      "sampleYear": 1519,
+      "sourceAreaKm2": 945446.1829376013,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -87.019524,
+        7.678739,
+        18.435537,
+        53.192196
       ]
     },
     {
@@ -3716,6 +4876,31 @@
       ]
     },
     {
+      "id": "cliopatria-7900",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 7900,
+      "sourceFromYear": 1521,
+      "sourceToYear": 1525,
+      "period": {
+        "start": 1521,
+        "endExclusive": 1526
+      },
+      "sampleYear": 1521,
+      "sourceAreaKm2": 664854.5416969849,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        35.773273,
+        18.435537,
+        53.192196
+      ]
+    },
+    {
       "id": "cliopatria-7910",
       "polityId": "kingdom-of-portugal",
       "sourceIndex": 7910,
@@ -3763,6 +4948,31 @@
         12.693166,
         47.05851,
         47.466473
+      ]
+    },
+    {
+      "id": "cliopatria-7925",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 7925,
+      "sourceFromYear": 1521,
+      "sourceToYear": 1525,
+      "period": {
+        "start": 1521,
+        "endExclusive": 1526
+      },
+      "sampleYear": 1521,
+      "sourceAreaKm2": 486439.89943803084,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -97.92382,
+        18.768361
+      ],
+      "bbox": [
+        -101.72821,
+        7.678739,
+        13.607404,
+        36.932613
       ]
     },
     {
@@ -3866,6 +5076,31 @@
       ]
     },
     {
+      "id": "cliopatria-7955",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 7955,
+      "sourceFromYear": 1526,
+      "sourceToYear": 1528,
+      "period": {
+        "start": 1526,
+        "endExclusive": 1529
+      },
+      "sampleYear": 1526,
+      "sourceAreaKm2": 677150.0290449598,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        35.773273,
+        18.435537,
+        53.462067
+      ]
+    },
+    {
       "id": "cliopatria-7956",
       "polityId": "kingdom-of-france",
       "sourceIndex": 7956,
@@ -3916,6 +5151,31 @@
       ]
     },
     {
+      "id": "cliopatria-7965",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 7965,
+      "sourceFromYear": 1526,
+      "sourceToYear": 1528,
+      "period": {
+        "start": 1526,
+        "endExclusive": 1529
+      },
+      "sampleYear": 1526,
+      "sourceAreaKm2": 878304.3085016927,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -95.576042,
+        17.096882
+      ],
+      "bbox": [
+        -101.72821,
+        7.164437,
+        13.607404,
+        36.932613
+      ]
+    },
+    {
       "id": "cliopatria-7977",
       "polityId": "safavid-dynasty",
       "sourceIndex": 7977,
@@ -3938,6 +5198,31 @@
         25.03639,
         66.357765,
         41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-7983",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 7983,
+      "sourceFromYear": 1529,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1529,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1529,
+      "sourceAreaKm2": 985724.3741005143,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -90.376458,
+        14.300358
+      ],
+      "bbox": [
+        -101.72821,
+        7.164437,
+        13.607404,
+        36.932613
       ]
     },
     {
@@ -4013,6 +5298,31 @@
         5.428671,
         42.293785,
         16.936163
+      ]
+    },
+    {
+      "id": "cliopatria-8017",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8017,
+      "sourceFromYear": 1529,
+      "sourceToYear": 1533,
+      "period": {
+        "start": 1529,
+        "endExclusive": 1534
+      },
+      "sampleYear": 1529,
+      "sourceAreaKm2": 872138.966355764,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        35.773273,
+        19.237562,
+        52.317577
       ]
     },
     {
@@ -4116,6 +5426,31 @@
       ]
     },
     {
+      "id": "cliopatria-8031",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8031,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 876050.2139784727,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        19.237562,
+        52.317577
+      ]
+    },
+    {
       "id": "cliopatria-8039",
       "polityId": "safavid-dynasty",
       "sourceIndex": 8039,
@@ -4138,6 +5473,56 @@
         25.03639,
         66.357765,
         41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8048",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8048,
+      "sourceFromYear": 1534,
+      "sourceToYear": 1539,
+      "period": {
+        "start": 1534,
+        "endExclusive": 1540
+      },
+      "sampleYear": 1534,
+      "sourceAreaKm2": 1469907.8641654486,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -85.843527,
+        12.371728
+      ],
+      "bbox": [
+        -108.039452,
+        -14.050468,
+        13.607404,
+        36.932613
+      ]
+    },
+    {
+      "id": "cliopatria-8062",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8062,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 3968029.8131122906,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -35.651798,
+        13.607404,
+        36.932613
       ]
     },
     {
@@ -4166,6 +5551,31 @@
       ]
     },
     {
+      "id": "cliopatria-8070",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8070,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 169986.60010382373,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -7.160187,
+        49.980007,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8071",
       "polityId": "kingdom-of-france",
       "sourceIndex": 8071,
@@ -4188,6 +5598,31 @@
         42.561192,
         8.581819,
         50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-8077",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8077,
+      "sourceFromYear": 1540,
+      "sourceToYear": 1546,
+      "period": {
+        "start": 1540,
+        "endExclusive": 1547
+      },
+      "sampleYear": 1540,
+      "sourceAreaKm2": 971767.582393919,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        22.439766,
+        52.317577
       ]
     },
     {
@@ -4291,6 +5726,31 @@
       ]
     },
     {
+      "id": "cliopatria-8101",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8101,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 179030.38648690018,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -8.948099,
+        49.980007,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8102",
       "polityId": "kingdom-of-france",
       "sourceIndex": 8102,
@@ -4363,6 +5823,31 @@
         18.221918,
         124.725349,
         42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8117",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8117,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1551,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1552
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 4104600.7051137215,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -35.651798,
+        13.607404,
+        36.932613
       ]
     },
     {
@@ -4441,6 +5926,81 @@
       ]
     },
     {
+      "id": "cliopatria-8142",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8142,
+      "sourceFromYear": 1547,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1547,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1547,
+      "sourceAreaKm2": 971450.2013988423,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        22.439766,
+        52.317577
+      ]
+    },
+    {
+      "id": "cliopatria-8153",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8153,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 4220142.736330799,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -77.854488,
+        -8.296733
+      ],
+      "bbox": [
+        -108.039452,
+        -41.659111,
+        5.016778,
+        36.932613
+      ]
+    },
+    {
+      "id": "cliopatria-8159",
+      "polityId": "kingdom-of-scotland",
+      "sourceIndex": 8159,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 90185.19051929287,
+      "wikidata": "Q230791",
+      "seshatId": "gb_scotland_k",
+      "labelPoint": [
+        -4.268175,
+        56.696713
+      ],
+      "bbox": [
+        -7.597295,
+        54.273907,
+        -0.805086,
+        60.839905
+      ]
+    },
+    {
       "id": "cliopatria-8161",
       "polityId": "kingdom-of-france",
       "sourceIndex": 8161,
@@ -4463,6 +6023,31 @@
         42.561192,
         8.581819,
         50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-8162",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8162,
+      "sourceFromYear": 1552,
+      "sourceToYear": 1555,
+      "period": {
+        "start": 1552,
+        "endExclusive": 1556
+      },
+      "sampleYear": 1552,
+      "sourceAreaKm2": 182335.85949944844,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -9.748264,
+        49.980007,
+        2.090827,
+        55.908218
       ]
     },
     {
@@ -4541,6 +6126,31 @@
       ]
     },
     {
+      "id": "cliopatria-8195",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8195,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 737532.7257195865,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.540756,
+        39.902341
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        53.529591
+      ]
+    },
+    {
       "id": "cliopatria-8206",
       "polityId": "kingdom-of-portugal",
       "sourceIndex": 8206,
@@ -4616,6 +6226,31 @@
       ]
     },
     {
+      "id": "cliopatria-8220",
+      "polityId": "kingdom-of-scotland",
+      "sourceIndex": 8220,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 91943.67504050313,
+      "wikidata": "Q230791",
+      "seshatId": "gb_scotland_k",
+      "labelPoint": [
+        -4.268175,
+        56.696713
+      ],
+      "bbox": [
+        -7.597295,
+        54.206123,
+        -0.805086,
+        60.839905
+      ]
+    },
+    {
       "id": "cliopatria-8228",
       "polityId": "safavid-dynasty",
       "sourceIndex": 8228,
@@ -4638,6 +6273,31 @@
         25.03639,
         66.70327,
         41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-8237",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8237,
+      "sourceFromYear": 1556,
+      "sourceToYear": 1563,
+      "period": {
+        "start": 1556,
+        "endExclusive": 1564
+      },
+      "sampleYear": 1556,
+      "sourceAreaKm2": 186630.08882016063,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -9.748264,
+        49.980007,
+        2.090827,
+        55.908218
       ]
     },
     {
@@ -4816,6 +6476,31 @@
       ]
     },
     {
+      "id": "cliopatria-8266",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8266,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 730657.8502468731,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.540756,
+        39.902341
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        53.529591
+      ]
+    },
+    {
       "id": "cliopatria-8277",
       "polityId": "kingdom-of-france",
       "sourceIndex": 8277,
@@ -4841,6 +6526,31 @@
       ]
     },
     {
+      "id": "cliopatria-8278",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8278,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 218051.20514843785,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        2.090827,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8285",
       "polityId": "ming-dynasty",
       "sourceIndex": 8285,
@@ -4863,6 +6573,31 @@
         18.221918,
         124.725349,
         42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8288",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8288,
+      "sourceFromYear": 1564,
+      "sourceToYear": 1571,
+      "period": {
+        "start": 1564,
+        "endExclusive": 1572
+      },
+      "sampleYear": 1564,
+      "sourceAreaKm2": 4228461.74500646,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -77.854488,
+        -8.296733
+      ],
+      "bbox": [
+        -108.039452,
+        -41.659111,
+        -0.446487,
+        35.7089
       ]
     },
     {
@@ -4913,6 +6648,31 @@
         42.561192,
         7.460639,
         50.912201
+      ]
+    },
+    {
+      "id": "cliopatria-8310",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8310,
+      "sourceFromYear": 1572,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1572,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1572,
+      "sourceAreaKm2": 4409345.426698719,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -77.608751,
+        -8.714602
+      ],
+      "bbox": [
+        -108.039452,
+        -42.243549,
+        124.620865,
+        35.7089
       ]
     },
     {
@@ -4991,6 +6751,31 @@
       ]
     },
     {
+      "id": "cliopatria-8344",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8344,
+      "sourceFromYear": 1572,
+      "sourceToYear": 1578,
+      "period": {
+        "start": 1572,
+        "endExclusive": 1579
+      },
+      "sampleYear": 1572,
+      "sourceAreaKm2": 722628.7962578743,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.540756,
+        39.902341
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        53.529591
+      ]
+    },
+    {
       "id": "cliopatria-8350",
       "polityId": "ming-dynasty",
       "sourceIndex": 8350,
@@ -5041,6 +6826,31 @@
       ]
     },
     {
+      "id": "cliopatria-8353",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8353,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1581,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1582
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 249156.8585268384,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8354",
       "polityId": "kingdom-of-france",
       "sourceIndex": 8354,
@@ -5063,6 +6873,56 @@
         42.561192,
         7.460639,
         51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8358",
+      "polityId": "kingdom-of-scotland",
+      "sourceIndex": 8358,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1601,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1602
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 92385.93634706685,
+      "wikidata": "Q230791",
+      "seshatId": "gb_scotland_k",
+      "labelPoint": [
+        -4.268175,
+        56.696713
+      ],
+      "bbox": [
+        -7.597295,
+        54.138363,
+        -0.805086,
+        60.839905
+      ]
+    },
+    {
+      "id": "cliopatria-8360",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8360,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1581,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1582
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 4517465.629961401,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -77.608751,
+        -8.714602
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        124.620865,
+        35.7089
       ]
     },
     {
@@ -5166,6 +7026,81 @@
       ]
     },
     {
+      "id": "cliopatria-8378",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8378,
+      "sourceFromYear": 1579,
+      "sourceToYear": 1581,
+      "period": {
+        "start": 1579,
+        "endExclusive": 1582
+      },
+      "sampleYear": 1579,
+      "sourceAreaKm2": 692782.4986795401,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.540756,
+        39.902341
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.848125
+      ]
+    },
+    {
+      "id": "cliopatria-8384",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8384,
+      "sourceFromYear": 1582,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1582,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1582,
+      "sourceAreaKm2": 5697799.465836416,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.186546,
+        -7.911007
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        128.245316,
+        35.83765
+      ]
+    },
+    {
+      "id": "cliopatria-8389",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8389,
+      "sourceFromYear": 1582,
+      "sourceToYear": 1587,
+      "period": {
+        "start": 1582,
+        "endExclusive": 1588
+      },
+      "sampleYear": 1582,
+      "sourceAreaKm2": 240013.4260933036,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.506695,
+        49.980007,
+        1.739019,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8393",
       "polityId": "ming-dynasty",
       "sourceIndex": 8393,
@@ -5241,6 +7176,31 @@
       ]
     },
     {
+      "id": "cliopatria-8418",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8418,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 249156.8585268384,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8419",
       "polityId": "kingdom-of-france",
       "sourceIndex": 8419,
@@ -5263,6 +7223,31 @@
         42.561192,
         7.206159,
         51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8427",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8427,
+      "sourceFromYear": 1588,
+      "sourceToYear": 1594,
+      "period": {
+        "start": 1588,
+        "endExclusive": 1595
+      },
+      "sampleYear": 1588,
+      "sourceAreaKm2": 6080631.570100413,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.067975,
+        -8.039582
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        128.245316,
+        35.83765
       ]
     },
     {
@@ -5391,6 +7376,31 @@
       ]
     },
     {
+      "id": "cliopatria-8481",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8481,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 232080.44483689973,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8485",
       "polityId": "ming-dynasty",
       "sourceIndex": 8485,
@@ -5438,6 +7448,31 @@
         25.03639,
         66.694435,
         41.327385
+      ]
+    },
+    {
+      "id": "cliopatria-8494",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8494,
+      "sourceFromYear": 1595,
+      "sourceToYear": 1599,
+      "period": {
+        "start": 1595,
+        "endExclusive": 1600
+      },
+      "sampleYear": 1595,
+      "sourceAreaKm2": 6401492.8015858,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.186546,
+        -7.911007
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        128.245316,
+        35.83765
       ]
     },
     {
@@ -5566,6 +7601,31 @@
       ]
     },
     {
+      "id": "cliopatria-8525",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8525,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1601,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1602
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 215610.817900381,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8526",
       "polityId": "safavid-dynasty",
       "sourceIndex": 8526,
@@ -5613,6 +7673,31 @@
         18.221918,
         124.725349,
         42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8535",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8535,
+      "sourceFromYear": 1600,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1600,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1600,
+      "sourceAreaKm2": 6381186.441794633,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        128.245316,
+        36.481617
       ]
     },
     {
@@ -5666,6 +7751,31 @@
       ]
     },
     {
+      "id": "cliopatria-8542",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8542,
+      "sourceFromYear": 1602,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1602,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1602,
+      "sourceAreaKm2": 219052.80311823176,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        55.908218
+      ]
+    },
+    {
       "id": "cliopatria-8546",
       "polityId": "songhai-empire",
       "sourceIndex": 8546,
@@ -5688,6 +7798,31 @@
         15.714691,
         -3.65454,
         15.843266
+      ]
+    },
+    {
+      "id": "cliopatria-8548",
+      "polityId": "kingdom-of-scotland",
+      "sourceIndex": 8548,
+      "sourceFromYear": 1602,
+      "sourceToYear": 1608,
+      "period": {
+        "start": 1602,
+        "endExclusive": 1609
+      },
+      "sampleYear": 1602,
+      "sourceAreaKm2": 92385.93634706685,
+      "wikidata": "Q230791",
+      "seshatId": "gb_scotland_k",
+      "labelPoint": [
+        -4.268175,
+        56.696713
+      ],
+      "bbox": [
+        -7.597295,
+        54.138363,
+        -0.805086,
+        60.839905
       ]
     },
     {
@@ -5766,6 +7901,31 @@
       ]
     },
     {
+      "id": "cliopatria-8569",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8569,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 341650.2806005273,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        60.839905
+      ]
+    },
+    {
       "id": "cliopatria-8570",
       "polityId": "new-france",
       "sourceIndex": 8570,
@@ -5788,6 +7948,31 @@
         44.581291,
         -65.280327,
         47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-8574",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8574,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1611,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1612
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 6508058.006883343,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
       ]
     },
     {
@@ -5838,6 +8023,56 @@
         24.264904,
         142.089737,
         42.23621
+      ]
+    },
+    {
+      "id": "cliopatria-8583",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8583,
+      "sourceFromYear": 1609,
+      "sourceToYear": 1611,
+      "period": {
+        "start": 1609,
+        "endExclusive": 1612
+      },
+      "sampleYear": 1609,
+      "sourceAreaKm2": 1563.4454474604436,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -76.833952,
+        37.351582
+      ],
+      "bbox": [
+        -77.194252,
+        32.171696,
+        -64.649498,
+        37.512772
+      ]
+    },
+    {
+      "id": "cliopatria-8603",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8603,
+      "sourceFromYear": 1612,
+      "sourceToYear": 1618,
+      "period": {
+        "start": 1612,
+        "endExclusive": 1619
+      },
+      "sampleYear": 1612,
+      "sourceAreaKm2": 4058.7559646528143,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -76.454508,
+        37.093746
+      ],
+      "bbox": [
+        -77.635498,
+        32.171696,
+        -52.954014,
+        47.664101
       ]
     },
     {
@@ -5941,6 +8176,56 @@
       ]
     },
     {
+      "id": "cliopatria-8627",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8627,
+      "sourceFromYear": 1612,
+      "sourceToYear": 1618,
+      "period": {
+        "start": 1612,
+        "endExclusive": 1619
+      },
+      "sampleYear": 1612,
+      "sourceAreaKm2": 6533618.052431825,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-8630",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8630,
+      "sourceFromYear": 1619,
+      "sourceToYear": 1621,
+      "period": {
+        "start": 1619,
+        "endExclusive": 1622
+      },
+      "sampleYear": 1619,
+      "sourceAreaKm2": 7388.585364751159,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -53.404827,
+        47.664106
+      ],
+      "bbox": [
+        -77.635498,
+        32.171696,
+        -52.818726,
+        48.05975
+      ]
+    },
+    {
       "id": "cliopatria-8651",
       "polityId": "ming-dynasty",
       "sourceIndex": 8651,
@@ -5963,6 +8248,56 @@
         18.221918,
         124.725349,
         42.886398
+      ]
+    },
+    {
+      "id": "cliopatria-8655",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8655,
+      "sourceFromYear": 1619,
+      "sourceToYear": 1621,
+      "period": {
+        "start": 1619,
+        "endExclusive": 1622
+      },
+      "sampleYear": 1619,
+      "sourceAreaKm2": 6902283.234544915,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-8665",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8665,
+      "sourceFromYear": 1622,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1622,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1622,
+      "sourceAreaKm2": 6908770.315719799,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
       ]
     },
     {
@@ -6016,6 +8351,56 @@
       ]
     },
     {
+      "id": "cliopatria-8685",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8685,
+      "sourceFromYear": 1622,
+      "sourceToYear": 1625,
+      "period": {
+        "start": 1622,
+        "endExclusive": 1626
+      },
+      "sampleYear": 1622,
+      "sourceAreaKm2": 11069.44108762939,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -53.056526,
+        47.33482
+      ],
+      "bbox": [
+        -77.168831,
+        32.171696,
+        -52.621849,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8700",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8700,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1628,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1629
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 13425.98910818819,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -53.056526,
+        47.33482
+      ],
+      "bbox": [
+        -77.168831,
+        17.643328,
+        -52.621849,
+        48.05975
+      ]
+    },
+    {
       "id": "cliopatria-8701",
       "polityId": "mughal-empire",
       "sourceIndex": 8701,
@@ -6063,6 +8448,31 @@
         10.057378,
         51.74725,
         47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8710",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8710,
+      "sourceFromYear": 1626,
+      "sourceToYear": 1628,
+      "period": {
+        "start": 1626,
+        "endExclusive": 1629
+      },
+      "sampleYear": 1626,
+      "sourceAreaKm2": 7065807.1955842385,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
       ]
     },
     {
@@ -6141,6 +8551,31 @@
       ]
     },
     {
+      "id": "cliopatria-8722",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8722,
+      "sourceFromYear": 1629,
+      "sourceToYear": 1631,
+      "period": {
+        "start": 1629,
+        "endExclusive": 1632
+      },
+      "sampleYear": 1629,
+      "sourceAreaKm2": 7118453.967231507,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-8723",
       "polityId": "ming-dynasty",
       "sourceIndex": 8723,
@@ -6216,6 +8651,81 @@
       ]
     },
     {
+      "id": "cliopatria-8747",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8747,
+      "sourceFromYear": 1629,
+      "sourceToYear": 1631,
+      "period": {
+        "start": 1629,
+        "endExclusive": 1632
+      },
+      "sampleYear": 1629,
+      "sourceAreaKm2": 19642.778184411203,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -53.056526,
+        47.33482
+      ],
+      "bbox": [
+        -77.168831,
+        7.421588,
+        -12.506955,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8765",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8765,
+      "sourceFromYear": 1632,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1632,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1632,
+      "sourceAreaKm2": 21156.83904083597,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -53.056526,
+        47.33482
+      ],
+      "bbox": [
+        -77.219765,
+        7.421588,
+        -12.506955,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8770",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8770,
+      "sourceFromYear": 1632,
+      "sourceToYear": 1635,
+      "period": {
+        "start": 1632,
+        "endExclusive": 1636
+      },
+      "sampleYear": 1632,
+      "sourceAreaKm2": 7103370.676625812,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-8777",
       "polityId": "ming-dynasty",
       "sourceIndex": 8777,
@@ -6288,6 +8798,31 @@
         17.707617,
         -59.786049,
         47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-8786",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8786,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 7064031.412276356,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
       ]
     },
     {
@@ -6391,6 +8926,31 @@
       ]
     },
     {
+      "id": "cliopatria-8822",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8822,
+      "sourceFromYear": 1636,
+      "sourceToYear": 1639,
+      "period": {
+        "start": 1636,
+        "endExclusive": 1640
+      },
+      "sampleYear": 1636,
+      "sourceAreaKm2": 27470.40415993521,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -53.056526,
+        47.33482
+      ],
+      "bbox": [
+        -77.219765,
+        7.421588,
+        -12.506955,
+        48.05975
+      ]
+    },
+    {
       "id": "cliopatria-8825",
       "polityId": "ottoman-empire",
       "sourceIndex": 8825,
@@ -6463,6 +9023,31 @@
         42.561192,
         8.115007,
         51.112431
+      ]
+    },
+    {
+      "id": "cliopatria-8833",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8833,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1641,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1642
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 248047.47791157666,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -1.235309,
+        52.58634
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        55.361809
       ]
     },
     {
@@ -6541,6 +9126,31 @@
       ]
     },
     {
+      "id": "cliopatria-8846",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 8846,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 6152470.753456205,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -79.457402,
+        -5.468077
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-8854",
       "polityId": "ottoman-empire",
       "sourceIndex": 8854,
@@ -6563,6 +9173,31 @@
         10.057378,
         48.600475,
         47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8856",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8856,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1641,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1642
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 35525.178628432346,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.274646,
+        42.463674
+      ],
+      "bbox": [
+        -77.219765,
+        5.171521,
+        80.346947,
+        48.05975
       ]
     },
     {
@@ -6616,6 +9251,81 @@
       ]
     },
     {
+      "id": "cliopatria-8870",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8870,
+      "sourceFromYear": 1640,
+      "sourceToYear": 1641,
+      "period": {
+        "start": 1640,
+        "endExclusive": 1642
+      },
+      "sampleYear": 1640,
+      "sourceAreaKm2": 660617.9587485319,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.51342
+      ]
+    },
+    {
+      "id": "cliopatria-8878",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8878,
+      "sourceFromYear": 1642,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1642,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1642,
+      "sourceAreaKm2": 39584.3382497684,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.274646,
+        42.463674
+      ],
+      "bbox": [
+        -77.219765,
+        5.171521,
+        80.346947,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8890",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8890,
+      "sourceFromYear": 1642,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1642,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1642,
+      "sourceAreaKm2": 679136.6935854006,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.51342
+      ]
+    },
+    {
       "id": "cliopatria-8893",
       "polityId": "new-france",
       "sourceIndex": 8893,
@@ -6638,6 +9348,31 @@
         14.428933,
         -59.786049,
         47.137375
+      ]
+    },
+    {
+      "id": "cliopatria-8894",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 8894,
+      "sourceFromYear": 1642,
+      "sourceToYear": 1644,
+      "period": {
+        "start": 1642,
+        "endExclusive": 1645
+      },
+      "sampleYear": 1642,
+      "sourceAreaKm2": 183308.7950415501,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.331211,
+        52.95636
+      ],
+      "bbox": [
+        -9.973213,
+        49.980007,
+        1.739019,
+        55.908218
       ]
     },
     {
@@ -6691,6 +9426,31 @@
       ]
     },
     {
+      "id": "cliopatria-8913",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8913,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 683486.0599680708,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.51342
+      ]
+    },
+    {
       "id": "cliopatria-8920",
       "polityId": "republic-of-venice",
       "sourceIndex": 8920,
@@ -6738,6 +9498,56 @@
         10.057378,
         48.600475,
         47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8926",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8926,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 43461.131491478154,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.280056,
+        42.36618
+      ],
+      "bbox": [
+        -77.219765,
+        5.171521,
+        80.346947,
+        48.05975
+      ]
+    },
+    {
+      "id": "cliopatria-8933",
+      "polityId": "commonwealth-of-england",
+      "sourceIndex": 8933,
+      "sourceFromYear": 1645,
+      "sourceToYear": 1647,
+      "period": {
+        "start": 1645,
+        "endExclusive": 1648
+      },
+      "sampleYear": 1645,
+      "sourceAreaKm2": 138621.0490581114,
+      "wikidata": "Q330362",
+      "seshatId": "",
+      "labelPoint": [
+        -1.452419,
+        53.225937
+      ],
+      "bbox": [
+        -5.26427,
+        50.578861,
+        1.739019,
+        55.908218
       ]
     },
     {
@@ -6816,6 +9626,31 @@
       ]
     },
     {
+      "id": "cliopatria-8947",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 8947,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 677063.4848061615,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
       "id": "cliopatria-8955",
       "polityId": "republic-of-venice",
       "sourceIndex": 8955,
@@ -6866,6 +9701,31 @@
       ]
     },
     {
+      "id": "cliopatria-8960",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 8960,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 53381.05990262044,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.280056,
+        42.36618
+      ],
+      "bbox": [
+        -77.63501,
+        5.171521,
+        80.346947,
+        48.05975
+      ]
+    },
+    {
       "id": "cliopatria-8963",
       "polityId": "ottoman-empire",
       "sourceIndex": 8963,
@@ -6888,6 +9748,31 @@
         10.057378,
         48.600475,
         47.993771
+      ]
+    },
+    {
+      "id": "cliopatria-8971",
+      "polityId": "commonwealth-of-england",
+      "sourceIndex": 8971,
+      "sourceFromYear": 1648,
+      "sourceToYear": 1652,
+      "period": {
+        "start": 1648,
+        "endExclusive": 1653
+      },
+      "sampleYear": 1648,
+      "sourceAreaKm2": 167278.1459936157,
+      "wikidata": "Q330362",
+      "seshatId": "",
+      "labelPoint": [
+        -2.273742,
+        52.990042
+      ],
+      "bbox": [
+        -8.708573,
+        49.980007,
+        1.739019,
+        55.908218
       ]
     },
     {
@@ -6966,6 +9851,31 @@
       ]
     },
     {
+      "id": "cliopatria-8991",
+      "polityId": "commonwealth-of-england",
+      "sourceIndex": 8991,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 341675.6004253676,
+      "wikidata": "Q330362",
+      "seshatId": "",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        60.839905
+      ]
+    },
+    {
       "id": "cliopatria-8999",
       "polityId": "new-france",
       "sourceIndex": 8999,
@@ -7041,6 +9951,31 @@
       ]
     },
     {
+      "id": "cliopatria-9010",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9010,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 682146.4437027257,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
       "id": "cliopatria-9023",
       "polityId": "mughal-empire",
       "sourceIndex": 9023,
@@ -7063,6 +9998,31 @@
         18.157629,
         91.495125,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9024",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9024,
+      "sourceFromYear": 1653,
+      "sourceToYear": 1658,
+      "period": {
+        "start": 1653,
+        "endExclusive": 1659
+      },
+      "sampleYear": 1653,
+      "sourceAreaKm2": 81042.54278554961,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.437398,
+        42.36618
+      ],
+      "bbox": [
+        -77.63501,
+        5.171521,
+        80.346947,
+        48.05975
       ]
     },
     {
@@ -7141,6 +10101,81 @@
       ]
     },
     {
+      "id": "cliopatria-9035",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9035,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 6226721.6554242205,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.91874,
+        -2.993003
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        126.591057,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-9036",
+      "polityId": "commonwealth-of-england",
+      "sourceIndex": 9036,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 341493.93277141,
+      "wikidata": "Q330362",
+      "seshatId": "",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        60.839905
+      ]
+    },
+    {
+      "id": "cliopatria-9044",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9044,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1661,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1662
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 94824.89373729946,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.437398,
+        42.36618
+      ],
+      "bbox": [
+        -78.390015,
+        5.171521,
+        80.346947,
+        48.05975
+      ]
+    },
+    {
       "id": "cliopatria-9046",
       "polityId": "mughal-empire",
       "sourceIndex": 9046,
@@ -7163,6 +10198,31 @@
         17.900478,
         91.495125,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9056",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9056,
+      "sourceFromYear": 1659,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1659,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1659,
+      "sourceAreaKm2": 678079.1673822743,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
       ]
     },
     {
@@ -7216,6 +10276,31 @@
       ]
     },
     {
+      "id": "cliopatria-9075",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9075,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1669,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1670
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 106053.72417181579,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -71.437398,
+        42.36618
+      ],
+      "bbox": [
+        -78.390015,
+        5.171521,
+        80.346947,
+        48.720371
+      ]
+    },
+    {
       "id": "cliopatria-9083",
       "polityId": "kingdom-of-kongo",
       "sourceIndex": 9083,
@@ -7238,6 +10323,31 @@
         -8.457451,
         16.59304,
         -4.278756
+      ]
+    },
+    {
+      "id": "cliopatria-9085",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 9085,
+      "sourceFromYear": 1662,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1662,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1662,
+      "sourceAreaKm2": 341939.66811630945,
+      "wikidata": "Q179876",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        2.255567,
+        60.839905
       ]
     },
     {
@@ -7291,6 +10401,31 @@
       ]
     },
     {
+      "id": "cliopatria-9102",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9102,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 674494.5322315191,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
       "id": "cliopatria-9113",
       "polityId": "ottoman-empire",
       "sourceIndex": 9113,
@@ -7316,6 +10451,31 @@
       ]
     },
     {
+      "id": "cliopatria-9116",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9116,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1672,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1673
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 154906.55003344774,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -73.27379,
+        40.87357
+      ],
+      "bbox": [
+        -89.183632,
+        5.107234,
+        80.346947,
+        51.714184
+      ]
+    },
+    {
       "id": "cliopatria-9118",
       "polityId": "mughal-empire",
       "sourceIndex": 9118,
@@ -7338,6 +10498,31 @@
         16.936163,
         92.766762,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9128",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9128,
+      "sourceFromYear": 1670,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1670,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1670,
+      "sourceAreaKm2": 6263658.379671643,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.91874,
+        -2.993003
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        144.968323,
+        36.481617
       ]
     },
     {
@@ -7541,6 +10726,31 @@
       ]
     },
     {
+      "id": "cliopatria-9164",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9164,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 177085.61393291032,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -73.27379,
+        40.87357
+      ],
+      "bbox": [
+        -89.183632,
+        5.107234,
+        80.346947,
+        51.714184
+      ]
+    },
+    {
       "id": "cliopatria-9165",
       "polityId": "mughal-empire",
       "sourceIndex": 9165,
@@ -7563,6 +10773,31 @@
         16.936163,
         92.471886,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9170",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9170,
+      "sourceFromYear": 1673,
+      "sourceToYear": 1676,
+      "period": {
+        "start": 1673,
+        "endExclusive": 1677
+      },
+      "sampleYear": 1673,
+      "sourceAreaKm2": 674247.5266104642,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
       ]
     },
     {
@@ -7591,6 +10826,31 @@
       ]
     },
     {
+      "id": "cliopatria-9184",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9184,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 176941.4682905582,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -73.27379,
+        40.87357
+      ],
+      "bbox": [
+        -89.183632,
+        5.107234,
+        80.346947,
+        51.714184
+      ]
+    },
+    {
       "id": "cliopatria-9185",
       "polityId": "mughal-empire",
       "sourceIndex": 9185,
@@ -7613,6 +10873,31 @@
         17.00045,
         92.471886,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9196",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9196,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 653407.3417210376,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
       ]
     },
     {
@@ -7691,6 +10976,56 @@
       ]
     },
     {
+      "id": "cliopatria-9213",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9213,
+      "sourceFromYear": 1677,
+      "sourceToYear": 1682,
+      "period": {
+        "start": 1677,
+        "endExclusive": 1683
+      },
+      "sampleYear": 1677,
+      "sourceAreaKm2": 6267956.357603128,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.91874,
+        -2.993003
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-9230",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9230,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 6248820.966699403,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.91874,
+        -2.993003
+      ],
+      "bbox": [
+        -108.039452,
+        -42.828686,
+        144.968323,
+        35.83765
+      ]
+    },
+    {
       "id": "cliopatria-9239",
       "polityId": "new-france",
       "sourceIndex": 9239,
@@ -7766,6 +11101,56 @@
       ]
     },
     {
+      "id": "cliopatria-9250",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9250,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 657299.8624112221,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
+      "id": "cliopatria-9266",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9266,
+      "sourceFromYear": 1683,
+      "sourceToYear": 1686,
+      "period": {
+        "start": 1683,
+        "endExclusive": 1687
+      },
+      "sampleYear": 1683,
+      "sourceAreaKm2": 206721.24541098686,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -74.706413,
+        40.323021
+      ],
+      "bbox": [
+        -89.183632,
+        4.721508,
+        80.346947,
+        52.519085
+      ]
+    },
+    {
       "id": "cliopatria-9267",
       "polityId": "ottoman-empire",
       "sourceIndex": 9267,
@@ -7816,6 +11201,31 @@
       ]
     },
     {
+      "id": "cliopatria-9287",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9287,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 219168.33567102926,
+      "wikidata": "Q617219",
+      "seshatId": "gb_tudor_stuart",
+      "labelPoint": [
+        -74.954081,
+        39.934698
+      ],
+      "bbox": [
+        -93.029564,
+        4.785795,
+        80.346947,
+        57.21294
+      ]
+    },
+    {
       "id": "cliopatria-9288",
       "polityId": "ottoman-empire",
       "sourceIndex": 9288,
@@ -7863,6 +11273,31 @@
         36.159592,
         25.285975,
         46.677208
+      ]
+    },
+    {
+      "id": "cliopatria-9296",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9296,
+      "sourceFromYear": 1687,
+      "sourceToYear": 1690,
+      "period": {
+        "start": 1687,
+        "endExclusive": 1691
+      },
+      "sampleYear": 1687,
+      "sourceAreaKm2": 6482716.385427133,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.91874,
+        -2.993003
+      ],
+      "bbox": [
+        -112.518921,
+        -42.828686,
+        144.968323,
+        35.83765
       ]
     },
     {
@@ -7941,6 +11376,31 @@
       ]
     },
     {
+      "id": "cliopatria-9308",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9308,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 6511538.087687545,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.91874,
+        -2.993003
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        35.83765
+      ]
+    },
+    {
       "id": "cliopatria-9311",
       "polityId": "kingdom-of-france",
       "sourceIndex": 9311,
@@ -7963,6 +11423,31 @@
         41.586884,
         8.112675,
         51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9312",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 9312,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 341675.6004253676,
+      "wikidata": "Q179876",
+      "seshatId": "",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        60.839905
       ]
     },
     {
@@ -8013,6 +11498,56 @@
         3.950056,
         -3.176635,
         52.519085
+      ]
+    },
+    {
+      "id": "cliopatria-9324",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9324,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 641385.1654845475,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
+      "id": "cliopatria-9333",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9333,
+      "sourceFromYear": 1691,
+      "sourceToYear": 1695,
+      "period": {
+        "start": 1691,
+        "endExclusive": 1696
+      },
+      "sampleYear": 1691,
+      "sourceAreaKm2": 221128.01998116402,
+      "wikidata": "Q617219",
+      "seshatId": "",
+      "labelPoint": [
+        -74.954081,
+        39.934698
+      ],
+      "bbox": [
+        -93.029564,
+        4.785795,
+        88.47271,
+        57.21294
       ]
     },
     {
@@ -8166,6 +11701,31 @@
       ]
     },
     {
+      "id": "cliopatria-9354",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9354,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 6609259.006928258,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9357",
       "polityId": "republic-of-venice",
       "sourceIndex": 9357,
@@ -8191,6 +11751,31 @@
       ]
     },
     {
+      "id": "cliopatria-9360",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9360,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 221317.0949545509,
+      "wikidata": "Q617219",
+      "seshatId": "",
+      "labelPoint": [
+        -74.954081,
+        39.934698
+      ],
+      "bbox": [
+        -89.183632,
+        4.785795,
+        88.47271,
+        52.519085
+      ]
+    },
+    {
       "id": "cliopatria-9362",
       "polityId": "ottoman-empire",
       "sourceIndex": 9362,
@@ -8213,6 +11798,31 @@
         10.057378,
         48.600475,
         48.19175
+      ]
+    },
+    {
+      "id": "cliopatria-9367",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9367,
+      "sourceFromYear": 1696,
+      "sourceToYear": 1699,
+      "period": {
+        "start": 1696,
+        "endExclusive": 1700
+      },
+      "sampleYear": 1696,
+      "sourceAreaKm2": 642432.5537277178,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.540756,
+        39.902341
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
       ]
     },
     {
@@ -8291,6 +11901,31 @@
       ]
     },
     {
+      "id": "cliopatria-9388",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9388,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1701,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1702
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 6905916.844933987,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9390",
       "polityId": "republic-of-venice",
       "sourceIndex": 9390,
@@ -8341,6 +11976,31 @@
       ]
     },
     {
+      "id": "cliopatria-9394",
+      "polityId": "english-colonial-component",
+      "sourceIndex": 9394,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1701,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1702
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 221710.24761960292,
+      "wikidata": "Q617219",
+      "seshatId": "",
+      "labelPoint": [
+        -74.954081,
+        39.934698
+      ],
+      "bbox": [
+        -89.1782,
+        4.785795,
+        88.47271,
+        52.519085
+      ]
+    },
+    {
       "id": "cliopatria-9395",
       "polityId": "mughal-empire",
       "sourceIndex": 9395,
@@ -8363,6 +12023,56 @@
         10.932109,
         92.471886,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9402",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9402,
+      "sourceFromYear": 1700,
+      "sourceToYear": 1701,
+      "period": {
+        "start": 1700,
+        "endExclusive": 1702
+      },
+      "sampleYear": 1700,
+      "sourceAreaKm2": 657503.617616287,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
+      "id": "cliopatria-9416",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9416,
+      "sourceFromYear": 1702,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1702,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1702,
+      "sourceAreaKm2": 552407.1065779396,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -4.050948,
+        39.837638
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
       ]
     },
     {
@@ -8441,6 +12151,31 @@
       ]
     },
     {
+      "id": "cliopatria-9435",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9435,
+      "sourceFromYear": 1702,
+      "sourceToYear": 1705,
+      "period": {
+        "start": 1702,
+        "endExclusive": 1706
+      },
+      "sampleYear": 1702,
+      "sourceAreaKm2": 6904120.735506923,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9438",
       "polityId": "kingdom-of-france",
       "sourceIndex": 9438,
@@ -8463,6 +12198,31 @@
         42.366177,
         8.113841,
         51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9439",
+      "polityId": "kingdom-of-england",
+      "sourceIndex": 9439,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 342178.8032464089,
+      "wikidata": "Q179876",
+      "seshatId": "",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        41.327385,
+        2.413253,
+        60.839905
       ]
     },
     {
@@ -8541,6 +12301,31 @@
       ]
     },
     {
+      "id": "cliopatria-9449",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9449,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 6830485.029650217,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9456",
       "polityId": "ottoman-empire",
       "sourceIndex": 9456,
@@ -8616,6 +12401,31 @@
       ]
     },
     {
+      "id": "cliopatria-9471",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9471,
+      "sourceFromYear": 1706,
+      "sourceToYear": 1708,
+      "period": {
+        "start": 1706,
+        "endExclusive": 1709
+      },
+      "sampleYear": 1706,
+      "sourceAreaKm2": 496094.9637017587,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -2.149613,
+        39.869981
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        51.446541
+      ]
+    },
+    {
       "id": "cliopatria-9477",
       "polityId": "mughal-empire",
       "sourceIndex": 9477,
@@ -8638,6 +12448,31 @@
         10.932109,
         92.471886,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9478",
+      "polityId": "kingdom-of-great-britain",
+      "sourceIndex": 9478,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1756,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1757
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 341693.41968804994,
+      "wikidata": "Q23666",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -2.059079,
+        54.443549
+      ],
+      "bbox": [
+        -10.528071,
+        49.980007,
+        1.739019,
+        60.839905
       ]
     },
     {
@@ -8691,6 +12526,31 @@
       ]
     },
     {
+      "id": "cliopatria-9497",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9497,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 614775.6131126084,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        50.179462
+      ]
+    },
+    {
       "id": "cliopatria-9508",
       "polityId": "kingdom-of-france",
       "sourceIndex": 9508,
@@ -8738,6 +12598,106 @@
         25.03639,
         66.694435,
         41.976379
+      ]
+    },
+    {
+      "id": "cliopatria-9517",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9517,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 227113.07922879382,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -75.195588,
+        39.74061
+      ],
+      "bbox": [
+        -89.1782,
+        4.785795,
+        88.47271,
+        52.519085
+      ]
+    },
+    {
+      "id": "cliopatria-9518",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9518,
+      "sourceFromYear": 1709,
+      "sourceToYear": 1712,
+      "period": {
+        "start": 1709,
+        "endExclusive": 1713
+      },
+      "sampleYear": 1709,
+      "sourceAreaKm2": 6925947.006290504,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-9521",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9521,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 7017001.273090912,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-9522",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9522,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 417697.55221572245,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -75.195588,
+        39.74061
+      ],
+      "bbox": [
+        -93.029564,
+        4.785795,
+        88.47271,
+        57.21294
       ]
     },
     {
@@ -8816,6 +12776,31 @@
       ]
     },
     {
+      "id": "cliopatria-9543",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9543,
+      "sourceFromYear": 1713,
+      "sourceToYear": 1717,
+      "period": {
+        "start": 1713,
+        "endExclusive": 1718
+      },
+      "sampleYear": 1713,
+      "sourceAreaKm2": 494305.1084827995,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_1",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        3.515789,
+        43.733017
+      ]
+    },
+    {
       "id": "cliopatria-9550",
       "polityId": "ottoman-empire",
       "sourceIndex": 9550,
@@ -8863,6 +12848,56 @@
         13.014604,
         92.471886,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9561",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9561,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1720,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1721
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 483218.1699664984,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -76.968426,
+        38.02879
+      ],
+      "bbox": [
+        -94.860504,
+        4.785795,
+        88.47271,
+        58.945816
+      ]
+    },
+    {
+      "id": "cliopatria-9562",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9562,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1720,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1721
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 7023970.113201122,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.573204,
+        -42.828686,
+        144.968323,
+        36.481617
       ]
     },
     {
@@ -8938,6 +12973,31 @@
         18.221918,
         141.556625,
         56.182064
+      ]
+    },
+    {
+      "id": "cliopatria-9577",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9577,
+      "sourceFromYear": 1718,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1718,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1718,
+      "sourceAreaKm2": 543074.4159792297,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        15.624265,
+        43.733017
       ]
     },
     {
@@ -9091,6 +13151,56 @@
       ]
     },
     {
+      "id": "cliopatria-9608",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9608,
+      "sourceFromYear": 1721,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1721,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1721,
+      "sourceAreaKm2": 7039961.6891513895,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.899216,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-9610",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9610,
+      "sourceFromYear": 1721,
+      "sourceToYear": 1726,
+      "period": {
+        "start": 1721,
+        "endExclusive": 1727
+      },
+      "sampleYear": 1721,
+      "sourceAreaKm2": 635305.0289211104,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -84.086748,
+        54.7151
+      ],
+      "bbox": [
+        -94.8377,
+        4.785795,
+        88.47271,
+        58.945816
+      ]
+    },
+    {
       "id": "cliopatria-9615",
       "polityId": "mughal-empire",
       "sourceIndex": 9615,
@@ -9191,6 +13301,56 @@
       ]
     },
     {
+      "id": "cliopatria-9641",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9641,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 640479.9002403556,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -84.086748,
+        54.7151
+      ],
+      "bbox": [
+        -94.8377,
+        4.785795,
+        88.47271,
+        58.945816
+      ]
+    },
+    {
+      "id": "cliopatria-9642",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9642,
+      "sourceFromYear": 1727,
+      "sourceToYear": 1733,
+      "period": {
+        "start": 1727,
+        "endExclusive": 1734
+      },
+      "sampleYear": 1727,
+      "sourceAreaKm2": 7049671.467599711,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -112.899216,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9650",
       "polityId": "ottoman-empire",
       "sourceIndex": 9650,
@@ -9238,6 +13398,56 @@
         14.428933,
         92.071487,
         38.416016
+      ]
+    },
+    {
+      "id": "cliopatria-9669",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9669,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 7060878.965647927,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -113.229889,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
+      "id": "cliopatria-9671",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9671,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1737,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1738
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 650797.2503367773,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -84.086748,
+        54.7151
+      ],
+      "bbox": [
+        -94.8377,
+        4.785795,
+        88.47271,
+        58.945816
       ]
     },
     {
@@ -9338,6 +13548,31 @@
         3.950056,
         -3.176635,
         50.645493
+      ]
+    },
+    {
+      "id": "cliopatria-9691",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9691,
+      "sourceFromYear": 1734,
+      "sourceToYear": 1747,
+      "period": {
+        "start": 1734,
+        "endExclusive": 1748
+      },
+      "sampleYear": 1734,
+      "sourceAreaKm2": 593211.553178797,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        45.169586
       ]
     },
     {
@@ -9463,6 +13698,31 @@
         3.950056,
         -3.176635,
         54.206123
+      ]
+    },
+    {
+      "id": "cliopatria-9729",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9729,
+      "sourceFromYear": 1738,
+      "sourceToYear": 1740,
+      "period": {
+        "start": 1738,
+        "endExclusive": 1741
+      },
+      "sampleYear": 1738,
+      "sourceAreaKm2": 678522.3302306932,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -76.896722,
+        37.802992
+      ],
+      "bbox": [
+        -94.8377,
+        4.785795,
+        88.47271,
+        58.945816
       ]
     },
     {
@@ -9616,6 +13876,56 @@
       ]
     },
     {
+      "id": "cliopatria-9771",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9771,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1743,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1744
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 714384.2313639333,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -76.896722,
+        37.802992
+      ],
+      "bbox": [
+        -94.8377,
+        4.785795,
+        88.47271,
+        58.945816
+      ]
+    },
+    {
+      "id": "cliopatria-9772",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9772,
+      "sourceFromYear": 1741,
+      "sourceToYear": 1743,
+      "period": {
+        "start": 1741,
+        "endExclusive": 1744
+      },
+      "sampleYear": 1741,
+      "sourceAreaKm2": 7076770.822921315,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -113.229889,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9781",
       "polityId": "new-france",
       "sourceIndex": 9781,
@@ -9716,6 +14026,56 @@
       ]
     },
     {
+      "id": "cliopatria-9797",
+      "polityId": "british-colonial-component",
+      "sourceIndex": 9797,
+      "sourceFromYear": 1744,
+      "sourceToYear": 1751,
+      "period": {
+        "start": 1744,
+        "endExclusive": 1752
+      },
+      "sampleYear": 1744,
+      "sourceAreaKm2": 740324.4570728958,
+      "wikidata": "Q8680",
+      "seshatId": "gb_british_emp_1",
+      "labelPoint": [
+        -76.896722,
+        37.802992
+      ],
+      "bbox": [
+        -94.8377,
+        4.785795,
+        88.47271,
+        58.945816
+      ]
+    },
+    {
+      "id": "cliopatria-9798",
+      "polityId": "spanish-empire-component",
+      "sourceIndex": 9798,
+      "sourceFromYear": 1744,
+      "sourceToYear": 1751,
+      "period": {
+        "start": 1744,
+        "endExclusive": 1752
+      },
+      "sampleYear": 1744,
+      "sourceAreaKm2": 7076427.64995544,
+      "wikidata": "Q80702",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -78.882204,
+        -0.614362
+      ],
+      "bbox": [
+        -113.229889,
+        -42.828686,
+        144.968323,
+        36.481617
+      ]
+    },
+    {
       "id": "cliopatria-9805",
       "polityId": "mughal-empire",
       "sourceIndex": 9805,
@@ -9788,6 +14148,31 @@
         42.366177,
         10.278442,
         51.179214
+      ]
+    },
+    {
+      "id": "cliopatria-9848",
+      "polityId": "kingdom-of-spain",
+      "sourceIndex": 9848,
+      "sourceFromYear": 1748,
+      "sourceToYear": 1777,
+      "period": {
+        "start": 1748,
+        "endExclusive": 1778
+      },
+      "sampleYear": 1748,
+      "sourceAreaKm2": 594074.5221679691,
+      "wikidata": "Q29",
+      "seshatId": "es_spanish_emp_2",
+      "labelPoint": [
+        -3.565086,
+        39.86999
+      ],
+      "bbox": [
+        -9.304603,
+        36.030804,
+        18.435537,
+        45.169586
       ]
     },
     {

@@ -6,7 +6,7 @@ Veri genişletmesi (1400–1750), zengin bilgi panelleri ve ikinci arşiv perspe
 
 Kullanıcının yönlendirmesi: kalan işleri listele; kullanıcıya görünür etkiye göre geliştirmeye devam et. Sıra görsel etkiye göredir; veri doğruluğu ve güvenlik bağımlılıkları atlanmaz.
 
-Son güncelleme: [Avrupa/Amerika genişlemesi](16-europe-americas-collection.md); 28 siyasi yapı, 389 seçilmiş kayıt, en yakın kaynaklı yıl ve koleksiyon oynatma. Aşağıdaki ilk arşiv adımının doğrulama kaydı korunur.
+Son güncelleme: [İngiltere/İspanya/koloni genişlemesi](17-england-spain-americas-collection.md); 38 siyasi yapı, 562 seçilmiş kayıt, en yakın kaynaklı yıl ve koleksiyon oynatma. Aşağıdaki ilk arşiv adımının doğrulama kaydı korunur.
 
 ## Bu adımda uygulananlar
 

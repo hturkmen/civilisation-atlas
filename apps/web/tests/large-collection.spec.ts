@@ -26,7 +26,7 @@ test('large collection records bundle size and local map readiness measurements'
     mapReadyFlagObservedMs:performance.now(),viewport:{width:innerWidth,height:innerHeight}
   }));
   const bundle=readFileSync(new URL('../public/data/polity-boundaries.geojson',import.meta.url));
-  expect(bundle.length).toBe(2884759);
+  expect(bundle.length).toBe(5033000);
   const measurement={...result,rawBytes:bundle.length,gzipLevel9Bytes:gzipSync(bundle,{level:9}).length,note:'Local software GPU; gzip is an offline estimate, not measured production transfer; map-ready flag is not a full visual paint metric.'};
   console.log('ATLAS_LOCAL_MEASUREMENT',JSON.stringify(measurement));
   await info.attach('local-map-measurements.json',{body:JSON.stringify(measurement,null,2),contentType:'application/json'});

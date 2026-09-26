@@ -1,6 +1,6 @@
 # Devam kaydı
 
-## Güncel devir noktası — 19 Eylül 2026 / ikinci arşiv eseri
+## Güncel devir noktası — 26 Eylül 2026 / İngiltere, İspanya ve koloni dilimi
 
 **Önce bu bölümü oku.** Veri, zengin bilgi panelleri ve arşiv perspektifleri kullanıcı önceliğidir. Eski sonraki-adım notları güncel görev kuyruğu değildir.
 
@@ -8,12 +8,12 @@
 |---|---|
 | Arşiv | Waldseemüller 1507 + Ortelius 1570. Bilinen dünya panelinde eser seçici; seçim yayım yılına açıkça geçer, URL/yeniden yükleme korunur. Yakınlaştırma eser değişiminde sıfırlanır; boş yıllara eser taşınmaz. |
 | Doğruluk/haklar | Ortelius Commons kaydı okundu: 1570, yazar, LOC kaynak atfı, PD-Art/public domain. Eski LOC bağlantısı 404; kurum kaydı doğrudan doğrulanmış sayılmaz. Bu sınır UI locator'ında yazılı. Bağımsız inceleme bekliyor; iki eser iki farklı toplumun temsili olarak sunulmaz. |
-| Diğer içerik | 28 siyasi yapı / 389 sınır, üç yerleşim ve 10 kaynaklı ön bilgi kartı değişmedi. Tarihsel dünya ile eser perspektifi ayrı. |
-| Kontroller | 3/3 arşiv domain testi, 2/2 hedefli masaüstü/mobil Chromium testi, iki görselin hash kontrolü, sınır validator ve statik build/TypeScript geçti. Tam paket, Node build, fiziksel cihaz/Safari/Firefox çalıştırılmadı. |
-| Kod/yayın | Main kod 2e1a4c7dbe7d4512595cdf5621f856e2cb17242d; demo kaynak 43d7c36524a95756560c7c56985784b3d7e252d9. V12 succeeded, 2026-09-19T02:35:12.726305+00:00. Mevcut özel erişim korundu; canlıda ek tarayıcı testi yapılmadı. |
-| İlk sonraki iş | 1400–1750 İngiltere/İspanya ve koloni kayıtlarını sabit Cliopatria kaynağından kimlik, dönem, hak ve geometri tutarlılığıyla genişlet; mevcut 389 kaydı yeniden üretme işi olarak başa dönme. Üretilmiş GeoJSON elle düzenlenmez. |
+| Diğer içerik | 38 siyasi yapı / 562 sınır: 173 yeni kaynak satırı, eski 389 metadata/geometri korundu. Üç yerleşim, 10 anlatı ve iki arşiv eseri değişmedi. |
+| Kontroller | Kaynak SHA, Shapely geometri, sınır validator, domain testleri, plan, Node build/TypeScript geçti. Hedefli Chromium çalışmadı: tarayıcı ikilisi yok, indirme geçersiz arşiv döndürdü. Fiziksel cihaz ve bağımsız tarihçi incelemesi açık. |
+| Kod/yayın | Bu veri diliminin GitHub/demo teslim sonucu aşağıdaki handoff'a yazılır. Son doğrulanmış özel demo V12'dir; GitHub teslimi tek başına demo yayını sayılmaz. |
+| İlk sonraki iş | Tutulan İngiliz/Britanya ve İspanyol geçiş kimliklerini incele; ayrı koloni ve Yerli Amerika kaynaklarını tarih/kimlik/geometri/haklarıyla araştır. 562 kaydı baştan üretme; üretilmiş GeoJSON elle düzenlenmez. |
 
-Detay: docs/team/handoffs/p06-second-archive-20260919.md. Performans/fiziksel cihaz kabulü ertelendi, tamamlanmış sayılmaz. 10 anlatı ve iki arşiv hazır; bunları yeniden yapma. Aynı yıla ait birden çok eser eklenirse URL'de eser kimliği desteği gerekir; bugünkü iki farklı yıl için mevcut yıl tabanlı seçim yeterlidir.
+Detay: docs/17-england-spain-americas-collection.md ve docs/team/handoffs/p02-006-england-spain-20260926.md. 5 MB ham veri için mobil ağ/GPU ölçümü açık; tarihçi onayı verilmedi. Aynı yıla ait birden çok arşiv eseri eklenirse URL'de eser kimliği gerekir.
 
 Her dilim sonunda bu tabloyu, kendi handoff kaydını ve ilgili backlog notunu güncelle. Çalışan kodun SHA'sını, gerçekten geçen/çalışmayan testleri, demo dağıtım sonucunu ve sonraki tek işi belirt. Kullanıcı “devam” dediğinde en baştan plan çıkarmak yerine bu devir noktasından ilerle.
 
