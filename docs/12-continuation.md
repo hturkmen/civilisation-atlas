@@ -2,7 +2,7 @@
 
 ## 28 Eylül 2026 — öncelikli arayüz değişikliği
 
-Sabit ülke isim kutuları kaldırıldı; yalnız ülke alanının üzerine gelince yarı saydam tooltip gösterilir. Tıklama/dokunma, yan liste ve örtüşen alan seçimi korunur. Ana Node build/TypeScript geçti. Tarayıcı indirmesi bozuk ZIP nedeniyle engelli; yayın sonucu teslim sonunda kaydedilecek. Detay: [hover devir kaydı](team/handoffs/p04-hover-labels-20260928.md). Veri 38 siyasi yapı / 562 kayıt olarak korundu; önceki 1440 yerel dilimi yayımlanmış kabul edilmez.
+Sabit ülke isim kutuları kaldırıldı; yalnız ülke alanının üzerine gelince yarı saydam tooltip gösterilir. Tıklama/dokunma, yan liste ve örtüşen alan seçimi korunur. Node ve statik build/TypeScript, 56 domain testi ve plan kontrolü geçti. Tarayıcı indirmesi bozuk ZIP nedeniyle engelli; tarayıcı/gerçek cihaz QA yapılmadı. Main kod: 88706897f8a1dbe72925b450f69b6f7368805286. Demo kaynak: 5887881e5db992e2c0a6fbb7b8e39cbc1f90ac8d. Özel yayın succeeded: 2026-09-28T08:29:08.771152+00:00, dağıtım appgdep_6aba2542bc248191879dd6d3a985a80e. Detay: [hover devir kaydı](team/handoffs/p04-hover-labels-20260928.md). Veri 38 siyasi yapı / 562 kayıt olarak korundu; önceki 1440 yerel dilimi yayımlanmış kabul edilmez.
 
 ## Güncel devir noktası — 26 Eylül 2026 / İngiltere, İspanya ve koloni dilimi
 
