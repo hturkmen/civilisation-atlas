@@ -111,7 +111,7 @@ test('mobile keeps timeline and place selection accessible without horizontal ov
   await page.goto('/');
   await expect(page.getByRole('slider')).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  await expect(page.locator('.polity-map-label:visible')).toHaveCount(2);
+  await expect(page.locator('.polity-map-label')).toHaveCount(0);
   await expect.poll(() => page.evaluate(() => {
     const labels = [...document.querySelectorAll('.polity-map-label, .marker-label')].map(element => element.getBoundingClientRect());
     return labels.some((a, i) => labels.slice(i + 1).some(b => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top));

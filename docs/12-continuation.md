@@ -1,5 +1,9 @@
 # Devam kaydı
 
+## 28 Eylül 2026 — öncelikli arayüz değişikliği
+
+Sabit ülke isim kutuları kaldırıldı; yalnız ülke alanının üzerine gelince yarı saydam tooltip gösterilir. Tıklama/dokunma, yan liste ve örtüşen alan seçimi korunur. Ana Node build/TypeScript geçti. Tarayıcı indirmesi bozuk ZIP nedeniyle engelli; yayın sonucu teslim sonunda kaydedilecek. Detay: [hover devir kaydı](team/handoffs/p04-hover-labels-20260928.md). Veri 38 siyasi yapı / 562 kayıt olarak korundu; önceki 1440 yerel dilimi yayımlanmış kabul edilmez.
+
 ## Güncel devir noktası — 26 Eylül 2026 / İngiltere, İspanya ve koloni dilimi
 
 **Önce bu bölümü oku.** Veri, zengin bilgi panelleri ve arşiv perspektifleri kullanıcı önceliğidir. Eski sonraki-adım notları güncel görev kuyruğu değildir.

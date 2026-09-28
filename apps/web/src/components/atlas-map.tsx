@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
-import type {Map as MapInstance, Marker, StyleSpecification} from 'maplibre-gl';
+import type {Map as MapInstance, Marker, Popup, StyleSpecification} from 'maplibre-gl';
 import type {Place} from '@atlas/domain/catalog';
 import type {VisibleBoundary} from '@atlas/domain/boundaries';
 import {boundaryCollection} from '@/lib/boundaries';
@@ -36,8 +36,7 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapInstance | null>(null);
   const markers = useRef<Marker[]>([]);
-  const boundaryMarkers = useRef<Marker[]>([]);
-  const leadersRef = useRef<SVGSVGElement>(null);
+  const hoverPopup = useRef<Popup | null>(null);
   const selectRef = useRef(onSelect);
   const selectPolityRef = useRef(onSelectPolity);
   const [overlapIds, setOverlapIds] = useState<string[]>([]);
@@ -52,7 +51,7 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
     let localMap: MapInstance | undefined;
     let observer: ResizeObserver | undefined;
     let loadTimeout: ReturnType<typeof setTimeout> | undefined;
-    import('maplibre-gl').then(({Map, setWorkerUrl, getVersion}) => {
+    import('maplibre-gl').then(({Map, Popup, setWorkerUrl, getVersion}) => {
       if (cancelled || !container.current) return;
       try {
         setWorkerUrl('/vendor/maplibre/' + getVersion() + '/maplibre-gl-worker.mjs');
@@ -60,6 +59,13 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
           minZoom: 0, maxZoom: 6, renderWorldCopies: false, attributionControl: {compact: false},
           dragRotate: false, pitchWithRotate: false, touchPitch: false});
         mapRef.current = localMap;
+        const popup = new Popup({closeButton: false, closeOnClick: true, offset: 14, className: 'polity-hover-tooltip', maxWidth: '240px'});
+        hoverPopup.current = popup;
+        const clearHover = () => {popup.remove(); if (localMap) localMap.getCanvas().style.cursor = '';};
+        localMap.on('movestart', clearHover);
+        localMap.on('touchstart', clearHover);
+        localMap.getCanvas().addEventListener('mouseleave', clearHover);
+        localMap.getCanvas().addEventListener('keydown', event => {if (event.key === 'Escape') clearHover();});
         localMap.touchZoomRotate.disableRotation();
         localMap.fitBounds([[-128, -54], [132, 64]], {padding: {top: 90, bottom: 70, left: 40, right: 40}, duration: 0});
         loadTimeout = setTimeout(() => {if (!cancelled) setFailed(true);}, 15000);
@@ -72,8 +78,15 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
           if (ids.length === 1) {setOverlapIds([]); selectPolityRef.current(ids[0]);}
           else if (ids.length > 1) setOverlapIds(ids);
         });
-        localMap.on('mouseenter', 'polity-fill', () => {if (localMap) localMap.getCanvas().style.cursor = 'pointer';});
-        localMap.on('mouseleave', 'polity-fill', () => {if (localMap) localMap.getCanvas().style.cursor = '';});
+        localMap.on('mousemove', 'polity-fill', event => {
+          if (!localMap || localMap.isMoving() || event.originalEvent.buttons || !window.matchMedia('(any-hover: hover)').matches) return;
+          const names = [...new Set((event.features ?? []).map(feature => String(feature.properties.name)))];
+          if (!names.length) {clearHover(); return;}
+          localMap.getCanvas().style.cursor = 'pointer';
+          popup.setLngLat(event.lngLat).setText(names.join(' · ')).addTo(localMap);
+          popup.getElement().setAttribute('role', 'tooltip');
+        });
+        localMap.on('mouseleave', 'polity-fill', clearHover);
         localMap.on('error', () => {if (!cancelled) setFailed(true);});
         observer = new ResizeObserver(() => localMap?.resize());
         observer.observe(container.current);
@@ -87,8 +100,8 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
       observer?.disconnect();
       markers.current.forEach(marker => marker.remove());
       markers.current = [];
-      boundaryMarkers.current.forEach(marker => marker.remove());
-      boundaryMarkers.current = [];
+      hoverPopup.current?.remove();
+      hoverPopup.current = null;
       localMap?.remove();
       mapRef.current = null;
     };
@@ -98,74 +111,14 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
   useEffect(() => {
     if (!ready || !mapRef.current) return;
     const map = mapRef.current;
-    let cancelled = false;
     setOverlapIds([]);
     const filter: import('maplibre-gl').FilterSpecification = ['in', ['get', 'recordId'], ['literal', boundaries.map(item => item.record.id)]];
     map.setFilter('polity-fill', filter);
     map.setFilter('polity-line', filter);
     map.setPaintProperty('polity-fill', 'fill-opacity', ['case', ['==', ['get', 'polityId'], selectedPolityId ?? ''], 0.47, 0.27]);
     map.setPaintProperty('polity-line', 'line-width', ['case', ['==', ['get', 'polityId'], selectedPolityId ?? ''], 2.5, 1.1]);
-    boundaryMarkers.current.forEach(marker => marker.remove());
-    boundaryMarkers.current = [];
-    const positionBoundaryLabels = () => {
-      if (!showLabels) {leadersRef.current?.replaceChildren(); return;}
-      const host = map.getContainer();
-      const origin = host.getBoundingClientRect();
-      const lines: SVGLineElement[] = [];
-      const placed = [...host.parentElement!.querySelectorAll<HTMLElement>('.marker-label:not([hidden]), .marker-dot, .map-heading, .map-controls, .map-legend')].map(element => {
-        const rect = element.getBoundingClientRect();
-        return {left: rect.left - origin.left, right: rect.right - origin.left, top: rect.top - origin.top, bottom: rect.bottom - origin.top};
-      });
-      for (const marker of boundaryMarkers.current) {
-        const point = map.project(marker.getLngLat());
-        const element = marker.getElement();
-        const width = element.offsetWidth;
-        const height = element.offsetHeight;
-        let positioned = false;
-        for (const dy of [0, 60, -60, 120, -120, 180]) {
-          for (const dx of [0, -60, 60, -120, 120, -180, 180]) {
-            const box = {left: point.x + dx - width / 2, right: point.x + dx + width / 2, top: point.y + dy - height / 2, bottom: point.y + dy + height / 2};
-            if (box.left < 5 || box.right > host.clientWidth - 5 || box.top < 5 || box.bottom > host.clientHeight - 5) continue;
-            if (placed.every(other => box.right < other.left - 5 || box.left > other.right + 5 || box.bottom < other.top - 5 || box.top > other.bottom + 5)) {
-              marker.setOffset([dx, dy]); placed.push(box); positioned = true;
-              const back = Math.min(dx ? width / (2 * Math.abs(dx)) : Infinity, dy ? height / (2 * Math.abs(dy)) : Infinity);
-              if (back < 1) {
-                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                for (const [key, value] of Object.entries({x1: point.x, y1: point.y, x2: point.x + dx * (1 - back), y2: point.y + dy * (1 - back)})) line.setAttribute(key, String(value));
-                line.setAttribute('stroke', element.style.getPropertyValue('--polity-color'));
-                lines.push(line);
-              }
-              break;
-            }
-          }
-          if (positioned) break;
-        }
-        element.style.visibility = positioned ? '' : 'hidden';
-      }
-      leadersRef.current?.replaceChildren(...lines);
-    };
-    const host = container.current;
-    host?.addEventListener('atlas-label-layout', positionBoundaryLabels);
-    map.on('move', positionBoundaryLabels);
-    map.on('resize', positionBoundaryLabels);
-    import('maplibre-gl').then(({Marker}) => {
-      if (cancelled) return;
-      boundaryMarkers.current = boundaries.map(({polity, record}) => {
-        const element = document.createElement('button');
-        element.type = 'button';
-        element.className = 'polity-map-label' + (selectedPolityId === polity.id ? ' selected' : '');
-        element.style.setProperty('--polity-color', polity.color);
-        element.textContent = polity.name;
-        element.hidden = !showLabels;
-        element.setAttribute('aria-label', polity.name + ' alanını seç');
-        element.setAttribute('aria-pressed', String(selectedPolityId === polity.id));
-        element.addEventListener('click', () => selectPolityRef.current(polity.id));
-        return new Marker({element, anchor: 'center'}).setLngLat(record.labelPoint).addTo(map);
-      });
-      positionBoundaryLabels();
-    });
-    return () => {cancelled = true; host?.removeEventListener('atlas-label-layout', positionBoundaryLabels); map.off('move', positionBoundaryLabels); map.off('resize', positionBoundaryLabels);};
-  }, [ready, boundaryKey, selectedPolityId, showLabels]);
+    hoverPopup.current?.remove();
+  }, [ready, boundaryKey, selectedPolityId]);
 
   useEffect(() => {
     if (!ready || !selectedPolityId) return;
@@ -185,7 +138,6 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
         const x = map.project(marker.getLngLat()).x;
         marker.getElement().querySelector('.marker-label')?.classList.toggle('label-left', x > map.getCanvas().clientWidth - 170);
       }
-      container.current?.dispatchEvent(new Event('atlas-label-layout'));
     };
     map.on('move', positionLabels);
     map.on('resize', positionLabels);
@@ -227,7 +179,6 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
 
   return <>
     <div ref={container} className="map-canvas" role="region" aria-label="Etkileşimli dünya haritası" data-testid="atlas-map" data-ready={ready} />
-    <svg ref={leadersRef} className="polity-leaders" aria-hidden="true"/>
     {!ready && !failed && <div className="map-loading" role="status"><Icon name="globe"/> Harita hazırlanıyor…</div>}
     {failed && <div className="map-fallback" role="status"><Icon name="map" size={32}/><h2>Harita görüntülenemiyor</h2>
       <p>Yerleşimleri ve siyasi yapıları listeden seçerek tarih ve kaynakları keşfetmeye devam edebilirsin.</p></div>}
@@ -236,7 +187,7 @@ export function AtlasMap({places, selectedId, onSelect, boundaries, selectedPoli
       <button onClick={() => mapRef.current?.zoomIn({duration: 150})} aria-label="Yakınlaştır" disabled={!ready || failed}><Icon name="plus"/></button>
       <button onClick={() => mapRef.current?.zoomOut({duration: 150})} aria-label="Uzaklaştır" disabled={!ready || failed}><Icon name="minus"/></button>
       <button onClick={reset} aria-label="Dünya görünümüne dön" disabled={!ready || failed}><Icon name="globe"/></button>
-      <button onClick={() => setShowLabels(value => !value)} aria-label="Haritadaki adları göster" aria-pressed={showLabels} disabled={!ready || failed}><Icon name="layers"/></button>
+      <button onClick={() => setShowLabels(value => !value)} aria-label="Yerleşim adlarını göster" aria-pressed={showLabels} disabled={!ready || failed}><Icon name="layers"/></button>
     </div>
   </>;
 }
